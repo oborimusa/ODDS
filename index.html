@@ -6,7 +6,28 @@
     <title>ODDS - Home</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style>
+  .service-card {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-card i {
+    transition: color 0.3s;
+  }
+
+  .service-card:hover i {
+    color: #0d6efd;
+  }
+</style>
 </head>
 <body>
     <!-- Navbar -->
@@ -66,23 +87,52 @@
     </section>
 
     <!-- Services Overview Section -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <h3>Design</h3>
-                <p>We craft compelling brand identities and user experiences.</p>
-            </div>
-            <div class="card">
-                <h3>Development</h3>
-                <p>We build scalable web applications and digital products.</p>
-            </div>
-            <div class="card">
-                <h3>Digital Marketing</h3>
-                <p>We help businesses thrive in the digital age with effective marketing strategies.</p>
-            </div>
+    <!-- SERVICES SECTION -->
+<section class="services py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-5">Our Services</h2>
+    <div class="row justify-content-center">
+
+      <!-- Design Service -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-20 shadow-sm service-card p-4 w-100">
+          <div class="mb-3 text-primary">
+            <i class="fas fa-paint-brush fa-3x"></i>
+          </div>
+          <h3 class="card-title mb-3">Design</h3>
+          <p class="card-text">We craft compelling brand identities and seamless user experiences that captivate and convert.</p>
         </div>
-    </section>
+      </div>
+
+      <!-- Development Service -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-20 shadow-sm service-card p-4 w-100">
+          <div class="mb-3 text-success">
+            <i class="fas fa-code fa-3x"></i>
+          </div>
+          <h3 class="card-title mb-3">Development</h3>
+          <p class="card-text">We build scalable, secure, and efficient websites, applications, and digital platforms tailored to your goals.</p>
+        </div>
+      </div>
+
+      <!-- Digital Marketing Service -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-20 shadow-sm service-card p-4 w-100">
+          <div class="mb-3 text-danger">
+            <i class="fas fa-bullhorn fa-3x"></i>
+          </div>
+          <h3 class="card-title mb-3">Digital Marketing</h3>
+          <p class="card-text">We grow brands through data-driven marketing strategies and smart social media management.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Call to Action -->
+    <a href="services.html" class="btn btn-primary mt-4 px-4 py-2 rounded-pill">Learn More About Our Services</a>
+  </div>
+</section>
+
 
     <!-- Featured Projects Section -->
     <section class="projects">
@@ -137,7 +187,7 @@
           <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
           <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
           <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
-          <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
+          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
         </ul>
       </div>
 
