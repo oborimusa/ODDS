@@ -1,124 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ODDS - About Us</title>
-    <link rel="stylesheet" href="CSS/about.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ODDS - About Us</title>
+
+  <link rel="stylesheet" href="CSS/about.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <style>
+    .team-card {
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-card img {
+      object-fit: cover;
+      height: 300px;
+    }
+
+    .hero {
+      position: relative;
+      height: 400px;
+      background: url("image/about.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* .hero-content {
+      position: absolute;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 12px;
+    } */
+  </style>
 </head>
+
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
- <div class="container-fluid">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-            <img src="image/ODDS.jpeg" alt="Logo" class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
-            <h1 class="m-0 fs-4 text-light">ODDS</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="image/ODDS.jpeg" alt="Logo" class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
+      <h1 class="m-0 fs-4 text-light">ODDS</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+         <li class="nav-item"><a href="founder.html" class="nav-link active">Founder</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<!-- Hero Section -->
-  <section class="hero">
-  <div class="hero-background">
-    <img src="image/about.jpg" alt="Hero Background Image">
-  </div>
+<!-- HERO SECTION -->
+<section class="hero">
   <div class="hero-content">
     <h1 class="animate__animated animate__fadeInUp">Empowering Innovation, One Step at a Time</h1>
     <p class="animate__animated animate__fadeInUp animate__delay-1s">Discover the story behind ODDS, where passion meets purpose</p>
-    <!-- <a href="cta-btn animate__animated animate__fadeInUp animate__delay-2s">Learn More About Our Journey<a/> -->
-    <a href="learn-more.html" class="btn btn-primary btn-lg" style="border-radius: 15px;">Learn More About Our Journey</a>
+    <a href="learn-more.html" class="btn btn-primary btn-lg mt-3" style="border-radius: 15px;">Learn More About Our Journey</a>
   </div>
 </section>
-    <section class="about-us py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-4">
-                    <h2 class="mb-4 fw-bold">About ODDS</h2>
-                    <p class="lead mb-4">We're a team of passionate designers and developers dedicated to creating innovative digital solutions.</p>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-6">
-                    <h3 class="mb-4 fw-bold"> Vision Statement</h3>
-                    <p>At ODDS, our vision is to empower businesses to thrive in the digital age by providing innovative design and digital solutions that drive growth, efficiency, and success.
-                    </p>
-                </div>
 
-                <div class="col-lg-6">
-                    <h3 class="mb-4 fw-bold">Our Mission</h3>
-                    <p>Our vision at ODDS is to be a leading design and digital solutions company that inspires and enables businesses to achieve their full potential through creative, effective, and innovative solutions
-                    </p>
-                </div>
-            </div>
-             
-            <div class="row justify-content-center">
-  <div class="col-lg-10 text-center mb-5">
-    <h3 class="mb-4 fw-bold">Our Values</h3>
-    <div class="row text-start">
-      <div class="col-md-6 mb-3">
-        <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>O</strong> - Ownership: We take ownership of our work and strive for excellence in everything we do.</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>D</strong> - Design Thinking: We approach problems with a design-thinking mindset, prioritizing creativity, empathy, and innovation.</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>D</strong> - Delivery: We are committed to delivering high-quality solutions that meet our clients' needs and exceed their expectations.</p>
-      </div>
-      <div class="col-md-6 mb-3">
-        <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>S</strong> - Solutions: We focus on providing solutions that drive real results and impact for our clients.</p>
+<!-- ABOUT SECTION -->
+<section class="about-us py-5">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center mb-4">
+        <h2 class="fw-bold mb-3">About ODDS</h2>
+        <p class="lead">We're a team of passionate designers and developers dedicated to creating innovative digital solutions.</p>
       </div>
     </div>
-  </div>
-</div>
-            
 
-            <div class="row mt-5">
-                <div class="col-lg-12 text-center">
-                    <h3 class="mb-4">Meet Our Team</h3>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card mb-4 h-40" style="width: 100%;">
-                        <img src="image/team-member1.jpg" alt="Team Member 1" class="card-img-top">
-                        <div class="card-body">
-                            <h4 class="card-title">Dahiru Obori</h4>
-                            <p class="card-text">Founder & CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card mb-4 h-40" style="width: 100%;">
-                        <img src="image/team-member2.jpg" alt="Team Member 2" class="card-img-top">
-                        <div class="card-body">
-                            <h4 class="card-title">Augustina Ibeh</h4>
-                            <p class="card-text">Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card mb-4 h-40" style="width: 100%;">
-                        <img src="image/team-member3.jpg" alt="Team Member 3" class="card-img-top">
-                        <div class="card-body">
-                            <h4 class="card-title">Ismail Musa</h4>
-                            <p class="card-text">Technical Lead</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <h3 class="mb-4 fw-bold">Vision Statement</h3>
+        <p>At ODDS, our vision is to empower businesses to thrive in the digital age by providing innovative design and digital solutions that drive growth, efficiency, and success.</p>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="mb-4 fw-bold">Our Mission</h3>
+        <p>Our mission at ODDS is to be a leading design and digital solutions company that inspires and enables businesses to achieve their full potential through creative, effective, and innovative solutions.</p>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-10 text-center mb-5">
+        <h3 class="fw-bold mb-4">Our Values</h3>
+        <div class="row text-start">
+          <div class="col-md-6 mb-3">
+            <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>O</strong> - Ownership: We take ownership of our work and strive for excellence in everything we do.</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>D</strong> - Design Thinking: We approach problems with creativity, empathy, and innovation.</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>D</strong> - Delivery: We are committed to delivering high-quality solutions that exceed client expectations.</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <p><i class="fas fa-check-circle text-primary me-2"></i> <strong>S</strong> - Solutions: We focus on providing solutions that drive real results and impact.</p>
+          </div>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <div class="row mt-5">
+      <div class="col-lg-12 text-center mb-4">
+        <h3 class="fw-bold">Meet Our Team</h3>
+      </div>
+
+      <!-- CEO Card -->
+      <div class="col-lg-4 mb-4">
+        <div class="card team-card h-100">
+          <img src="image/obori5.png" alt="Dahiru Obori" class="card-img-top img-fluid">
+          <div class="card-body text-center">
+            <h4 class="card-title mb-1">Dahiru Obori</h4>
+            <p class="card-text">Founder & CEO</p>
+            <a href="founder.html" class="btn btn-outline-primary btn-sm mt-2">Learn more about the Founder</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creative Director -->
+      <div class="col-lg-4 mb-4">
+        <div class="card team-card h-100">
+          <img src="image/testimonial-1.jpg" alt="Augustina Ibeh" class="card-img-top img-fluid">
+          <div class="card-body text-center">
+            <h4 class="card-title mb-1">Augustina Ibeh</h4>
+            <p class="card-text">Creative Director</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Lead -->
+      <div class="col-lg-4 mb-4">
+        <div class="card team-card h-100">
+          <img src="image/testimonial-2.jpg" alt="Ismail Musa" class="card-img-top img-fluid">
+          <div class="card-body text-center">
+            <h4 class="card-title mb-1">Ismail Musa</h4>
+            <p class="card-text">Technical Lead</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container text-md-start">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">ODDS</h5>
+        <p>Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
+          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Contact</h6>
+        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
+        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Follow Us</h6>
+        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="border-light" />
+
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
