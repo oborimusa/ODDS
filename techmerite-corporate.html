@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Training – TechMerite Academy</title>
+  <meta name="description" content="TechMerite Academy offers custom corporate technology training for companies, NGOs and government organisations across Africa." />
+  <link rel="icon" href="/favicon.ico" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <style>
+    :root {
+      --green: #0ea861;
+      --blue: #004aad;
+      --dark: #0b2540;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+
+    body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  color: #25D366; /* WhatsApp green */
+  z-index: 999;
+}
+.whatsapp-float:hover { color: #1ebe57; }
+header {
+  background: var(--blue);
+  color: #fff;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logo {
+  height: 40px;
+}
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2000; /* ensure it’s on top */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;           /* hide until toggled */
+    flex-direction: column;
+    background: var(--blue);  /* background of dropdown */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;           /* show when JS adds .show */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--blue), #007bff);
+      color: #fff;
+      padding: 20px;
+    }
+    header .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header img { height: 44px; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    /* Main content */
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+    p.lead {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+    .benefit-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .benefit-card h3 {
+      color: var(--blue);
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .benefit-card p {
+      color: var(--muted);
+    }
+
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(180deg, #f8fffb, #ffffff);
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .btn-primary:hover {
+      background: #0c9556;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--green);
+      color: var(--green);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .btn-outline:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    footer {
+      background: #07142a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="brand" style="display:flex;align-items:center;gap:12px;">
+        <a href="techmerite.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5 m-2">
+                    <div class="img pb-2 pt-2">
+                        <img src="image/techmerite Logo.jpeg" alt="TechMerite logo" style="width: 40px;">
+                    </div>
+                    </a>
+        <div>
+          <div style="font-weight:800;">TechMerite Academy</div>
+          <div style="font-size:12px;color:#e0e7ff;">Digital skills for Africa</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="nav-links">
+  <a href="techmerite-courses.html" style="color: white; margin: 10px;">Courses</a>
+  <a href="techmerit-corporate.html" style="color: white; margin: 10px;">Corporate</a>
+  <a href="techmerite-about.html" style="color: white; margin: 10px;">About</a>
+  <a href="techmerite-contact.html" style="color: white; margin: 10px;">Contact</a>
+</nav>
+    </div>
+  </header>
+<a href="https://wa.me/2348039661354" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  <!-- Corporate Training Content -->
+  <main>
+    <h1>Corporate Training</h1>
+    <p class="lead">
+      Upskill your workforce with customised, industry-relevant technology training.
+      We partner with companies, NGOs, and government agencies across Africa to
+      drive digital transformation and measurable impact.
+    </p>
+
+    <section class="benefits">
+      <div class="benefit-card">
+        <h3>Tailored Curriculum</h3>
+        <p>We design training that matches your organisation’s goals, from beginner to advanced levels.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Industry-Experienced Trainers</h3>
+        <p>Our facilitators bring real-world expertise from top tech companies and startups.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Flexible Delivery</h3>
+        <p>Choose onsite workshops, virtual bootcamps, or a blended model to suit your team’s schedule.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Measurable Impact</h3>
+        <p>Post-training assessments and reports show tangible skill growth and ROI for your business.</p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2 style="color:var(--blue); margin-bottom:12px;">Ready to Empower Your Team?</h2>
+      <p style="color:var(--muted); max-width:650px; margin:0 auto 20px;">
+        Let’s create a custom training plan for your organisation. From data analytics to cloud computing,
+        TechMerite Academy equips your staff with the skills to excel in a digital economy.
+      </p>
+      <button class="btn-primary" onclick="location.href='contact.html'">Request a Proposal</button>
+      <button class="btn-outline" onclick="location.href='about.html#impact'">View Impact Reports</button>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> TechMerite Academy — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>

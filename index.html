@@ -1,223 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ODDS - Home</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<style>
-  .service-card {
-    transition: all 0.3s ease-in-out;
-    border: none;
-    border-radius: 10px;
-  }
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .service-card {
+        transition: all 0.3s ease-in-out;
+        border: none;
+        border-radius: 10px;
+      }
 
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  }
+      .hero-solid {
+        background: linear-gradient(90deg, #28a745 0%, #cb5100 100%);
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+      }
 
-  .service-card i {
-    transition: color 0.3s;
-  }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+      }
 
-  .service-card:hover i {
-    color: #0d6efd;
-  }
-</style>
-</head>
-<body>
+      .service-card i {
+        transition: color 0.3s;
+      }
+
+      .service-card:hover i {
+        color: #0d6efd;
+      }
+      @media (max-width: 991.98px) {
+        .navbar-nav .nav-item {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-            <img src="image/ODDS.jpeg" alt="Logo" class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
-            <h1 class="m-0 fs-4 text-light">ODDS</h1>
+      <div class="container-fluid">
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="image/ODDS.jpeg"
+            alt="Logo"
+            class="me-2"
+            style="width: 50px; height: 50px; object-fit: cover"
+          />
+          <h1 class="m-0 fs-4 text-light">ODDS</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-                <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
-            </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li>
+               <a href="techmerite.html" class="nav-link">Academy</a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="founder.html" class="nav-link">Founder</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <!-- Hero Section -->
-   <!-- HERO SECTION -->
-<section class="hero d-flex justify-content-center align-items-center position-relative text-white" 
-         style="background: url('image/home2.jpg') center center/cover no-repeat; height: 100vh;">
+    <!-- HERO SECTION -->
+    <section
+      class="hero d-flex justify-content-center align-items-center position-relative text-white"
+      style="
+        background: url('image/home2.jpg') center center/cover no-repeat;
+        height: 100vh;
+      "
+    >
+      <!-- Dark overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
+      ></div>
 
-  <!-- Dark overlay -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+      <!-- Content -->
+      <div class="container text-center position-relative" style="z-index: 2">
+        <h1
+          class="display-4 mb-3"
+          style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7)"
+        >
+          Transforming Businesses with Creative Solutions
+        </h1>
+        <h2
+          class="lead mb-4"
+          style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6)"
+        >
+          Welcome to ODDS (Obori Designs & Digital Solutions)
+        </h2>
+        <p class="mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6)">
+          We empower businesses through innovative design and digital solutions,
+          driving growth and success in the digital age.
+        </p>
+        <a href="discover-how.html" class="btn btn-primary btn-lg"
+          >Discover How</a
+        >
+      </div>
+    </section>
 
-  <!-- Content -->
-  <div class="container text-center position-relative" style="z-index: 2;">
-    <h1 class="display-4 mb-3" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
-      Transforming Businesses with Creative Solutions
-    </h1>
-    <h2 class="lead mb-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
-      Welcome to ODDS (Obori Designs & Digital Solutions)
-    </h2>
-    <p class="mb-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
-      We empower businesses through innovative design and digital solutions, driving growth and success in the digital age.
-    </p>
-    <a href="discover-how.html" class="btn btn-primary btn-lg">Discover How</a>
-  </div>
-</section>
-
-
-<!-- Main HTML file -->
-
+    <!-- Main HTML file -->
 
     <!-- Introduction Section -->
     <section class="intro">
-        <h2>Introduction to ODDS</h2>
-        <p>We are a team of experts combining creative vision with technical expertise to deliver innovative solutions.</p>
+      <h2>Introduction to ODDS</h2>
+      <p>
+        We are a team of experts combining creative vision with technical
+        expertise to deliver innovative solutions.
+      </p>
     </section>
 
     <!-- Services Overview Section -->
     <!-- SERVICES SECTION -->
-<section class="services py-5 text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-5">Our Services</h2>
-    <div class="row justify-content-center">
-
-      <!-- Design Service -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-20 shadow-sm service-card p-4 w-100">
-          <div class="mb-3 text-primary">
-            <i class="fas fa-paint-brush fa-3x"></i>
+    <section class="services py-5 text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-5">Our Services</h2>
+        <div class="row justify-content-center">
+          <!-- Design Service -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-20 shadow-sm service-card p-4 w-100">
+              <div class="mb-3 text-primary">
+                <i class="fas fa-paint-brush fa-3x"></i>
+              </div>
+              <h3 class="card-title mb-3">Design</h3>
+              <p class="card-text">
+                We craft compelling brand identities and seamless user
+                experiences that captivate and convert.
+              </p>
+            </div>
           </div>
-          <h3 class="card-title mb-3">Design</h3>
-          <p class="card-text">We craft compelling brand identities and seamless user experiences that captivate and convert.</p>
-        </div>
-      </div>
 
-      <!-- Development Service -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-20 shadow-sm service-card p-4 w-100">
-          <div class="mb-3 text-success">
-            <i class="fas fa-code fa-3x"></i>
+          <!-- Development Service -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-20 shadow-sm service-card p-4 w-100">
+              <div class="mb-3 text-success">
+                <i class="fas fa-code fa-3x"></i>
+              </div>
+              <h3 class="card-title mb-3">Development</h3>
+              <p class="card-text">
+                We build scalable, secure, and efficient websites, applications,
+                and digital platforms tailored to your goals.
+              </p>
+            </div>
           </div>
-          <h3 class="card-title mb-3">Development</h3>
-          <p class="card-text">We build scalable, secure, and efficient websites, applications, and digital platforms tailored to your goals.</p>
-        </div>
-      </div>
 
-      <!-- Digital Marketing Service -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-20 shadow-sm service-card p-4 w-100">
-          <div class="mb-3 text-danger">
-            <i class="fas fa-bullhorn fa-3x"></i>
+          <!-- Digital Marketing Service -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-20 shadow-sm service-card p-4 w-100">
+              <div class="mb-3 text-danger">
+                <i class="fas fa-bullhorn fa-3x"></i>
+              </div>
+              <h3 class="card-title mb-3">Digital Marketing</h3>
+              <p class="card-text">
+                We grow brands through data-driven marketing strategies and
+                smart social media management.
+              </p>
+            </div>
           </div>
-          <h3 class="card-title mb-3">Digital Marketing</h3>
-          <p class="card-text">We grow brands through data-driven marketing strategies and smart social media management.</p>
         </div>
+
+        <!-- Call to Action -->
+        <a
+          href="services.html"
+          class="btn btn-primary mt-4 px-4 py-2 rounded-pill"
+          >Learn More About Our Services</a
+        >
       </div>
-
-    </div>
-
-    <!-- Call to Action -->
-    <a href="services.html" class="btn btn-primary mt-4 px-4 py-2 rounded-pill">Learn More About Our Services</a>
-  </div>
-</section>
-
+    </section>
 
     <!-- Featured Projects Section -->
     <section class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-cards">
-            <div class="card">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A brief description of the project.</p>
-            </div>
-            <div class="card">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>A brief description of the project.</p>
-            </div>
-            <div class="card">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>A brief description of the project.</p>
-            </div>
+      <h2>Featured Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="project1.jpg" alt="Project 1" />
+          <h3>Project 1</h3>
+          <p>A brief description of the project.</p>
         </div>
+        <div class="card">
+          <img src="project2.jpg" alt="Project 2" />
+          <h3>Project 2</h3>
+          <p>A brief description of the project.</p>
+        </div>
+        <div class="card">
+          <img src="project3.jpg" alt="Project 3" />
+          <h3>Project 3</h3>
+          <p>A brief description of the project.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Call-to-Action Section -->
     <!-- CTA SECTION -->
-<section class="cta text-center text-white py-5" style="background-color: #0d6efd;">
-  <div class="container">
-    <h2 class="mb-3 fw-bold">Get in Touch</h2>
-    <p class="lead mb-4">Ready to start your next project? Contact us today!</p>
-    <a href="contact.html" class="btn btn-light btn-lg fw-bold">Contact Us</a>
-  </div>
-</section>
+    <section
+      class="cta text-center text-white py-5"
+      style="background-color: #0d6efd"
+    >
+      <div class="container">
+        <h2 class="mb-3 fw-bold">Get in Touch</h2>
+        <p class="lead mb-4">
+          Ready to start your next project? Contact us today!
+        </p>
+        <a href="contact.html" class="btn btn-light btn-lg fw-bold"
+          >Contact Us</a
+        >
+      </div>
+    </section>
 
     <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-md-start">
-    <div class="row">
+    <footer class="bg-dark text-light pt-5 pb-4">
+      <div class="container text-md-start">
+        <div class="row">
+          <!-- About -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold mb-3">ODDS</h5>
+            <p>
+              Obori Designs & Digital Solutions (ODDS) is committed to
+              empowering businesses through creative design and innovative
+              digital strategies.
+            </p>
+          </div>
 
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>
-          Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.
-        </p>
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-decoration-none text-light"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-decoration-none text-light"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-decoration-none text-light"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-decoration-none text-light"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="founder.html" class="text-decoration-none text-light"
+                  >Founder</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Contact</h6>
+            <p><i class="fas fa-phone me-2"></i> +234 801 234 5678</p>
+            <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Lagos, Nigeria</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Follow Us</h6>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-facebook fa-lg"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-twitter fa-lg"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-instagram fa-lg"></i
+            ></a>
+            <a href="#" class="text-light"
+              ><i class="fab fa-linkedin fa-lg"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="text-center">
+          <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+        </div>
       </div>
+    </footer>
 
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
-          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
-          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 801 234 5678</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos, Nigeria</p>
-      </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
-      </div>
-
-    </div>
-
-    <hr class="border-light" />
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-    <script src="script.js"></script>
-</body>
+    <script src="script.js">
+            window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("some-id").innerHTML = "Hello";
+      });
+    </script>
+  </body>
 </html>

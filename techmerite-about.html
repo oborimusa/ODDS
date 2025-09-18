@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – TechMerite Academy</title>
+  <meta name="description" content="Learn more about TechMerite Academy, our mission, vision, and team empowering Africa with cutting-edge digital skills." />
+  <link rel="icon" href="/favicon.ico" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <style>
+    :root {
+      --green: #0ea861;
+      --blue: #004aad;
+      --dark: #0b2540;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    
+    body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  background: var(--blue);
+  color: #fff;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  color: #25D366; /* WhatsApp green */
+  z-index: 999;
+}
+.whatsapp-float:hover { color: #1ebe57; }
+
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logo {
+  height: 40px;
+}
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2000; /* ensure it’s on top */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;           /* hide until toggled */
+    flex-direction: column;
+    background: var(--blue);  /* background of dropdown */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;           /* show when JS adds .show */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--blue), #007bff);
+      color: #fff;
+      padding: 20px;
+    }
+    header .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header img { height: 44px; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    /* Main */
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+    p.lead {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .card h3 {
+      color: var(--blue);
+      margin-top: 0;
+    }
+    .card p {
+      color: var(--muted);
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(180deg, #f8fffb, #ffffff);
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #0c9556;
+    }
+
+    footer {
+      background: #07142a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="brand" style="display:flex;align-items:center;gap:12px;">
+        <a href="techmerite.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5 m-2" style="width: 50px;">
+                    
+                        <img src="image/techmerite Logo.jpeg" alt="TechMerite logo" style="width: 40px;">
+                    
+                    </a>
+        <div>
+            <div class="title" style="font-size: 25px; text-align: center; line-height: 1.00;">TechMerite Academy</div>
+            <div class="tag">Digital skills for Africa</div>
+          </div>
+      </div>
+       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="nav-links">
+  <a href="techmerite-courses.html" style="color: white; margin: 10px;">Courses</a>
+  <a href="techmerite-corporate.html" style="color: white; margin: 10px;">Corporate</a>
+  <a href="techmerite-about.html" style="color: white; margin: 10px;">About</a>
+  <a href="techmerite-contact.html" style="color: white; margin: 10px;">Contact</a>
+</nav>
+    </div>
+  </header>
+<a href="https://wa.me/2348039661354" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  <!-- About Content -->
+  <main>
+    <h1>About TechMerite Academy</h1>
+    <p class="lead">
+      TechMerite Academy is a leading technology training institution in Africa,
+      empowering individuals and organisations with cutting-edge digital skills
+      for the continent’s evolving tech landscape.
+    </p>
+
+    <section class="section-grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          To bridge the digital skills gap across Africa by providing accessible,
+          world-class training that equips learners and businesses to thrive in
+          the modern economy.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>
+          A continent where every community and organisation harnesses technology
+          to create opportunity, innovation, and sustainable growth.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Our Approach</h3>
+        <p>
+          From free monthly community programmes to enterprise-level training,
+          we blend practical, hands-on learning with mentorship and career support.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-grid">
+      <div class="card">
+        <h3>Leadership</h3>
+        <p>
+          Our team of educators, engineers, and entrepreneurs brings years of
+          experience in global tech companies, ensuring every course stays
+          relevant and forward-looking.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Impact</h3>
+        <p>
+          Thousands of learners across multiple African countries have already
+          gained new skills and advanced their careers through TechMerite’s
+          bootcamps and corporate programmes.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 style="color:var(--blue); margin-bottom:12px;">Join Our Mission</h2>
+      <p style="color:var(--muted); max-width:650px; margin:0 auto 20px;">
+        Whether you’re an individual eager to learn, a company seeking workforce
+        training, or a partner who shares our vision, we invite you to
+        collaborate with TechMerite Academy.
+      </p>
+      <button class="btn-primary" onclick="location.href='techmerite-contact.html'">
+        Contact Us
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> TechMerite Academy — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+   <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>

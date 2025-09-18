@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact TechMerite Academy</title>
+  <meta name="description" content="Get in touch with TechMerite Academy for admissions, corporate training, or partnership inquiries." />
+  <link rel="icon" href="/favicon.ico" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <!-- Shared styles from main site -->
+  <style>
+    :root{
+      --green:#0ea861;
+      --blue:#004aad;
+      --dark:#0b2540;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box;}
+    
+    body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  background: var(--blue);
+  color: #fff;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  color: #25D366; /* WhatsApp green */
+  z-index: 999;
+}
+.whatsapp-float:hover { color: #1ebe57; }
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logo {
+  height: 40px;
+}
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2000; /* ensure it’s on top */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;           /* hide until toggled */
+    flex-direction: column;
+    background: var(--blue);  /* background of dropdown */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;           /* show when JS adds .show */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+    /* Header */
+    header{
+      background:linear-gradient(90deg, var(--blue), #007bff);
+      color:#fff;
+      padding:20px;
+    }
+    header .container{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    header img{height:44px;}
+    header nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:600;
+    }
+
+    /* Contact section */
+    main{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 20px;
+    }
+    h1{
+      text-align:center;
+      color:var(--blue);
+      margin-bottom:30px;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+    .info{
+      color:var(--muted);
+    }
+    .info p{
+      margin-bottom:14px;
+    }
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    input, textarea{
+      padding:12px;
+      border:1px solid rgba(11,37,69,0.1);
+      border-radius:8px;
+      font-size:1rem;
+    }
+    .btn-primary{
+      background:var(--green);
+      color:#fff;
+      border:none;
+      padding:12px 18px;
+      border-radius:8px;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .btn-primary:hover{
+      background:#0c9556;
+    }
+
+    footer{
+      background:#07142a;
+      color:#cbd5e1;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:40px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .contact-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="brand" style="display:flex;align-items:center;gap:12px;">
+       <a href="techmerite.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5 m-2">
+                    <div class="img pb-2 pt-2">
+                        <img src="image/techmerite Logo.jpeg" alt="TechMerite logo" style="width: 40px;">
+                    </div>
+                    </a>
+        <div>
+          <div style="font-weight:800;">TechMerite Academy</div>
+          <div style="font-size:12px;color:#e0e7ff;">Digital skills for Africa</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="nav-links">
+  <a href="techmerite-courses.html" style="color: white; margin: 10px;">Courses</a>
+  <a href="techmerite-corporate.html" style="color: white; margin: 10px;">Corporate</a>
+  <a href="techmerite-about.html" style="color: white; margin: 10px;">About</a>
+  <a href="techmerite-contact.html" style="color: white; margin: 10px;">Contact</a>
+</nav>
+    </div>
+  </header>
+<a href="https://wa.me/2348039661354" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  <!-- Contact Section -->
+  <main>
+    <h1>Contact Us</h1>
+    <div class="contact-grid">
+      <div class="info">
+        <p><strong>Email:</strong> techmeriteafrica@gmail.com</p>
+        <p><strong>Phone:</strong> +234 803 966 1354</p>
+        <p><strong>Address:</strong> TechMerite Hub, Lagos, Nigeria</p>
+        <p>
+          Have questions about admissions, our free monthly programme, or
+          corporate training? Fill out the form and our team will respond within 24 hours.
+        </p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> TechMerite Academy — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>
