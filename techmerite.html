@@ -53,25 +53,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px 20px;
+        padding: 16px 5px;
         position: relative;
       }
-      .brand {
+      /* .brand {
         display: flex;
         align-items: center;
         gap: 12px;
         color: #fff;
-      }
-      .brand img {
+      } */
+       .brand img {
         height: 44px;
         border-radius: 6px;
-      }
+        width: 20px;
+        margin-left: 0;
+        background: white;
+      } 
       .brand .title {
         font-weight: 800;
+        margin-left: 20px;
       }
       .brand .tag {
-        font-size: 12px;
+        font-size: 14px;
         color: rgba(255, 255, 255, 0.9);
+        margin-left: 18px;
+        padding: 5px;
       }
       .nav-links {
         display: flex;
@@ -110,6 +116,30 @@
         .nav-toggle {
           display: block;
         }
+
+         .brand .title {
+        font-weight: 800;
+        position: absolute;
+        left: 30px;
+        font-size: 2px;
+      }
+
+
+        .brand .tag {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-left: 18px;
+        padding-top: 30px;
+      }
+
+         .brand img {
+        height: 44px;
+        border-radius: 6px;
+        width: 0px;
+        margin-left: 0;
+        position: absolute;
+        left: 5px;
+      }
       }
 
       /* SLIDER */
@@ -391,6 +421,7 @@
               src="image/techmerite Logo.jpeg"
               alt="TechMerite logo"
               style="width: 40px"
+              
             />
           </a>
           <div>
@@ -470,22 +501,21 @@
   <div class="slider-inner">
     <h1>Empowering Africa with Cutting-Edge Digital Skills</h1>
     <p>
-      TechMerite Academy trains individuals and organisations with
-      practical tech skills — from web development to freelancing
-      readiness and no-code design.
+     Practical tech training for web, freelancing, and no-code design.
     </p>
   </div>
     
 
     <!-- Right card -->
-   <div class="cta-row">
-    <button class="btn btn-primary" onclick="location.href='#courses'">
-      Explore Courses
-    </button>
-    <button class="btn btn-ghost" onclick="location.href='#monthly'">
-      Free Monthly Programs
-    </button>
-  </div>
+  <div class="cta-row">
+  <button class="btn btn-primary"
+          onclick="location.href='techmerite-courses.html'">
+    Explore Courses
+  </button>
+  <button class="btn btn-ghost"
+          onclick="location.href='monthly.html'">
+    Free Monthly Programs
+  </button>
 </div>
   </div>
 </div>

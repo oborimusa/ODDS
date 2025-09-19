@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Monthly Programs – TechMerite Academy</title>
+    <meta
+      name="description"
+      content="TechMerite Academy empowers individuals and organisations across Africa with cutting-edge digital skills for the continent's evolving tech landscape."
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <a
+      href="https://wa.me/2348012345678"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    ></a>
+
+
+  <style>
+      :root {
+        --primary: #004aad;
+        --blue: #004aad;
+        --green: #0ea861;
+        --dark: #0b2540;
+        --muted: #6b7280;
+        --glass: rgba(255, 255, 255, 0.08);
+        --whatsapp: #25d366;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #f7fafc;
+        color: var(--dark);
+      }
+
+      /* NAV */
+      header {
+        background: var(--blue);
+        color: #fff;
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 5px;
+        position: relative;
+      }
+
+       .brand img {
+        height: 44px;
+        border-radius: 6px;
+        width: 20px;
+        margin-left: 0;
+        background: white;
+      } 
+      .brand .title {
+        font-weight: 800;
+        margin-left: 20px;
+      }
+      .brand .tag {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-left: 18px;
+        padding: 5px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 18px;
+      }
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 6px;
+      }
+      .nav-toggle {
+        display: none;
+        font-size: 26px;
+        background: none;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background: var(--blue);
+          position: absolute;
+          top: 64px;
+          left: 0;
+          width: 100%;
+          padding: 12px 0;
+          z-index: 1500;
+        }
+        .nav-links.show {
+          display: flex;
+        }
+        .nav-toggle {
+          display: block;
+        }
+
+         .brand .title {
+        font-weight: 800;
+        position: absolute;
+        left: 30px;
+        font-size: 2px;
+      }
+
+
+        .brand .tag {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-left: 18px;
+        padding-top: 30px;
+      }
+
+         .brand img {
+        height: 44px;
+        border-radius: 6px;
+        width: 0px;
+        margin-left: 0;
+        position: absolute;
+        left: 5px;
+
+      }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      .section-title {
+        text-align: center;
+        color: var(--primary);
+        margin-top: 40px;
+        margin-bottom: 18px;
+      }
+     
+      .card {
+        background: #fff;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+        text-align: center;
+      }
+      .card i {
+        font-size: 36px;
+        color: var(--green);
+        margin-bottom: 10px;
+      }
+      .card h3 {
+        margin: 8px 0;
+        color: var(--primary);
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      /* WHATSAPP & FOOTER */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 28px;
+        right: 12px;
+        font-size: 48px;
+        color: var(--whatsapp);
+        z-index: 1200;
+      }
+      .whatsapp-float:hover {
+        color: #1ebe57;
+      }
+      footer {
+        background: #07142a;
+        color: #cbd5e1;
+        text-align: center;
+        padding: 26px;
+        margin-top: 30px;
+        font-size: 0.95rem;
+      }
+       </style>
+       </head>
+      
+  <body>
+    <!-- NAVIGATION -->
+    <header>
+      <div class="nav-container">
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 12px"
+        >
+          <a
+            href="techmerite.html"
+            class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5 m-2"
+            style="width: 50px"
+          >
+            <img
+              src="image/techmerite Logo.jpeg"
+              alt="TechMerite logo"
+              style="width: 40px"
+              
+            />
+          </a>
+          <div>
+            <div
+              class="title"
+              style="font-size: 25px; text-align: center; line-height: 1"
+            >
+              TechMerite Academy
+            </div>
+            <div class="tag">Digital skills for Africa</div>
+          </div>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="free-monthly-courses.html" class="active">Free Monthly</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="slider"
+      style="
+        height: 40vh;
+        background: #004aad;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div class="slider-inner center">
+        <h1>Free Monthly Tech Programs</h1>
+        <p>
+          Join our zero-cost monthly workshops and gain in-demand skills to
+          start or grow your tech career.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROGRAM LIST -->
+    <main class="container">
+      <h2 class="section-title">This Month’s Free Classes</h2>
+      <div class="features">
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Video Editing</h3>
+          <p>
+            Edit videos professionally using your smartphone. Perfect for social
+            media creators.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Graphic Designing</h3>
+          <p>
+            Learn design fundamentals and create stunning graphics with free or
+            low-cost tools.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-sitemap"></i>
+          <h3>Product Management</h3>
+          <p>
+            Discover how to plan, launch, and manage digital products
+            efficiently.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-briefcase"></i>
+          <h3>Freelancing & Upwork Readiness</h3>
+          <p>
+            Set up your profile, bid for projects, and win clients on top
+            freelance platforms.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-code"></i>
+          <h3>Front-End Development</h3>
+          <p>
+            Get hands-on with HTML, CSS, and JavaScript—your first step into web
+            development.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-desktop"></i>
+          <h3>Web Design (No-Code)</h3>
+          <p>
+            Build attractive websites without touching code using popular
+            no-code tools.
+          </p>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top: 30px">
+        <a href="apply.html" class="btn btn-primary"
+          >Apply for the Next Cohort</a
+        >
+      </div>
+    </main>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/234XXXXXXXXXX"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; <span id="year"></span> TechMerite Academy – All rights reserved.
+    </footer>
+
+    <script>
+      // Mobile nav toggle
+      document
+        .querySelector(".nav-toggle")
+        .addEventListener("click", () =>
+          document.querySelector(".nav-links").classList.toggle("show")
+        );
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
