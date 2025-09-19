@@ -105,6 +105,26 @@
         border: 0;
         color: #fff;
         cursor: pointer;
+
+        
+      }
+
+
+      .container {
+        max-width: 1200px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      .section-title {
+        text-align: center;
+        color: var(--primary);
+        margin-top: 40px;
+        margin-bottom: 18px;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
       }
 
       @media (max-width: 768px) {
@@ -272,6 +292,43 @@
         </p>
       </div>
     </section>
+
+
+        <!-- COURSES -->
+    <main class="container" id="courses">
+      <h2 class="section-title">Professional Courses</h2>
+      <div class="features">
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Video Editing</h3>
+          <p>
+            Edit videos professionally using your smartphone. Perfect for social
+            media creators.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-chart-line" aria-hidden="true"></i>
+          <h3>Data Analytics & AI</h3>
+          <p>
+            Learn Python, data analysis, and introductory machine learning
+            techniques.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-paint-brush" aria-hidden="true"></i>
+          <h3>Digital Product Design</h3>
+          <p>
+            Design interfaces and prototypes using UX best practices and tools.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+          <h3>Mobile App Development</h3>
+          <p>Build cross-platform mobile apps and publish to stores.</p>
+        </div>
+      </div>
+    </main>
 
     <!-- PROGRAM LIST -->
     <main class="container">
