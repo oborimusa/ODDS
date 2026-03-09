@@ -1,82 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage - most important, updated frequently -->
   <url>
-    <loc>https://www.odds.ng/</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://odds-ng.netlify.app/</loc>
   </url>
-  
-  <!-- About Page -->
   <url>
-    <loc>https://www.odds.ng/about.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://odds-ng.netlify.app/lander</loc>
   </url>
-  
-  <!-- Services Page (main SME services) -->
   <url>
-    <loc>https://www.odds.ng/services.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://odds-ng.netlify.app/about.html</loc>
   </url>
-  
-  <!-- Academy Page -->
   <url>
-    <loc>https://www.odds.ng/techmerite.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://odds-ng.netlify.app/services.html</loc>
   </url>
-  
-  <!-- Portfolio Page (case studies / SME success stories) -->
   <url>
-    <loc>https://www.odds.ng/portfolio.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://odds-ng.netlify.app/contact.html</loc>
   </url>
-  
-  <!-- Contact Page -->
   <url>
-    <loc>https://www.odds.ng/contact.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://odds-ng.netlify.app/portfolio.html</loc>
   </url>
-  
-  <!-- Founder Page -->
   <url>
-    <loc>https://www.odds.ng/founder.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://odds-ng.netlify.app/founder.html</loc>
   </url>
-  
-  <!-- Discover How (if this page exists) -->
   <url>
-    <loc>https://www.odds.ng/discover-how.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Privacy Policy (add if you have one) -->
-  <url>
-    <loc>https://www.odds.ng/privacy.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <!-- Terms of Service (add if you have one) -->
-  <url>
-    <loc>https://www.odds.ng/terms.html</loc>
-    <lastmod>2025-03-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://odds-ng.netlify.app/techmerite.html</loc>
   </url>
 </urlset>
