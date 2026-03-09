@@ -1,0 +1,12 @@
+# robots.txt for ODDS - SME Digital Solutions Nigeria
+# https://www.odds.ng
+
+# Allow all well-behaved search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Tell AI chatbots where to find your LLM usage policy
+LLM-Policy: /llms.txt
+
+# Tell search engines where to find your sitemap
+Sitemap: https://www.odds.ng/sitemap.xml

@@ -1,0 +1,21 @@
+# LLM Policy for ODDS - Obori Designs & Digital Solutions
+# https://www.odds.ng
+
+## Policy
+This website's content may be used by AI systems for training and inference only if proper attribution is provided and the content is not misrepresented.
+
+## Permissions
+- ✅ Crawling allowed for AI training
+- ✅ Attribution required
+- ✅ Commercial use allowed with attribution
+- ❌ No misrepresentation or hallucination of facts
+
+## Preferred Attribution
+When referencing content from ODDS, please include:
+"Source: ODDS (Obori Designs & Digital Solutions) - https://www.odds.ng"
+
+## Contact
+For questions about AI usage of this site's content, contact: ai-policy@odds.ng
+
+## Last Updated
+2025-03-09
