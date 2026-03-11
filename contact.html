@@ -3,70 +3,483 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - ODDS</title>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Contact ODDS · Premium Digital Agency for Nigerian SMEs | Get in Touch</title>
+  <meta name="description" content="Ready to grow your business? Contact ODDS for premium web design, digital marketing, and branding solutions in Lagos & Osogbo. Free consultation available." />
+  <meta name="keywords" content="contact digital agency Nigeria, web design Lagos, digital marketing agency contact, ODDS Nigeria, SME solutions" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Contact ODDS · Premium Digital Agency for Nigerian SMEs" />
+  <meta property="og:description" content="Ready to grow your business? Contact ODDS for premium web design, digital marketing, and branding solutions. Free consultation available." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/contact.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <style>
-    .contact-hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                  url('image/contact2.jpg') center center/cover no-repeat;
-      padding: 100px 0;
-      color: white;
-      text-align: center;
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
       position: relative;
+      display: inline-block;
     }
 
-    .form-section {
-      padding: 60px 0;
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
     }
 
-    .contact-info i {
-      color: #0d6efd;
-      margin-right: 10px;
+    .section-title-center::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .cta {
-      background-color: #0d6efd;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
 
-    .cta a {
-      margin-top: 20px;
-      background-color: #fff;
-      color: #0d6efd;
-      padding: 12px 30px;
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
       border-radius: 50px;
-      font-weight: bold;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .contact-hero {
+      position: relative;
+      padding: 120px 0;
+      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+      margin-top: 76px;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+      z-index: 1;
+    }
+
+    .contact-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2.5rem;
+      }
+      .contact-hero .lead {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ===== CONTACT CARDS ===== */
+    .contact-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card p {
+      color: var(--gray-600);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card a {
+      color: var(--primary);
       text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    .cta a:hover {
-      background-color: #f0f0f0;
-      color: #0b5ed7;
-    }
-
-    footer a {
-      color: #bbb;
       transition: color 0.3s ease;
     }
 
-    footer a:hover {
-      color: #fff;
-      text-decoration: underline;
+    .contact-card a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== FORM STYLES ===== */
+    .form-wrapper {
+      background: var(--white);
+      border-radius: 30px;
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+    }
+
+    .form-control, .form-select {
+      border-radius: 12px;
+      padding: 12px 16px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+      outline: none;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== INFO CARD ===== */
+    .info-card {
+      background: var(--gradient-primary);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 3rem;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: var(--accent);
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+
+    .info-card::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: var(--accent);
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+
+    .info-card h3 {
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .info-text h5 {
+      color: var(--white);
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+    }
+
+    .info-text p, .info-text a {
+      color: var(--gray-300);
+      margin-bottom: 0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-text a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== MAP SECTION ===== */
+    .map-wrapper {
+      position: relative;
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(0.2) invert(0.05);
+      transition: all 0.3s ease;
+    }
+
+    .map-wrapper:hover iframe {
+      filter: grayscale(0);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" width="50" height="50" class="me-2 rounded-circle">
-      <strong>ODDS</strong>
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" width="50" height="50" class="me-2 rounded">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -74,131 +487,284 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
-         <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
+        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="contact-hero">
+<!-- HERO SECTION -->
+<section class="contact-hero" style="background: url('image/contact2.jpg') center center/cover no-repeat;">
   <div class="container">
-    <h1 class="display-4 fw-bold">Get in Touch</h1>
-    <p class="lead">Have a project in mind or want to say hello? We’d love to hear from you!</p>
+    <span class="sme-badge" data-aos="fade-down">Get In Touch</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Let's Start a <span style="color: var(--accent);">Conversation</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Have a project in mind? We're here to turn your vision into reality.</p>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<!-- QUICK CONTACT CARDS -->
+<section class="py-5" style="margin-top: -50px; position: relative; z-index: 10;">
   <div class="container">
-    <h2 class="mb-3 fw-bold">Let’s Build Something Great</h2>
-    <p class="lead mb-4">Start your next project with ODDS today.</p>
-    <a href="#contact-form" class="btn btn-light btn-lg">Send a Message</a>
-  </div>
-</section>
-
-<!-- CONTACT FORM SECTION -->
-<section class="form-section" id="contact-form">
-  <div class="container">
-    <div class="row">
-      <!-- Contact Form -->
-      <div class="col-md-7">
-        <h3 class="mb-4">Send Us a Message</h3>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name *</label>
-            <input type="text" class="form-control" id="name" name="name" required />
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address *</label>
-            <input type="email" class="form-control" id="email" name="email" required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Your Message *</label>
-            <textarea class="form-control" id="message" rows="5" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary px-4">Send Message</button>
-        </form>
+          <h3>Call Us</h3>
+          <p>Mon-Fri: 9am - 6pm</p>
+          <p class="fw-bold"><a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        </div>
       </div>
-
-      <!-- Contact Details -->
-      <div class="col-md-5 mt-5 mt-md-0">
-        <h3 class="mb-4">Contact Information</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 28 Olude Street, Osogbo, Nigeria</p>
-        <p><i class="fas fa-phone"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope"></i> contact@odds.com</p>
-        <p><i class="fas fa-globe"></i> www.odds.com</p>
-
-        <h5 class="mt-4">Follow Us</h5>
-        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <p>24/7 Support</p>
+          <p class="fw-bold"><a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <p>Lagos & Osogbo</p>
+          <p class="fw-bold">Schedule a meeting</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MAP -->
-<section class="py-0">
+<!-- MAIN CONTACT SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="form-wrapper">
+          <span class="sme-badge">Send Message</span>
+          <h2 class="section-title mb-4">How Can We Help?</h2>
+          <p class="text-secondary mb-4">Fill out the form below and we'll get back to you within 24 hours.</p>
+          
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="John Doe" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="john@example.com" />
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+234 800 000 0000" />
+            </div>
+            
+            <div class="mb-3">
+              <label for="service" class="form-label">Service Interested In</label>
+              <select class="form-select" id="service" name="service">
+                <option selected disabled>Select a service</option>
+                <option value="web-design">Web Design</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="branding">Brand Identity</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="support">IT Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="mb-4">
+              <label for="message" class="form-label">Your Message *</label>
+              <textarea class="form-control" id="message" rows="6" name="message" required placeholder="Tell us about your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100 py-3">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="info-card">
+          <h3>Let's Connect</h3>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-text">
+              <h5>Main Office</h5>
+              <p>28 Olude Street, Osogbo, Nigeria</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-text">
+              <h5>Lagos Office</h5>
+              <p>12B Odunlami Street, Lagos Island</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <h5>Phone</h5>
+              <p><a href="tel:+2348039661354">+234 803 966 1354</a></p>
+              <p><a href="tel:+2348012345678">+234 801 234 5678</a> (Lagos)</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h5>Email</h5>
+              <p><a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+              <p><a href="mailto:support@odds.ng">support@odds.ng</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-text">
+              <h5>Business Hours</h5>
+              <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+              <p>Saturday: 10:00 AM - 2:00 PM</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-wrapper">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.874198601738!2d3.3792051147741963!3d7.377560594658658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039dd1c9be1e09d%3A0xa672660b7ed52871!2sLagos!5e0!3m2!1sen!2sng!4v1616582609491!5m2!1sen!2sng"
-    width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </section>
 
+<!-- CTA SECTION -->
+<section class="cta-section text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Start?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Something Great Together</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs who trust ODDS for their digital growth.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="#contact-form" class="btn btn-light btn-lg me-3">Send a Message</a>
+          <a href="services.html" class="btn btn-outline-light btn-lg">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
+<footer class="footer pt-5 pb-4">
   <div class="container">
     <div class="row">
-
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>Obori Designs & Digital Solutions (ODDS) helps businesses grow through design, development, and digital innovation.</p>
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Links</h6>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="founder.html">Founder</a></li>
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
         </ul>
       </div>
-
-      <!-- Contact -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact Info</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
       </div>
-
-      <!-- Social -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Connect With Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
+        </form>
       </div>
-
     </div>
-    <hr class="border-light" />
+    
+    <hr class="border-secondary" />
+    
     <div class="text-center small">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
     </div>
   </div>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+  
+  // Smooth scroll for CTA button
+  document.querySelector('a[href="#contact-form"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#contact-form').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>

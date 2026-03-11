@@ -3,193 +3,923 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Journey - ODDS</title>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Our Journey · The ODDS Story | Empowering Nigerian SMEs Since 2020</title>
+  <meta name="description" content="Discover the inspiring journey of ODDS — from a small startup in Osogbo to a premium digital agency serving SMEs across Nigeria. Milestones, team, and vision." />
+  <meta name="keywords" content="ODDS journey, digital agency story, Nigerian SME success, company milestones, team Nigeria" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Our Journey · The ODDS Story | Empowering Nigerian SMEs" />
+  <meta property="og:description" content="Discover the inspiring journey of ODDS — from a small startup in Osogbo to a premium digital agency serving SMEs across Nigeria." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/journey.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <style>
-    .hero {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
+    }
+
+    .section-title-left::after {
+      left: 0;
+      transform: none;
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary);
       color: white;
-      padding: 100px 0;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .journey-hero {
+      position: relative;
+      padding: 150px 0;
       text-align: center;
+      color: var(--white);
+      overflow: hidden;
+      margin-top: 76px;
     }
-    .milestone-icon {
-      font-size: 2rem;
-      color: #2ecc71;
-    }
-    .team-member img {
+
+    .journey-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      border-radius: 10px;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.9) 0%, rgba(30, 58, 95, 0.8) 100%);
+      z-index: 1;
     }
-    .cta {
-      background-color: #2c3e50;
-      color: white;
-      padding: 50px 0;
+
+    .journey-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .journey-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .journey-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .journey-hero h1 {
+        font-size: 2.5rem;
+      }
+      .journey-hero .lead {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ===== STORY SECTION ===== */
+    .story-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--gray-600);
+    }
+
+    .story-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--gradient-accent);
+      opacity: 0.3;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      z-index: 2;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .timeline-content {
+      width: 45%;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: auto;
+    }
+
+    .timeline-content h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 30px;
+      }
+      .timeline-year {
+        left: 30px;
+        transform: translateX(0);
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+      .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+      }
+    }
+
+    /* ===== MILESTONE CARDS ===== */
+    .milestone-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
       text-align: center;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .milestone-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .milestone-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+      color: var(--primary-dark);
+    }
+
+    .milestone-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .milestone-card h5 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--accent-dark);
+    }
+
+    .milestone-card p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* ===== TEAM CARDS ===== */
+    .team-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: all 0.6s ease;
+    }
+
+    .team-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .team-card .card-body {
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--white);
+    }
+
+    .team-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card p {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .team-social a {
+      width: 35px;
+      height: 35px;
+      background: var(--off-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .team-social a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-section {
+      background: var(--gradient-primary);
+      color: var(--white);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
   </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
- <div class="container-fluid">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-            <img src="image/ODDS.jpeg" alt="Logo" class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
-            <h1 class="m-0 fs-4 text-light">ODDS</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-
-  <!-- HERO SECTION -->
-<section class="hero text-white text-center position-relative" 
-         style="background: url('image/Learn-more.webp') center center/cover no-repeat; padding: 100px 0;">
-  
-  <!-- Dark overlay -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-  
-  <!-- Content -->
-  <div class="container position-relative">
-    <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-      Learn More About Our Journey
-    </h1>
-    <p class="lead mt-3" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);">
-      From our humble beginnings to the impact we make today — here’s how it all started.
-    </p>
+<!-- HERO SECTION -->
+<section class="journey-hero" style="background: url('image/Learn-more.webp') center center/cover no-repeat;">
+  <div class="container">
+    <span class="sme-badge" data-aos="fade-down">Our Story</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">The <span style="color: var(--accent);">ODDS</span> Journey</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">From humble beginnings to empowering SMEs across Nigeria — a story of passion, resilience, and purpose.</p>
   </div>
 </section>
 
-
-
-<!-- OUR STORY -->
-<section class="py-5">
+<!-- STATS SECTION -->
+<section class="stats-section">
   <div class="container">
-    <h2 class="mb-4 text-center">Our Story</h2>
-    <p class="lead text-center">
-      At ODDS, we started with a vision: to empower businesses through design and technology. Over the years, our team has grown, our solutions have evolved, and our passion has only intensified. From building websites for startups to transforming brands for global impact, our journey has been fueled by innovation, resilience, and a love for what we do.
-    </p>
-  </div>
-</section>
-
-<!-- MILESTONES -->
-<section class="bg-light py-5">
-  <div class="container">
-    <h2 class="mb-4 text-center">Milestones</h2>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <i class="fas fa-lightbulb milestone-icon mb-2"></i>
-        <h5>Founded in 2018</h5>
-        <p>We launched ODDS with a small team and a bold mission.</p>
+    <div class="row">
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-item">
+          <div class="stat-number">2020</div>
+          <div class="stat-label">Founded</div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <i class="fas fa-users milestone-icon mb-2"></i>
-        <h5>100+ Clients</h5>
-        <p>We've worked with businesses across multiple industries.</p>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">SME Partners</div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <i class="fas fa-globe milestone-icon mb-2"></i>
-        <h5>Global Reach</h5>
-        <p>Our digital solutions now serve clients in 10+ countries.</p>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-item">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Team Members</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MEET THE TEAM -->
+<!-- OUR STORY SECTION -->
 <section class="py-5">
   <div class="container">
-    <h2 class="mb-4 text-center">Meet the Team</h2>
-    <div class="row text-center">
-      <div class="col-md-4 team-member">
-        <img src="images/founder.jpg" alt="Founder" class="mb-3">
-        <h5>Jane Doe</h5>
-        <p>Founder & CEO</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="text-center mb-5">
+          <span class="sme-badge" data-aos="fade-down">How It Started</span>
+          <h2 class="section-title" data-aos="fade-up">Our Story</h2>
+        </div>
+        
+        <div class="story-content" data-aos="fade-up">
+          <p class="lead mb-4">
+            At ODDS, we started with a vision: to empower Nigerian SMEs through premium design and technology. What began as a one-person operation in Osogbo has grown into a full-service digital agency serving businesses across the nation.
+          </p>
+          
+          <div class="story-quote">
+            "We believe every Nigerian business deserves world-class digital solutions — without the enterprise price tag."
+          </div>
+          
+          <p>
+            Our founder, Dahiru Obori, started ODDS in 2020 with a laptop, a passion for coding, and an unwavering belief in the potential of local businesses. The name "ODDS" represents our commitment to overcoming challenges — we help our clients beat the odds and thrive in the digital age.
+          </p>
+          
+          <p>
+            Over the years, our team has grown, our solutions have evolved, and our passion has only intensified. From building websites for startups to transforming brands for regional impact, our journey has been fueled by innovation, resilience, and a genuine love for what we do.
+          </p>
+          
+          <p>
+            Today, we're proud to be the trusted digital partner for over 50 SMEs across Nigeria, with offices in Lagos and Osogbo. But we're just getting started.
+          </p>
+        </div>
       </div>
-      <div class="col-md-4 team-member">
-        <img src="images/designer.jpg" alt="Designer" class="mb-3">
-        <h5>John Smith</h5>
-        <p>Lead Designer</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">The Path</span>
+      <h2 class="section-title" data-aos="fade-up">Our Journey Through Time</h2>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h4>The Beginning</h4>
+          <p>ODDS was founded in Osogbo with a mission to help local businesses go digital. Started as a one-person operation serving the first 5 clients.</p>
+        </div>
       </div>
-      <div class="col-md-4 team-member">
-        <img src="images/developer.jpg" alt="Developer" class="mb-3">
-        <h5>Ada Kalu</h5>
-        <p>Senior Developer</p>
+      
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-content">
+          <h4>First Team Member</h4>
+          <p>Hired our first employee — a junior developer. Team expanded to 3, completed 20+ projects in the year.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h4>Expansion to Lagos</h4>
+          <p>Opened Lagos office to better serve our growing client base. Team grew to 6 specialists across design, development, and marketing.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h4>30+ SMEs Served</h4>
+          <p>Celebrated our 30th SME partner milestone. Launched our first e-commerce platform for a major retail client.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h4>50+ Clients & Awards</h4>
+          <p>Reached 50+ SME partners. Founder Dahiru Obori recognized as top tech entrepreneur in Osun State.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <h4>Premium Services Launch</h4>
+          <p>Introduced premium service tier with dedicated account managers. Team now 10+ strong with plans for further expansion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Key Achievements</span>
+      <h2 class="section-title" data-aos="fade-up">Milestones That Matter</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="milestone-card">
+          <div class="milestone-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>2020</h3>
+          <h5>Founded in Osogbo</h5>
+          <p>Started with a vision to empower local businesses through digital solutions.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="milestone-card">
+          <div class="milestone-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>50+</h3>
+          <h5>SME Partners</h5>
+          <p>Trusted by businesses across Nigeria, from Lagos to Port Harcourt.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="milestone-card">
+          <div class="milestone-icon">
+            <i class="fas fa-globe-africa"></i>
+          </div>
+          <h3>10+</h3>
+          <h5>Team Members</h5>
+          <p>A growing family of passionate designers, developers, and strategists.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">The Dream Team</span>
+      <h2 class="section-title" data-aos="fade-up">Meet the People Behind ODDS</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Passionate experts dedicated to your success</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="team-card">
+          <img src="image/obori5.png" alt="Dahiru Obori - Founder & CEO" onerror="this.src='https://placehold.co/400x300/0a2647/c5a059?text=Dahiru+Obori'">
+          <div class="card-body">
+            <h4>Dahiru Obori</h4>
+            <p>Founder & CEO</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="founder.html"><i class="fas fa-user"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-card">
+          <img src="images/designer.jpg" alt="John Smith - Lead Designer" onerror="this.src='https://placehold.co/400x300/1e3a5f/ffffff?text=John+Smith'">
+          <div class="card-body">
+            <h4>John Smith</h4>
+            <p>Lead Designer</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-behance"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-card">
+          <img src="images/developer.jpg" alt="Ada Kalu - Senior Developer" onerror="this.src='https://placehold.co/400x300/2c3e50/ffffff?text=Ada+Kalu'">
+          <div class="card-body">
+            <h4>Ada Kalu</h4>
+            <p>Senior Developer</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="about.html" class="btn btn-primary">Meet the Full Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="sme-badge">Our DNA</span>
+        <h2 class="section-title-left mb-4">What Drives Us</h2>
+        <p class="lead mb-4">Our values shape every project, every interaction, and every relationship.</p>
+        
+        <div class="d-flex mb-4">
+          <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); margin-right: 1rem;">O</div>
+          <div>
+            <h5>Ownership</h5>
+            <p class="text-secondary">We take full responsibility for every project, treating your business like our own.</p>
+          </div>
+        </div>
+        
+        <div class="d-flex mb-4">
+          <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); margin-right: 1rem;">D</div>
+          <div>
+            <h5>Design Thinking</h5>
+            <p class="text-secondary">We solve problems creatively, always putting user experience first.</p>
+          </div>
+        </div>
+        
+        <div class="d-flex mb-4">
+          <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); margin-right: 1rem;">D</div>
+          <div>
+            <h5>Delivery</h5>
+            <p class="text-secondary">We consistently deliver high-quality work on time and on budget.</p>
+          </div>
+        </div>
+        
+        <div class="d-flex">
+          <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); margin-right: 1rem;">S</div>
+          <div>
+            <h5>Solutions</h5>
+            <p class="text-secondary">We focus on results, not just deliverables — building what actually works.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="image/team-collaboration.jpg" alt="ODDS team collaborating" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Team+Culture'">
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA SECTION -->
-<section class="cta">
+<section class="cta-section text-white text-center">
   <div class="container">
-    <h2 class="mb-3">Ready to Join Our Story?</h2>
-    <p class="lead mb-4">Let’s build something extraordinary together.</p>
-    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Join Our Story</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready to Be Part of Our Journey?</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Let's build something extraordinary together.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
+          <a href="services.html" class="btn btn-outline-light btn-lg">Explore Services</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-md-start">
+<footer class="footer pt-5 pb-4">
+  <div class="container">
     <div class="row">
-
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.</p>
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
-          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
-          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact Info</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
       </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
+        </form>
       </div>
-
     </div>
-
-    <hr class="border-light" />
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+    
+    <hr class="border-secondary" />
+    
+    <div class="text-center small">
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
     </div>
   </div>
 </footer>
 
-<!-- Bootstrap JS -->
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
 </html>

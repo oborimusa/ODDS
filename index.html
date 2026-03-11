@@ -4,497 +4,882 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- === PRIMARY META TAGS (Critical for SEO) === -->
-    <title>ODDS · SME Digital Solutions Nigeria | Web Design & Marketing for Small Business</title>
-    <meta name="title" content="ODDS · SME Digital Solutions Nigeria | Web Design & Marketing for Small Business" />
-    <meta name="description" content="ODDS empowers Nigerian SMEs with affordable websites, digital marketing, and branding. We help small businesses in Lagos grow online. Get your free consultation today." />
-    <meta name="keywords" content="SME digital solutions Nigeria, small business web design Lagos, affordable marketing for SMEs, Nigerian business website, ODDS, Obori Designs, digital agency Lagos" />
+    <!-- === PRIMARY META TAGS === -->
+    <title>ODDS · Premium SME Digital Solutions Nigeria | Web Design & Marketing</title>
+    <meta name="title" content="ODDS · Premium SME Digital Solutions Nigeria | Web Design & Marketing" />
+    <meta name="description" content="ODDS empowers Nigerian SMEs with premium websites, data-driven marketing, and branding. We help businesses in Lagos dominate their market. Get your free strategy session." />
+    <meta name="keywords" content="SME digital solutions Nigeria, professional web design Lagos, premium marketing for SMEs, Nigerian business website, ODDS, Obori Designs, top digital agency Lagos" />
     <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
 
-    <!-- === OPEN GRAPH (For Facebook, LinkedIn, WhatsApp sharing) === -->
-    <meta property="og:title" content="ODDS · SME Digital Solutions Nigeria" />
-    <meta property="og:description" content="We help Nigerian small businesses grow with affordable websites, branding, and digital marketing. Based in Lagos." />
-    <meta property="og:image" content="https://www.odds.ng/image/odds-og-image.jpg" />
-    <meta property="og:url" content="https://www.odds.ng" />
+    <!-- === OPEN GRAPH === -->
+    <meta property="og:title" content="ODDS · Premium SME Digital Solutions Nigeria" />
+    <meta property="og:description" content="We help Nigerian small businesses dominate with premium websites, branding, and digital marketing. Based in Lagos." />
+    <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+    <meta property="og:url" content="https://odds-ng.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ODDS · Obori Designs & Digital Solutions" />
     <meta property="og:locale" content="en_NG" />
 
-    <!-- === TWITTER CARD (For Twitter/X sharing) === -->
+    <!-- === TWITTER CARD === -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ODDS · SME Digital Solutions Nigeria" />
-    <meta name="twitter:description" content="We help Nigerian small businesses grow with affordable websites, branding, and digital marketing." />
-    <meta name="twitter:image" content="https://www.odds.ng/image/odds-twitter-image.jpg" />
+    <meta name="twitter:title" content="ODDS · Premium SME Digital Solutions Nigeria" />
+    <meta name="twitter:description" content="We help Nigerian small businesses dominate with premium websites, branding, and digital marketing." />
+    <meta name="twitter:image" content="https://odds-ng.netlify.app/images/odds-twitter-image.jpg" />
 
-    <!-- === FAVICON (Brand recognition in tabs) === -->
-    <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
-    <link rel="apple-touch-icon" href="image/apple-touch-icon.png" />
+    <!-- === FAVICON === -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
-    <!-- === CANONICAL URL (Prevents duplicate content issues) === -->
-    <link rel="canonical" href="https://www.odds.ng" />
+    <!-- === CANONICAL URL === -->
+    <link rel="canonical" href="https://odds-ng.netlify.app" />
 
-    <!-- === PRELOAD & PRECONNECT (Speed optimization hints) === -->
+    <!-- === PRELOAD & PRECONNECT === -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Bootstrap 5.1 + Font Awesome -->
+    <!-- Bootstrap 5.1 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Google Fonts - Inter + Playfair Display for premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     
     <style>
-      /* custom styles */
-      .service-card {
-        transition: all 0.3s ease-in-out;
+      /* ===== RESET & VARIABLES ===== */
+      :root {
+        --primary: #0a2647;
+        --primary-dark: #051a34;
+        --primary-light: #1e3a5f;
+        --accent: #c5a059;
+        --accent-light: #d4b37a;
+        --accent-dark: #9e7b44;
+        --white: #ffffff;
+        --off-white: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-300: #cbd5e1;
+        --gray-600: #475569;
+        --gray-800: #1e293b;
+        --dark: #0f172a;
+        --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+        --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+        --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+      }
+
+      /* ===== GLOBAL STYLES ===== */
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--gray-800);
+        overflow-x: hidden;
+        background-color: var(--white);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--gradient-accent);
+        border-radius: 3px;
+      }
+
+      .section-subtitle {
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        padding: 12px 32px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
+
+      .btn-primary {
+        background: var(--gradient-primary);
         border: none;
-        border-radius: 10px;
+        box-shadow: var(--shadow-md);
       }
-      .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+        background: var(--gradient-primary);
       }
-      .service-card i {
-        transition: color 0.3s;
+
+      .btn-outline-light {
+        border: 2px solid var(--white);
+        background: transparent;
       }
-      .service-card:hover i {
-        color: #0d6efd !important;
+
+      .btn-outline-light:hover {
+        background: var(--white);
+        color: var(--primary) !important;
+        transform: translateY(-2px);
       }
 
       .sme-badge {
-        background-color: #ffc107;
-        color: #000;
+        background: var(--gradient-accent);
+        color: var(--primary-dark);
         padding: 0.5rem 1.5rem;
         border-radius: 50px;
-        font-weight: 600;
+        font-weight: 700;
         display: inline-block;
         margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow-accent);
       }
 
-      /* carousel hero: full screen, dark overlay */
+      /* ===== NAVBAR ===== */
+      .navbar {
+        background: var(--gradient-primary) !important;
+        padding: 1rem 0;
+        box-shadow: var(--shadow-md);
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+      }
+
+      .navbar-nav .nav-link {
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.25rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .navbar-nav .nav-link.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+
+      /* ===== HERO CAROUSEL ===== */
       .hero-carousel .carousel-item {
         height: 100vh;
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
         position: relative;
       }
-      .hero-carousel .carousel-item::after {
-        content: "";
+
+      .hero-carousel .carousel-item::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
+        background: linear-gradient(135deg, rgba(10, 38, 71, 0.9) 0%, rgba(30, 58, 95, 0.8) 100%);
         z-index: 1;
       }
-      .hero-carousel .carousel-item .carousel-caption {
+
+      .hero-carousel .carousel-item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="0.5"/></svg>');
+        background-size: 50px 50px;
+        z-index: 1;
+      }
+
+      .hero-carousel .carousel-caption {
+        z-index: 3;
         bottom: 0;
         top: 50%;
         transform: translateY(-50%);
-        z-index: 3;
         left: 10%;
         right: 10%;
         text-align: center;
-        padding: 0 1rem;
       }
+
       .hero-carousel .carousel-caption h1 {
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-        font-size: calc(1.8rem + 2vw);
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
+
       .hero-carousel .carousel-caption .lead {
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        font-size: calc(1rem + 0.8vw);
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
       }
-      .hero-carousel .carousel-control-prev,
-      .hero-carousel .carousel-control-next {
-        z-index: 4;
-        opacity: 0.9;
-      }
-      .hero-carousel .carousel-indicators {
-        z-index: 4;
-      }
-      @media (max-width: 991.98px) {
-        .navbar-nav .nav-item {
-          margin-bottom: 6px;
+
+      @media (max-width: 768px) {
+        .hero-carousel .carousel-caption h1 {
+          font-size: 2.5rem;
+        }
+        .hero-carousel .carousel-caption .lead {
+          font-size: 1.2rem;
         }
       }
 
-      /* Breadcrumb styling (SEO friendly) */
-      .breadcrumb-nav {
-        background-color: #f8f9fa;
-        padding: 0.75rem 0;
+      /* ===== SERVICE CARDS ===== */
+      .service-card {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid var(--gray-200);
+        position: relative;
+        overflow: hidden;
       }
-      .breadcrumb {
+
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--gradient-accent);
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+      }
+
+      .service-card:hover::before {
+        transform: translateX(0);
+      }
+
+      .service-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent-light);
+      }
+
+      .service-card i {
+        transition: all 0.3s ease;
+        color: var(--primary);
+      }
+
+      .service-card:hover i {
+        transform: scale(1.1);
+        color: var(--accent) !important;
+      }
+
+      /* ===== STATS SECTION ===== */
+      .stats-section {
+        background: var(--gradient-primary);
+        color: var(--white);
+        padding: 5rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stats-section::before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: var(--accent);
+        opacity: 0.1;
+        border-radius: 50%;
+        top: -150px;
+        right: -150px;
+      }
+
+      .stats-section::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: var(--accent);
+        opacity: 0.1;
+        border-radius: 50%;
+        bottom: -100px;
+        left: -100px;
+      }
+
+      .stat-item {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        font-family: 'Playfair Display', serif;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* ===== PROCESS SECTION ===== */
+      .process-step {
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .process-step:not(:last-child)::after {
+        content: '→';
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+        color: var(--accent);
+        font-weight: 300;
+      }
+
+      @media (max-width: 768px) {
+        .process-step:not(:last-child)::after {
+          content: '↓';
+          right: 50%;
+          top: auto;
+          bottom: -30px;
+          transform: translateX(50%);
+        }
+      }
+
+      .step-number {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-accent);
+        color: var(--primary-dark);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 auto 1.5rem;
+        box-shadow: var(--shadow-accent);
+      }
+
+      /* ===== TESTIMONIAL CARDS ===== */
+      .testimonial-card {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent-light);
+      }
+
+      .testimonial-rating {
+        color: #ffc107;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: var(--gray-600);
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-dark);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .author-info h5 {
+        margin-bottom: 0.25rem;
+        font-weight: 700;
+      }
+
+      .author-info p {
         margin-bottom: 0;
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      /* ===== CTA SECTION ===== */
+      .cta-section {
+        background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none"/></svg>');
+        background-size: 100px 100px;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: var(--dark);
+        color: var(--gray-300);
+      }
+
+      .footer h5, .footer h6 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer a {
+        color: var(--gray-300);
+        transition: all 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: var(--accent);
+        text-decoration: none !important;
+        transform: translateX(5px);
+      }
+
+      .newsletter-input {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--white);
+        padding: 12px 20px;
+        border-radius: 50px 0 0 50px;
+      }
+
+      .newsletter-input:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: var(--accent);
+        outline: none;
+        box-shadow: none;
+      }
+
+      .newsletter-btn {
+        background: var(--accent);
+        color: var(--primary-dark);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 0 50px 50px 0;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-btn:hover {
+        background: var(--accent-light);
+        transform: translateX(2px);
+      }
+
+      /* ===== ANIMATIONS ===== */
+      [data-aos] {
+        pointer-events: none;
+      }
+      [data-aos].aos-animate {
+        pointer-events: auto;
       }
     </style>
 
-    <!-- === STRUCTURED DATA (JSON-LD) for Local Business SEO === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "ODDS · Obori Designs & Digital Solutions",
-      "image": "https://www.odds.ng/image/odds-logo.jpg",
-      "logo": "https://www.odds.ng/image/odds-logo.jpg",
-      "url": "https://www.odds.ng",
-      "telephone": "+234-801-234-5678",
-      "priceRange": "₦₦",
-      "description": "ODDS empowers Nigerian SMEs with affordable websites, digital marketing, and branding. We help small businesses in Lagos grow online.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12B Odunlami Street, Lagos Island",
-        "addressLocality": "Lagos",
-        "addressRegion": "Lagos",
-        "postalCode": "101001",
-        "addressCountry": "NG"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "6.455057",
-        "longitude": "3.394179"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "10:00",
-          "closes": "14:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/odds.ng",
-        "https://www.instagram.com/odds.ng",
-        "https://www.linkedin.com/company/odds-ng"
-      ]
-    }
-    </script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Skip to main content link (Accessibility + SEO bonus) -->
-    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
-
-    <!-- Navbar (dark) with SEO-friendly link text -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Main navigation">
-      <div class="container-fluid">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none" aria-label="ODDS homepage">
-          <img src="image/ODDS.jpeg" alt="ODDS Logo - SME Digital Solutions Nigeria" class="me-2" style="width: 50px; height: 50px; object-fit: cover" />
-          <span class="m-0 fs-4 text-light fw-bold">ODDS</span>
-          <span class="visually-hidden"> · Obori Designs & Digital Solutions</span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center" aria-label="ODDS homepage">
+          <span class="fw-bold">ODDS</span>
+          <span class="ms-2 small text-accent">· Premium</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">SME Services</a></li>
-            <li class="nav-item"><a href="techmerite.html" class="nav-link">Academy</a></li>
-            <li class="nav-item"><a href="portfolio.html" class="nav-link">SME Portfolio</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Breadcrumb (SEO benefit: shows site structure) -->
-    <nav class="breadcrumb-nav" aria-label="breadcrumb">
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-pause="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('/images/hero-1.jpg');">
+          <div class="carousel-caption">
+            <span class="sme-badge" data-aos="fade-down">Nigerian SMEs · Premium Partner</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">We Build Digital <br /><span style="color: var(--accent);">Empires</span></h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Premium websites, marketing & branding for ambitious Nigerian businesses</p>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <a href="services.html" class="btn btn-primary btn-lg me-3">Explore Services</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg">Free Strategy Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('/images/hero-2.jpg');">
+          <div class="carousel-caption">
+            <span class="sme-badge" data-aos="fade-down">Data-Driven Marketing</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">Turn Clicks Into <br /><span style="color: var(--accent);">Customers</span></h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">SEO, social media & Google Ads that deliver real ROI</p>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <a href="services.html#marketing" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('/images/hero-3.jpg');">
+          <div class="carousel-caption">
+            <span class="sme-badge" data-aos="fade-down">Custom Development</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">Technology That <br /><span style="color: var(--accent);">Scales</span></h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Websites, apps & portals built for growth</p>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <a href="portfolio.html" class="btn btn-primary btn-lg">View Our Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="py-5 text-center" style="padding: 6rem 0;">
       <div class="container">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">Home</li>
-          <li class="breadcrumb-item"><a href="about.html">About</a></li>
-          <li class="breadcrumb-item"><a href="services.html">Services</a></li>
-          <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
-        </ol>
-      </div>
-    </nav>
-
-    <!-- === MAIN CONTENT (ID for skip link) === -->
-    <main id="main-content">
-      <!-- HERO SECTION as BOOTSTRAP CAROUSEL - SME Focused Messaging with SEO keywords -->
-      <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: SME Growth"></button>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2: Digital Marketing for SMEs"></button>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3: Web Development for Small Business"></button>
-        </div>
-
-        <!-- Carousel items with descriptive alt text for images -->
-        <div class="carousel-inner">
-          <!-- slide 1 - SME growth focus -->
-          <div class="carousel-item active" style="background-image: url('image/home2.jpg');" role="img" aria-label="Nigerian small business owner using laptop">
-            <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-              <span class="sme-badge">Built for Nigerian SMEs</span>
-              <h1>Digital Solutions That Grow With Your Small Business</h1>
-              <div class="lead fs-3 my-3">ODDS · Obori Designs & Digital Solutions</div>
-              <p class="mb-4 fs-5">We help small and medium enterprises in Lagos and across Nigeria establish a powerful online presence, attract more customers, and compete with the big players — all at affordable rates.</p>
-              <div>
-                <a href="discover-how.html" class="btn btn-primary btn-lg px-5">How We Help SMEs</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- slide 2 - Digital Marketing for local businesses -->
-          <div class="carousel-item" style="background-image: url('image/digital.jpg'); background-color: #223664; background-blend-mode: overlay;" role="img" aria-label="Digital marketing strategy for Nigerian business">
-            <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-              <span class="sme-badge">Affordable Marketing for SMEs</span>
-              <h2>Data-Driven Marketing That Delivers Real Results</h2>
-              <div class="lead fs-3 my-3">Reach. Engage. Convert.</div>
-              <p class="mb-4 fs-5">From social media management to local SEO in Lagos, we craft strategies that put your SME on the map and in front of the right customers.</p>
-              <div>
-                <a href="services.html#marketing" class="btn btn-outline-light btn-lg px-5 border-2">Explore SME Marketing</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- slide 3 - Development tailored for SMEs -->
-          <div class="carousel-item" style="background-image: url('image/development.jpg'); background-color: #114f3f; background-blend-mode: overlay;" role="img" aria-label="Web development for small business in Nigeria">
-            <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-              <span class="sme-badge">Custom-Built for Your Business</span>
-              <h2>Websites & Apps That Work as Hard as You Do</h2>
-              <div class="lead fs-3 my-3">Scalable. Secure. Affordable.</div>
-              <p class="mb-4 fs-5">Whether you need a simple business website or a custom e-commerce platform, we build solutions tailored to your budget and growth goals.</p>
-              <div>
-                <a href="portfolio.html" class="btn btn-primary btn-lg px-5">View SME Success Stories</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <!-- intro section - SME focused with keywords -->
-      <section class="intro py-5 text-center" aria-labelledby="intro-heading">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <span class="sme-badge">Your SME Growth Partner in Lagos</span>
-              <h2 id="intro-heading" class="fw-bold mb-3">We Speak Small Business</h2>
-              <p class="lead">
-                At ODDS, we understand the unique challenges Nigerian small and medium businesses face — limited budgets, 
-                tight timelines, and the need for real results. That's why every solution we build is designed 
-                to be affordable, scalable, and practical for businesses like yours.
-              </p>
-              <p class="mt-3">
-                We don't just build websites or run ads. We become your digital partner, helping you navigate 
-                the online world with confidence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICES OVERVIEW - With schema markup and descriptive headings -->
-      <section class="services py-5 text-center bg-light" aria-labelledby="services-heading">
-        <div class="container">
-          <span class="sme-badge">Services Designed for SMEs in Nigeria</span>
-          <h2 id="services-heading" class="fw-bold mb-5">How We Help Your Business Grow</h2>
-          <div class="row justify-content-center">
-            <!-- Design Service -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm service-card p-4" itemscope itemtype="https://schema.org/Service">
-                <meta itemprop="serviceType" content="Web Design" />
-                <div class="mb-3 text-primary">
-                  <i class="fas fa-paint-brush fa-3x" aria-hidden="true"></i>
-                </div>
-                <h3 class="card-title mb-3" itemprop="name">Brand & Web Design for SMEs</h3>
-                <p class="card-text" itemprop="description">
-                  First impressions matter. We create professional, mobile-friendly websites and brand identities that help small businesses in Lagos look credible and attract customers — without breaking the bank.
-                </p>
-              </div>
-            </div>
-            <!-- Development Service -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm service-card p-4" itemscope itemtype="https://schema.org/Service">
-                <meta itemprop="serviceType" content="Web Development" />
-                <div class="mb-3 text-success">
-                  <i class="fas fa-code fa-3x" aria-hidden="true"></i>
-                </div>
-                <h3 class="card-title mb-3" itemprop="name">Custom Development for Small Business</h3>
-                <p class="card-text" itemprop="description">
-                  From inventory management tools to customer portals, we build affordable software solutions that automate your manual processes and free up your time to focus on what matters — running your business.
-                </p>
-              </div>
-            </div>
-            <!-- Digital Marketing Service -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm service-card p-4" itemscope itemtype="https://schema.org/Service">
-                <meta itemprop="serviceType" content="Digital Marketing" />
-                <div class="mb-3 text-danger">
-                  <i class="fas fa-bullhorn fa-3x" aria-hidden="true"></i>
-                </div>
-                <h3 class="card-title mb-3" itemprop="name">Digital Marketing for Nigerian SMEs</h3>
-                <p class="card-text" itemprop="description">
-                  Stop guessing and start growing. We help SMEs attract local customers through social media management, Google My Business optimization, and targeted ads that deliver measurable ROI.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- SME value proposition row -->
-          <div class="row mt-5 g-4">
-            <div class="col-md-4">
-              <div class="p-3">
-                <i class="fas fa-wallet fa-2x text-primary mb-3" aria-hidden="true"></i>
-                <h4>Affordable Packages</h4>
-                <p>Flexible pricing designed specifically for small business budgets in Nigeria.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="p-3">
-                <i class="fas fa-chart-line fa-2x text-primary mb-3" aria-hidden="true"></i>
-                <h4>Growth-Focused</h4>
-                <p>Every strategy is built to help you acquire and retain customers.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="p-3">
-                <i class="fas fa-headset fa-2x text-primary mb-3" aria-hidden="true"></i>
-                <h4>Ongoing Support</h4>
-                <p>We don't just build and leave. We're here when you need us.</p>
-              </div>
-            </div>
-          </div>
-          
-          <a href="services.html" class="btn btn-primary mt-4 px-4 py-2 rounded-pill"
-            >See All SME Solutions</a
-          >
-        </div>
-      </section>
-
-      <!-- Featured Projects - With descriptive alt text -->
-      <section class="projects py-5" aria-labelledby="projects-heading">
-        <div class="container">
-          <span class="sme-badge">Real SMEs, Real Results in Nigeria</span>
-          <h2 id="projects-heading" class="fw-bold text-center mb-5">Success Stories from Business Owners Like You</h2>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm border-0">
-                <img src="project1.jpg" class="card-img-top" alt="Local restaurant website designed by ODDS for Lagos restaurant" loading="lazy" />
-                <div class="card-body">
-                  <h3 class="h5 card-title">Local Restaurant · Lagos</h3>
-                  <p class="card-text">Complete brand overhaul and online ordering system that increased takeout orders by 150% for this Lagos-based restaurant.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm border-0">
-                <img src="project2.jpg" class="card-img-top" alt="Fashion boutique e-commerce website for Nigerian fashion brand" loading="lazy" />
-                <div class="card-body">
-                  <h3 class="h5 card-title">Fashion Boutique · Abuja</h3>
-                  <p class="card-text">E-commerce website and social media strategy that grew Instagram followers by 300% in 3 months for this Abuja-based fashion brand.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm border-0">
-                <img src="project3.jpg" class="card-img-top" alt="Professional services website for Nigerian legal consultancy" loading="lazy" />
-                <div class="card-body">
-                  <h3 class="h5 card-title">Legal Consultancy · Port Harcourt</h3>
-                  <p class="card-text">Professional website and Google Ads campaign that generated 50+ qualified leads in the first month for this Port Harcourt firm.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA SECTION - SME focused -->
-      <section class="cta text-center text-white py-5" style="background-color: #004dc0" aria-label="Free consultation">
-        <div class="container">
-          <span class="sme-badge bg-light text-dark">Start Your Journey Today</span>
-          <h2 class="mb-3 fw-bold">Ready to Take Your SME to the Next Level?</h2>
-          <p class="lead mb-4">Let's talk about your business goals and how we can help you achieve them — without the enterprise price tag.</p>
-          <a href="contact.html" class="btn btn-light btn-lg fw-bold">Get Your Free SME Consultation</a>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER - With structured address and keywords -->
-    <footer class="bg-dark text-light pt-5 pb-4" aria-label="Footer">
-      <div class="container text-md-start">
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <h5 class="fw-bold mb-3">ODDS · Built for Nigerian SMEs</h5>
-            <p>
-              Obori Designs & Digital Solutions (ODDS) is committed to
-              empowering small and medium enterprises in Lagos and across Nigeria through creative design and
-              innovative digital strategies that deliver real business growth.
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="sme-badge" data-aos="fade-down">Why ODDS?</span>
+            <h2 class="section-title" data-aos="fade-up">We Speak <span style="color: var(--accent);">Success</span></h2>
+            <p class="lead text-secondary" data-aos="fade-up" data-aos-delay="100">
+              We don't just build websites — we build market-dominating digital assets for Nigerian SMEs. 
+              Your growth is our only metric.
             </p>
           </div>
-          <div class="col-md-2 mb-4">
-            <h6 class="fw-bold mb-3">Quick Links</h6>
-            <ul class="list-unstyled">
-              <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-              <li><a href="about.html" class="text-decoration-none text-light">About ODDS</a></li>
-              <li><a href="services.html" class="text-decoration-none text-light">SME Services</a></li>
-              <li><a href="portfolio.html" class="text-decoration-none text-light">SME Portfolio</a></li>
-              <li><a href="contact.html" class="text-decoration-none text-light">Contact Us</a></li>
-              <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
-            </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-item">
+              <div class="stat-number">150+</div>
+              <div class="stat-label">Projects Delivered</div>
+            </div>
           </div>
-          <div class="col-md-3 mb-4">
-            <h6 class="fw-bold mb-3">Contact</h6>
-            <p><i class="fas fa-phone me-2" aria-hidden="true"></i> <a href="tel:+2348012345678" class="text-light text-decoration-none">+234 801 234 5678</a></p>
-            <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> <a href="mailto:sme@odds.ng" class="text-light text-decoration-none">sme@odds.ng</a></p>
-            <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Lagos Island, Lagos, Nigeria</p>
-            <p><small>Mon-Fri: 9am-6pm | Sat: 10am-2pm</small></p>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-item">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
           </div>
-          <div class="col-md-3 mb-4">
-            <h6 class="fw-bold mb-3">Follow Us</h6>
-            <a href="#" class="text-light me-3" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="#" class="text-light me-3" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-            <a href="#" class="text-light me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="#" class="text-light" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">SME Partners</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years Excellence</div>
+            </div>
           </div>
         </div>
-        <hr class="border-light" />
-        <div class="text-center">
-          <p class="mb-0">&copy; 2025 ODDS · Empowering Nigerian SMEs Through Digital Innovation. All rights reserved.</p>
-          <p class="mt-2 small">
-            <a href="privacy.html" class="text-light text-decoration-none me-3">Privacy Policy</a>
-            <a href="terms.html" class="text-light text-decoration-none me-3">Terms of Service</a>
-            <a href="sitemap.xml" class="text-light text-decoration-none">Sitemap</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5" style="padding: 6rem 0; background: var(--off-white);">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="sme-badge" data-aos="fade-down">Our Expertise</span>
+          <h2 class="section-title" data-aos="fade-up">Premium Services</h2>
+          <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Comprehensive solutions tailored for Nigerian SMEs</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-card">
+              <div class="mb-4">
+                <i class="fas fa-paint-brush fa-4x" style="color: var(--primary);"></i>
+              </div>
+              <h3>Brand & Web Design</h3>
+              <p class="text-secondary">Premium identities and websites that command attention and build trust instantly.</p>
+              <a href="services.html#design" class="text-decoration-none" style="color: var(--accent); font-weight: 600;">Learn More →</a>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="mb-4">
+                <i class="fas fa-code fa-4x" style="color: var(--primary);"></i>
+              </div>
+              <h3>Custom Development</h3>
+              <p class="text-secondary">Scalable web applications, portals, and e-commerce platforms built for growth.</p>
+              <a href="custom.html" class="text-decoration-none" style="color: var(--accent); font-weight: 600;">Learn More →</a>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="mb-4">
+                <i class="fas fa-bullhorn fa-4x" style="color: var(--primary);"></i>
+              </div>
+              <h3>Digital Marketing</h3>
+              <p class="text-secondary">Data-driven SEO, social media, and Google Ads that deliver measurable ROI.</p>
+              <a href="services.html#marketing" class="text-decoration-none" style="color: var(--accent); font-weight: 600;">Learn More →</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="services.html" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5" style="padding: 6rem 0;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="sme-badge" data-aos="fade-down">Our Process</span>
+          <h2 class="section-title" data-aos="fade-up">From Vision to Victory</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
+            <div class="step-number">1</div>
+            <h4>Discovery</h4>
+            <p class="text-secondary">We dive deep into your business, goals, and market.</p>
+          </div>
+          <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">2</div>
+            <h4>Strategy</h4>
+            <p class="text-secondary">Custom roadmap crafted for your success.</p>
+          </div>
+          <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">3</div>
+            <h4>Execution</h4>
+            <p class="text-secondary">Premium design & development with precision.</p>
+          </div>
+          <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">4</div>
+            <h4>Growth</h4>
+            <p class="text-secondary">Ongoing optimization and support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5" style="padding: 6rem 0; background: var(--off-white);">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="sme-badge" data-aos="fade-down">Success Stories</span>
+          <h2 class="section-title" data-aos="fade-up">Trusted by Business Owners</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"ODDS transformed our online presence. Our orders increased 150% within 3 months of launching our new website."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AO</div>
+                <div class="author-info">
+                  <h5>Amara Okafor</h5>
+                  <p>Lagos Restaurant Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Their digital marketing strategy grew our Instagram following by 300% and doubled our sales. True professionals."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">CI</div>
+                <div class="author-info">
+                  <h5>Chidi Ibe</h5>
+                  <p>Abuja Fashion Boutique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The Google Ads campaign they designed brought us 50+ qualified leads in the first month. Best investment we've made."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">FE</div>
+                <div class="author-info">
+                  <h5>Funmi Eze</h5>
+                  <p>Port Harcourt Legal Consultancy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-white text-center" style="padding: 6rem 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="sme-badge bg-light text-dark" data-aos="fade-down">Start Your Journey</span>
+            <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready to Dominate Your Market?</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Book a free strategy session. No pressure, just possibilities.</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <a href="contact.html" class="btn btn-light btn-lg me-3">Get Free Consultation</a>
+              <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Our Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>ODDS</h5>
+            <p class="text-secondary">Obori Designs & Digital Solutions · Premium digital partner for Nigerian SMEs.</p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="https://facebook.com/odds.ng" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/odds_ng" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://instagram.com/odds.ng" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com/company/odds-ng" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html">Home</a></li>
+              <li class="mb-2"><a href="about.html">About</a></li>
+              <li class="mb-2"><a href="services.html">Services</a></li>
+              <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+              <li class="mb-2"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6>Contact</h6>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348012345678">+234 801 234 5678</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:hello@odds.ng">hello@odds.ng</a></p>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Lagos Island, Nigeria</p>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h6>Stay Updated</h6>
+            <p class="small text-secondary">Get growth tips & exclusive offers</p>
+            <form class="d-flex">
+              <input type="email" class="form-control newsletter-input" placeholder="Your email" aria-label="Email">
+              <button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center small">
+          <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+          <p class="mt-2">
+            <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+            <a href="terms.html" class="text-secondary me-3">Terms</a>
+            <a href="sitemap.xml" class="text-secondary">Sitemap</a>
           </p>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
   </body>
 </html>

@@ -3,80 +3,463 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About the Founder - Dahiru Obori</title>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Dahiru Obori · Founder of ODDS | Visionary Tech Entrepreneur & Developer</title>
+  <meta name="description" content="Meet Dahiru Obori, founder of ODDS. Full-stack developer, economist, serial entrepreneur, and YouWin! awardee. Discover his journey and vision for Nigerian SMEs." />
+  <meta name="keywords" content="Dahiru Obori, ODDS founder, Nigerian tech entrepreneur, full-stack developer, YouWin awardee, digital agency founder" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Dahiru Obori · Founder of ODDS | Visionary Tech Entrepreneur" />
+  <meta property="og:description" content="Meet Dahiru Obori, founder of ODDS. Full-stack developer, economist, serial entrepreneur, and YouWin! awardee." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/obori5.png" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/founder.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="profile:first_name" content="Dahiru" />
+  <meta property="profile:last_name" content="Obori" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <style>
-    .founder-hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/obori-banner.jpg') center/cover no-repeat;
-      padding: 120px 0;
-      color: #fff;
-      text-align: center;
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
-    .founder-content {
-      padding: 60px 20px;
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
     }
 
-    .founder-content h2 {
-      font-weight: bold;
-      margin-bottom: 20px;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
-    .founder-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .skills-list {
-      margin-top: 30px;
-    }
-
-    .skills-list i {
-      color: #0d6efd;
-      margin-right: 8px;
-    }
-
-    .contact-cta {
-      background-color: #0d6efd;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .contact-cta a {
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
       display: inline-block;
-      margin-top: 20px;
-      background-color: #fff;
-      color: #0d6efd;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s ease;
     }
 
-    .contact-cta a:hover {
-      background-color: #f0f0f0;
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
+    }
+
+    .section-title-center::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .founder-hero {
+      position: relative;
+      padding: 200px 0;
+      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+      margin-top: 76px;
+    }
+
+    .founder-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.9) 0%, rgba(30, 58, 95, 0.8) 100%);
+      z-index: 1;
+    }
+
+    .founder-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .founder-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .founder-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .founder-hero h1 {
+        font-size: 2.5rem;
+      }
+      .founder-hero .lead {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ===== FOUNDER CONTENT ===== */
+    .founder-content {
+      padding: 80px 0;
+    }
+
+    .founder-image-wrapper {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .founder-image-wrapper img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.6s ease;
+    }
+
+    .founder-image-wrapper:hover img {
+      transform: scale(1.02);
+    }
+
+    .founder-image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 2rem 1.5rem 1.5rem;
+    }
+
+    .founder-image-caption h3 {
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .founder-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      margin: 0.25rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .achievement-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .achievement-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .achievement-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .achievement-card p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    .venture-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .venture-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--gray-200);
+      display: flex;
+      align-items: center;
+    }
+
+    .venture-list li:last-child {
+      border-bottom: none;
+    }
+
+    .venture-list i {
+      color: var(--accent);
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--accent);
+    }
+
+    .timeline-year {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      min-width: 100px;
+    }
+
+    .timeline-content h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" width="50" height="50" class="me-2" />
-      ODDS
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
     </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -87,135 +470,293 @@
 </nav>
 
 <!-- HERO SECTION -->
- 
-<!-- FOUNDER HERO SECTION -->
-<section class="founder-hero text-white text-center position-relative" 
-         style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/dahiru-obori.png') center/cover no-repeat; padding: 200px 0;">
-  
-  <div class="container position-relative z-1">
-    <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
-      Meet the Founder
-    </h1>
-    <p class="lead" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
-      Dahiru Obori — Visionary, Full-Stack Developer, Communicator
-    </p> 
+<section class="founder-hero" style="background: url('image/dahiru-obori.png') center/cover no-repeat;">
+  <div class="container">
+    <span class="sme-badge" data-aos="fade-down">Visionary Leader</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Dahiru <span style="color: var(--accent);">Obori</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Founder & CEO · Full-Stack Developer · Economist · Serial Entrepreneur</p>
   </div>
-
 </section>
 
-
-<!-- BIOGRAPHY CONTENT -->
+<!-- MAIN CONTENT -->
 <section class="founder-content">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h2>About Dahiru Obori</h2>
+    <div class="row g-5">
+      <!-- Left Column - Image and Quick Facts -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="founder-image-wrapper">
+          <img src="image/obori5.png" alt="Dahiru Obori - Founder of ODDS" class="img-fluid">
+          <div class="founder-image-caption">
+            <h3>Dahiru Obori</h3>
+            <p class="mb-0"><i class="fas fa-map-marker-alt me-2" style="color: var(--accent);"></i> Lagos & Osogbo, Nigeria</p>
+          </div>
+        </div>
         
-        <p>
-          Dahiru Obori is a versatile full-stack developer, graphic designer, and entrepreneur with deep expertise across multiple industries, including hospitality, media, and information technology. Trained as an economist and certified in digital marketing, virtual assistance, and human resources consulting, he has worked closely with marketing and business managers to achieve strategic goals and consistently exceed expectations.
+        <div class="mt-4 p-4 bg-light rounded-4">
+          <h4 class="mb-3">Quick Facts</h4>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-secondary">Experience:</span>
+            <span class="fw-bold">10+ Years</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-secondary">Ventures Founded:</span>
+            <span class="fw-bold">5+</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-secondary">Industries:</span>
+            <span class="fw-bold">Tech, Hospitality, Media</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-secondary">Award:</span>
+            <span class="fw-bold">YouWin! Winner</span>
+          </div>
+          <div class="mt-3">
+            <a href="contact.html" class="btn btn-primary w-100">Connect with Dahiru</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Biography -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <span class="sme-badge">The Founder's Story</span>
+        <h2 class="section-title mb-4">About Dahiru Obori</h2>
+        
+        <div class="founder-quote">
+          "I believe technology should empower people, not intimidate them. That's why I bridge the gap between complex code and real-world solutions."
+        </div>
+        
+        <p class="lead mb-4">
+          Dahiru Obori is a versatile full-stack developer, graphic designer, and entrepreneur with deep expertise across multiple industries, including hospitality, media, and information technology.
         </p>
         
         <p>
-          As a full-stack developer, Dahiru is highly skilled in:
+          Trained as an economist and certified in digital marketing, virtual assistance, and human resources consulting, he has worked closely with marketing and business managers to achieve strategic goals and consistently exceed expectations.
         </p>
         
-        <ul class="skills-list">
-          <li><i class="fas fa-code"></i> HTML, CSS, JavaScript, Bootstrap</li>
-          <li><i class="fab fa-github"></i> Git & GitHub Version Control</li>
-          <li><i class="fab fa-python"></i> Python & Django Framework</li>
-          <li><i class="fas fa-database"></i> Database Management (SQL, Firebase)</li>
-        </ul>
-
-        <p class="mt-4">
+        <h4 class="mt-5 mb-3">Technical Expertise</h4>
+        <div class="mb-4">
+          <span class="skill-tag"><i class="fab fa-html5 me-1"></i> HTML5</span>
+          <span class="skill-tag"><i class="fab fa-css3-alt me-1"></i> CSS3</span>
+          <span class="skill-tag"><i class="fab fa-js me-1"></i> JavaScript</span>
+          <span class="skill-tag"><i class="fab fa-bootstrap me-1"></i> Bootstrap</span>
+          <span class="skill-tag"><i class="fab fa-github me-1"></i> Git & GitHub</span>
+          <span class="skill-tag"><i class="fab fa-python me-1"></i> Python</span>
+          <span class="skill-tag"><i class="fab fa-python me-1"></i> Django</span>
+          <span class="skill-tag"><i class="fas fa-database me-1"></i> SQL</span>
+          <span class="skill-tag"><i class="fas fa-database me-1"></i> Firebase</span>
+          <span class="skill-tag"><i class="fas fa-paint-brush me-1"></i> Graphic Design</span>
+        </div>
+        
+        <p>
           He is also an outstanding communicator and speaker, with a proven ability to explain complex technical concepts to diverse audiences. From one-on-one coaching sessions to keynote addresses before hundreds, Dahiru bridges the gap between technology and people.
         </p>
-
+        
         <p>
           Beyond his work at ODDS, Dahiru has made his mark in politics, the music scene, and Nollywood — collaborating with politicians, music artists, and film industry influencers across multiple states in Nigeria.
         </p>
-
-        <p>
-          As a visionary founder, he has launched several successful ventures, including:
-        </p>
         
-        <ul>
-          <li><strong>Drecot Consults</strong> – Hospitality recruitment and consulting</li>
-          <li><strong>Shopsafe Delivery Service</strong></li>
-          <li><strong>Hotel Bookings NG</strong></li>
-          <li><strong>First Credmart</strong> – An e-commerce platform</li>
+        <h4 class="mt-5 mb-3">Ventures & Achievements</h4>
+        
+        <ul class="venture-list">
+          <li><i class="fas fa-building"></i> <strong>Drecot Consults</strong> – Hospitality recruitment and consulting</li>
+          <li><i class="fas fa-truck"></i> <strong>Shopsafe Delivery Service</strong> – Last-mile delivery solutions</li>
+          <li><i class="fas fa-hotel"></i> <strong>Hotel Bookings NG</strong> – Hospitality booking platform</li>
+          <li><i class="fas fa-store"></i> <strong>First Credmart</strong> – E-commerce platform</li>
         </ul>
-
-        <p>
-          He was also one of the early awardees of the <strong>Youth Enterprise with Innovation in Nigeria (YouWin!)</strong> program. Currently, he is developing a new global platform designed to unite students from around the world.
+        
+        <div class="bg-light p-4 rounded-4 mt-4">
+          <h5 class="fw-bold mb-3"><i class="fas fa-trophy me-2" style="color: var(--accent);"></i> Recognition</h5>
+          <p class="mb-0">He was one of the early awardees of the <strong>Youth Enterprise with Innovation in Nigeria (YouWin!)</strong> program, a testament to his entrepreneurial vision and capacity to drive change.</p>
+        </div>
+        
+        <p class="mt-4">
+          Currently, he is developing a new global platform designed to unite students from around the world — his most ambitious project yet.
         </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <p class="fw-bold mt-4">
-          Thank you for learning about my journey. Stay connected with ODDS for more impactful digital stories!
-        </p>
+<!-- ACHIEVEMENTS SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Milestones</span>
+      <h2 class="section-title-center" data-aos="fade-up">Key Achievements</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h4>YouWin! Awardee</h4>
+          <p>Early recipient of Nigeria's prestigious youth enterprise grant, recognizing innovative business ideas.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h4>5+ Successful Ventures</h4>
+          <p>Founded multiple companies across tech, hospitality, and e-commerce sectors.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>100+ Speaking Engagements</h4>
+          <p>Keynote speaker at tech conferences, universities, and business events across Nigeria.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">The Journey</span>
+      <h2 class="section-title-center" data-aos="fade-up">Path to Founding ODDS</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content">
+            <h4>YouWin! Award Winner</h4>
+            <p>Received the Youth Enterprise with Innovation in Nigeria grant, launching his entrepreneurial journey.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-content">
+            <h4>Founded Drecot Consults</h4>
+            <p>Launched hospitality recruitment and consulting firm, serving hotels and restaurants across Osogbo.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <h4>Founded ODDS</h4>
+            <p>Established Obori Designs & Digital Solutions to help Nigerian SMEs build premium digital presence.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <h4>Expanded to Lagos</h4>
+            <p>Opened Lagos office to serve a growing client base of SMEs across Nigeria.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h4>Global Student Platform</h4>
+            <p>Developing a new global platform to unite students worldwide — his most ambitious project yet.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA SECTION -->
-<section class="contact-cta">
+<section class="cta-section text-white text-center">
   <div class="container">
-    <h2>Want to collaborate with Dahiru Obori?</h2>
-    <p class="lead">Get in touch for speaking engagements, consulting, tech partnerships or mentorship.</p>
-    <a href="contact.html">Contact the Founder</a>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Let's Connect</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Want to Collaborate with Dahiru?</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Available for speaking engagements, consulting, tech partnerships, and mentorship.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Contact the Founder</a>
+          <a href="https://linkedin.com/in/dahirubori" class="btn btn-outline-light btn-lg">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-md-start">
+<footer class="footer pt-5 pb-4">
+  <div class="container">
     <div class="row">
-
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.</p>
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
-          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact Info</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
       </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
+        </form>
       </div>
-
     </div>
-
-    <hr class="border-light" />
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+    
+    <hr class="border-secondary" />
+    
+    <div class="text-center small">
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
     </div>
   </div>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
 </html>

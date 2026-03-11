@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Discover How ODDS Empowers Nigerian SMEs | Digital Growth Partners</title>
-  <meta name="description" content="Discover how ODDS helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions. Your success story starts here." />
-  <meta name="keywords" content="digital agency Nigeria, SME growth solutions, web design Lagos, business growth strategy, ODDS process" />
+  <title>Web Design Services for Nigerian SMEs · ODDS Premium Digital Agency</title>
+  <meta name="description" content="Discover ODDS premium web design services for Nigerian SMEs. We craft beautiful, responsive, and high-converting websites that engage your audience and drive results." />
+  <meta name="keywords" content="web design Nigeria, website design Lagos, responsive web design, SME website, business website Nigeria, ODDS web design" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Discover How ODDS Empowers Nigerian SMEs" />
-  <meta property="og:description" content="Discover how ODDS helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions." />
+  <meta property="og:title" content="Web Design Services for Nigerian SMEs · ODDS" />
+  <meta property="og:description" content="Premium web design services for Nigerian SMEs. Mobile-first, SEO-optimized, and built for speed." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/discover-how.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/web-design.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   
   <!-- === CSS LIBRARIES === -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
@@ -77,17 +77,16 @@
       content: '';
       position: absolute;
       bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
       width: 80px;
       height: 3px;
       background: var(--gradient-accent);
       border-radius: 3px;
     }
 
-    .section-title-left::after {
-      left: 0;
-      transform: none;
+    .section-title-center::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .section-subtitle {
@@ -176,29 +175,51 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .discover-hero {
-      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%), url('image/empowering-business.jpg') center/cover no-repeat;
-      padding: 120px 0;
-      color: white;
+    .service-hero {
+      position: relative;
+      padding: 150px 0;
       text-align: center;
+      color: var(--white);
+      overflow: hidden;
       margin-top: 76px;
     }
 
-    .discover-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
+    .service-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+      z-index: 1;
     }
 
-    .discover-hero .lead {
-      font-size: 1.3rem;
+    .service-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
       max-width: 800px;
       margin: 0 auto;
     }
 
     @media (max-width: 768px) {
-      .discover-hero h1 {
+      .service-hero h1 {
         font-size: 2.5rem;
+      }
+      .service-hero .lead {
+        font-size: 1.2rem;
       }
     }
 
@@ -228,7 +249,7 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: var(--primary-dark);
     }
 
@@ -267,7 +288,7 @@
     /* ===== BENEFITS LIST ===== */
     .benefit-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
@@ -295,32 +316,69 @@
       margin-bottom: 0;
     }
 
-    /* ===== STATS SECTION ===== */
-    .stats-section {
-      background: var(--gradient-primary);
-      color: var(--white);
-      padding: 5rem 0;
-      position: relative;
+    /* ===== PORTFOLIO CARD ===== */
+    .portfolio-card {
+      border-radius: 20px;
       overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
     }
 
-    .stat-item {
-      text-align: center;
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
     }
 
-    .stat-number {
-      font-size: 3.5rem;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      color: var(--accent);
+    .portfolio-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: all 0.6s ease;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-card .card-body {
+      padding: 1.5rem;
+    }
+
+    .portfolio-card h4 {
+      color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .stat-label {
-      font-size: 1.1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .portfolio-card p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: var(--off-white);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .faq-item p {
+      color: var(--gray-600);
+      margin-bottom: 0;
     }
 
     /* ===== CTA SECTION ===== */
@@ -389,7 +447,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
         <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
@@ -399,124 +457,107 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="discover-hero">
+<section class="service-hero" style="background: url('image/web-design-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Your Growth Journey Starts Here</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Discover How We <span style="color: var(--accent);">Transform</span> Nigerian SMEs</h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We combine strategy, design, and technology to build digital assets that drive real business growth. Here's how we do it.</p>
+    <span class="sme-badge" data-aos="fade-down">Premium Web Design</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Websites That <span style="color: var(--accent);">Work</span> for Your Business</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">We craft beautiful, responsive, and high-converting websites that engage your audience and drive results. Mobile-first, SEO-optimized, and built for speed.</p>
   </div>
 </section>
 
-<!-- STATS SECTION -->
-<section class="stats-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">SME Partners</div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="stat-item">
-          <div class="stat-number">150+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-item">
-          <div class="stat-number">98%</div>
-          <div class="stat-label">Satisfaction</div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-item">
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW WE HELP SECTION -->
+<!-- INTRO SECTION -->
 <section class="py-5">
   <div class="container">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Our Approach</span>
-        <h2 class="section-title-left mb-4">How We Help Your Business Thrive</h2>
-        <p class="lead mb-4">We don't just build websites — we build comprehensive digital ecosystems tailored to your unique business needs.</p>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
-          <div class="benefit-text">
-            <h4>Customized Design Solutions</h4>
-            <p>Unique, mobile-responsive designs that reflect your brand and captivate your audience.</p>
+        <span class="sme-badge">Your Digital Storefront</span>
+        <h2 class="section-title mb-4">First Impressions <span style="color: var(--accent);">Matter</span></h2>
+        <p class="lead mb-4">Your website is often the first interaction potential customers have with your brand. Make it count.</p>
+        <p class="mb-4">At ODDS, we don't just build websites — we build digital experiences that capture your brand essence, engage visitors, and convert them into loyal customers. Every line of code, every pixel, and every interaction is crafted with one goal in mind: your business success.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>Mobile-First</h4>
+            <p class="text-secondary small">Optimized for all devices</p>
           </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
-          <div class="benefit-text">
-            <h4>Digital Marketing</h4>
-            <p>Data-driven campaigns that attract qualified leads and maximize your ROI.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-code"></i></div>
-          <div class="benefit-text">
-            <h4>Technology Solutions</h4>
-            <p>Scalable web applications, e-commerce platforms, and cloud solutions built for growth.</p>
+          <div class="col-6">
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>SEO-Ready</h4>
+            <p class="text-secondary small">Built to rank on Google</p>
           </div>
         </div>
       </div>
-      
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/empowering-business.jpg" alt="ODDS team working with client" class="img-fluid rounded-3 shadow-lg" style="border-radius: 20px;" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=ODDS+Approach'">
+        <img src="image/web-design-showcase.jpg" alt="Web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Premium+Web+Design'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- OUR EXPERTISE SECTION -->
+<!-- KEY FEATURES SECTION -->
 <section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Our Expertise</span>
-      <h2 class="section-title" data-aos="fade-up">What We Do Best</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Specialized solutions for Nigerian SMEs</p>
+      <span class="sme-badge" data-aos="fade-down">What You Get</span>
+      <h2 class="section-title-center" data-aos="fade-up">Everything You Need to Succeed Online</h2>
     </div>
     
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>Web Design</h3>
-          <p>We'll create visually captivating and user-friendly websites that engage visitors and drive conversions. Fully responsive and SEO-optimized.</p>
+          <h3>Mobile-First Design</h3>
+          <p>With over 60% of web traffic coming from mobile devices, your website will be fully responsive and look stunning on phones, tablets, and desktops.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-pen-nib"></i>
+            <i class="fas fa-tachometer-alt"></i>
           </div>
-          <h3>Branding</h3>
-          <p>Our team will define strong brand identities through compelling logos, color schemes, and brand guidelines that make you unforgettable.</p>
+          <h3>Lightning Fast</h3>
+          <p>Optimized code and images ensure your website loads in under 3 seconds — improving user experience and boosting your Google rankings.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-search"></i>
           </div>
-          <h3>E-commerce Solutions</h3>
-          <p>We'll build secure and seamless e-commerce websites, optimizing the buying process for maximum conversions and repeat customers.</p>
+          <h3>SEO Optimized</h3>
+          <p>Built with search engines in mind — clean code, proper headings, meta tags, and schema markup to help you rank higher on Google.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Custom Design</h3>
+          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out from competitors.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Conversion Focused</h3>
+          <p>Strategic placement of calls-to-action, forms, and content to guide visitors toward becoming customers.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Secure & Reliable</h3>
+          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
         </div>
       </div>
     </div>
@@ -528,29 +569,30 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title" data-aos="fade-up">How We Deliver Excellence</h2>
+      <h2 class="section-title-center" data-aos="fade-up">How We Bring Your Vision to Life</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">A proven methodology that delivers results</p>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
         <h4>Discovery</h4>
-        <p class="text-secondary">We dive deep into your business goals, audience, and competition.</p>
+        <p class="text-secondary">We learn about your business, goals, audience, and competition.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
         <h4>Strategy</h4>
-        <p class="text-secondary">Custom roadmap crafted with clear milestones and KPIs.</p>
+        <p class="text-secondary">We create a custom site map, wireframes, and design direction.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Execution</h4>
-        <p class="text-secondary">Premium design & development with regular updates.</p>
+        <h4>Design</h4>
+        <p class="text-secondary">We craft stunning visuals and user experiences tailored to your brand.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Growth</h4>
-        <p class="text-secondary">Ongoing optimization, support, and scaling.</p>
+        <h4>Development</h4>
+        <p class="text-secondary">We code, test, and launch your fast, secure, responsive website.</p>
       </div>
     </div>
   </div>
@@ -561,42 +603,42 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/benefits.jpg" alt="Business growth benefits" class="img-fluid rounded-3 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Growth+Benefits'">
+        <img src="image/web-design-benefits.jpg" alt="Web design benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Why+Choose+ODDS'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
         <span class="sme-badge">Why Choose Us</span>
-        <h2 class="section-title-left mb-4">Benefits of Working with ODDS</h2>
+        <h2 class="section-title mb-4">The ODDS Advantage</h2>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
           <div class="benefit-text">
-            <h4>Increased Efficiency</h4>
-            <p>Streamlined processes and automation that save you time and reduce operational costs.</p>
+            <h4>Faster Turnaround</h4>
+            <p>We deliver high-quality websites in weeks, not months, so you can start seeing results sooner.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-smile"></i></div>
+          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
           <div class="benefit-text">
-            <h4>Improved Customer Experience</h4>
-            <p>Intuitive designs and seamless interactions that keep customers coming back.</p>
+            <h4>Affordable Premium</h4>
+            <p>Enterprise-level quality at prices designed for Nigerian SMEs.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+          <div class="benefit-text">
+            <h4>Ongoing Support</h4>
+            <p>We don't just build and leave. We're here for training, updates, and support.</p>
           </div>
         </div>
         
         <div class="benefit-item">
           <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
           <div class="benefit-text">
-            <h4>Data-Driven Insights</h4>
-            <p>Analytics and reporting that help you make informed business decisions.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="benefit-text">
-            <h4>Competitive Advantage</h4>
-            <p>Stand out from competitors with premium digital assets that build trust.</p>
+            <h4>Performance Tracking</h4>
+            <p>We set up analytics to track your traffic, conversions, and growth.</p>
           </div>
         </div>
       </div>
@@ -604,23 +646,90 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL SNIPPET -->
+<!-- PORTFOLIO SNIPPET -->
 <section class="py-5">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <span class="sme-badge" data-aos="fade-down">Client Success</span>
-        <h2 class="section-title mb-4" data-aos="fade-up">What Our Partners Say</h2>
-        <div class="testimonial-quote p-5 bg-light rounded-4" style="border-left: 4px solid var(--accent);" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-quote-left fa-3x mb-4" style="color: var(--accent); opacity: 0.5;"></i>
-          <p class="lead mb-4">"ODDS didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching, and our brand has never looked better."</p>
-          <div class="d-flex align-items-center justify-content-center">
-            <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">AO</div>
-            <div class="ms-3 text-start">
-              <h5 class="mb-0">Amara Okafor</h5>
-              <p class="text-secondary">Lagos Restaurant Owner</p>
-            </div>
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
+      <h2 class="section-title-center" data-aos="fade-up">Websites We've Built</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-card">
+          <img src="image/portfolio-restaurant.jpg" alt="Restaurant website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Site'">
+          <div class="card-body">
+            <h4>Lagos Restaurant</h4>
+            <p class="text-secondary">Online ordering system + brand website</p>
           </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-card">
+          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Store'">
+          <div class="card-body">
+            <h4>Abuja Fashion</h4>
+            <p class="text-secondary">E-commerce + social media integration</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card">
+          <img src="image/portfolio-legal.jpg" alt="Legal consultancy" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Firm'">
+          <div class="card-body">
+            <h4>PH Legal</h4>
+            <p class="text-secondary">Professional services website</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">FAQ</span>
+      <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-item" data-aos="fade-up">
+          <h4>How long does it take to build a website?</h4>
+          <p>Typically 2-4 weeks depending on complexity. A simple business site can be ready in 2 weeks, while e-commerce sites may take 3-4 weeks.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Do I need to provide content?</h4>
+          <p>We can work with your existing content or help create new copy and images. We also offer professional copywriting and photography services.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Will my website work on mobile phones?</h4>
+          <p>Absolutely! All our websites are mobile-first, meaning they're designed specifically for phones, tablets, and desktops.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Can I update the website myself after launch?</h4>
+          <p>Yes! We build on easy-to-use content management systems. We also provide training so you can make updates confidently.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>What about hosting and domain?</h4>
+          <p>We can help you register a domain and set up reliable hosting. We offer managed hosting packages with maintenance included.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>How much does a website cost?</h4>
+          <p>Pricing varies based on your needs. We offer affordable packages starting from ₦250,000 for SMEs. Contact us for a custom quote.</p>
         </div>
       </div>
     </div>
@@ -632,12 +741,12 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Start?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Success Story</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Take the first step toward transforming your business today.</p>
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Grow?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Website</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your project.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Get Free Consultation</a>
-          <a href="services.html" class="btn btn-outline-light btn-lg">Explore Services</a>
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
         </div>
       </div>
     </div>

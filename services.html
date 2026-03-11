@@ -3,60 +3,408 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services - ODDS</title>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Our Premium Services | ODDS · Digital Solutions for Nigerian SMEs</title>
+  <meta name="description" content="Explore ODDS premium services: Web Design, Digital Marketing, Brand Identity, E-commerce, IT Support & more. We help Nigerian SMEs dominate their market." />
+  <meta name="keywords" content="digital services Nigeria, web design Lagos, digital marketing agency Nigeria, SME solutions, brand identity, e-commerce Nigeria, IT support Lagos" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Our Premium Services | ODDS · Digital Solutions for Nigerian SMEs" />
+  <meta property="og:description" content="Premium digital services tailored for Nigerian SMEs. Web design, marketing, branding & more." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-light {
+      border: 2px solid var(--white);
+      background: transparent;
+    }
+
+    .btn-outline-light:hover {
+      background: var(--white);
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
     .services-hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image/services-hero.jpg') center center/cover no-repeat;
-      padding: 100px 0;
-      color: #fff;
+      position: relative;
+      padding: 120px 0;
       text-align: center;
+      color: var(--white);
+      overflow: hidden;
     }
 
-    .services-section {
-      padding: 60px 0;
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+      z-index: 1;
     }
 
+    .services-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="0.5"/></svg>');
+      background-size: 50px 50px;
+      z-index: 1;
+    }
+
+    .services-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .services-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .services-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .services-hero h1 {
+        font-size: 2.5rem;
+      }
+      .services-hero .lead {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ===== SERVICE CARDS ===== */
     .service-card {
-      transition: transform 0.3s ease;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient-accent);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover::before {
+      transform: translateX(0);
     }
 
     .service-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-light);
     }
 
     .service-icon {
-      font-size: 40px;
-      color: #0d6efd;
-      margin-bottom: 20px;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      transition: all 0.3s ease;
     }
 
-    footer {
-      background-color: #000;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+      color: var(--accent) !important;
     }
 
-    footer a {
-      color: #fff;
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-link {
+      color: var(--accent);
+      font-weight: 600;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .service-link:hover {
+      gap: 1rem;
+      color: var(--accent-dark);
+    }
+
+    /* ===== CATEGORY BADGES ===== */
+    .category-badge {
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--gray-200);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none"/></svg>');
+      background-size: 100px 100px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      text-decoration: none !important;
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== PROCESS SECTION ===== */
+    .process-step {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow-accent);
     }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" style="width: 50px; height: 50px;" class="me-2">
-      <span>ODDS</span>
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" style="width: 50px; height: 50px;" class="me-2 rounded">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -68,176 +416,275 @@
         <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
         <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- HERO SECTION -->
-<!-- SERVICES HERO SECTION -->
-<section class="services-hero text-white text-center position-relative"
-         style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('image/services.jpg') center center/cover no-repeat; padding: 100px 0;">
-
-  <div class="container position-relative" style="z-index: 2;">
-    <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">Our Services</h1>
-    <p class="lead" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
-      Empowering your business through design, technology, and strategy.
-    </p>
+<section class="services-hero" style="margin-top: 76px;">
+  <div class="container">
+    <span class="sme-badge" data-aos="fade-down">Premium Services</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Solutions That <span style="color: var(--accent);">Dominate</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">We combine strategy, design, and technology to build digital assets that drive real business growth for Nigerian SMEs.</p>
   </div>
 </section>
 
-<!-- SERVICES SECTION -->
-<section class="services-section">
+<!-- CATEGORY FILTER (Visual only) -->
+<section class="py-4 bg-light">
   <div class="container">
-    <div class="row text-center">
-
-      <!-- Original Services -->
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h4 class="fw-bold mb-3">Web Design</h4>
-          <p>We craft beautiful, responsive, and user-friendly websites that engage your audience and drive results.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-          <h4 class="fw-bold mb-3">Digital Marketing</h4>
-          <p>From SEO to social media campaigns, we help you attract, convert, and retain customers online.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-          <h4 class="fw-bold mb-3">E-commerce Solutions</h4>
-          <p>Build your online store with secure, scalable solutions that make shopping easy and boost sales.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
-          <h4 class="fw-bold mb-3">Brand Identity</h4>
-          <p>Logo design, color systems, and brand strategy to help you stand out with a memorable brand image.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h4 class="fw-bold mb-3">Business Strategy</h4>
-          <p>We align your digital presence with your long-term goals through expert analysis and planning.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-cloud"></i></div>
-          <h4 class="fw-bold mb-3">Cloud Solutions</h4>
-          <p>We implement and manage modern cloud services so you can scale efficiently and securely.</p>
-        </div>
-      </div>
-
-      <!-- Additional Services -->
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-headset"></i></div>
-          <h4 class="fw-bold mb-3">Virtual Admin Assistant</h4>
-          <p>We offer professional remote admin support to help manage your daily business tasks efficiently.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
-          <h4 class="fw-bold mb-3">Content Creation & Copywriting</h4>
-          <p>Engaging content that connects with your audience and boosts your brand presence online.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h4 class="fw-bold mb-3">UI/UX Design</h4>
-          <p>Creating seamless and user-friendly designs that provide great digital experiences.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-share-alt"></i></div>
-          <h4 class="fw-bold mb-3">Social Media Management</h4>
-          <p>We manage your social media accounts, increase visibility, and engage your audience consistently.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="p-4 border rounded service-card h-100">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
-          <h4 class="fw-bold mb-3">IT Support & Maintenance</h4>
-          <p>Reliable technical support to keep your website running smoothly and securely at all times.</p>
-        </div>
-      </div>
-
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <span class="category-badge">🔥 All Services</span>
+      <span class="category-badge">🎨 Design</span>
+      <span class="category-badge">💻 Development</span>
+      <span class="category-badge">📈 Marketing</span>
+      <span class="category-badge">⚙️ Support</span>
     </div>
   </div>
 </section>
 
- <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-md-start">
-    <div class="row">
-
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>
-          Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.
-        </p>
+<!-- MAIN SERVICES SECTION -->
+<section class="py-5" style="padding: 5rem 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">What We Offer</span>
+      <h2 class="section-title" data-aos="fade-up">Complete Digital Ecosystem</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Everything your business needs to succeed online</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Row 1: Core Services -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Design</h3>
+          <p>We craft beautiful, responsive, and high-converting websites that engage your audience and drive results. Mobile-first, SEO-optimized, and built for speed.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
 
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Digital Marketing</h3>
+          <p>Data-driven SEO, social media campaigns, Google Ads, and content marketing that attract qualified leads and maximize your ROI.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-commerce Solutions</h3>
+          <p>Build your online store with secure, scalable solutions that make shopping easy. Inventory management, payment integration, and mobile optimization.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Row 2: Brand & Strategy -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+          <h3>Brand Identity</h3>
+          <p>Logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Business Strategy</h3>
+          <p>We align your digital presence with your long-term goals through expert market analysis, competitor research, and strategic planning.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud Solutions</h3>
+          <p>We implement and manage modern cloud services (AWS, Google Cloud) so you can scale efficiently, securely, and cost-effectively.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Row 3: Support & Operations -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Virtual Admin Assistant</h3>
+          <p>Professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+          <h3>Content Creation</h3>
+          <p>Engaging copywriting, blog posts, video scripts, and social media content that connects with your audience and boosts brand presence.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Creating seamless, intuitive, and user-friendly digital experiences that keep visitors engaged and convert them into customers.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Row 4: Management & Support -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+          <h3>Social Media Management</h3>
+          <p>We manage your social media accounts, create engaging content, increase visibility, and build a loyal community around your brand.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>IT Support & Maintenance</h3>
+          <p>Reliable technical support, regular updates, security monitoring, and backups to keep your website running smoothly 24/7.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h3>SEO Optimization</h3>
+          <p>Comprehensive on-page and off-page SEO strategies to improve your search rankings and drive organic traffic to your website.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION - How We Work -->
+<section class="py-5 bg-light" style="padding: 5rem 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Our Process</span>
+      <h2 class="section-title" data-aos="fade-up">How We Deliver Excellence</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-number">1</div>
+        <h4>Discovery</h4>
+        <p class="text-secondary">We dive deep into your business goals, audience, and competition.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-number">2</div>
+        <h4>Strategy</h4>
+        <p class="text-secondary">Custom roadmap crafted with clear milestones and KPIs.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-number">3</div>
+        <h4>Execution</h4>
+        <p class="text-secondary">Premium design & development with regular updates.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-number">4</div>
+        <h4>Growth</h4>
+        <p class="text-secondary">Ongoing optimization, support, and scaling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Scale?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Something Great Together</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Book a free strategy session. No pressure, just possibilities.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Get Free Consultation</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
-          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
-          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos, Nigeria</p>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos Island, Lagos, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
       </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">Subscribe</button>
+        </form>
       </div>
-
     </div>
-
-    <hr class="border-light" />
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+    
+    <hr class="border-secondary" />
+    
+    <div class="text-center small">
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy Policy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms of Service</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
     </div>
   </div>
 </footer>
 
-<!-- JS -->
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
 </html>

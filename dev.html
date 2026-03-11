@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Custom Development Services for Nigerian SMEs · ODDS Premium Tech Solutions</title>
+  <meta name="description" content="Discover ODDS custom development services for Nigerian SMEs. Scalable web applications, portals, and e-commerce platforms built for growth. From concept to launch." />
+  <meta name="keywords" content="custom development Nigeria, web application development Lagos, e-commerce platform Nigeria, business portals, software development SME, ODDS tech solutions" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Custom Development Services for Nigerian SMEs · ODDS" />
+  <meta property="og:description" content="Scalable web applications, portals, and e-commerce platforms built for growth. From concept to launch." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/custom-development.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
+    }
+
+    .section-title-center::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .service-hero {
+      position: relative;
+      padding: 150px 0;
+      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+      margin-top: 76px;
+    }
+
+    .service-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+      z-index: 1;
+    }
+
+    .service-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-hero .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .service-hero h1 {
+        font-size: 2.5rem;
+      }
+      .service-hero .lead {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .feature-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ===== PROCESS STEPS ===== */
+    .process-step {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    /* ===== TECH STACK ===== */
+    .tech-badge {
+      display: inline-block;
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      margin: 0.5rem;
+      font-weight: 600;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-accent);
+    }
+
+    .tech-badge i {
+      margin-right: 8px;
+    }
+
+    /* ===== BENEFITS LIST ===== */
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .benefit-text h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .benefit-text p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* ===== USE CASE CARDS ===== */
+    .usecase-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .usecase-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .usecase-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .usecase-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .usecase-card p {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .usecase-tag {
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+    }
+
+    .case-study-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .case-study-card .card-body {
+      padding: 2rem;
+    }
+
+    .case-study-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .case-study-card .industry {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: var(--off-white);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .faq-item p {
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="service-hero" style="background: url('image/custom-dev-hero.jpg') center center/cover no-repeat;">
+  <div class="container">
+    <span class="sme-badge" data-aos="fade-down">Custom Development</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Software <span style="color: var(--accent);">Built for Growth</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Scalable web applications, business portals, and e-commerce platforms tailored to your unique needs.</p>
+  </div>
+</section>
+
+<!-- INTRO SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="sme-badge">Beyond Off-the-Shelf</span>
+        <h2 class="section-title mb-4">Technology That <span style="color: var(--accent);">Scales</span> With You</h2>
+        <p class="lead mb-4">Off-the-shelf software can only take you so far. To truly grow, you need technology built around your unique processes.</p>
+        <p class="mb-4">At ODDS, we build custom web applications, portals, and platforms that automate your workflows, connect your data, and give you complete control. No unnecessary features. No limitations. Just exactly what your business needs to thrive.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>Scalable</h4>
+            <p class="text-secondary small">Grows with your business</p>
+          </div>
+          <div class="col-6">
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>Secure</h4>
+            <p class="text-secondary small">Enterprise-grade protection</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="image/custom-dev-showcase.jpg" alt="Custom development showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Custom+Development'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">What We Build</span>
+      <h2 class="section-title-center" data-aos="fade-up">Solutions for Every Need</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="usecase-card">
+          <div class="usecase-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Web Applications</h3>
+          <p>Powerful, browser-based software for inventory management, customer portals, reporting dashboards, and internal tools.</p>
+          <span class="usecase-tag">Inventory Systems</span>
+          <span class="usecase-tag ms-2">Dashboards</span>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="usecase-card">
+          <div class="usecase-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>E-Commerce Platforms</h3>
+          <p>Custom online stores with advanced features: multi-vendor, subscription billing, inventory sync, and mobile optimization.</p>
+          <span class="usecase-tag">Multi-Vendor</span>
+          <span class="usecase-tag ms-2">Subscriptions</span>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="usecase-card">
+          <div class="usecase-icon">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>Business Portals</h3>
+          <p>Client portals, employee dashboards, and partner platforms that streamline communication and data sharing.</p>
+          <span class="usecase-tag">Client Portals</span>
+          <span class="usecase-tag ms-2">HR Systems</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FEATURES SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Why Custom?</span>
+      <h2 class="section-title-center" data-aos="fade-up">Built Exactly for Your Business</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <h3>Scalable Architecture</h3>
+          <p>Built to grow with you. Whether you have 10 users or 10,000, your application will perform flawlessly.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Enterprise Security</h3>
+          <p>Data encryption, secure authentication, and regular security audits to protect your business and customer information.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <h3>Clean Code</h3>
+          <p>Well-documented, maintainable code that makes future updates and feature additions smooth and cost-effective.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Data Integration</h3>
+          <p>Seamless connection with your existing tools — CRMs, accounting software, payment gateways, and more.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile-Responsive</h3>
+          <p>Your application will work perfectly on desktops, tablets, and smartphones — your team can work anywhere.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Analytics Ready</h3>
+          <p>Built-in reporting and analytics to give you insights into your business performance and user behavior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Our Technology</span>
+      <h2 class="section-title-center" data-aos="fade-up">Modern Stack, Reliable Results</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">We use cutting-edge technologies to build fast, secure, and scalable applications</p>
+    </div>
+    
+    <div class="text-center" data-aos="fade-up">
+      <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+      <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+      <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+      <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+      <span class="tech-badge"><i class="fab fa-vuejs"></i> Vue.js</span>
+      <span class="tech-badge"><i class="fas fa-database"></i> PostgreSQL</span>
+      <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+      <span class="tech-badge"><i class="fas fa-database"></i> Firebase</span>
+      <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+      <span class="tech-badge"><i class="fas fa-cloud"></i> Google Cloud</span>
+      <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+      <span class="tech-badge"><i class="fas fa-code"></i> REST APIs</span>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROCESS SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Our Process</span>
+      <h2 class="section-title-center" data-aos="fade-up">From Concept to Launch</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-number">1</div>
+        <h4>Discovery</h4>
+        <p class="text-secondary">We dive deep into your business processes, challenges, and goals.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-number">2</div>
+        <h4>Architecture</h4>
+        <p class="text-secondary">We design the system structure, database, and user experience.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-number">3</div>
+        <h4>Development</h4>
+        <p class="text-secondary">Agile sprints with regular updates and testing.</p>
+      </div>
+      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-number">4</div>
+        <h4>Launch & Support</h4>
+        <p class="text-secondary">Deployment, training, and ongoing maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="image/custom-dev-benefits.jpg" alt="Custom development benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Business+Growth'">
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="sme-badge">Why Go Custom</span>
+        <h2 class="section-title mb-4">The Competitive Advantage</h2>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-cog"></i></div>
+          <div class="benefit-text">
+            <h4>Tailored to Your Workflow</h4>
+            <p>Software that adapts to your processes, not the other way around.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-chart-bar"></i></div>
+          <div class="benefit-text">
+            <h4>Own Your Data</h4>
+            <p>Full ownership and control of your business data — no third-party limitations.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-text">
+            <h4>Competitive Edge</h4>
+            <p>Unique features and capabilities that off-the-shelf software can't provide.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+          <div class="benefit-text">
+            <h4>No Recurring Licenses</h4>
+            <p>Pay once, own forever. No monthly per-user fees that scale with your team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Custom Solution in Action</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
+          <div class="card-body">
+            <h4>Inventory Management System</h4>
+            <p class="industry">Retail · Lagos</p>
+            <p>A growing retail chain with 5 locations was struggling with stock tracking, manual reordering, and data silos. We built a custom inventory management system that:</p>
+            <ul class="text-secondary mb-3">
+              <li>Centralized inventory data across all locations in real-time</li>
+              <li>Automated reordering when stock hits threshold levels</li>
+              <li>Generated sales reports by location, category, and time period</li>
+              <li>Integrated with their existing POS systems</li>
+            </ul>
+            <p class="result">📈 Result: 40% reduction in stockouts, 25% lower inventory holding costs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="portfolio.html" class="btn btn-primary">View More Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">FAQ</span>
+      <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-item" data-aos="fade-up">
+          <h4>How long does custom development take?</h4>
+          <p>Timeline depends on complexity. A simple web application can take 4-6 weeks, while complex platforms may take 2-4 months. We'll provide a detailed timeline during discovery.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>How much does custom software cost?</h4>
+          <p>Every project is unique. We provide transparent, fixed-price quotes based on your requirements. Custom software is an investment that pays for itself through efficiency gains.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Do you provide maintenance after launch?</h4>
+          <p>Absolutely! We offer ongoing maintenance packages including updates, security patches, backups, and technical support.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Can you integrate with my existing tools?</h4>
+          <p>Yes. We build APIs and integrations with popular tools like accounting software, CRMs, payment gateways, and more.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Who owns the code and intellectual property?</h4>
+          <p>You do. Upon final payment, you receive full ownership of all code, designs, and intellectual property.</p>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up">
+          <h4>Do I need technical knowledge to manage the software?</h4>
+          <p>No. We build user-friendly interfaces that your team can use without technical training. We also provide documentation and training sessions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Build?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Create Your Custom Solution</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Tell us about your project. We'll provide a free consultation and estimate.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact Info</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
+      </div>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    
+    <hr class="border-secondary" />
+    
+    <div class="text-center small">
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
+</body>
+</html>
