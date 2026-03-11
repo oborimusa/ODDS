@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
+  <title>UI/UX Design for Nigerian SMEs · User-Centered Digital Experiences | ODDS</title>
+  <meta name="description" content="ODDS UI/UX design services for Nigerian SMEs: creating seamless, intuitive, and user-friendly digital experiences that keep visitors engaged and convert them into customers." />
+  <meta name="keywords" content="UI UX design Nigeria, user experience Lagos, user interface design, product design, app design, website UX, conversion optimization, ODDS design" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
+  <meta property="og:title" content="UI/UX Design for Nigerian SMEs · User-Centered Digital Experiences" />
+  <meta property="og:description" content="Creating seamless, intuitive, and user-friendly digital experiences that keep visitors engaged and convert them into customers." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/ui-ux-design.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
@@ -263,8 +263,8 @@
       line-height: 1.7;
     }
 
-    /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
+    /* ===== PRINCIPLE CARDS ===== */
+    .principle-card {
       background: var(--white);
       border-radius: 20px;
       padding: 2rem;
@@ -275,13 +275,13 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .brand-card:hover {
+    .principle-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .brand-icon {
+    .principle-icon {
       width: 80px;
       height: 80px;
       background: var(--gradient-accent);
@@ -294,14 +294,14 @@
       color: var(--primary-dark);
     }
 
-    .brand-card h3 {
+    .principle-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    .brand-card p {
+    .principle-card p {
       color: var(--gray-600);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
     }
 
     /* ===== PROCESS STEPS ===== */
@@ -357,67 +357,106 @@
       margin-bottom: 0;
     }
 
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
+    /* ===== METRICS CARDS ===== */
+    .metrics-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metrics-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* ===== TOOLS SECTION ===== */
+    .tool-badge {
+      display: inline-block;
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      margin: 0.5rem;
+      font-weight: 600;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .tool-badge:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-accent);
+    }
+
+    .tool-badge i {
+      margin-right: 8px;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
+      height: 100%;
     }
 
-    .portfolio-card:hover {
+    .case-study-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
+    .case-study-card .card-body {
+      padding: 2rem;
     }
 
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
+    .case-study-card h4 {
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .case-study-card .industry {
       color: var(--accent);
-      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
 
-    .integration-note p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .result-highlight {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     /* ===== FAQ SECTION ===== */
@@ -443,6 +482,50 @@
     .faq-item p {
       color: var(--gray-600);
       margin-bottom: 0;
+    }
+
+    /* ===== UX VS UI SECTION ===== */
+    .comparison-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .comparison-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .comparison-card h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .comparison-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .comparison-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--gray-200);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .comparison-list li:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-list i {
+      color: var(--accent);
+      width: 24px;
     }
 
     /* ===== CTA SECTION ===== */
@@ -521,11 +604,11 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/brand-web-hero.jpg') center center/cover no-repeat;">
+<section class="service-hero" style="background: url('image/uiux-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
+    <span class="sme-badge" data-aos="fade-down">UI/UX Design</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Experiences <span style="color: var(--accent);">Users Love</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Creating seamless, intuitive, and user-friendly digital experiences that keep visitors engaged and convert them into customers.</p>
   </div>
 </section>
 
@@ -534,179 +617,171 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
+        <span class="sme-badge">User-Centered Design</span>
+        <h2 class="section-title mb-4">Great Design = <span style="color: var(--accent);">Happy Users</span></h2>
+        <p class="lead mb-4">Users don't just use your product — they experience it.</p>
+        <p class="mb-4">At ODDS, we design digital experiences that feel effortless. From the moment a user lands on your site or opens your app, every click, swipe, and interaction is intentional. We combine aesthetics with psychology to create interfaces that not only look beautiful but also guide users naturally toward their goals — and yours.</p>
         <div class="row mt-4">
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-heart me-2" style="color: var(--accent);"></i>User Love</h4>
+            <p class="text-secondary small">Higher satisfaction</p>
           </div>
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-chart-line me-2" style="color: var(--accent);"></i>More Conversions</h4>
+            <p class="text-secondary small">More sales, signups</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/brand-web-showcase.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
+        <img src="image/uiux-showcase.jpg" alt="UI/UX design examples" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=UI+UX+Design'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND DESIGN SECTION -->
+<!-- METRICS BANNER -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="metrics-card">
+          <div class="metrics-number">200%</div>
+          <div class="metrics-label">Conversion Increase</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="metrics-card">
+          <div class="metrics-number">60%</div>
+          <div class="metrics-label">Lower Bounce Rate</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="metrics-card">
+          <div class="metrics-number">5x</div>
+          <div class="metrics-label">ROI on Design</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="metrics-card">
+          <div class="metrics-number">100%</div>
+          <div class="metrics-label">User-Tested</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WEB DESIGN SECTION -->
+<!-- UX VS UI EXPLANATION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
+      <span class="sme-badge" data-aos="fade-down">UX vs UI</span>
+      <h2 class="section-title-center" data-aos="fade-up">Two Sides of the Same Coin</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Great products need both — and we deliver both.</p>
     </div>
     
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="comparison-card">
+          <h3><span style="color: var(--accent);">UX</span> · User Experience</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-brain"></i> How the product feels</li>
+            <li><i class="fas fa-users"></i> User research & personas</li>
+            <li><i class="fas fa-sitemap"></i> Information architecture</li>
+            <li><i class="fas fa-flask"></i> Usability testing</li>
+            <li><i class="fas fa-road"></i> User flows & journey mapping</li>
+            <li><i class="fas fa-chart-line"></i> Conversion optimization</li>
+            <li><i class="fas fa-check-circle"></i> Goal: Makes things work</li>
+          </ul>
         </div>
       </div>
       
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
-          </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="comparison-card">
+          <h3><span style="color: var(--accent);">UI</span> · User Interface</h3>
+          <ul class="comparison-list">
+            <li><i class="fas fa-paint-brush"></i> How the product looks</li>
+            <li><i class="fas fa-palette"></i> Color systems & typography</li>
+            <li><i class="fas fa-icons"></i> Iconography & imagery</li>
+            <li><i class="fas fa-mouse-pointer"></i> Interactive elements</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive layouts</li>
+            <li><i class="fas fa-border-all"></i> Spacing & hierarchy</li>
+            <li><i class="fas fa-check-circle"></i> Goal: Makes things beautiful</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTEGRATION NOTE -->
+<!-- DESIGN PRINCIPLES SECTION -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Our Principles</span>
+      <h2 class="section-title-center" data-aos="fade-up">Design That Delights</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-compass"></i>
+          </div>
+          <h3>Intuitive</h3>
+          <p>Users shouldn't have to think. Every element guides them naturally to their next step.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Fast & Responsive</h3>
+          <p>Milliseconds matter. We design for speed and seamless experiences across all devices.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-universal-access"></i>
+          </div>
+          <h3>Accessible</h3>
+          <p>Design for everyone. We follow WCAG guidelines to ensure your product is usable by all.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Consistent</h3>
+          <p>Every screen feels like part of one cohesive experience, not a collection of random pages.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Goal-Oriented</h3>
+          <p>Design isn't just about beauty — it's about achieving business objectives.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Human-Centered</h3>
+          <p>We design for real people with real needs, not just "users" in the abstract.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -716,75 +791,99 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
+      <h2 class="section-title-center" data-aos="fade-up">From Research to Reality</h2>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
+        <h4>Research</h4>
+        <p class="text-secondary">User interviews, competitor analysis, and understanding your audience.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
+        <h4>Wireframing</h4>
+        <p class="text-secondary">Sketches and low-fidelity prototypes to map user flows.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
+        <h4>Visual Design</h4>
+        <p class="text-secondary">High-fidelity UI with colors, typography, and interactions.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+        <h4>Testing</h4>
+        <p class="text-secondary">Usability testing and refinement before handoff.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BENEFITS SECTION -->
+<!-- TOOLS SECTION -->
 <section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Our Tools</span>
+      <h2 class="section-title-center" data-aos="fade-up">Designing With the Best</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">We use industry-leading tools to bring your vision to life</p>
+    </div>
+    
+    <div class="text-center" data-aos="fade-up">
+      <span class="tool-badge"><i class="fab fa-figma"></i> Figma</span>
+      <span class="tool-badge"><i class="fab fa-sketch"></i> Sketch</span>
+      <span class="tool-badge"><i class="fas fa-paint-brush"></i> Adobe XD</span>
+      <span class="tool-badge"><i class="fas fa-layer-group"></i> Illustrator</span>
+      <span class="tool-badge"><i class="fas fa-vector-square"></i> InVision</span>
+      <span class="tool-badge"><i class="fas fa-project-diagram"></i> Miro</span>
+      <span class="tool-badge"><i class="fas fa-check-circle"></i> Zeplin</span>
+      <span class="tool-badge"><i class="fas fa-check-circle"></i> Abstract</span>
+      <span class="tool-badge"><i class="fas fa-check-circle"></i> Hotjar</span>
+      <span class="tool-badge"><i class="fas fa-check-circle"></i> UsabilityHub</span>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/brand-web-benefits.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
+        <img src="image/uiux-benefits.jpg" alt="UI/UX benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Better+Experiences'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
+        <span class="sme-badge">Why UI/UX Matters</span>
+        <h2 class="section-title mb-4">The Business Case for Great Design</h2>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
           <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
+            <h4>Higher Conversions</h4>
+            <p>Intuitive design guides users to complete purchases, signups, and desired actions.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
           <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
+            <h4>Customer Loyalty</h4>
+            <p>Users return to products that are easy and enjoyable to use. Good design builds habit.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+          <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
           <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
+            <h4>Reduced Support Costs</h4>
+            <p>When interfaces are intuitive, users need less help. Fewer calls, emails, and complaints.</p>
           </div>
         </div>
         
         <div class="benefit-item">
           <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
           <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
+            <h4>Competitive Advantage</h4>
+            <p>In crowded markets, the best-designed product wins.</p>
           </div>
         </div>
       </div>
@@ -792,54 +891,42 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SNIPPET -->
-<section class="py-5">
+<!-- CASE STUDY SECTION -->
+<section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Design That Delivered</h2>
     </div>
     
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
           <div class="card-body">
-            <h4>Lagos Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
-          <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
+            <h4>Fintech App Redesign</h4>
+            <p class="industry">Fintech · Lagos</p>
+            <p>A Nigerian fintech startup had a functional but confusing app with poor user retention. Users struggled to complete transactions. We redesigned the entire experience:</p>
+            <ul class="text-secondary mb-3">
+              <li>Conducted user research to identify pain points in the payment flow</li>
+              <li>Simplified the navigation and reduced steps to complete a transaction from 7 to 3</li>
+              <li>Created a clean, modern visual language that built trust</li>
+              <li>Designed a dashboard that gave users clear visibility into their finances</li>
+              <li>Tested prototypes with real users and iterated based on feedback</li>
+            </ul>
+            <p class="result"><span class="result-highlight">60%</span> reduction in drop-offs · <span class="result-highlight">150%</span> increase in daily active users · <span class="result-highlight">4.8★</span> app store rating</p>
           </div>
         </div>
       </div>
     </div>
     
     <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+      <a href="portfolio.html" class="btn btn-primary">View More Case Studies</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section class="py-5 bg-light">
+<section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">FAQ</span>
@@ -849,33 +936,33 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
+          <h4>What's the difference between UI and UX?</h4>
+          <p>UX (User Experience) is about how a product works and feels — the overall experience. UI (User Interface) is about how it looks — the visual design. Both are essential, and we provide both.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
+          <h4>How long does the design process take?</h4>
+          <p>A complete UI/UX design for a website typically takes 3-4 weeks. Mobile apps take 4-6 weeks. Complex products may take longer. We'll provide a timeline during discovery.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
+          <h4>How much does UI/UX design cost?</h4>
+          <p>Pricing depends on complexity. Website UI/UX packages start from ₦350,000, mobile apps from ₦500,000. Contact us for a custom quote based on your needs.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
+          <h4>Do you design for web, mobile, or both?</h4>
+          <p>Both! We design responsive websites that work on all devices, as well as native mobile apps for iOS and Android.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
+          <h4>Do you conduct user testing?</h4>
+          <p>Absolutely. We believe in designing with users, not just for them. We conduct usability testing at key stages and iterate based on feedback.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
+          <h4>What files will I receive?</h4>
+          <p>You'll receive design files (Figma, Sketch, or Adobe XD), a design system/style guide, and all assets (icons, images) ready for development.</p>
         </div>
       </div>
     </div>
@@ -887,9 +974,9 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Create Something Amazing</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready for Design That Works?</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free UI/UX consultation. Let's discuss your project.</p>
         <div data-aos="fade-up" data-aos-delay="200">
           <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
           <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>

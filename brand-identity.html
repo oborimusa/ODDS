@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
+  <title>Brand Identity for Nigerian SMEs · Logo, Strategy & Design | ODDS</title>
+  <meta name="description" content="ODDS brand identity services for Nigerian SMEs: logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience." />
+  <meta name="keywords" content="brand identity Nigeria, logo design Lagos, brand strategy, visual identity, brand guidelines, SME branding, ODDS brand design" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
+  <meta property="og:title" content="Brand Identity for Nigerian SMEs · Logo, Strategy & Design" />
+  <meta property="og:description" content="Logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-identity.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
@@ -264,7 +264,7 @@
     }
 
     /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
+    .element-card {
       background: var(--white);
       border-radius: 20px;
       padding: 2rem;
@@ -275,13 +275,13 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .brand-card:hover {
+    .element-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .brand-icon {
+    .element-icon {
       width: 80px;
       height: 80px;
       background: var(--gradient-accent);
@@ -294,14 +294,14 @@
       color: var(--primary-dark);
     }
 
-    .brand-card h3 {
+    .element-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    .brand-card p {
+    .element-card p {
       color: var(--gray-600);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
     }
 
     /* ===== PROCESS STEPS ===== */
@@ -357,67 +357,106 @@
       margin-bottom: 0;
     }
 
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
+    /* ===== METRICS CARDS ===== */
+    .metrics-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metrics-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* ===== COLOR PALETTE SHOWCASE ===== */
+    .color-swatch {
+      width: 100%;
+      height: 100px;
+      border-radius: 15px;
+      margin-bottom: 0.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-md);
+    }
+
+    .color-label {
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+
+    .color-hex {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      font-family: monospace;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
+      height: 100%;
     }
 
-    .portfolio-card:hover {
+    .case-study-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
+    .case-study-card .card-body {
+      padding: 2rem;
     }
 
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
+    .case-study-card h4 {
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .case-study-card .industry {
       color: var(--accent);
-      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
 
-    .integration-note p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .result-highlight {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     /* ===== FAQ SECTION ===== */
@@ -521,11 +560,11 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/brand-web-hero.jpg') center center/cover no-repeat;">
+<section class="service-hero" style="background: url('image/brand-identity-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
+    <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Your Brand, <span style="color: var(--accent);">Unforgettable</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience.</p>
   </div>
 </section>
 
@@ -534,179 +573,170 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
+        <span class="sme-badge">First Impressions Matter</span>
+        <h2 class="section-title mb-4">More Than Just a <span style="color: var(--accent);">Logo</span></h2>
+        <p class="lead mb-4">Your brand is how the world recognizes you. Make it count.</p>
+        <p class="mb-4">At ODDS, we don't just design logos — we build complete brand identities that tell your story, connect with your audience, and create lasting trust. From color psychology to typography, every element is carefully crafted to reflect your values and resonate with your customers.</p>
         <div class="row mt-4">
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Strategic</h4>
+            <p class="text-secondary small">Rooted in research</p>
           </div>
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-heart me-2" style="color: var(--accent);"></i>Memorable</h4>
+            <p class="text-secondary small">Lasts in memory</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/brand-web-showcase.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
+        <img src="image/brand-identity-showcase.jpg" alt="Brand identity showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+Identity'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND DESIGN SECTION -->
+<!-- METRICS BANNER -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="metrics-card">
+          <div class="metrics-number">90%</div>
+          <div class="metrics-label">Brand Recognition</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="metrics-card">
+          <div class="metrics-number">33%</div>
+          <div class="metrics-label">Higher Revenue</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="metrics-card">
+          <div class="metrics-number">80%</div>
+          <div class="metrics-label">Consumer Trust</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="metrics-card">
+          <div class="metrics-number">100%</div>
+          <div class="metrics-label">Unique To You</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WEB DESIGN SECTION -->
+<!-- BRAND ELEMENTS SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
+      <span class="sme-badge" data-aos="fade-down">The Elements</span>
+      <h2 class="section-title-center" data-aos="fade-up">What's Included in Your Brand Identity</h2>
     </div>
     
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-pen-nib"></i>
           </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+          <h3>Logo Design</h3>
+          <p>A distinctive, versatile logo that works across all platforms — from business cards to billboards, social media to storefronts.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-palette"></i>
           </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
+          <h3>Color Systems</h3>
+          <p>Strategically selected color palettes that evoke the right emotions and create visual consistency across all touchpoints.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-search"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-font"></i>
           </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
+          <h3>Typography</h3>
+          <p>Carefully chosen font pairings that enhance readability and express your brand's personality.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-image"></i>
           </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
+          <h3>Brand Guidelines</h3>
+          <p>A comprehensive guide showing how to use your brand elements correctly — ensuring consistency forever.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-business-time"></i>
           </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
+          <h3>Business Stationery</h3>
+          <p>Professional business cards, letterheads, and email signatures that carry your brand identity.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
+        <div class="element-card">
+          <div class="element-icon">
+            <i class="fas fa-bullseye"></i>
           </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
+          <h3>Brand Strategy</h3>
+          <p>Your brand story, mission, values, voice, and positioning — the foundation of everything you communicate.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTEGRATION NOTE -->
+<!-- COLOR PALETTE SHOWCASE -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Example Palette</span>
+      <h2 class="section-title-center" data-aos="fade-up">Colors That Communicate</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Every color tells a story. We help you choose the right one.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="color-swatch" style="background-color: #0a2647;"></div>
+        <div class="text-center">
+          <div class="color-label">Primary Navy</div>
+          <div class="color-hex">#0A2647</div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="color-swatch" style="background-color: #c5a059;"></div>
+        <div class="text-center">
+          <div class="color-label">Accent Gold</div>
+          <div class="color-hex">#C5A059</div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="color-swatch" style="background-color: #1e3a5f;"></div>
+        <div class="text-center">
+          <div class="color-label">Secondary Blue</div>
+          <div class="color-hex">#1E3A5F</div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="color-swatch" style="background-color: #f8fafc;"></div>
+        <div class="text-center">
+          <div class="color-label">Neutral Light</div>
+          <div class="color-hex">#F8FAFC</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -716,29 +746,29 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
+      <h2 class="section-title-center" data-aos="fade-up">From Discovery to Identity</h2>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
         <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
+        <p class="text-secondary">We learn about your business, values, audience, and competitors.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
+        <h4>Strategy</h4>
+        <p class="text-secondary">We define your brand positioning, voice, and visual direction.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
+        <h4>Design</h4>
+        <p class="text-secondary">We create concepts, refine, and deliver your complete identity.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+        <h4>Launch</h4>
+        <p class="text-secondary">We deliver all files and guidelines, ready for use everywhere.</p>
       </div>
     </div>
   </div>
@@ -749,42 +779,42 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/brand-web-benefits.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
+        <img src="image/brand-benefits.jpg" alt="Brand identity benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Brand+Trust'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
+        <span class="sme-badge">Why Brand Matters</span>
+        <h2 class="section-title mb-4">The Power of a Strong Brand</h2>
         
         <div class="benefit-item">
           <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
           <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
+            <h4>Instant Recognition</h4>
+            <p>Customers recognize you at a glance. Your logo, colors, and style become synonymous with quality.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
           <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
+            <h4>Builds Trust</h4>
+            <p>A professional, consistent brand signals reliability and credibility. Customers buy from brands they trust.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
           <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
+            <h4>Command Premium Prices</h4>
+            <p>Strong brands can charge 20-30% more than generic competitors. Brand equity = higher profits.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-icon"><i class="fas fa-users"></i></div>
           <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
+            <h4>Customer Loyalty</h4>
+            <p>People form emotional connections with brands they love. They'll choose you over competitors.</p>
           </div>
         </div>
       </div>
@@ -792,48 +822,35 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SNIPPET -->
+<!-- CASE STUDY SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Brand Transformation</h2>
     </div>
     
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
           <div class="card-body">
-            <h4>Lagos Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
-          <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
+            <h4>Local Restaurant Rebrand</h4>
+            <p class="industry">Hospitality · Lagos</p>
+            <p>A popular Lagos restaurant had great food but an outdated, inconsistent brand that didn't reflect their quality. We created:</p>
+            <ul class="text-secondary mb-3">
+              <li>A modern, memorable logo inspired by Nigerian cuisine</li>
+              <li>Warm, appetizing color palette (terracotta, cream, deep green)</li>
+              <li>Complete brand guidelines for menus, signage, social media</li>
+              <li>Redesigned menu and packaging</li>
+            </ul>
+            <p class="result"><span class="result-highlight">150%</span> increase in takeout orders · <span class="result-highlight">Featured</span> in Lagos Food Guide</p>
           </div>
         </div>
       </div>
     </div>
     
     <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+      <a href="portfolio.html" class="btn btn-primary">View More Case Studies</a>
     </div>
   </div>
 </section>
@@ -849,33 +866,33 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
+          <h4>How long does the brand identity process take?</h4>
+          <p>A complete brand identity package typically takes 3-4 weeks. This includes discovery, strategy, design, and revisions.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
+          <h4>How much does a brand identity cost?</h4>
+          <p>Pricing depends on complexity and scope. We offer packages starting from ₦250,000 for SMEs. Contact us for a custom quote.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
+          <h4>What if I already have a logo but need a full brand identity?</h4>
+          <p>Perfect! We can work with your existing logo and build a complete brand system around it — colors, fonts, guidelines, and more.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
+          <h4>What files will I receive?</h4>
+          <p>You'll receive all master files (AI, EPS, PDF) and web-ready formats (PNG, JPG, SVG) for print, digital, and social media.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
+          <h4>How many logo concepts do you provide?</h4>
+          <p>We typically present 3 distinct logo concepts for you to choose from, then refine your favorite through 2 rounds of revisions.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
+          <h4>Do you also design packaging, signage, or marketing materials?</h4>
+          <p>Yes! Once your brand identity is established, we can apply it to any materials you need — from menus to billboards to social media templates.</p>
         </div>
       </div>
     </div>
@@ -888,10 +905,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free brand consultation and quote. No pressure, just possibilities.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Brand</a>
           <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
         </div>
       </div>

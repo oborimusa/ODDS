@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
+  <title>Social Media Management for Nigerian SMEs · Community & Growth | ODDS</title>
+  <meta name="description" content="ODDS social media management for Nigerian SMEs: we manage your social media accounts, create engaging content, increase visibility, and build a loyal community around your brand." />
+  <meta name="keywords" content="social media management Nigeria, Instagram management Lagos, Facebook marketing, LinkedIn growth, TikTok management, community management, SME social media, ODDS social" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
+  <meta property="og:title" content="Social Media Management for Nigerian SMEs · Community & Growth" />
+  <meta property="og:description" content="We manage your social media accounts, create engaging content, increase visibility, and build a loyal community around your brand." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/social-media-management.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
@@ -263,8 +263,8 @@
       line-height: 1.7;
     }
 
-    /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
+    /* ===== PLATFORM CARDS ===== */
+    .platform-card {
       background: var(--white);
       border-radius: 20px;
       padding: 2rem;
@@ -275,13 +275,13 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .brand-card:hover {
+    .platform-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .brand-icon {
+    .platform-icon {
       width: 80px;
       height: 80px;
       background: var(--gradient-accent);
@@ -289,19 +289,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1rem;
       font-size: 2.5rem;
       color: var(--primary-dark);
     }
 
-    .brand-card h3 {
+    .platform-card h3 {
       font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .platform-card p {
+      color: var(--gray-600);
       margin-bottom: 1rem;
     }
 
-    .brand-card p {
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
+    .platform-tag {
+      display: inline-block;
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 0.2rem;
     }
 
     /* ===== PROCESS STEPS ===== */
@@ -357,67 +368,136 @@
       margin-bottom: 0;
     }
 
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
+    /* ===== METRICS CARDS ===== */
+    .metrics-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metrics-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* ===== CONTENT CALENDAR EXAMPLE ===== */
+    .calendar-example {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .calendar-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px dashed var(--gray-200);
+    }
+
+    .calendar-item:last-child {
+      border-bottom: none;
+    }
+
+    .calendar-day {
+      width: 50px;
+      height: 50px;
+      background: var(--off-white);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .calendar-day span {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .calendar-day small {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .calendar-content h5 {
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+    }
+
+    .calendar-content p {
+      margin-bottom: 0;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
+      height: 100%;
     }
 
-    .portfolio-card:hover {
+    .case-study-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
+    .case-study-card .card-body {
+      padding: 2rem;
     }
 
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
+    .case-study-card h4 {
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .case-study-card .industry {
       color: var(--accent);
-      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
 
-    .integration-note p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .result-highlight {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     /* ===== FAQ SECTION ===== */
@@ -521,11 +601,11 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/brand-web-hero.jpg') center center/cover no-repeat;">
+<section class="service-hero" style="background: url('image/social-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
+    <span class="sme-badge" data-aos="fade-down">Social Media Management</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Build Your <span style="color: var(--accent);">Community</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">We manage your social media accounts, create engaging content, increase visibility, and build a loyal community around your brand.</p>
   </div>
 </section>
 
@@ -534,257 +614,390 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
+        <span class="sme-badge">Your Brand, Amplified</span>
+        <h2 class="section-title mb-4">More Followers, <span style="color: var(--accent);">More Customers</span></h2>
+        <p class="lead mb-4">Social media isn't just about posting — it's about connecting.</p>
+        <p class="mb-4">At ODDS, we take the stress out of social media. We don't just post randomly — we create a strategy, craft compelling content, engage with your audience, and track what works. Whether it's Instagram, Facebook, LinkedIn, or TikTok, we help you build a loyal community that loves your brand and buys your products.</p>
         <div class="row mt-4">
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-chart-line me-2" style="color: var(--accent);"></i>Growth Focused</h4>
+            <p class="text-secondary small">Real followers, real engagement</p>
           </div>
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-clock me-2" style="color: var(--accent);"></i>Time Saving</h4>
+            <p class="text-secondary small">You focus on your business</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/brand-web-showcase.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
+        <img src="image/social-showcase.jpg" alt="Social media management" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Social+Media'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND DESIGN SECTION -->
+<!-- METRICS BANNER -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="metrics-card">
+          <div class="metrics-number">300%</div>
+          <div class="metrics-label">Engagement Increase</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="metrics-card">
+          <div class="metrics-number">5x</div>
+          <div class="metrics-label">Follower Growth</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="metrics-card">
+          <div class="metrics-number">24/7</div>
+          <div class="metrics-label">Community Monitoring</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="metrics-card">
+          <div class="metrics-number">100%</div>
+          <div class="metrics-label">Custom Content</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WEB DESIGN SECTION -->
+<!-- PLATFORMS SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
+      <span class="sme-badge" data-aos="fade-down">Platforms We Master</span>
+      <h2 class="section-title-center" data-aos="fade-up">Where Your Audience Lives</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <h3>Instagram</h3>
+          <p>Visual storytelling, Reels, Stories, and community building.</p>
+          <div>
+            <span class="platform-tag">Reels</span>
+            <span class="platform-tag">Stories</span>
+            <span class="platform-tag">Posts</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-facebook"></i>
+          </div>
+          <h3>Facebook</h3>
+          <p>Community engagement, groups, and targeted reach.</p>
+          <div>
+            <span class="platform-tag">Pages</span>
+            <span class="platform-tag">Groups</span>
+            <span class="platform-tag">Events</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>B2B networking, thought leadership, and professional content.</p>
+          <div>
+            <span class="platform-tag">Articles</span>
+            <span class="platform-tag">Company Page</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <h3>TikTok</h3>
+          <p>Viral content, trends, and reaching younger audiences.</p>
+          <div>
+            <span class="platform-tag">Short Videos</span>
+            <span class="platform-tag">Trends</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-x-twitter"></i>
+          </div>
+          <h3>X (Twitter)</h3>
+          <p>Real-time updates, customer service, and conversations.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <h3>YouTube</h3>
+          <p>Long-form video content, tutorials, and brand storytelling.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Direct customer communication, broadcast lists, and support.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="platform-card">
+          <div class="platform-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Multi-Platform</h3>
+          <p>Integrated strategy across all channels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">What We Do</span>
+      <h2 class="section-title-center" data-aos="fade-up">Full-Service Social Media Management</h2>
     </div>
     
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-calendar-alt"></i>
           </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+          <h3>Content Strategy</h3>
+          <p>We develop a monthly content calendar tailored to your brand voice, audience, and goals. No random posts — just purposeful content.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-pen-fancy"></i>
           </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
+          <h3>Content Creation</h3>
+          <p>Eye-catching graphics, scroll-stopping videos, and compelling captions that reflect your brand identity and resonate with your audience.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-comments"></i>
           </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
+          <h3>Community Management</h3>
+          <p>We respond to comments and DMs, engage with your audience, and build genuine relationships that turn followers into fans.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
+          <h3>Growth & Engagement</h3>
+          <p>Strategic hashtags, collaborations, and engagement tactics to grow your following and increase visibility.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3>Analytics & Reporting</h3>
+          <p>Monthly reports showing follower growth, engagement rates, top posts, and actionable insights.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-ad"></i>
           </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
+          <h3>Paid Social</h3>
+          <p>Targeted ad campaigns to reach new audiences and boost your best content.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTEGRATION NOTE -->
-<section class="py-5 bg-light">
+<!-- CONTENT CALENDAR EXAMPLE -->
+<section class="py-5">
   <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="sme-badge">Example Content Calendar</span>
+        <h2 class="section-title mb-4">A Week of <span style="color: var(--accent);">Engaging Content</span></h2>
+        <p class="mb-4">We don't post randomly. Every piece of content serves a purpose — educate, entertain, inspire, or sell.</p>
+        
+        <div class="calendar-example">
+          <div class="calendar-item">
+            <div class="calendar-day">
+              <span>1</span>
+              <small>MON</small>
+            </div>
+            <div class="calendar-content">
+              <h5>Educational Carousel</h5>
+              <p>5 tips for choosing the right product · High engagement</p>
+            </div>
+          </div>
+          
+          <div class="calendar-item">
+            <div class="calendar-day">
+              <span>2</span>
+              <small>TUE</small>
+            </div>
+            <div class="calendar-content">
+              <h5>Behind the Scenes</h5>
+              <p>Video of your team at work · Humanizes your brand</p>
+            </div>
+          </div>
+          
+          <div class="calendar-item">
+            <div class="calendar-day">
+              <span>3</span>
+              <small>WED</small>
+            </div>
+            <div class="calendar-content">
+              <h5>Customer Testimonial</h5>
+              <p>Real review from a happy client · Builds trust</p>
+            </div>
+          </div>
+          
+          <div class="calendar-item">
+            <div class="calendar-day">
+              <span>4</span>
+              <small>THU</small>
+            </div>
+            <div class="calendar-content">
+              <h5>Product Spotlight</h5>
+              <p>Highlight a specific product or service · Drives sales</p>
+            </div>
+          </div>
+          
+          <div class="calendar-item">
+            <div class="calendar-day">
+              <span>5</span>
+              <small>FRI</small>
+            </div>
+            <div class="calendar-content">
+              <h5>Fun/Entertainment</h5>
+              <p>Relatable meme or trend · Boosts engagement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="image/social-calendar.jpg" alt="Content calendar" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Content+Calendar'">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- OUR PROCESS SECTION -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
+      <h2 class="section-title-center" data-aos="fade-up">How We Manage Your Social Media</h2>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
+        <h4>Audit & Strategy</h4>
+        <p class="text-secondary">We analyze your current presence and create a custom strategy.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
+        <h4>Content Planning</h4>
+        <p class="text-secondary">We develop a monthly content calendar for approval.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
+        <h4>Creation & Scheduling</h4>
+        <p class="text-secondary">We create and schedule posts across all platforms.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+        <h4>Monitoring & Reporting</h4>
+        <p class="text-secondary">We engage daily and provide monthly performance reports.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BENEFITS SECTION -->
-<section class="py-5 bg-light">
+<section class="py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/brand-web-benefits.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
+        <img src="image/social-benefits.jpg" alt="Social media benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Grow+Your+Community'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
+        <span class="sme-badge">Why Invest in Social Media</span>
+        <h2 class="section-title mb-4">The Power of Community</h2>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
           <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
+            <h4>Brand Awareness</h4>
+            <p>Reach thousands of potential customers and put your brand on their radar.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
           <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
+            <h4>Customer Loyalty</h4>
+            <p>Engage with existing customers and turn them into brand advocates.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
           <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
+            <h4>Website Traffic</h4>
+            <p>Drive qualified traffic to your website and increase sales.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-icon"><i class="fas fa-search"></i></div>
           <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
+            <h4>Social Proof</h4>
+            <p>A strong social presence builds trust and credibility with new customers.</p>
           </div>
         </div>
       </div>
@@ -792,54 +1005,42 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SNIPPET -->
-<section class="py-5">
+<!-- CASE STUDY SECTION -->
+<section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Community Built</h2>
     </div>
     
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
           <div class="card-body">
-            <h4>Lagos Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
-          <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
+            <h4>Local Restaurant Growth</h4>
+            <p class="industry">Hospitality · Lagos</p>
+            <p>A Lagos restaurant had great food but low social media engagement. They weren't showing up in customers' feeds. We took over their social media:</p>
+            <ul class="text-secondary mb-3">
+              <li>Created a mouth-watering content strategy featuring food photography and videos</li>
+              <li>Posted daily stories showing behind-the-scenes and daily specials</li>
+              <li>Engaged with every comment and DM within hours</li>
+              <li>Ran Instagram and Facebook ads targeting local food lovers</li>
+              <li>Created user-generated content campaigns encouraging customers to share photos</li>
+            </ul>
+            <p class="result"><span class="result-highlight">400%</span> increase in engagement · <span class="result-highlight">5,000+</span> new followers in 6 months · <span class="result-highlight">60%</span> more dine-in customers</p>
           </div>
         </div>
       </div>
     </div>
     
     <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+      <a href="portfolio.html" class="btn btn-primary">View More Success Stories</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section class="py-5 bg-light">
+<section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">FAQ</span>
@@ -849,33 +1050,33 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
+          <h4>How many posts will you create per week?</h4>
+          <p>Our standard package includes 4-5 posts per week per platform, plus daily stories. We can customize based on your needs and budget.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
+          <h4>How much does social media management cost?</h4>
+          <p>Packages start from ₦150,000/month for one platform, ₦250,000/month for two platforms, and ₦350,000/month for three platforms. Contact us for a custom quote.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
+          <h4>Do I need to provide content?</h4>
+          <p>We can work with your existing content or create everything from scratch — graphics, videos, captions. We just need your input on key messages and promotions.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
+          <h4>How soon will I see results?</h4>
+          <p>You'll see engagement increases within the first month. Significant follower growth typically takes 3-6 months of consistent, strategic posting.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
+          <h4>Will I have approval over posts?</h4>
+          <p>Yes. We send a monthly content calendar for your approval before posting. You're always in control of your brand voice.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
+          <h4>Do you handle social media ads?</h4>
+          <p>Yes. We can manage paid social campaigns as an add-on service. We'll create the ads, target the right audiences, and optimize for results.</p>
         </div>
       </div>
     </div>
@@ -887,12 +1088,12 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Grow?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Community</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free social media audit and consultation.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Journey</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Success Stories</a>
         </div>
       </div>
     </div>

@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
+  <title>SEO Optimization for Nigerian SMEs · Rank Higher on Google | ODDS</title>
+  <meta name="description" content="ODDS SEO optimization for Nigerian SMEs: comprehensive on-page and off-page SEO strategies to improve your search rankings and drive organic traffic to your website." />
+  <meta name="keywords" content="SEO Nigeria, search engine optimization Lagos, Google ranking, on-page SEO, off-page SEO, local SEO, organic traffic, SME SEO, ODDS digital" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
+  <meta property="og:title" content="SEO Optimization for Nigerian SMEs · Rank Higher on Google" />
+  <meta property="og:description" content="Comprehensive on-page and off-page SEO strategies to improve your search rankings and drive organic traffic to your website." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/seo-optimization.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
@@ -263,45 +263,48 @@
       line-height: 1.7;
     }
 
-    /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
+    /* ===== ON-PAGE VS OFF-PAGE ===== */
+    .seo-column {
       background: var(--white);
       border-radius: 20px;
       padding: 2rem;
-      transition: all 0.4s ease;
-      border: 1px solid var(--gray-200);
       height: 100%;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
     }
 
-    .brand-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
+    .seo-column:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
       border-color: var(--accent);
     }
 
-    .brand-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
+    .seo-column h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .seo-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .seo-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--gray-200);
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2.5rem;
-      color: var(--primary-dark);
+      gap: 1rem;
     }
 
-    .brand-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    .seo-list li:last-child {
+      border-bottom: none;
     }
 
-    .brand-card p {
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
+    .seo-list i {
+      color: var(--accent);
+      width: 24px;
     }
 
     /* ===== PROCESS STEPS ===== */
@@ -357,67 +360,80 @@
       margin-bottom: 0;
     }
 
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
+    /* ===== METRICS CARDS ===== */
+    .metrics-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metrics-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
+      height: 100%;
     }
 
-    .portfolio-card:hover {
+    .case-study-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
+    .case-study-card .card-body {
+      padding: 2rem;
     }
 
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
+    .case-study-card h4 {
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .case-study-card .industry {
       color: var(--accent);
-      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
 
-    .integration-note p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .result-highlight {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     /* ===== FAQ SECTION ===== */
@@ -521,11 +537,11 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/brand-web-hero.jpg') center center/cover no-repeat;">
+<section class="service-hero" style="background: url('image/seo-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
+    <span class="sme-badge" data-aos="fade-down">SEO Optimization</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Get Found on <span style="color: var(--accent);">Google</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Comprehensive on-page and off-page SEO strategies to improve your search rankings and drive organic traffic to your website.</p>
   </div>
 </section>
 
@@ -534,179 +550,176 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
+        <span class="sme-badge">Organic Growth</span>
+        <h2 class="section-title mb-4">Be Found When <span style="color: var(--accent);">Customers Search</span></h2>
+        <p class="lead mb-4">93% of online experiences begin with a search engine. If you're not on page one, you're invisible.</p>
+        <p class="mb-4">At ODDS, we don't believe in quick fixes or black-hat tactics. We build sustainable SEO strategies that stand the test of time. From technical audits to content optimization to authoritative backlinks — we do the work that gets you ranking higher, driving qualified traffic, and growing your business.</p>
         <div class="row mt-4">
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-chart-line me-2" style="color: var(--accent);"></i>Long-Term Results</h4>
+            <p class="text-secondary small">Sustainable growth</p>
           </div>
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-dollar-sign me-2" style="color: var(--accent);"></i>Free Traffic</h4>
+            <p class="text-secondary small">No ad spend required</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/brand-web-showcase.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
+        <img src="image/seo-showcase.jpg" alt="SEO optimization" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=SEO+Optimization'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND DESIGN SECTION -->
+<!-- METRICS BANNER -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="metrics-card">
+          <div class="metrics-number">300%</div>
+          <div class="metrics-label">Traffic Increase</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="metrics-card">
+          <div class="metrics-number">#1</div>
+          <div class="metrics-label">Page Rankings</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="metrics-card">
+          <div class="metrics-number">70%</div>
+          <div class="metrics-label">of Clicks Go to Top 5</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="metrics-card">
+          <div class="metrics-number">3-6mo</div>
+          <div class="metrics-label">Typical Time to Results</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WEB DESIGN SECTION -->
+<!-- ON-PAGE VS OFF-PAGE SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
+      <span class="sme-badge" data-aos="fade-down">The Two Pillars</span>
+      <h2 class="section-title-center" data-aos="fade-up">On-Page + Off-Page = Complete SEO</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="seo-column">
+          <h3><span style="color: var(--accent);">On-Page</span> SEO</h3>
+          <ul class="seo-list">
+            <li><i class="fas fa-search"></i> Keyword research & strategy</li>
+            <li><i class="fas fa-file-alt"></i> Title tags & meta descriptions</li>
+            <li><i class="fas fa-heading"></i> Header structure (H1, H2, H3)</li>
+            <li><i class="fas fa-image"></i> Image optimization & alt text</li>
+            <li><i class="fas fa-link"></i> Internal linking structure</li>
+            <li><i class="fas fa-code"></i> Schema markup & structured data</li>
+            <li><i class="fas fa-mobile-alt"></i> Mobile-friendliness</li>
+            <li><i class="fas fa-tachometer-alt"></i> Page speed optimization</li>
+            <li><i class="fas fa-file"></i> Content optimization</li>
+            <li><i class="fas fa-sitemap"></i> XML sitemap optimization</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="seo-column">
+          <h3><span style="color: var(--accent);">Off-Page</span> SEO</h3>
+          <ul class="seo-list">
+            <li><i class="fas fa-link"></i> Quality backlink building</li>
+            <li><i class="fas fa-newspaper"></i> Guest posting</li>
+            <li><i class="fas fa-share-alt"></i> Social media signals</li>
+            <li><i class="fas fa-building"></i> Local citations & directories</li>
+            <li><i class="fas fa-star"></i> Review management</li>
+            <li><i class="fas fa-handshake"></i> Influencer outreach</li>
+            <li><i class="fas fa-bullhorn"></i> Brand mentions</li>
+            <li><i class="fas fa-map-marker-alt"></i> Google Business Profile optimization</li>
+            <li><i class="fas fa-newspaper"></i> PR and content syndication</li>
+            <li><i class="fas fa-chart-line"></i> Competitor backlink analysis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY SERVICES SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">What We Do</span>
+      <h2 class="section-title-center" data-aos="fade-up">Comprehensive SEO Services</h2>
     </div>
     
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-clipboard-list"></i>
           </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+          <h3>SEO Audit</h3>
+          <p>Comprehensive analysis of your current SEO health, identifying issues and opportunities for improvement.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-key"></i>
           </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
+          <h3>Keyword Research</h3>
+          <p>Finding the terms your customers actually search for — with the right volume and intent.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-file-alt"></i>
           </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
+          <h3>On-Page Optimization</h3>
+          <p>Optimizing your pages, content, and technical elements for search engines and users.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
+            <i class="fas fa-link"></i>
           </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
+          <h3>Link Building</h3>
+          <p>Earning high-quality backlinks from authoritative sites to boost your domain authority.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Local SEO</h3>
+          <p>Optimizing for "near me" searches, Google Maps, and local citations to attract nearby customers.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
+          <h3>SEO Reporting</h3>
+          <p>Monthly reports showing rankings, traffic, conversions, and clear next steps.</p>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTEGRATION NOTE -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
     </div>
   </div>
 </section>
@@ -716,29 +729,29 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
+      <h2 class="section-title-center" data-aos="fade-up">How We Rank You Higher</h2>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
+        <h4>Audit</h4>
+        <p class="text-secondary">We analyze your site, competitors, and current rankings.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
+        <h4>Strategy</h4>
+        <p class="text-secondary">We create a custom roadmap with target keywords and tactics.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
+        <h4>Implementation</h4>
+        <p class="text-secondary">We optimize your site and build authoritative backlinks.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+        <h4>Monitor & Report</h4>
+        <p class="text-secondary">We track results and refine our approach monthly.</p>
       </div>
     </div>
   </div>
@@ -749,42 +762,42 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/brand-web-benefits.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
+        <img src="image/seo-benefits.jpg" alt="SEO benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Free+Traffic+Forever'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
+        <span class="sme-badge">Why SEO Matters</span>
+        <h2 class="section-title mb-4">The Gift That Keeps Giving</h2>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
           <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
+            <h4>Free Traffic Forever</h4>
+            <p>Unlike ads, organic traffic doesn't stop when you stop paying. Every visitor is free.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
           <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
+            <h4>Qualified Leads</h4>
+            <p>People searching for your products are already interested. SEO brings you ready-to-buy customers.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
           <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
+            <h4>Builds Trust & Authority</h4>
+            <p>High rankings signal to customers that you're a trusted, authoritative brand.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
           <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
+            <h4>Long-Term ROI</h4>
+            <p>SEO compounds over time. The work you do today pays off for years.</p>
           </div>
         </div>
       </div>
@@ -792,48 +805,37 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SNIPPET -->
+<!-- CASE STUDY SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Ranking That Pays</h2>
     </div>
     
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
           <div class="card-body">
-            <h4>Lagos Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
-          <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
+            <h4>Local Plumbing Business</h4>
+            <p class="industry">Home Services · Lagos</p>
+            <p>A Lagos-based plumbing company was getting zero leads from their website. They were invisible on Google. We implemented a comprehensive SEO strategy:</p>
+            <ul class="text-secondary mb-3">
+              <li>Keyword research focused on "plumber in Lagos," "emergency plumber," and related terms</li>
+              <li>Optimized all pages with targeted keywords and improved meta descriptions</li>
+              <li>Set up and optimized Google Business Profile with photos and reviews</li>
+              <li>Built local citations across Nigerian directories</li>
+              <li>Created service-specific content pages for different plumbing services</li>
+              <li>Earned backlinks from local business associations</li>
+            </ul>
+            <p class="result"><span class="result-highlight">#1</span> ranking for "plumber Lagos" · <span class="result-highlight">400%</span> increase in organic traffic · <span class="result-highlight">30+</span> new leads per month</p>
           </div>
         </div>
       </div>
     </div>
     
     <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+      <a href="portfolio.html" class="btn btn-primary">View More Case Studies</a>
     </div>
   </div>
 </section>
@@ -849,33 +851,33 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
+          <h4>How long does SEO take to show results?</h4>
+          <p>SEO is a long-term strategy. You'll typically see initial improvements in 3-6 months, with significant results in 6-12 months. It's an investment in sustainable growth.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
+          <h4>How much does SEO cost?</h4>
+          <p>Monthly SEO packages start from ₦200,000. Pricing depends on your industry competitiveness, current site state, and goals. Contact us for a custom quote.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
+          <h4>Do you guarantee #1 rankings?</h4>
+          <p>No ethical SEO agency can guarantee #1 rankings. We guarantee strategic, white-hat work that improves your rankings and traffic over time.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
+          <h4>What's the difference between SEO and Google Ads?</h4>
+          <p>SEO earns free traffic over time. Google Ads gets you immediate traffic but costs per click. Both have their place — we can advise on the best mix for your business.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
+          <h4>Do you work with local businesses only?</h4>
+          <p>We work with both local and national businesses. Our local SEO expertise helps you dominate your city, while our broader SEO strategies can target national audiences.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
+          <h4>Will I receive regular reports?</h4>
+          <p>Yes. You'll receive monthly reports showing keyword rankings, traffic, conversions, and the work we've done.</p>
         </div>
       </div>
     </div>
@@ -887,12 +889,12 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Get Found on Google</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready to Rank Higher?</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free SEO audit and consultation. Let's see where you stand.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Get Your Free Audit</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Case Studies</a>
         </div>
       </div>
     </div>

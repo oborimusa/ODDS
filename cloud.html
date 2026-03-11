@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
+  <title>Cloud Solutions for Nigerian SMEs · AWS & Google Cloud Experts | ODDS</title>
+  <meta name="description" content="ODDS cloud solutions for Nigerian SMEs: implement and manage modern cloud services (AWS, Google Cloud) so you can scale efficiently, securely, and cost-effectively." />
+  <meta name="keywords" content="cloud solutions Nigeria, AWS Nigeria, Google Cloud Nigeria, cloud migration, cloud management, scalable infrastructure, SME cloud services, ODDS cloud" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
   <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
+  <meta property="og:title" content="Cloud Solutions for Nigerian SMEs · AWS & Google Cloud Experts" />
+  <meta property="og:description" content="Implement and manage modern cloud services (AWS, Google Cloud) so you can scale efficiently, securely, and cost-effectively." />
   <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/services/cloud-solutions.html" />
   <meta property="og:type" content="website" />
   
   <!-- === FAVICON === -->
@@ -263,11 +263,11 @@
       line-height: 1.7;
     }
 
-    /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
+    /* ===== CLOUD PROVIDER CARDS ===== */
+    .provider-card {
       background: var(--white);
       border-radius: 20px;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
       height: 100%;
@@ -275,33 +275,66 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .brand-card:hover {
+    .provider-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .brand-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2.5rem;
-      color: var(--primary-dark);
+    .provider-logo {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
     }
 
-    .brand-card h3 {
-      font-size: 1.5rem;
+    .provider-card h3 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
-    .brand-card p {
+    .provider-card p {
       color: var(--gray-600);
       margin-bottom: 1.5rem;
+    }
+
+    .provider-tag {
+      display: inline-block;
+      background: var(--off-white);
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0.2rem;
+    }
+
+    /* ===== SERVICE CARDS ===== */
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--off-white);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(5px);
+    }
+
+    .service-item i {
+      width: 30px;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .service-item span {
+      color: var(--gray-800);
+      font-weight: 500;
     }
 
     /* ===== PROCESS STEPS ===== */
@@ -357,67 +390,80 @@
       margin-bottom: 0;
     }
 
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
+    /* ===== METRICS CARDS ===== */
+    .metrics-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metrics-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* ===== CASE STUDY CARD ===== */
+    .case-study-card {
+      background: var(--white);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: all 0.4s ease;
       border: 1px solid var(--gray-200);
+      height: 100%;
     }
 
-    .portfolio-card:hover {
+    .case-study-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
 
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
+    .case-study-card .card-body {
+      padding: 2rem;
     }
 
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
+    .case-study-card h4 {
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .case-study-card .industry {
       color: var(--accent);
-      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
 
-    .integration-note p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .case-study-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-study-card .result {
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid var(--gray-200);
+      padding-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .result-highlight {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     /* ===== FAQ SECTION ===== */
@@ -521,11 +567,11 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/brand-web-hero.jpg') center center/cover no-repeat;">
+<section class="service-hero" style="background: url('image/cloud-hero.jpg') center center/cover no-repeat;">
   <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
+    <span class="sme-badge" data-aos="fade-down">Cloud Solutions</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Scale Without <span style="color: var(--accent);">Limits</span></h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">We implement and manage modern cloud services (AWS, Google Cloud) so you can scale efficiently, securely, and cost-effectively.</p>
   </div>
 </section>
 
@@ -534,179 +580,165 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
+        <span class="sme-badge">The Future of Infrastructure</span>
+        <h2 class="section-title mb-4">Your Business, <span style="color: var(--accent);">In the Cloud</span></h2>
+        <p class="lead mb-4">Stop worrying about servers, uptime, and scaling. Focus on what matters — your business.</p>
+        <p class="mb-4">At ODDS, we help Nigerian SMEs harness the power of cloud computing. Whether you need to migrate existing infrastructure, build cloud-native applications, or optimize your current cloud spend, we provide end-to-end cloud solutions. From AWS to Google Cloud, we design, implement, and manage infrastructure that grows with you.</p>
         <div class="row mt-4">
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-expand-arrows-alt me-2" style="color: var(--accent);"></i>Elastic Scaling</h4>
+            <p class="text-secondary small">Pay only for what you use</p>
           </div>
           <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
+            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-shield-alt me-2" style="color: var(--accent);"></i>Enterprise Security</h4>
+            <p class="text-secondary small">Always protected</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/brand-web-showcase.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
+        <img src="image/cloud-showcase.jpg" alt="Cloud infrastructure" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Cloud+Solutions'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND DESIGN SECTION -->
+<!-- METRICS BANNER -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="metrics-card">
+          <div class="metrics-number">99.9%</div>
+          <div class="metrics-label">Uptime Guarantee</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="metrics-card">
+          <div class="metrics-number">40%</div>
+          <div class="metrics-label">Cost Reduction</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="metrics-card">
+          <div class="metrics-number">60%</div>
+          <div class="metrics-label">Faster Deployment</div>
         </div>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="metrics-card">
+          <div class="metrics-number">24/7</div>
+          <div class="metrics-label">Monitoring</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WEB DESIGN SECTION -->
+<!-- CLOUD PROVIDERS SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
+      <span class="sme-badge" data-aos="fade-down">Our Partners</span>
+      <h2 class="section-title-center" data-aos="fade-up">Leading Cloud Platforms</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">We work with the world's most trusted cloud providers</p>
     </div>
     
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="provider-card">
+          <div class="provider-logo">
+            <i class="fab fa-aws"></i>
           </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+          <h3>Amazon Web Services</h3>
+          <p>The world's most comprehensive cloud platform. From compute power to storage to machine learning — AWS has it all.</p>
+          <div>
+            <span class="provider-tag">EC2</span>
+            <span class="provider-tag">S3</span>
+            <span class="provider-tag">RDS</span>
+            <span class="provider-tag">Lambda</span>
+            <span class="provider-tag">CloudFront</span>
+          </div>
         </div>
       </div>
       
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="provider-card">
+          <div class="provider-logo">
+            <i class="fab fa-google"></i>
           </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-search"></i>
+          <h3>Google Cloud Platform</h3>
+          <p>Built on the same infrastructure that powers Google Search and YouTube. High-performance, secure, and innovative.</p>
+          <div>
+            <span class="provider-tag">Compute Engine</span>
+            <span class="provider-tag">Cloud Storage</span>
+            <span class="provider-tag">BigQuery</span>
+            <span class="provider-tag">Kubernetes</span>
+            <span class="provider-tag">Cloud Run</span>
           </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTEGRATION NOTE -->
+<!-- SERVICES GRID SECTION -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">What We Offer</span>
+      <h2 class="section-title-center" data-aos="fade-up">Comprehensive Cloud Services</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h3 class="mb-4">Cloud Implementation</h3>
+        
+        <div class="service-item">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <span>Cloud Migration – Move your existing infrastructure to the cloud</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-server"></i>
+          <span>Infrastructure Setup – Configure servers, networks, and storage</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-database"></i>
+          <span>Database Management – Managed databases with automatic backups</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-code-branch"></i>
+          <span>DevOps & CI/CD – Automated deployment pipelines</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-container-storage"></i>
+          <span>Containerization – Docker & Kubernetes orchestration</span>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <h3 class="mb-4">Cloud Management</h3>
+        
+        <div class="service-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Cost Optimization – Reduce cloud spend by 30-50%</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Security & Compliance – Firewalls, encryption, and monitoring</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-eye"></i>
+          <span>24/7 Monitoring – Proactive alerts and incident response</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-backup"></i>
+          <span>Backup & Disaster Recovery – Automated backups, quick recovery</span>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Performance Optimization – Keep your applications fast</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -716,29 +748,29 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
+      <h2 class="section-title-center" data-aos="fade-up">From Assessment to Optimization</h2>
     </div>
     
     <div class="row justify-content-center">
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
+        <h4>Assessment</h4>
+        <p class="text-secondary">We analyze your current infrastructure, needs, and goals.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
+        <h4>Architecture</h4>
+        <p class="text-secondary">We design a secure, scalable cloud architecture.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
+        <h4>Migration</h4>
+        <p class="text-secondary">We move your workloads with minimal downtime.</p>
       </div>
       <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+        <h4>Optimization</h4>
+        <p class="text-secondary">Ongoing monitoring, cost optimization, and support.</p>
       </div>
     </div>
   </div>
@@ -749,42 +781,42 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/brand-web-benefits.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
+        <img src="image/cloud-benefits.jpg" alt="Cloud benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cloud+Advantages'">
       </div>
       
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
+        <span class="sme-badge">Why Go Cloud</span>
+        <h2 class="section-title mb-4">The Cloud Advantage</h2>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
           <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
+            <h4>Elastic Scalability</h4>
+            <p>Scale up during peak times, scale down during slow periods. Pay only for what you use.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
           <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
+            <h4>Enterprise Security</h4>
+            <p>Built-in security, encryption, and compliance. Your data is safer than in on-premise servers.</p>
           </div>
         </div>
         
         <div class="benefit-item">
           <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
           <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
+            <h4>Cost Efficiency</h4>
+            <p>No upfront hardware costs. Pay-as-you-go pricing with 30-50% savings compared to traditional hosting.</p>
           </div>
         </div>
         
         <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+          <div class="benefit-icon"><i class="fas fa-globe"></i></div>
           <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
+            <h4>Global Reach</h4>
+            <p>Deploy your applications in data centers around the world. Fast access for your customers anywhere.</p>
           </div>
         </div>
       </div>
@@ -792,54 +824,113 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SNIPPET -->
+<!-- USE CASES SECTION -->
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
+      <span class="sme-badge" data-aos="fade-down">Use Cases</span>
+      <h2 class="section-title-center" data-aos="fade-up">Cloud Solutions for Every Need</h2>
     </div>
     
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
-          <div class="card-body">
-            <h4>Lagos Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shopping-cart"></i>
           </div>
+          <h3>E-Commerce Hosting</h3>
+          <p>Handle traffic spikes during sales and promotions. Auto-scaling ensures your store never goes down.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
           </div>
+          <h3>Data Backup & Recovery</h3>
+          <p>Automated backups, geo-redundant storage, and quick recovery options. Peace of mind for your data.</p>
         </div>
       </div>
       
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Web Applications</h3>
+          <p>Host scalable web apps with load balancing, auto-scaling, and global content delivery.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Big Data & Analytics</h3>
+          <p>Process large datasets, run analytics, and gain insights with cloud data tools.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Remote Work Infrastructure</h3>
+          <p>Set up secure virtual desktops, collaboration tools, and remote access for your team.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile Backend</h3>
+          <p>Scalable, secure backend for your mobile apps. Handle millions of users effortlessly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Success Story</span>
+      <h2 class="section-title-center" data-aos="fade-up">Cloud Transformation</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="case-study-card" data-aos="fade-up">
           <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
+            <h4>E-Commerce Platform Migration</h4>
+            <p class="industry">Retail · Lagos</p>
+            <p>A fast-growing e-commerce business was facing downtime during peak sales and high hosting costs. We migrated them to AWS:</p>
+            <ul class="text-secondary mb-3">
+              <li>Auto-scaling architecture to handle traffic spikes</li>
+              <li>CloudFront CDN for faster global content delivery</li>
+              <li>RDS managed database with automated backups</li>
+              <li>Cost optimization – moved from fixed servers to pay-as-you-go</li>
+            </ul>
+            <p class="result"><span class="result-highlight">0</span> downtime during Black Friday · <span class="result-highlight">45%</span> cost reduction</p>
           </div>
         </div>
       </div>
     </div>
     
     <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+      <a href="portfolio.html" class="btn btn-primary">View More Case Studies</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section class="py-5 bg-light">
+<section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">FAQ</span>
@@ -849,33 +940,33 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
+          <h4>What is cloud computing?</h4>
+          <p>Cloud computing means running your applications and storing data on remote servers accessed via the internet, instead of on-premise hardware. It's more flexible, scalable, and cost-effective.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
+          <h4>How much does cloud migration cost?</h4>
+          <p>Costs vary based on complexity. We provide a detailed assessment and quote. Most SMEs see ROI within 6-12 months through reduced infrastructure costs.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
+          <h4>Is my data secure in the cloud?</h4>
+          <p>Yes. Cloud providers like AWS and Google Cloud have enterprise-grade security certifications. We add additional layers of security and encryption to protect your data.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
+          <h4>What if I already have servers?</h4>
+          <p>We can help you migrate your existing workloads to the cloud with minimal disruption. We also offer hybrid solutions if you want to keep some systems on-premise.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
+          <h4>Do you provide ongoing management?</h4>
+          <p>Absolutely. We offer comprehensive cloud management packages including monitoring, security, cost optimization, and 24/7 support.</p>
         </div>
         
         <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
+          <h4>Which cloud provider is right for me?</h4>
+          <p>We'll assess your needs and recommend the best platform — AWS, Google Cloud, or a multi-cloud strategy. Each has unique strengths.</p>
         </div>
       </div>
     </div>
@@ -887,12 +978,12 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Scale?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Move to the Cloud Today</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free cloud assessment and consultation. No pressure, just possibilities.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Cloud Journey</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Case Studies</a>
         </div>
       </div>
     </div>

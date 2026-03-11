@@ -3,150 +3,663 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - ODDS</title>
+  
+  <!-- === SEO META TAGS === -->
+  <title>Our Portfolio · ODDS Success Stories for Nigerian SMEs</title>
+  <meta name="description" content="Explore ODDS portfolio: real results for Nigerian SMEs. See case studies in web design, branding, e-commerce, digital marketing, and more." />
+  <meta name="keywords" content="ODDS portfolio, web design case studies, branding projects Nigeria, digital marketing results, SME success stories" />
+  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
+  
+  <!-- === OPEN GRAPH TAGS === -->
+  <meta property="og:title" content="Our Portfolio · ODDS Success Stories for Nigerian SMEs" />
+  <meta property="og:description" content="Real results for Nigerian SMEs. See case studies in web design, branding, e-commerce, and digital marketing." />
+  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
+  <meta property="og:url" content="https://odds-ng.netlify.app/portfolio.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- === FAVICON === -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- === CSS LIBRARIES === -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <style>
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 3px;
+    }
+
+    .sme-badge {
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .btn {
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-primary);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: var(--gradient-primary) !important;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== HERO SECTION ===== */
     .portfolio-hero {
-      background-color: #004dc0;
-      padding: 100px 0;
-      color: #fff;
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      padding: 120px 0;
+      color: var(--white);
+      overflow: hidden;
+      margin-top: 76px;
+      position: relative;
+    }
+
+    .portfolio-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="0.5"/></svg>');
+      background-size: 50px 50px;
+      z-index: 1;
+    }
+
+    .portfolio-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .portfolio-hero img {
+      max-height: 400px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-hero img:hover {
+      transform: scale(1.02);
+    }
+
+    .founder-tag {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ===== CASE STUDY CARDS ===== */
+    .case-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      position: relative;
       overflow: hidden;
     }
-    .portfolio-hero img {
-      max-height: 450px;
+
+    .case-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--gradient-accent);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .case-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .case-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .case-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .case-client {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .case-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+
+    .case-result {
+      background: var(--off-white);
+      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin-top: 1rem;
     }
-    .section-title {
+
+    .case-result strong {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    /* ===== TESTIMONIAL CARDS ===== */
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .testimonial-quote {
+      font-size: 2rem;
+      color: var(--accent);
+      opacity: 0.3;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .author-info h5 {
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+    }
+
+    .author-info p {
+      margin-bottom: 0;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-section {
+      background: var(--gradient-primary);
+      color: var(--white);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-item {
       text-align: center;
-      margin-bottom: 40px;
     }
-    .testimonial {
-      background-color: #f8f9fa;
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 30px;
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
     }
-    .testimonial i {
-      color: #0d6efd;
+
+    .stat-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    footer {
-      background-color: #000;
-      color: #fff;
-      padding: 30px 0;
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+    }
+
+    .footer h5, .footer h6 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer a {
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .footer .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
       text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="image/ODDS.jpeg" alt="ODDS" width="50" height="50" class="me-2 rounded-circle">
-      <span>ODDS</span>
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+      <span class="fw-bold">ODDS</span>
+      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
     </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO WITH PERSONAL IMAGE -->
-<section class="portfolio-hero text-white text-center">
+<!-- HERO WITH FOUNDER IMAGE -->
+<section class="portfolio-hero">
   <div class="container">
     <div class="row align-items-center">
       <!-- Text -->
-      <div class="col-lg-6 mb-4 mb-lg-0 text-lg-start text-center">
-        <h1 class="display-4 fw-bold">Our Portfolio</h1>
-        <p class="lead">A showcase of how we've transformed ideas into digital success stories.</p>
-        <p class="mt-3">
-          <strong>Hello, I'm Obori</strong> – founder of ODDS.<br>
-          I lead a team that turns business ideas into beautiful, functional digital products.
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <span class="sme-badge">Our Work</span>
+        <h1 class="display-4 fw-bold">Results That <span style="color: var(--accent);">Speak</span></h1>
+        <p class="lead mb-4">A showcase of how we've transformed ideas into digital success stories for Nigerian SMEs.</p>
+        <p class="mt-4">
+          <span class="founder-tag fw-bold">👋 Hello, I'm Dahiru Obori</span><br>
+          Founder of ODDS. I lead a team that turns business ideas into beautiful, functional digital products that deliver real results.
         </p>
       </div>
       <!-- Image -->
-      <div class="col-lg-6 text-center">
-        <img src="image/obori.png" alt="Obori - Founder of ODDS" class="img-fluid">
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <img src="image/obori5.png" alt="Dahiru Obori - Founder of ODDS" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
 
-<!-- CASE STUDIES -->
-<section class="py-5">
+<!-- STATS SECTION -->
+<section class="stats-section">
   <div class="container">
-    <h2 class="text-center mb-5 fw-bold">Case Studies</h2>
-
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h4 class="fw-bold">🏘️ Real Estate Website Redesign</h4>
-        <p><strong>Client:</strong> Emerald Properties</p>
-        <p>We transformed their outdated site into a responsive, SEO-friendly platform with a robust property listing system.</p>
-        <p><strong>Result:</strong> +52% engagement, +36% increase in inquiries within 2 months.</p>
-      </div>
-      <div class="col-md-6">
-        <h4 class="fw-bold">🧴 Branding + Store for Skincare Startup</h4>
-        <p><strong>Client:</strong> Zenith Organic Skincare</p>
-        <p>Developed their logo, packaging, Shopify store, and launched a social media presence.</p>
-        <p><strong>Result:</strong> 5,000+ followers, 35+ orders/week in Q1.</p>
-      </div>
-    </div>
-
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h4 class="fw-bold">📅 Virtual Admin + Social Media</h4>
-        <p><strong>Client:</strong> Mavens Executive Coaching</p>
-        <p>Provided admin assistance and content design, improving their engagement and scheduling efficiency.</p>
-        <p><strong>Result:</strong> 60% workload reduction, 120% LinkedIn engagement growth.</p>
-      </div>
-      <div class="col-md-6">
-        <h4 class="fw-bold">🍽️ Digital Overhaul for Restaurant</h4>
-        <p><strong>Client:</strong> TastyBite Kitchens</p>
-        <p>New website, SMS-based loyalty system, and hyper-local advertising campaign.</p>
-        <p><strong>Result:</strong> 400% growth in local search traffic, doubled customer retention.</p>
-      </div>
-    </div>
-
     <div class="row">
-      <div class="col-md-6 mx-auto">
-        <h4 class="fw-bold">📊 SaaS Dashboard UI/UX</h4>
-        <p><strong>Client:</strong> LogiTrack Fleet Software</p>
-        <p>Reimagined their dashboard with Figma prototyping, dev handoffs, and user testing.</p>
-        <p><strong>Result:</strong> Reduced onboarding time by 60%, +30% retention.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title fw-bold">What Our Clients Say</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="testimonial">
-          <i class="fas fa-quote-left fa-2x mb-2"></i>
-          <p>"Working with ODDS was a game-changer. Their design and branding boosted our credibility and online presence."</p>
-          <strong>— Jane M., Founder, StyleHub</strong>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Projects</div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="testimonial">
-          <i class="fas fa-quote-left fa-2x mb-2"></i>
-          <p>"ODDS delivered results beyond expectations. Their team is professional, creative, and responsive."</p>
-          <strong>— Augustina Ibeh, CEO, Jobspitality</strong>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Years</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-item">
+          <div class="stat-number">300%</div>
+          <div class="stat-label">Avg. Traffic</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Case Studies</span>
+      <h2 class="section-title" data-aos="fade-up">Success Stories</h2>
+      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Real results for real businesses</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Case Study 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="case-card">
+          <div class="case-icon">🏘️</div>
+          <h4>Real Estate Website Redesign</h4>
+          <div class="case-client">Emerald Properties</div>
+          <p>We transformed their outdated site into a responsive, SEO-friendly platform with a robust property listing system and virtual tour integration.</p>
+          <div class="case-result">
+            <strong>+52%</strong> engagement · <strong>+36%</strong> inquiries in 2 months
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="case-card">
+          <div class="case-icon">🧴</div>
+          <h4>Branding + Store for Skincare</h4>
+          <div class="case-client">Zenith Organic Skincare</div>
+          <p>Complete brand identity, packaging design, Shopify store development, and social media strategy. Launched with a cohesive look and feel.</p>
+          <div class="case-result">
+            <strong>5,000+</strong> followers · <strong>35+</strong> orders/week
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="case-card">
+          <div class="case-icon">📅</div>
+          <h4>Virtual Admin + Social Media</h4>
+          <div class="case-client">Mavens Executive Coaching</div>
+          <p>Provided virtual admin support and content creation, managing scheduling, client communication, and LinkedIn presence.</p>
+          <div class="case-result">
+            <strong>60%</strong> workload reduction · <strong>120%</strong> engagement growth
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 4 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="case-card">
+          <div class="case-icon">🍽️</div>
+          <h4>Digital Overhaul for Restaurant</h4>
+          <div class="case-client">TastyBite Kitchens</div>
+          <p>New website, SMS-based loyalty system, online ordering, and hyper-local advertising campaign targeting nearby customers.</p>
+          <div class="case-result">
+            <strong>400%</strong> local search traffic · <strong>2x</strong> retention
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 5 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="case-card">
+          <div class="case-icon">📊</div>
+          <h4>SaaS Dashboard UI/UX</h4>
+          <div class="case-client">LogiTrack Fleet Software</div>
+          <p>Reimagined their complex dashboard with user research, Figma prototyping, and usability testing. Simplified data visualization.</p>
+          <div class="case-result">
+            <strong>60%</strong> faster onboarding · <strong>+30%</strong> retention
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 6 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="case-card">
+          <div class="case-icon">📱</div>
+          <h4>E-Commerce + SEO</h4>
+          <div class="case-client">Lagos Fashion House</div>
+          <p>Custom e-commerce platform with PayStack integration, inventory management, and comprehensive SEO strategy.</p>
+          <div class="case-result">
+            <strong>300%</strong> organic traffic · <strong>150%</strong> sales increase
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sme-badge" data-aos="fade-down">Testimonials</span>
+      <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Working with ODDS was a game-changer. Their design and branding boosted our credibility and online presence. They understood our vision and delivered beyond expectations."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div class="author-info">
+              <h5>Jane M.</h5>
+              <p>Founder, StyleHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"ODDS delivered results beyond expectations. Their team is professional, creative, and responsive. They didn't just build a website — they built a digital strategy that grew our business."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AI</div>
+            <div class="author-info">
+              <h5>Augustina Ibeh</h5>
+              <p>CEO, Jobspitality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"The SEO and Google Ads campaign ODDS designed for us brought in 50+ qualified leads in the first month. Our revenue has never been higher. They're now our go-to digital partner."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FE</div>
+            <div class="author-info">
+              <h5>Funmi Eze</h5>
+              <p>Legal Consultancy, PH</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Our social media engagement has exploded since ODDS took over. They create content that resonates with our audience and actually converts. Highly recommended!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TO</div>
+            <div class="author-info">
+              <h5>Tunde O.</h5>
+              <p>Fashion Boutique, Abuja</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready for Results?</span>
+        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Success Story</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs who trust ODDS for their digital growth.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
+          <a href="services.html" class="btn btn-outline-light btn-lg">Explore Services</a>
         </div>
       </div>
     </div>
@@ -154,57 +667,72 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-md-start">
+<footer class="footer pt-5 pb-4">
+  <div class="container">
     <div class="row">
-
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">ODDS</h5>
-        <p>Obori Designs & Digital Solutions (ODDS) is committed to empowering businesses through creative design and innovative digital strategies.</p>
+      <div class="col-lg-4 mb-4">
+        <h5 class="fw-bold">ODDS</h5>
+        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6>Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
-          <li><a href="services.html" class="text-decoration-none text-light">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
-          <li><a href="founder.html" class="text-decoration-none text-light">Founder</a></li>
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About Us</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+          <li class="mb-2"><a href="founder.html">Founder</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> +234 803 966 1354</p>
-        <p><i class="fas fa-envelope me-2"></i> contact@odds.ng</p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h6>Contact Info</h6>
+        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
+        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
       </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+      
+      <div class="col-lg-3 mb-4">
+        <h6>Stay Updated</h6>
+        <p class="small text-secondary">Get growth tips & exclusive offers</p>
+        <form class="d-flex">
+          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
+          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
+        </form>
       </div>
-
     </div>
-
-    <hr class="border-light" />
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 ODDS. All rights reserved.</p>
+    
+    <hr class="border-secondary" />
+    
+    <div class="text-center small">
+      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
+        <a href="terms.html" class="text-secondary me-3">Terms</a>
+        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
+      </p>
     </div>
   </div>
 </footer>
 
-
-<!-- JS -->
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
 </html>
