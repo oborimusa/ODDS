@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Social Media Management | Content, Engagement & Growth – ODDS</title>
-  <meta name="description" content="Professional social media management for Instagram, Facebook, TikTok, and LinkedIn. Content creation, engagement, and growth to build a loyal community around your brand.">
+  <title>Analytics & Reporting | Data Dashboards & Actionable Insights – ODDS</title>
+  <meta name="description" content="Data dashboards and actionable insights. Know exactly what's working and where to invest your marketing budget. Make data-driven decisions for your business.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -43,6 +43,10 @@
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+      --data-blue: #3b82f6;
+      --data-green: #10b981;
+      --data-purple: #8b5cf6;
+      --data-orange: #f59e0b;
     }
 
     .container {
@@ -281,18 +285,18 @@
       line-height: 1.6;
     }
 
-    /* PLATFORM CARDS */
-    .platforms-section {
+    /* METRICS SECTION */
+    .metrics-section {
       background: var(--gray-100);
       padding: 80px 0;
     }
-    .platforms-grid {
+    .metrics-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
-    .platform-card {
+    .metric-card {
       background: white;
       border-radius: 20px;
       padding: 32px;
@@ -300,29 +304,66 @@
       transition: all 0.3s;
       border: 1px solid var(--gray-200);
     }
-    .platform-card:hover {
+    .metric-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
-    .platform-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
+    .metric-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
     }
-    .platform-icon .fa-instagram { color: #E4405F; }
-    .platform-icon .fa-facebook { color: #1877F2; }
-    .platform-icon .fa-tiktok { color: #000000; }
-    .platform-icon .fa-linkedin { color: #0077B5; }
-    .platform-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: var(--primary);
+    .metric-label {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* DASHBOARD PREVIEW */
+    .dashboard-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .dashboard-preview {
+      background: var(--gray-100);
+      border-radius: 24px;
+      padding: 40px;
+      margin-top: 40px;
+    }
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    .dashboard-stat {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+    .dashboard-stat .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .progress-bar {
+      background: var(--gray-200);
+      border-radius: 10px;
+      height: 8px;
+      overflow: hidden;
+      margin: 15px 0;
+    }
+    .progress-fill {
+      background: var(--accent);
+      height: 100%;
+      border-radius: 10px;
     }
 
     /* PROCESS SECTION */
     .process-section {
+      background: var(--gray-100);
       padding: 80px 0;
-      background: white;
     }
     .steps-grid {
       display: grid;
@@ -333,15 +374,15 @@
     .step-card {
       text-align: center;
       padding: 32px;
-      background: var(--gray-100);
+      background: white;
       border-radius: 24px;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
     .step-card:hover {
       transform: translateY(-5px);
-      background: white;
+      border-color: var(--accent);
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
     }
     .step-number {
       width: 60px;
@@ -361,58 +402,38 @@
       margin-bottom: 12px;
       color: var(--primary);
     }
-    .step-card p {
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
 
-    /* STATS SECTION */
-    .stats-section {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 60px 0;
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    /* PORTFOLIO SECTION */
-    .portfolio-section {
+    /* INTEGRATIONS */
+    .integrations-section {
       padding: 80px 0;
-      background: var(--gray-100);
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-    .portfolio-card {
       background: white;
-      border-radius: 20px;
-      padding: 28px;
+    }
+    .integrations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
       text-align: center;
-      border: 1px solid var(--gray-200);
+    }
+    .integration-card {
+      background: var(--gray-100);
+      border-radius: 16px;
+      padding: 24px;
       transition: all 0.3s;
     }
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
+    .integration-card:hover {
+      transform: translateY(-3px);
+      background: white;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--accent);
     }
-    .portfolio-card i {
+    .integration-card i {
       font-size: 2rem;
       color: var(--accent);
-      margin-bottom: 16px;
     }
-    .portfolio-stats {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 600;
+    .integration-card h5 {
       margin-top: 12px;
+      font-size: 0.9rem;
     }
 
     /* CTA SECTION */
@@ -549,9 +570,9 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Social Media Management</div>
-      <h1 data-aos="fade-up" data-aos-delay="100">Build a Loyal <span>Community</span> Around Your Brand</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Professional content creation, engagement, and growth on Instagram, Facebook, TikTok, and LinkedIn. We turn followers into customers.</p>
+      <div class="sme-badge" data-aos="fade-down">Analytics & Reporting</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Know Exactly <span>What's Working</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Data dashboards and actionable insights to guide your marketing budget. Make data-driven decisions that grow your business.</p>
     </div>
   </section>
 
@@ -559,67 +580,114 @@
   <section class="services-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete social media management that drives real results</p>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete analytics solutions for data-driven decision making</p>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-icon"><i class="fas fa-image"></i></div>
-          <h3>Content Creation</h3>
-          <p>High-quality photos, graphics, videos, and carousels designed to stop the scroll and engage your audience.</p>
+          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Custom Dashboards</h3>
+          <p>Centralized dashboards showing all your key metrics – website traffic, conversions, sales, and ROI – in one place.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h3>Content Strategy & Planning</h3>
-          <p>Strategic content calendars aligned with your business goals, seasons, and audience preferences.</p>
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Website Analytics</h3>
+          <p>Track visitor behavior, traffic sources, bounce rates, and conversion funnels to optimize your website performance.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>Community Engagement</h3>
-          <p>Active engagement with your followers – responding to comments, DMs, and mentions to build loyalty.</p>
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h3>SEO Performance Tracking</h3>
+          <p>Monitor keyword rankings, organic traffic, backlinks, and domain authority over time.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Growth Strategy</h3>
-          <p>Data-driven growth tactics to increase followers, reach, and engagement organically.</p>
+          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
+          <h3>Campaign Attribution</h3>
+          <p>Understand exactly which channels and campaigns are driving conversions and revenue.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
-          <h3>Analytics & Reporting</h3>
-          <p>Monthly reports showing follower growth, engagement rates, top-performing content, and ROI.</p>
+          <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Monthly Reports</h3>
+          <p>Comprehensive reports with actionable insights, trend analysis, and recommendations for improvement.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon"><i class="fas fa-ad"></i></div>
-          <h3>Social Media Advertising</h3>
-          <p>Targeted ad campaigns on Facebook, Instagram, and TikTok to accelerate your growth.</p>
+          <div class="service-icon"><i class="fas fa-chart-column"></i></div>
+          <h3>Goal Tracking</h3>
+          <p>Set up and monitor specific business goals – form submissions, purchases, phone calls, and more.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PLATFORMS WE MANAGE -->
-  <section class="platforms-section">
+  <!-- KEY METRICS -->
+  <section class="metrics-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Platforms We Master</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We speak the language of every major social network</p>
-      <div class="platforms-grid">
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="platform-icon"><i class="fab fa-instagram"></i></div>
-          <h4>Instagram</h4>
-          <p>Reels, Stories, Posts & Engagement</p>
+      <h2 class="section-title" data-aos="fade-up">Metrics We Track</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">The numbers that actually matter for your business</p>
+      <div class="metrics-grid">
+        <div class="metric-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="metric-number">Traffic</div>
+          <div class="metric-label">Visitors, sources, behavior flow</div>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="platform-icon"><i class="fab fa-facebook"></i></div>
-          <h4>Facebook</h4>
-          <p>Pages, Groups, Ads & Community</p>
+        <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="metric-number">Conversions</div>
+          <div class="metric-label">Leads, sales, goal completions</div>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
-          <h4>TikTok</h4>
-          <p>Short-form Video & Viral Trends</p>
+        <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="metric-number">ROI</div>
+          <div class="metric-label">Revenue vs marketing spend</div>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="platform-icon"><i class="fab fa-linkedin"></i></div>
-          <h4>LinkedIn</h4>
-          <p>Thought Leadership & B2B Growth</p>
+        <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="metric-number">Engagement</div>
+          <div class="metric-label">Bounce rate, time on site, pages/session</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD PREVIEW -->
+  <section class="dashboard-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Sample Dashboard</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Your data, visualized for clarity</p>
+      <div class="dashboard-preview" data-aos="fade-up" data-aos-delay="200">
+        <div class="dashboard-stats">
+          <div class="dashboard-stat">
+            <div class="stat-value">15,234</div>
+            <div>Monthly Visitors</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+            <div>↑ 23% vs last month</div>
+          </div>
+          <div class="dashboard-stat">
+            <div class="stat-value">342</div>
+            <div>Conversions</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 62%;"></div></div>
+            <div>↑ 18% vs last month</div>
+          </div>
+          <div class="dashboard-stat">
+            <div class="stat-value">3.2%</div>
+            <div>Conversion Rate</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 64%;"></div></div>
+            <div>↑ 0.5% vs last month</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Top Traffic Sources</h4>
+            <ul style="list-style: none; margin-top: 15px;">
+              <li>Organic Search: 42%</li>
+              <li>Direct: 28%</li>
+              <li>Social Media: 18%</li>
+              <li>Referral: 8%</li>
+              <li>Email: 4%</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Top Performing Pages</h4>
+            <ul style="list-style: none; margin-top: 15px;">
+              <li>/ (Homepage): 25,432 visits</li>
+              <li>/services: 8,234 visits</li>
+              <li>/contact: 5,123 visits</li>
+              <li>/portfolio: 4,567 visits</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -628,81 +696,62 @@
   <!-- HOW IT WORKS -->
   <section class="process-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Social Media Process</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic system for building your brand online</p>
+      <h2 class="section-title" data-aos="fade-up">Our Analytics Process</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">From raw data to actionable insights</p>
       <div class="steps-grid">
         <div class="step-card" data-aos="fade-up" data-aos-delay="0">
           <div class="step-number">1</div>
-          <h4>Discovery & Audit</h4>
-          <p>We analyze your current social media presence and competitors.</p>
+          <h4>Setup & Configuration</h4>
+          <p>We install tracking codes, set up goals, and configure dashboards.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">2</div>
-          <h4>Strategy & Planning</h4>
-          <p>Custom content strategy, posting schedule, and platform selection.</p>
+          <h4>Data Collection</h4>
+          <p>Continuous monitoring and data gathering from all your channels.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">3</div>
-          <h4>Content Creation</h4>
-          <p>Design, copywriting, and video production tailored to each platform.</p>
+          <h4>Analysis</h4>
+          <p>We identify trends, opportunities, and areas for improvement.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">4</div>
-          <h4>Publish & Engage</h4>
-          <p>Scheduled posting and active community engagement.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="step-number">5</div>
-          <h4>Analyze & Optimize</h4>
-          <p>Monthly reporting and continuous improvement.</p>
+          <h4>Reporting</h4>
+          <p>Clear, actionable reports delivered monthly with recommendations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS SECTION -->
-  <section class="stats-section">
+  <!-- INTEGRATIONS -->
+  <section class="integrations-section">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="stat-number">300%+</div>
-          <p>Average Follower Growth</p>
+      <h2 class="section-title" data-aos="fade-up">Tools We Integrate With</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Seamless data integration from your existing tools</p>
+      <div class="integrations-grid">
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="0">
+          <i class="fab fa-google"></i>
+          <h5>Google Analytics</h5>
         </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">5x</div>
-          <p>Higher Engagement Rates</p>
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fab fa-google"></i>
+          <h5>Google Search Console</h5>
         </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number">50+</div>
-          <p>Active Accounts Managed</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO SNIPPET -->
-  <section class="portfolio-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Social Media Success Stories</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real growth from real brands</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fab fa-instagram"></i>
-          <h4>CFAMI Media</h4>
-          <p>Instagram growth campaign</p>
-          <div class="portfolio-stats">📈 2k → 25k followers (6 months)</div>
-        </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="200">
           <i class="fab fa-facebook"></i>
-          <h4>MarketHub</h4>
-          <p>Facebook community building</p>
-          <div class="portfolio-stats">👥 10k+ engaged group members</div>
+          <h5>Facebook Ads</h5>
         </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-tiktok"></i>
-          <h4>Zena Beauty</h4>
-          <p>TikTok viral strategy</p>
-          <div class="portfolio-stats">🎬 2M+ views, 50k+ followers</div>
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-chart-line"></i>
+          <h5>Hotjar</h5>
+        </div>
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-envelope"></i>
+          <h5>Email Platforms</h5>
+        </div>
+        <div class="integration-card" data-aos="fade-up" data-aos-delay="500">
+          <i class="fas fa-shopping-cart"></i>
+          <h5>E-commerce</h5>
         </div>
       </div>
     </div>
@@ -711,15 +760,15 @@
   <!-- CTA SECTION -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-aos="fade-up">Ready to Grow Your Social Media Presence?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Get a free social media audit. We'll analyze your current accounts and show you exactly how to grow.</p>
-      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Social Media Audit →</a>
+      <h2 data-aos="fade-up">Ready to Make Data-Driven Decisions?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Get a free analytics audit. We'll review your current tracking setup and show you what insights you're missing.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Analytics Audit →</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>ODDS</h4>
@@ -730,7 +779,7 @@
         <a href="web-design.html">Web & E‑commerce</a>
         <a href="seo.html">SEO & Local SEO</a>
         <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="social-media.html">Social Media Management</a>
+        <a href="analytics.html">Analytics & Reporting</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

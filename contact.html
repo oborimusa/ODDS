@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   
   <!-- SEO META TAGS -->
-  <title>Contact ODDS · Premium Digital Agency for Nigerian SMEs</title>
-  <meta name="description" content="Get in touch with ODDS. Let's discuss your digital transformation journey. Free consultation for Nigerian SMEs." />
+  <title>Contact ODDS · Let's Build Your Digital Ecosystem</title>
+  <meta name="description" content="Get in touch with ODDS – your Complete Digital Ecosystem. Reach us via phone, email, WhatsApp, or visit our Osogbo office. We respond within 24 hours." />
   <meta name="keywords" content="contact ODDS, digital agency Lagos, web design consultation, SME digital solutions Nigeria" />
   <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
   
@@ -19,17 +19,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     /* Variables */
     :root {
       --primary: #0a2647;
       --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
       --accent: #c5a059;
       --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
       --white: #ffffff;
       --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
       --gray-600: #475569;
       --gray-800: #1e293b;
@@ -39,6 +42,7 @@
       --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
     * {
@@ -55,7 +59,7 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
     }
 
@@ -68,6 +72,7 @@
       display: inline-block;
       margin-bottom: 1.5rem;
       font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
     }
 
     .section-title {
@@ -101,10 +106,32 @@
       z-index: 1030;
     }
 
-    .navbar-brand img {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
       width: 45px;
       height: 45px;
       border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
     }
 
     @media (min-width: 992px) {
@@ -114,6 +141,7 @@
         padding: 8px 16px !important;
         border-radius: 50px;
         font-weight: 500;
+        transition: all 0.3s;
       }
       .nav-link:hover,
       .nav-link.active {
@@ -150,30 +178,60 @@
     /* Hero Section */
     .contact-hero {
       background: var(--gradient-primary);
-      padding: 60px 0;
+      padding: 80px 0 60px;
       text-align: center;
       color: white;
+      position: relative;
+      overflow: hidden;
     }
-
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .contact-hero .container {
+      position: relative;
+      z-index: 1;
+    }
     .contact-hero h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 1rem;
+      font-family: 'Space Grotesk', sans-serif;
     }
-
+    .contact-hero h1 span {
+      color: var(--accent);
+    }
+    .contact-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
     @media (max-width: 768px) {
       .contact-hero {
-        padding: 40px 0;
+        padding: 60px 0 40px;
       }
       .contact-hero h1 {
         font-size: 2rem;
+      }
+      .contact-hero p {
+        font-size: 1rem;
       }
     }
 
     /* Contact Info Cards */
     .contact-info-card {
       background: var(--white);
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 2rem;
       text-align: center;
       border: 1px solid var(--gray-200);
@@ -183,7 +241,7 @@
     }
 
     .contact-info-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
@@ -204,6 +262,7 @@
     .contact-info-card h3 {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
+      color: var(--primary);
     }
 
     .contact-info-card p {
@@ -228,6 +287,11 @@
       padding: 2rem;
       box-shadow: var(--shadow-lg);
       border: 1px solid var(--gray-200);
+    }
+
+    .contact-form-wrapper h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
     }
 
     .form-group {
@@ -295,10 +359,12 @@
       background: var(--off-white);
       border-radius: 20px;
       padding: 1.5rem;
+      border: 1px solid var(--gray-200);
     }
 
     .office-hours h4 {
       margin-bottom: 1rem;
+      color: var(--primary);
     }
 
     .hour-item {
@@ -312,28 +378,112 @@
       border-bottom: none;
     }
 
+    /* FAQ Section */
+    .faq-section {
+      background: var(--gray-100);
+      padding: 80px 0;
+    }
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      padding: 20px 28px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .faq-item:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 16px;
+      color: var(--gray-600);
+      display: none;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-question i {
+      transition: transform 0.3s;
+      color: var(--accent);
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
     /* CTA Section */
     .cta-section {
       background: var(--gradient-primary);
-      padding: 60px 0;
+      padding: 80px 0;
       text-align: center;
       color: white;
+      position: relative;
+      overflow: hidden;
     }
-
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
     .cta-section .btn-light {
-      background: white;
+      background: var(--accent);
       color: var(--primary-dark);
-      padding: 12px 32px;
-      border-radius: 50px;
+      padding: 14px 40px;
+      border-radius: 60px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       display: inline-block;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-section .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+    @media (max-width: 768px) {
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
     }
 
     /* Footer */
     .footer {
-      background: var(--dark);
-      color: var(--gray-600);
+      background: var(--primary);
+      color: var(--gray-300);
       padding: 3rem 0 2rem;
     }
 
@@ -343,7 +493,7 @@
     }
 
     .footer a {
-      color: var(--gray-600);
+      color: var(--gray-300);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -360,12 +510,21 @@
       color: white;
     }
 
+    .newsletter-input::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+
     .newsletter-btn {
       background: var(--accent);
       color: var(--primary-dark);
       border: none;
       padding: 12px 25px;
       border-radius: 0 50px 50px 0;
+      transition: all 0.3s;
+    }
+
+    .newsletter-btn:hover {
+      background: var(--accent-light);
     }
 
     /* Responsive */
@@ -385,9 +544,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="image/ODDS.jpeg" alt="Logo" class="me-2 rounded">
-      <span class="fw-bold">ODDS</span>
-      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
+      <div class="logo">
+        <img src="image/ODDS.jpeg" alt="ODDS Logo">
+        <div class="logo-text">
+          <h1>ODDS<span style="color:#c5a059;">®</span></h1>
+          <p>COMPLETE DIGITAL ECOSYSTEM</p>
+        </div>
+      </div>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -397,9 +560,9 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="founder.html">Founder</a></li>
       </ul>
     </div>
   </div>
@@ -408,8 +571,9 @@
 <!-- ===== HERO SECTION ===== -->
 <section class="contact-hero">
   <div class="container">
-    <h1>Let's Talk <span style="color: var(--accent);">Business</span></h1>
-    <p class="lead">Ready to transform your digital presence? We're here to help.</p>
+    <div class="sme-badge" data-aos="fade-down">Get in Touch</div>
+    <h1 data-aos="fade-up" data-aos-delay="100">Let's <span>Connect</span> and Grow Together</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">Ready to transform your digital presence? We're just a message away.</p>
   </div>
 </section>
 
@@ -418,11 +582,9 @@
   <div class="container">
     <div class="row g-4">
       <!-- Phone -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
         <div class="contact-info-card">
-          <div class="contact-info-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
+          <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
           <h3>Phone</h3>
           <p>Call us directly</p>
           <a href="tel:+2348039661354">+234 803 966 1354</a>
@@ -430,11 +592,9 @@
       </div>
       
       <!-- Email -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="contact-info-card">
-          <div class="contact-info-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
+          <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
           <h3>Email</h3>
           <p>Send us a message</p>
           <a href="mailto:hello@odds.ng">hello@odds.ng</a>
@@ -442,13 +602,11 @@
       </div>
       
       <!-- Location -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="contact-info-card">
-          <div class="contact-info-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
+          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h3>Location</h3>
-          <p>Lagos Island, Nigeria</p>
+          <p>Osogbo, Osun State</p>
           <p>Remote: Serving nationwide</p>
         </div>
       </div>
@@ -461,7 +619,7 @@
   <div class="container">
     <div class="row g-5">
       <!-- Contact Form -->
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-right">
         <div class="contact-form-wrapper">
           <h2 class="section-title text-start" style="text-align: left !important;">Send a Message</h2>
           <p class="text-secondary mb-4">Fill out the form and we'll get back to you within 24 hours.</p>
@@ -489,6 +647,7 @@
                 <option value="web-design">Web Design & Development</option>
                 <option value="digital-marketing">Digital Marketing</option>
                 <option value="branding">Branding & Identity</option>
+                <option value="ai-automation">AI Chatbot & Automation</option>
                 <option value="consulting">Digital Strategy Consulting</option>
                 <option value="other">Other</option>
               </select>
@@ -512,7 +671,7 @@
       </div>
       
       <!-- Map & Office Info -->
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-left">
         <!-- Map -->
         <div class="map-container mb-4">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.92735657368!2d3.319104406722723!3d6.463208377937347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" allowfullscreen loading="lazy"></iframe>
@@ -520,7 +679,7 @@
         
         <!-- Office Hours -->
         <div class="office-hours">
-          <h4>Office Hours</h4>
+          <h4><i class="fas fa-clock me-2" style="color: var(--accent);"></i> Office Hours</h4>
           <div class="hour-item">
             <span>Monday - Friday</span>
             <span>9:00 AM - 6:00 PM</span>
@@ -535,15 +694,11 @@
           </div>
         </div>
         
-        <!-- Social Links -->
+        <!-- WhatsApp CTA -->
         <div class="mt-4 text-center">
-          <h4>Connect With Us</h4>
-          <div class="d-flex justify-content-center gap-4 mt-3">
-            <a href="#" style="font-size: 1.5rem; color: var(--primary);"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" style="font-size: 1.5rem; color: var(--primary);"><i class="fab fa-twitter"></i></a>
-            <a href="#" style="font-size: 1.5rem; color: var(--primary);"><i class="fab fa-instagram"></i></a>
-            <a href="#" style="font-size: 1.5rem; color: var(--primary);"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+          <a href="https://wa.me/2348123456789" class="btn-submit" style="background: #25D366; display: inline-block; width: auto; padding: 12px 28px;">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -551,40 +706,44 @@
 </section>
 
 <!-- ===== FAQ SECTION ===== -->
-<section class="py-5">
+<section class="faq-section">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="sme-badge">FAQ</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
+      <span class="sme-badge" data-aos="fade-down">Quick Answers</span>
+      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
     </div>
     
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="bg-light p-4 rounded-4 h-100">
-          <h4 class="mb-3"><i class="fas fa-clock me-2" style="color: var(--accent);"></i> How long does a project take?</h4>
-          <p>Typical website projects take 2-4 weeks depending on complexity. Digital marketing campaigns start showing results within 30-60 days.</p>
+    <div class="faq-grid">
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="faq-question">
+          <span>How fast do you reply?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
+        <div class="faq-answer">We typically respond within 2–4 hours during business days. For urgent inquiries, use the WhatsApp button – we reply within 1 hour.</div>
       </div>
       
-      <div class="col-md-6">
-        <div class="bg-light p-4 rounded-4 h-100">
-          <h4 class="mb-3"><i class="fas fa-wallet me-2" style="color: var(--accent);"></i> What are your payment terms?</h4>
-          <p>We require 50% deposit to start, 25% at milestone completion, and 25% upon project completion. Custom payment plans available for long-term projects.</p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-question">
+          <span>Do you offer a free consultation?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
+        <div class="faq-answer">Yes. We offer a free 15‑minute discovery call to understand your needs and recommend the right solutions. Just mention "free consult" in your message.</div>
       </div>
       
-      <div class="col-md-6">
-        <div class="bg-light p-4 rounded-4 h-100">
-          <h4 class="mb-3"><i class="fas fa-users me-2" style="color: var(--accent);"></i> Do you work with startups?</h4>
-          <p>Absolutely! We love helping startups build their digital presence from the ground up. We offer special packages for early-stage businesses.</p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-question">
+          <span>Can you serve clients outside Osogbo?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
+        <div class="faq-answer">Absolutely. We work remotely with clients across Lagos, Abuja, Port Harcourt, and nationwide. Our digital ecosystem is designed for seamless remote collaboration.</div>
       </div>
       
-      <div class="col-md-6">
-        <div class="bg-light p-4 rounded-4 h-100">
-          <h4 class="mb-3"><i class="fas fa-headset me-2" style="color: var(--accent);"></i> What support do you offer after launch?</h4>
-          <p>We provide 30 days of free support after launch. Ongoing maintenance and support packages are available for continued peace of mind.</p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-question">
+          <span>What payment methods do you accept?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
+        <div class="faq-answer">Bank transfer, card payments via Paystack, and USSD. We issue proper receipts/invoices for all transactions.</div>
       </div>
     </div>
   </div>
@@ -595,9 +754,9 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h2 class="display-4 fw-bold mb-4">Ready to Get Started?</h2>
-        <p class="lead mb-4">Book a free strategy session with our team.</p>
-        <a href="#" class="btn-light">Schedule a Call</a>
+        <h2 data-aos="fade-up">Ready to Get Started?</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Book a free strategy session with our team. No pressure, just possibilities.</p>
+        <a href="#" class="btn-light" data-aos="fade-up" data-aos-delay="200">Schedule a Free Call →</a>
       </div>
     </div>
   </div>
@@ -605,11 +764,11 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container">
+  <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="row">
       <div class="col-lg-4 mb-4">
         <h5>ODDS</h5>
-        <p>Premium digital partner for Nigerian SMEs.</p>
+        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
         <div class="d-flex gap-3 mt-3">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
@@ -623,6 +782,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -631,7 +791,7 @@
         <h6>Contact</h6>
         <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
         <p><i class="fas fa-envelope me-2"></i> <a href="mailto:hello@odds.ng">hello@odds.ng</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos, Nigeria</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
       </div>
       <div class="col-lg-3 mb-4">
         <h6>Newsletter</h6>
@@ -643,14 +803,17 @@
     </div>
     <hr>
     <div class="text-center small">
-      <p>&copy; 2025 ODDS. All rights reserved.</p>
+      <p>&copy; 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
     </div>
   </div>
 </footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  AOS.init({ duration: 800, once: true, offset: 100 });
+
   // Close mobile menu when clicking on nav links
   document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
     link.addEventListener('click', () => {
@@ -658,6 +821,17 @@
       if (navbar && navbar.classList.contains('show')) {
         navbar.classList.remove('show');
       }
+    });
+  });
+  
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
     });
   });
   
@@ -670,26 +844,20 @@
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Get form values
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value;
       
-      // Simple validation
       if (!name || !email || !service || !message) {
         formError.style.display = 'block';
         setTimeout(() => { formError.style.display = 'none'; }, 3000);
         return;
       }
       
-      // Show success (simulate sending)
       formSuccess.style.display = 'block';
       contactForm.reset();
-      
       setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
-      
-      // In production, you would send this data to your backend
       console.log('Form submitted:', { name, email, service, message });
     });
   }

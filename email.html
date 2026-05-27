@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Social Media Management | Content, Engagement & Growth – ODDS</title>
-  <meta name="description" content="Professional social media management for Instagram, Facebook, TikTok, and LinkedIn. Content creation, engagement, and growth to build a loyal community around your brand.">
+  <title>Email Marketing | Campaigns, Automation & Newsletters – ODDS</title>
+  <meta name="description" content="Professional email marketing campaigns, automation workflows, and newsletter design that nurture leads and convert them into repeat customers.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -281,48 +281,23 @@
       line-height: 1.6;
     }
 
-    /* PLATFORM CARDS */
-    .platforms-section {
-      background: var(--gray-100);
-      padding: 80px 0;
+    /* STATS SECTION */
+    .stats-section {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 60px 0;
     }
-    .platforms-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-    .platform-card {
-      background: white;
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-      transition: all 0.3s;
-      border: 1px solid var(--gray-200);
-    }
-    .platform-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-    }
-    .platform-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
-    .platform-icon .fa-instagram { color: #E4405F; }
-    .platform-icon .fa-facebook { color: #1877F2; }
-    .platform-icon .fa-tiktok { color: #000000; }
-    .platform-icon .fa-linkedin { color: #0077B5; }
-    .platform-card h4 {
-      font-size: 1.2rem;
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
       margin-bottom: 8px;
-      color: var(--primary);
     }
 
     /* PROCESS SECTION */
     .process-section {
+      background: var(--gray-100);
       padding: 80px 0;
-      background: white;
     }
     .steps-grid {
       display: grid;
@@ -333,15 +308,15 @@
     .step-card {
       text-align: center;
       padding: 32px;
-      background: var(--gray-100);
+      background: white;
       border-radius: 24px;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
     .step-card:hover {
       transform: translateY(-5px);
-      background: white;
+      border-color: var(--accent);
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
     }
     .step-number {
       width: 60px;
@@ -366,53 +341,44 @@
       font-size: 0.9rem;
     }
 
-    /* STATS SECTION */
-    .stats-section {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 60px 0;
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    /* PORTFOLIO SECTION */
-    .portfolio-section {
+    /* BENEFITS SECTION */
+    .benefits-section {
       padding: 80px 0;
-      background: var(--gray-100);
+      background: white;
     }
-    .portfolio-grid {
+    .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
-    .portfolio-card {
-      background: white;
-      border-radius: 20px;
-      padding: 28px;
+    .benefit-card {
       text-align: center;
-      border: 1px solid var(--gray-200);
+      padding: 32px;
+      background: var(--gray-100);
+      border-radius: 24px;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
-    .portfolio-card:hover {
+    .benefit-card:hover {
       transform: translateY(-5px);
+      background: white;
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
-    .portfolio-card i {
+    .benefit-icon {
       font-size: 2rem;
       color: var(--accent);
       margin-bottom: 16px;
     }
-    .portfolio-stats {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 12px;
+    .benefit-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .benefit-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
     }
 
     /* CTA SECTION */
@@ -549,9 +515,9 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Social Media Management</div>
-      <h1 data-aos="fade-up" data-aos-delay="100">Build a Loyal <span>Community</span> Around Your Brand</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Professional content creation, engagement, and growth on Instagram, Facebook, TikTok, and LinkedIn. We turn followers into customers.</p>
+      <div class="sme-badge" data-aos="fade-down">Email Marketing</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Nurture Leads & <span>Convert Into Repeat Customers</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Professional email campaigns, automation workflows, and newsletter design that build relationships and drive sales.</p>
     </div>
   </section>
 
@@ -559,102 +525,37 @@
   <section class="services-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete social media management that drives real results</p>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete email marketing solutions that drive ROI</p>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-icon"><i class="fas fa-image"></i></div>
-          <h3>Content Creation</h3>
-          <p>High-quality photos, graphics, videos, and carousels designed to stop the scroll and engage your audience.</p>
+          <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+          <h3>Campaign Strategy & Design</h3>
+          <p>Beautiful, mobile-responsive email templates designed to grab attention and drive clicks.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h3>Content Strategy & Planning</h3>
-          <p>Strategic content calendars aligned with your business goals, seasons, and audience preferences.</p>
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>Marketing Automation</h3>
+          <p>Automated welcome sequences, abandoned cart recovery, post-purchase follow-ups, and re-engagement campaigns.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>Community Engagement</h3>
-          <p>Active engagement with your followers – responding to comments, DMs, and mentions to build loyalty.</p>
+          <div class="service-icon"><i class="fas fa-newspaper"></i></div>
+          <h3>Newsletter Design</h3>
+          <p>Weekly or monthly newsletters that keep your brand top-of-mind and drive consistent traffic.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Growth Strategy</h3>
-          <p>Data-driven growth tactics to increase followers, reach, and engagement organically.</p>
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>List Segmentation</h3>
+          <p>Targeted campaigns based on customer behavior, purchase history, and engagement levels.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
-          <h3>Analytics & Reporting</h3>
-          <p>Monthly reports showing follower growth, engagement rates, top-performing content, and ROI.</p>
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>A/B Testing & Optimization</h3>
+          <p>Continuous testing of subject lines, content, and send times to maximize open rates and conversions.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon"><i class="fas fa-ad"></i></div>
-          <h3>Social Media Advertising</h3>
-          <p>Targeted ad campaigns on Facebook, Instagram, and TikTok to accelerate your growth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PLATFORMS WE MANAGE -->
-  <section class="platforms-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Platforms We Master</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We speak the language of every major social network</p>
-      <div class="platforms-grid">
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="platform-icon"><i class="fab fa-instagram"></i></div>
-          <h4>Instagram</h4>
-          <p>Reels, Stories, Posts & Engagement</p>
-        </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="platform-icon"><i class="fab fa-facebook"></i></div>
-          <h4>Facebook</h4>
-          <p>Pages, Groups, Ads & Community</p>
-        </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
-          <h4>TikTok</h4>
-          <p>Short-form Video & Viral Trends</p>
-        </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="platform-icon"><i class="fab fa-linkedin"></i></div>
-          <h4>LinkedIn</h4>
-          <p>Thought Leadership & B2B Growth</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="process-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Social Media Process</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic system for building your brand online</p>
-      <div class="steps-grid">
-        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="step-number">1</div>
-          <h4>Discovery & Audit</h4>
-          <p>We analyze your current social media presence and competitors.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="step-number">2</div>
-          <h4>Strategy & Planning</h4>
-          <p>Custom content strategy, posting schedule, and platform selection.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="step-number">3</div>
-          <h4>Content Creation</h4>
-          <p>Design, copywriting, and video production tailored to each platform.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="step-number">4</div>
-          <h4>Publish & Engage</h4>
-          <p>Scheduled posting and active community engagement.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="step-number">5</div>
-          <h4>Analyze & Optimize</h4>
-          <p>Monthly reporting and continuous improvement.</p>
+          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
+          <h3>Analytics & Reporting</h3>
+          <p>Detailed reports on open rates, click-through rates, conversions, and revenue generated.</p>
         </div>
       </div>
     </div>
@@ -664,45 +565,121 @@
   <section class="stats-section">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="stat-number">300%+</div>
-          <p>Average Follower Growth</p>
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number">₦42</div>
+          <p>Average ROI per ₦1 spent</p>
         </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">5x</div>
-          <p>Higher Engagement Rates</p>
-        </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="stat-number">50+</div>
-          <p>Active Accounts Managed</p>
+          <p>Active Campaigns</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number">35%</div>
+          <p>Average Open Rate</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number">12%</div>
+          <p>Average CTR</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO SNIPPET -->
-  <section class="portfolio-section">
+  <!-- HOW IT WORKS -->
+  <section class="process-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Social Media Success Stories</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real growth from real brands</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fab fa-instagram"></i>
-          <h4>CFAMI Media</h4>
-          <p>Instagram growth campaign</p>
-          <div class="portfolio-stats">📈 2k → 25k followers (6 months)</div>
+      <h2 class="section-title" data-aos="fade-up">Our Email Marketing Process</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic system that turns subscribers into customers</p>
+      <div class="steps-grid">
+        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <h4>Strategy & Setup</h4>
+          <p>We define goals, segment audiences, and set up your email platform.</p>
         </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fab fa-facebook"></i>
-          <h4>MarketHub</h4>
-          <p>Facebook community building</p>
-          <div class="portfolio-stats">👥 10k+ engaged group members</div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">2</div>
+          <h4>Design & Content</h4>
+          <p>We create beautiful templates and compelling copy for your campaigns.</p>
         </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-tiktok"></i>
-          <h4>Zena Beauty</h4>
-          <p>TikTok viral strategy</p>
-          <div class="portfolio-stats">🎬 2M+ views, 50k+ followers</div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">3</div>
+          <h4>Automation Setup</h4>
+          <p>We build automated workflows for leads, purchases, and re-engagement.</p>
+        </div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">4</div>
+          <h4>Launch & Optimize</h4>
+          <p>We monitor performance and continuously improve results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY BENEFITS -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Why Email Marketing Matters</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">The most cost-effective channel for driving sales</p>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Highest ROI</h4>
+          <p>Email marketing generates ₦42 for every ₦1 spent – higher than any other channel.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon"><i class="fas fa-robot"></i></div>
+          <h4>Automated Sales</h4>
+          <p>Set up automated sequences that sell while you sleep.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon"><i class="fas fa-users"></i></div>
+          <h4>Builds Loyalty</h4>
+          <p>Regular communication turns one-time buyers into repeat customers.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon"><i class="fas fa-chart-simple"></i></div>
+          <h4>Measurable Results</h4>
+          <p>Track exactly how many sales and how much revenue each campaign generates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOMATION WORKFLOWS -->
+  <section class="services-section" style="background: var(--gray-100);">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Automation Workflows We Build</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Set it once, let it run forever</p>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Welcome Series</h3>
+          <p>Automated sequence for new subscribers – introduce your brand, offer value, and drive first purchase.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>Abandoned Cart Recovery</h3>
+          <p>Remind customers what they left behind and recover lost sales automatically.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-gift"></i></div>
+          <h3>Post-Purchase Follow-up</h3>
+          <p>Thank customers, request reviews, and cross-sell related products.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Birthday & Anniversary</h3>
+          <p>Celebrate special occasions with personalized offers and discounts.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-star"></i></div>
+          <h3>Win-back Campaigns</h3>
+          <p>Re-engage inactive subscribers with special offers and compelling content.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon"><i class="fas fa-tag"></i></div>
+          <h3>Promotional Sequences</h3>
+          <p>Automated countdowns, flash sale alerts, and limited-time offer reminders.</p>
         </div>
       </div>
     </div>
@@ -711,15 +688,15 @@
   <!-- CTA SECTION -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-aos="fade-up">Ready to Grow Your Social Media Presence?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Get a free social media audit. We'll analyze your current accounts and show you exactly how to grow.</p>
-      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Social Media Audit →</a>
+      <h2 data-aos="fade-up">Ready to Grow Your Email List & Sales?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Get a free email marketing audit. We'll analyze your current campaigns and show you exactly how to improve open rates and conversions.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Email Audit →</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>ODDS</h4>
@@ -730,7 +707,7 @@
         <a href="web-design.html">Web & E‑commerce</a>
         <a href="seo.html">SEO & Local SEO</a>
         <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="social-media.html">Social Media Management</a>
+        <a href="email-marketing.html">Email Marketing</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

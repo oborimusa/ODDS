@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Social Media Management | Content, Engagement & Growth – ODDS</title>
-  <meta name="description" content="Professional social media management for Instagram, Facebook, TikTok, and LinkedIn. Content creation, engagement, and growth to build a loyal community around your brand.">
+  <title>AI Automation & Chatbots | 24/7 Customer Support – ODDS</title>
+  <meta name="description" content="AI chatbots for 24/7 customer support, lead generation, and workflow automation that saves you time and increases sales. Transform your business with AI.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -281,46 +281,47 @@
       line-height: 1.6;
     }
 
-    /* PLATFORM CARDS */
-    .platforms-section {
+    /* BENEFITS SECTION */
+    .benefits-section {
       background: var(--gray-100);
       padding: 80px 0;
     }
-    .platforms-grid {
+    .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
-    .platform-card {
-      background: white;
-      border-radius: 20px;
-      padding: 32px;
+    .benefit-card {
       text-align: center;
-      transition: all 0.3s;
+      padding: 32px;
+      background: white;
+      border-radius: 24px;
       border: 1px solid var(--gray-200);
+      transition: all 0.3s;
     }
-    .platform-card:hover {
+    .benefit-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-sm);
     }
-    .platform-icon {
-      font-size: 3rem;
+    .benefit-icon {
+      font-size: 2rem;
+      color: var(--accent);
       margin-bottom: 16px;
     }
-    .platform-icon .fa-instagram { color: #E4405F; }
-    .platform-icon .fa-facebook { color: #1877F2; }
-    .platform-icon .fa-tiktok { color: #000000; }
-    .platform-icon .fa-linkedin { color: #0077B5; }
-    .platform-card h4 {
+    .benefit-card h4 {
       font-size: 1.2rem;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: var(--primary);
     }
+    .benefit-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
 
-    /* PROCESS SECTION */
-    .process-section {
+    /* HOW IT WORKS SECTION */
+    .how-it-works {
       padding: 80px 0;
       background: white;
     }
@@ -341,7 +342,6 @@
       transform: translateY(-5px);
       background: white;
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
     }
     .step-number {
       width: 60px;
@@ -379,18 +379,18 @@
       margin-bottom: 8px;
     }
 
-    /* PORTFOLIO SECTION */
-    .portfolio-section {
+    /* USE CASES SECTION */
+    .usecases-section {
       padding: 80px 0;
       background: var(--gray-100);
     }
-    .portfolio-grid {
+    .usecases-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
-    .portfolio-card {
+    .usecase-card {
       background: white;
       border-radius: 20px;
       padding: 28px;
@@ -398,21 +398,24 @@
       border: 1px solid var(--gray-200);
       transition: all 0.3s;
     }
-    .portfolio-card:hover {
+    .usecase-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
-    .portfolio-card i {
+    .usecase-card i {
       font-size: 2rem;
       color: var(--accent);
       margin-bottom: 16px;
     }
-    .portfolio-stats {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 12px;
+    .usecase-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .usecase-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
     }
 
     /* CTA SECTION */
@@ -549,9 +552,9 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Social Media Management</div>
-      <h1 data-aos="fade-up" data-aos-delay="100">Build a Loyal <span>Community</span> Around Your Brand</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Professional content creation, engagement, and growth on Instagram, Facebook, TikTok, and LinkedIn. We turn followers into customers.</p>
+      <div class="sme-badge" data-aos="fade-down">AI Automation & Chatbots</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">24/7 Customer Support & <span>Lead Generation Bots</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Workflow automation that saves you time, reduces costs, and increases sales. Transform your business with AI-powered solutions.</p>
     </div>
   </section>
 
@@ -559,102 +562,97 @@
   <section class="services-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete social media management that drives real results</p>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete AI automation solutions tailored to your business</p>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-icon"><i class="fas fa-image"></i></div>
-          <h3>Content Creation</h3>
-          <p>High-quality photos, graphics, videos, and carousels designed to stop the scroll and engage your audience.</p>
+          <div class="service-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>AI Chatbots</h3>
+          <p>Intelligent chatbots for website, WhatsApp, and Facebook that answer customer questions instantly – even at 3 AM.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h3>Content Strategy & Planning</h3>
-          <p>Strategic content calendars aligned with your business goals, seasons, and audience preferences.</p>
+          <div class="service-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Lead Generation Bots</h3>
+          <p>Automated bots that qualify leads, capture contact information, and schedule appointments while you sleep.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>Community Engagement</h3>
-          <p>Active engagement with your followers – responding to comments, DMs, and mentions to build loyalty.</p>
+          <div class="service-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email & CRM Automation</h3>
+          <p>Automated email sequences, lead nurturing, and CRM integration to move prospects through your sales funnel.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Growth Strategy</h3>
-          <p>Data-driven growth tactics to increase followers, reach, and engagement organically.</p>
+          <div class="service-icon"><i class="fas fa-tasks"></i></div>
+          <h3>Workflow Automation</h3>
+          <p>Automate repetitive tasks – data entry, invoice generation, customer follow-ups – and free up your team's time.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
-          <h3>Analytics & Reporting</h3>
-          <p>Monthly reports showing follower growth, engagement rates, top-performing content, and ROI.</p>
+          <div class="service-icon"><i class="fas fa-whatsapp"></i></div>
+          <h3>WhatsApp Business API</h3>
+          <p>Automated messaging, broadcast campaigns, and two-way conversations at scale.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon"><i class="fas fa-ad"></i></div>
-          <h3>Social Media Advertising</h3>
-          <p>Targeted ad campaigns on Facebook, Instagram, and TikTok to accelerate your growth.</p>
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Analytics & Reporting</h3>
+          <p>Track bot performance, lead conversion rates, and automation ROI with detailed dashboards.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PLATFORMS WE MANAGE -->
-  <section class="platforms-section">
+  <!-- KEY BENEFITS -->
+  <section class="benefits-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Platforms We Master</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We speak the language of every major social network</p>
-      <div class="platforms-grid">
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="platform-icon"><i class="fab fa-instagram"></i></div>
-          <h4>Instagram</h4>
-          <p>Reels, Stories, Posts & Engagement</p>
+      <h2 class="section-title" data-aos="fade-up">Why Automate with ODDS?</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real benefits for your business</p>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <h4>Save 40+ Hours/Week</h4>
+          <p>Automate repetitive tasks and let your team focus on what matters most.</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="platform-icon"><i class="fab fa-facebook"></i></div>
-          <h4>Facebook</h4>
-          <p>Pages, Groups, Ads & Community</p>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h4>Reduce Costs by 60%</h4>
+          <p>Cut operational costs with AI-powered customer support and automation.</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
-          <h4>TikTok</h4>
-          <p>Short-form Video & Viral Trends</p>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Increase Conversions</h4>
+          <p>Instant responses capture leads before they leave your site.</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="platform-icon"><i class="fab fa-linkedin"></i></div>
-          <h4>LinkedIn</h4>
-          <p>Thought Leadership & B2B Growth</p>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+          <h4>24/7 Availability</h4>
+          <p>Never miss a customer inquiry – even outside business hours.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="process-section">
+  <section class="how-it-works">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Social Media Process</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic system for building your brand online</p>
+      <h2 class="section-title" data-aos="fade-up">Our AI Implementation Process</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We make AI simple and effective</p>
       <div class="steps-grid">
         <div class="step-card" data-aos="fade-up" data-aos-delay="0">
           <div class="step-number">1</div>
-          <h4>Discovery & Audit</h4>
-          <p>We analyze your current social media presence and competitors.</p>
+          <h4>Discovery</h4>
+          <p>We identify repetitive tasks and automation opportunities in your business.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">2</div>
-          <h4>Strategy & Planning</h4>
-          <p>Custom content strategy, posting schedule, and platform selection.</p>
+          <h4>Design</h4>
+          <p>We design conversation flows and automation workflows tailored to your needs.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">3</div>
-          <h4>Content Creation</h4>
-          <p>Design, copywriting, and video production tailored to each platform.</p>
+          <h4>Build & Train</h4>
+          <p>We build your chatbot, train it on your business data, and set up automation rules.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">4</div>
-          <h4>Publish & Engage</h4>
-          <p>Scheduled posting and active community engagement.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="step-number">5</div>
-          <h4>Analyze & Optimize</h4>
-          <p>Monthly reporting and continuous improvement.</p>
+          <h4>Launch & Optimize</h4>
+          <p>We deploy, monitor, and continuously improve your AI solutions.</p>
         </div>
       </div>
     </div>
@@ -665,44 +663,46 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="stat-number">300%+</div>
-          <p>Average Follower Growth</p>
+          <div class="stat-number">1,000+</div>
+          <p>Chatbot Conversations/Month</p>
         </div>
         <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">5x</div>
-          <p>Higher Engagement Rates</p>
+          <div class="stat-number">60%</div>
+          <p>Average Cost Reduction</p>
         </div>
         <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number">50+</div>
-          <p>Active Accounts Managed</p>
+          <div class="stat-number">24/7</div>
+          <p>Round-the-Clock Support</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO SNIPPET -->
-  <section class="portfolio-section">
+  <!-- USE CASES -->
+  <section class="usecases-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Social Media Success Stories</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real growth from real brands</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fab fa-instagram"></i>
-          <h4>CFAMI Media</h4>
-          <p>Instagram growth campaign</p>
-          <div class="portfolio-stats">📈 2k → 25k followers (6 months)</div>
+      <h2 class="section-title" data-aos="fade-up">Perfect for Every Business</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real-world applications of AI automation</p>
+      <div class="usecases-grid">
+        <div class="usecase-card" data-aos="fade-up" data-aos-delay="0">
+          <i class="fas fa-store"></i>
+          <h4>E-commerce</h4>
+          <p>Product recommendations, order tracking, and abandoned cart recovery – all automated.</p>
         </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fab fa-facebook"></i>
-          <h4>MarketHub</h4>
-          <p>Facebook community building</p>
-          <div class="portfolio-stats">👥 10k+ engaged group members</div>
+        <div class="usecase-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-hotel"></i>
+          <h4>Hospitality</h4>
+          <p>Booking confirmations, room service requests, and FAQ automation.</p>
         </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-tiktok"></i>
-          <h4>Zena Beauty</h4>
-          <p>TikTok viral strategy</p>
-          <div class="portfolio-stats">🎬 2M+ views, 50k+ followers</div>
+        <div class="usecase-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h4>Financial Services</h4>
+          <p>Loan inquiries, account balance checks, and document collection automation.</p>
+        </div>
+        <div class="usecase-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-calendar-check"></i>
+          <h4>Service Businesses</h4>
+          <p>Appointment scheduling, reminders, and customer follow-ups.</p>
         </div>
       </div>
     </div>
@@ -711,15 +711,15 @@
   <!-- CTA SECTION -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-aos="fade-up">Ready to Grow Your Social Media Presence?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Get a free social media audit. We'll analyze your current accounts and show you exactly how to grow.</p>
-      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Social Media Audit →</a>
+      <h2 data-aos="fade-up">Ready to Automate Your Business?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Get a free AI automation consultation. We'll identify the biggest opportunities to save you time and increase sales.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free AI Consultation →</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>ODDS</h4>
@@ -730,7 +730,7 @@
         <a href="web-design.html">Web & E‑commerce</a>
         <a href="seo.html">SEO & Local SEO</a>
         <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="social-media.html">Social Media Management</a>
+        <a href="ai-automation.html">AI & Automation</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

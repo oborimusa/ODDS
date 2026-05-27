@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Brand Identity & Design | Logo, Color Systems & Brand Strategy – ODDS</title>
-  <meta name="description" content="Professional logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience.">
+  <title>How ODDS Works | Simple Process for Digital Success</title>
+  <meta name="description" content="See how ODDS transforms Nigerian SMEs into digital success stories. Our 4-step process: Discovery, Strategy, Execution, Growth.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -43,6 +43,7 @@
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+      --success-green: #10b981;
     }
 
     .container {
@@ -168,33 +169,28 @@
       }
     }
 
-    /* HERO SECTION */
-    .hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
+    /* HERO */
+    .process-hero {
+      background: linear-gradient(135deg, var(--off-white) 0%, #ffffff 100%);
+      padding: 80px 0 60px;
       text-align: center;
-      color: white;
       position: relative;
       overflow: hidden;
     }
-    .hero::before {
+    .process-hero::before {
       content: '';
       position: absolute;
       top: -50%;
       right: -20%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197,160,89,0.05) 0%, transparent 70%);
       border-radius: 50%;
       animation: softShift 15s ease infinite;
     }
     @keyframes softShift {
       0%, 100% { opacity: 0.5; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.05); }
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
     }
     .sme-badge {
       background: var(--gradient-accent);
@@ -206,197 +202,175 @@
       margin-bottom: 1.5rem;
       font-size: 0.8rem;
     }
-    .hero h1 {
-      font-size: 3.5rem;
+    .process-hero h1 {
+      font-size: 3rem;
       font-weight: 800;
-      margin-bottom: 20px;
       font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 16px;
+      color: var(--primary);
     }
-    .hero h1 span {
+    .process-hero h1 span {
       color: var(--accent);
     }
-    .hero p {
+    .process-hero p {
       font-size: 1.2rem;
-      opacity: 0.9;
+      color: var(--gray-600);
       max-width: 700px;
       margin: 0 auto;
     }
     @media (max-width: 768px) {
-      .hero { padding: 60px 0; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
+      .process-hero h1 { font-size: 2rem; }
+      .process-hero p { font-size: 1rem; }
     }
 
-    /* SERVICES OVERVIEW */
-    .services-section {
-      padding: 80px 0;
-      background: white;
-    }
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 16px;
-      font-family: 'Space Grotesk', sans-serif;
-      color: var(--primary);
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--gray-600);
-      max-width: 700px;
-      margin: 0 auto 56px;
-      font-size: 1.1rem;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 32px;
-    }
-    .service-card {
-      background: white;
-      border-radius: 24px;
-      padding: 32px;
-      transition: all 0.3s;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-    }
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-lg);
-    }
-    .service-icon {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-    .service-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    .service-card p {
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    /* PORTFOLIO SECTION */
-    .portfolio-section {
-      background: var(--gray-100);
-      padding: 80px 0;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-    .portfolio-card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-    }
-    .portfolio-card i {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .portfolio-card h4 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: var(--primary);
-    }
-
-    /* PROCESS SECTION */
-    .process-section {
+    /* STEPS SECTION */
+    .steps-section {
       padding: 80px 0;
       background: white;
     }
     .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .step-card {
-      text-align: center;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      background: white;
+      border-radius: 28px;
       padding: 32px;
-      background: var(--gray-100);
-      border-radius: 24px;
+      border: 1px solid var(--gray-200);
       transition: all 0.3s;
     }
     .step-card:hover {
-      transform: translateY(-5px);
-      background: white;
-      box-shadow: var(--shadow-md);
+      transform: translateX(8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
     }
     .step-number {
-      width: 60px;
-      height: 60px;
       background: var(--gradient-accent);
       color: var(--primary-dark);
-      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      border-radius: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
       font-weight: 800;
-      margin: 0 auto 20px;
+      flex-shrink: 0;
     }
-    .step-card h4 {
-      font-size: 1.2rem;
+    .step-content h3 {
+      font-size: 1.6rem;
       margin-bottom: 12px;
       color: var(--primary);
     }
-    .step-card p {
+    .step-content p {
       color: var(--gray-600);
-      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+    .step-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .step-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gray-700);
+    }
+    .step-list i {
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .step-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .step-list li { justify-content: center; }
+    }
+
+    /* TIMELINE SECTION */
+    .timeline-section {
+      background: var(--gray-100);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .timeline-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .timeline-item {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      min-width: 200px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+    .timeline-item .days {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .section-title { font-size: 1.8rem; }
     }
 
     /* WHY CHOOSE US */
     .why-choose {
-      background: var(--gray-100);
       padding: 80px 0;
+      background: white;
     }
-    .benefits-grid {
+    .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 32px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
-    .benefit-card {
+    .why-card {
       text-align: center;
       padding: 32px;
-      background: white;
       border-radius: 24px;
       border: 1px solid var(--gray-200);
       transition: all 0.3s;
     }
-    .benefit-card:hover {
+    .why-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: var(--shadow-sm);
     }
-    .benefit-icon {
-      font-size: 2rem;
+    .why-card i {
+      font-size: 2.5rem;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
-    .benefit-card h4 {
+    .why-card h4 {
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--primary);
     }
-    .benefit-card p {
+    .why-card p {
       color: var(--gray-600);
       font-size: 0.9rem;
     }
@@ -404,6 +378,7 @@
     /* CTA SECTION */
     .cta-section {
       background: var(--gradient-primary);
+      color: white;
       text-align: center;
       padding: 80px 0;
       position: relative;
@@ -421,8 +396,7 @@
     }
     .cta-section h2 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: white;
+      margin-bottom: 1rem;
       position: relative;
       z-index: 1;
     }
@@ -430,14 +404,13 @@
       max-width: 600px;
       margin: 0 auto 32px;
       opacity: 0.9;
-      color: white;
       position: relative;
       z-index: 1;
     }
     .btn-glow {
       background: var(--accent);
       color: var(--primary-dark);
-      padding: 14px 48px;
+      padding: 14px 40px;
       border-radius: 60px;
       font-weight: 700;
       text-decoration: none;
@@ -449,6 +422,9 @@
     .btn-glow:hover {
       transform: translateY(-3px);
       background: var(--accent-light);
+    }
+    @media (max-width: 768px) {
+      .cta-section h2 { font-size: 1.8rem; }
     }
 
     /* FOOTER */
@@ -498,9 +474,6 @@
       .nav-links.active { display: flex; }
       .menu-toggle { display: block; }
       .container { padding: 0 20px; }
-      .section-title { font-size: 1.8rem; }
-      .hero h1 { font-size: 2rem; }
-      .cta-section h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -525,6 +498,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="portfolio.html">Results</a></li>
+        <li><a href="how-it-works.html" class="active">How It Works</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -532,105 +506,92 @@
 </header>
 
 <main>
-  <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- HERO -->
+  <section class="process-hero">
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Brand Identity & Design</div>
-      <h1 data-aos="fade-up" data-aos-delay="100">Stand Out & <span>Build Lasting Trust</span></h1>
-      <p data-aos="fade-up" data-aos-delay="200">Professional logo design, color systems, typography, and comprehensive brand strategy to help you stand out and build lasting trust with your audience.</p>
+      <div class="sme-badge" data-aos="fade-down">Simple & Transparent</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">How <span>ODDS</span> Works</h1>
+      <p data-aos="fade-up" data-aos-delay="200">From discovery to growth – a simple, transparent process that delivers real results for your business.</p>
     </div>
   </section>
 
-  <!-- SERVICES OVERVIEW -->
-  <section class="services-section">
+  <!-- STEPS -->
+  <section class="steps-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete brand identity solutions that make you memorable</p>
-      <div class="services-grid">
-        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-icon"><i class="fas fa-star"></i></div>
-          <h3>Logo Design</h3>
-          <p>Unique, memorable logos that capture your brand's essence and work across all platforms – from business cards to billboards.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon"><i class="fas fa-palette"></i></div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant brand recognition.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon"><i class="fas fa-font"></i></div>
-          <h3>Typography</h3>
-          <p>Custom font pairings and typography systems that ensure consistency across all communications.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Brand Strategy</h3>
-          <p>Comprehensive brand positioning, messaging, and voice guidelines that differentiate you from competitors.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon"><i class="fas fa-id-card"></i></div>
-          <h3>Brand Guidelines</h3>
-          <p>Complete brand book documenting logo usage, colors, typography, and application rules for your team and partners.</p>
-        </div>
-        <class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon"><i class="fas fa-print"></i></div>
-          <h3>Collateral Design</h3>
-          <p>Business cards, letterheads, brochures, and other marketing materials that reinforce your brand identity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO SHOWCASE -->
-  <section class="portfolio-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Brand Identity Work</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Brands we've helped stand out</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fas fa-store"></i>
-          <h4>MarketHub</h4>
-          <p>Complete brand identity + packaging design</p>
-        </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-truck"></i>
-          <h4>SwiftLogistics</h4>
-          <p>Logo + color system + vehicle branding</p>
-        </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-church"></i>
-          <h4>CFAMI Media</h4>
-          <p>Full brand refresh + social media templates</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR PROCESS -->
-  <section class="process-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Branding Process</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic approach to building your brand</p>
       <div class="steps-grid">
-        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-card" data-aos="fade-right">
           <div class="step-number">1</div>
-          <h4>Discovery</h4>
-          <p>We learn about your business, values, audience, and competitors.</p>
+          <div class="step-content">
+            <h3>Discovery & Free Audit</h3>
+            <p>We start by understanding your business, goals, and current digital footprint. You'll receive a no-obligation digital ecosystem audit.</p>
+            <ul class="step-list">
+              <li><i class="fas fa-check-circle"></i> 15-min discovery call</li>
+              <li><i class="fas fa-check-circle"></i> Full website/SEO/social review</li>
+              <li><i class="fas fa-check-circle"></i> Custom audit report (48h)</li>
+            </ul>
+          </div>
         </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card" data-aos="fade-left">
           <div class="step-number">2</div>
-          <h4>Strategy</h4>
-          <p>We develop brand positioning, messaging, and direction.</p>
+          <div class="step-content">
+            <h3>Strategy & Proposal</h3>
+            <p>Based on the audit, we build a tailored digital roadmap with clear milestones, pricing, and expected outcomes.</p>
+            <ul class="step-list">
+              <li><i class="fas fa-check-circle"></i> Transparent pricing (no surprises)</li>
+              <li><i class="fas fa-check-circle"></i> Project timeline & deliverables</li>
+              <li><i class="fas fa-check-circle"></i> You approve before any work begins</li>
+            </ul>
+          </div>
         </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-card" data-aos="fade-right">
           <div class="step-number">3</div>
-          <h4>Design</h4>
-          <p>We create logo concepts, color palettes, and typography systems.</p>
+          <div class="step-content">
+            <h3>Execution & Implementation</h3>
+            <p>Our team builds, optimizes, and automates. You get weekly updates and full visibility into progress.</p>
+            <ul class="step-list">
+              <li><i class="fas fa-check-circle"></i> Dedicated project manager</li>
+              <li><i class="fas fa-check-circle"></i> Weekly progress reports</li>
+              <li><i class="fas fa-check-circle"></i> Revisions & quality assurance</li>
+            </ul>
+          </div>
         </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-card" data-aos="fade-left">
           <div class="step-number">4</div>
-          <h4>Deliver</h4>
-          <p>You receive your complete brand kit + guidelines.</p>
+          <div class="step-content">
+            <h3>Launch & Growth</h3>
+            <p>We go live, train your team, and continue to optimize. Our retainer plans ensure your digital ecosystem keeps evolving.</p>
+            <ul class="step-list">
+              <li><i class="fas fa-check-circle"></i> Hands-on training session</li>
+              <li><i class="fas fa-check-circle"></i> Monthly performance analytics</li>
+              <li><i class="fas fa-check-circle"></i> Ongoing support & iterations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Typical Timeline</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Every project is unique, but here's what most clients experience.</p>
+      <div class="timeline-grid">
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="days">1-2 days</div>
+          <p>Free audit delivered</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="days">3-5 days</div>
+          <p>Strategy & proposal</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="days">2-4 weeks</div>
+          <p>Website build / SEO / setup</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="days">Ongoing</div>
+          <p>Growth & optimization</p>
         </div>
       </div>
     </div>
@@ -639,45 +600,45 @@
   <!-- WHY CHOOSE ODDS -->
   <section class="why-choose">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Why Choose ODDS for Branding?</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We don't just design logos – we build brands</p>
-      <div class="benefits-grid">
-        <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
-          <h4>Strategic Approach</h4>
-          <p>Every design decision is backed by research and strategy.</p>
+      <h2 class="section-title text-center" data-aos="fade-up">Why Choose ODDS</h2>
+      <p class="text-center" style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto 40px;" data-aos="fade-up" data-aos-delay="100">We're different from other digital agencies</p>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <i class="fas fa-chart-line"></i>
+          <h4>Results-Driven</h4>
+          <p>We don't just deliver projects – we deliver measurable growth.</p>
         </div>
-        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="benefit-icon"><i class="fas fa-hand-sparkles"></i></div>
-          <h4>Unique Designs</h4>
-          <p>No templates. Your brand will be 100% original and memorable.</p>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-handshake"></i>
+          <h4>No Lock-in Contracts</h4>
+          <p>Month-to-month agreements. We earn your business every month.</p>
         </div>
-        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-          <h4>Timeless Identity</h4>
-          <p>We create brands that last – not trendy designs that age quickly.</p>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-clock"></i>
+          <h4>24h Response</h4>
+          <p>Guaranteed SLA for all support inquiries.</p>
         </div>
-        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="benefit-icon"><i class="fas fa-file-alt"></i></div>
-          <h4>Complete Guidelines</h4>
-          <p>You get a comprehensive brand book for consistent application.</p>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-shield-alt"></i>
+          <h4>100% Confidential</h4>
+          <p>Your data and strategies are safe with us.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA SECTION -->
-  <section class="cta-section">
+  <!-- CTA -->
+  <div class="cta-section">
     <div class="container">
-      <h2 data-aos="fade-up">Ready to Build a Brand That Stands Out?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Get a free brand consultation. We'll help you define your brand identity and stand out from the competition.</p>
-      <a href="contact.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Start Your Brand Journey →</a>
+      <h2 data-aos="fade-up">Ready to Start Your Journey?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Claim your free digital audit today – no obligation, just actionable insights.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Claim Free Audit →</a>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+  <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>ODDS</h4>
@@ -685,11 +646,10 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="web-design.html">Web & E‑commerce</a>
-        <a href="seo.html">SEO & Local SEO</a>
-        <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="ai-automation.html">AI & Automation</a>
-        <a href="brand-identity.html">Brand Identity</a>
+        <a href="services.html">Web & E‑commerce</a>
+        <a href="services.html">Digital Marketing</a>
+        <a href="services.html">AI & Automation</a>
+        <a href="services.html">Cybersecurity</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -711,7 +671,6 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true, offset: 100 });

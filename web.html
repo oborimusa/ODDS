@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <!-- === SEO META TAGS === -->
-  <title>Brand & Web Design for Nigerian SMEs · Premium Identity & Websites | ODDS</title>
-  <meta name="description" content="ODDS brand and web design services for Nigerian SMEs. We create cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta name="keywords" content="brand design Nigeria, web design Lagos, brand identity, logo design, responsive websites, SME branding, Nigerian business website, ODDS design" />
-  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
-  
-  <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Brand & Web Design for Nigerian SMEs · Premium Identity & Websites" />
-  <meta property="og:description" content="Cohesive brand identities and stunning websites that work together to engage your audience and drive results." />
-  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/brand-web-design.html" />
-  <meta property="og:type" content="website" />
-  
-  <!-- === FAVICON === -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  
-  <!-- === CSS LIBRARIES === -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Website & E-commerce Development | Custom Online Stores – ODDS</title>
+  <meta name="description" content="Custom websites and online stores that convert visitors into paying customers. Payment gateway integration, inventory management, and mobile optimization for Nigerian SMEs.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    /* ===== RESET & VARIABLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
     :root {
       --primary: #0a2647;
       --primary-dark: #051a34;
@@ -39,7 +34,6 @@
       --off-white: #f8fafc;
       --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
       --gray-600: #475569;
       --gray-800: #1e293b;
       --dark: #0f172a;
@@ -51,53 +45,157 @@
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
-    /* ===== GLOBAL STYLES ===== */
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      overflow-x: hidden;
-      background-color: var(--white);
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    /* HEADER */
+    header {
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
     }
 
-    .section-title {
-      font-size: 2.5rem;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
+      color: var(--primary);
+      line-height: 1.2;
     }
 
-    .section-title::after {
+    .logo-text p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    @media (min-width: 992px) {
+      .nav-link {
+        color: var(--gray-800) !important;
+        margin: 0 5px;
+        padding: 8px 16px !important;
+        border-radius: 50px;
+        font-weight: 500;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      body { padding-top: 65px; }
+      .navbar-collapse {
+        background: var(--primary);
+        padding: 1rem;
+        border-radius: 0 0 20px 20px;
+      }
+      .navbar-nav {
+        flex-direction: column !important;
+        gap: 0.5rem;
+      }
+      .nav-link {
+        padding: 12px 20px !important;
+        text-align: center;
+        border-radius: 8px;
+        color: white !important;
+      }
+      .nav-link.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
       content: '';
       position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 80px;
-      height: 3px;
-      background: var(--gradient-accent);
-      border-radius: 3px;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
     }
-
-    .section-title-center::after {
-      left: 50%;
-      transform: translateX(-50%);
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
     }
-
-    .section-subtitle {
-      color: var(--accent);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
-
     .sme-badge {
       background: var(--gradient-accent);
       color: var(--primary-dark);
@@ -106,868 +204,566 @@
       font-weight: 700;
       display: inline-block;
       margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
     }
-
-    .btn {
-      padding: 12px 32px;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-
-    .btn-primary {
-      background: var(--gradient-primary);
-      border: none;
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      background: var(--gradient-primary);
-    }
-
-    .btn-outline-primary {
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-
-    .btn-outline-primary:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* ===== NAVBAR ===== */
-    .navbar {
-      background: var(--gradient-primary) !important;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-    }
-
-    .navbar-brand {
+    .hero h1 {
+      font-size: 3.5rem;
       font-weight: 800;
-      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-family: 'Space Grotesk', sans-serif;
     }
-
-    .navbar-nav .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      margin: 0 0.25rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .navbar-nav .nav-link.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    /* ===== HERO SECTION ===== */
-    .service-hero {
-      position: relative;
-      padding: 150px 0;
-      text-align: center;
-      color: var(--white);
-      overflow: hidden;
-      margin-top: 76px;
-    }
-
-    
-
-    .service-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
-      z-index: 1;
-    }
-
-    .service-hero .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-hero h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .service-hero .lead {
-      font-size: 1.5rem;
-      font-weight: 300;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-      .service-hero h1 {
-        font-size: 2.5rem;
-      }
-      .service-hero .lead {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* ===== FEATURE CARDS ===== */
-    .feature-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 2rem;
-      transition: all 0.4s ease;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    .feature-icon {
-      width: 70px;
-      height: 70px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      color: var(--primary-dark);
-    }
-
-    .feature-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-card p {
-      color: var(--gray-600);
-      line-height: 1.7;
-    }
-
-    /* ===== BRAND ELEMENT CARDS ===== */
-    .brand-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 2rem;
-      transition: all 0.4s ease;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .brand-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    .brand-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2.5rem;
-      color: var(--primary-dark);
-    }
-
-    .brand-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .brand-card p {
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
-    }
-
-    /* ===== PROCESS STEPS ===== */
-    .process-step {
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: var(--gradient-accent);
-      color: var(--primary-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 0 auto 1.5rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    /* ===== BENEFITS LIST ===== */
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .benefit-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary-dark);
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .benefit-text h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .benefit-text p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== PORTFOLIO CARD ===== */
-    .portfolio-card {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.4s ease;
-      border: 1px solid var(--gray-200);
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: all 0.6s ease;
-    }
-
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-card .card-body {
-      padding: 1.5rem;
-    }
-
-    .portfolio-card h4 {
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .portfolio-card p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== INTEGRATION NOTE ===== */
-    .integration-note {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .integration-note h3 {
+    .hero h1 span {
       color: var(--accent);
-      font-size: 2rem;
-      margin-bottom: 1rem;
     }
-
-    .integration-note p {
+    .hero p {
       font-size: 1.2rem;
+      opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
     }
-
-    /* ===== FAQ SECTION ===== */
-    .faq-item {
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
-      background: var(--off-white);
-      border-radius: 15px;
-      transition: all 0.3s ease;
+    @media (max-width: 768px) {
+      .hero { padding: 60px 0; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
     }
 
-    .faq-item:hover {
-      background: var(--white);
-      box-shadow: var(--shadow-md);
+    /* SERVICES OVERVIEW */
+    .services-section {
+      padding: 80px 0;
+      background: white;
     }
-
-    .faq-item h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: 'Space Grotesk', sans-serif;
       color: var(--primary);
     }
-
-    .faq-item p {
+    .section-sub {
+      text-align: center;
       color: var(--gray-600);
-      margin-bottom: 0;
+      max-width: 700px;
+      margin: 0 auto 56px;
+      font-size: 1.1rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 24px;
+      padding: 32px;
+      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .service-card p {
+      color: var(--gray-600);
+      line-height: 1.6;
     }
 
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
-      position: relative;
-      overflow: hidden;
+    /* FEATURES SECTION */
+    .features-section {
+      background: var(--gray-100);
       padding: 80px 0;
     }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      background: var(--dark);
-      color: var(--gray-300);
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
     }
-
-    .footer h5, .footer h6 {
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-
-    .footer a {
-      color: var(--gray-300);
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: var(--accent);
-      transform: translateX(5px);
-    }
-
-    .footer .social-links a {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
+    .feature-card {
       text-align: center;
-      line-height: 40px;
-      margin-right: 10px;
-      transition: all 0.3s ease;
+      padding: 32px;
+      background: white;
+      border-radius: 24px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .feature-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .feature-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
     }
 
-    .footer .social-links a:hover {
+    /* PROCESS SECTION */
+    .process-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .step-card {
+      text-align: center;
+      padding: 32px;
+      background: var(--gray-100);
+      border-radius: 24px;
+      transition: all 0.3s;
+    }
+    .step-card:hover {
+      transform: translateY(-5px);
+      background: white;
+      box-shadow: var(--shadow-md);
+    }
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+    }
+    .step-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .step-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* STATS SECTION */
+    .stats-section {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 60px 0;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    /* PORTFOLIO SNIPPET */
+    .portfolio-section {
+      padding: 80px 0;
+      background: var(--gray-100);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .portfolio-card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+    .portfolio-card i {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .portfolio-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .portfolio-stats {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: var(--gradient-primary);
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-glow {
       background: var(--accent);
       color: var(--primary-dark);
+      padding: 14px 48px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+    .btn-glow:hover {
       transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: var(--gray-300);
+      padding: 60px 0 30px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .footer-col a {
+      display: block;
+      color: var(--gray-300);
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+      .nav-links.active { display: flex; }
+      .menu-toggle { display: block; }
+      .container { padding: 0 20px; }
+      .section-title { font-size: 1.8rem; }
+      .hero h1 { font-size: 2rem; }
+      .cta-section h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<header>
   <div class="container">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
-      <span class="fw-bold">ODDS</span>
-      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
-        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
+    <div class="navbar">
+      <a href="index.html" class="logo" style="text-decoration: none;">
+        <div class="logo">
+          <img src="image/ODDS.jpeg" alt="ODDS Logo">
+          <div class="logo-text">
+            <h1>ODDS<span style="color:#c5a059;">®</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
+          </div>
+        </div>
+      </a>
+      <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="portfolio.html">Results</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/web-design.jpg') center center/cover no-repeat;">
-  <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Brand & Web Design</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Identity + <span style="color: var(--accent);">Experience</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We create cohesive brand identities and stunning websites that work together to engage your audience and drive results.</p>
-  </div>
-</section>
+<main>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="sme-badge" data-aos="fade-down">Website & E-commerce</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Custom Websites That <span>Convert Visitors Into Customers</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Beautiful, high-performing websites and online stores with payment gateway integration, inventory management, and mobile optimization.</p>
+    </div>
+  </section>
 
-<!-- INTRO SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Two Disciplines, One Vision</span>
-        <h2 class="section-title mb-4">Brand + Web: <span style="color: var(--accent);">Better Together</span></h2>
-        <p class="lead mb-4">Your brand is your promise. Your website is where you deliver it.</p>
-        <p class="mb-4">At ODDS, we believe brand design and web design shouldn't be separate projects. When your visual identity and digital experience come from the same strategic foundation, magic happens. Your logo, colors, and messaging flow seamlessly into every page. Your website doesn't just look good — it feels unmistakably like <strong>you</strong>.</p>
-        <div class="row mt-4">
-          <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-paint-brush me-2" style="color: var(--accent);"></i>Brand First</h4>
-            <p class="text-secondary small">Strategy, identity, voice</p>
-          </div>
-          <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-laptop-code me-2" style="color: var(--accent);"></i>Web Amplified</h4>
-            <p class="text-secondary small">Experience, conversion, growth</p>
-          </div>
+  <!-- SERVICES OVERVIEW -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What We Build</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Tailored digital solutions that drive real business growth</p>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Custom Website Design</h3>
+          <p>Unique, mobile-responsive websites that reflect your brand identity and engage your audience from the first click.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-commerce Development</h3>
+          <p>Fully functional online stores with secure checkout, product catalogs, and seamless user experience.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+          <h3>Payment Gateway Integration</h3>
+          <p>Secure integration with Paystack, Flutterwave, and other Nigerian payment processors.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-boxes"></i></div>
+          <h3>Inventory Management</h3>
+          <p>Real-time stock tracking, automated alerts, and easy product management systems.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile Optimization</h3>
+          <p>Responsive designs that look and work flawlessly on every device – phone, tablet, or desktop.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>SEO-Ready Architecture</h3>
+          <p>Built with clean code and SEO best practices so your website ranks from day one.</p>
         </div>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/web-mock-up.jpg" alt="Brand and web design showcase" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Brand+%26+Web+Design'">
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BRAND DESIGN SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Brand Identity</span>
-      <h2 class="section-title-center" data-aos="fade-up">Who You Are</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The foundation of every great website</p>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <h3>Logo Design</h3>
-          <p>A distinctive, memorable logo that captures your essence and works beautifully across all platforms.</p>
+  <!-- KEY FEATURES -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features Included</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Everything you need to succeed online</p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h4>Fast Loading Speed</h4>
+          <p>Optimized for speed to reduce bounce rates and improve user experience.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>Color Systems</h3>
-          <p>Strategic color palettes that evoke the right emotions and create instant recognition.</p>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>SSL Security</h4>
+          <p>Free SSL certificate to keep your customer data safe and build trust.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-font"></i>
-          </div>
-          <h3>Typography</h3>
-          <p>Carefully chosen typefaces that express your personality while ensuring readability.</p>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-database"></i></div>
+          <h4>CMS Integration</h4>
+          <p>Easy-to-use content management system so you can update your site anytime.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <h3>Visual Guidelines</h3>
-          <p>A complete guide to using your brand consistently across every touchpoint.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Brand Strategy</h3>
-          <p>Your story, mission, values, and voice — the foundation of everything you communicate.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="brand-card">
-          <div class="brand-icon">
-            <i class="fas fa-business-time"></i>
-          </div>
-          <h3>Stationery</h3>
-          <p>Business cards, letterheads, and email signatures that carry your brand with pride.</p>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i class="fas fa-chart-simple"></i></div>
+          <h4>Analytics Dashboard</h4>
+          <p>Built-in analytics to track visitors, sales, and conversion rates.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WEB DESIGN SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Web Design</span>
-      <h2 class="section-title-center" data-aos="fade-up">Where Your Brand Comes to Life</h2>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Mobile-First Design</h3>
-          <p>With over 60% of web traffic from mobile, your site will look stunning on phones, tablets, and desktops.</p>
+  <!-- OUR PROCESS -->
+  <section class="process-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">How We Build Your Website</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A transparent, collaborative process from start to finish</p>
+      <div class="steps-grid">
+        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <h4>Discovery</h4>
+          <p>We learn about your business, goals, and target audience.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-tachometer-alt"></i>
-          </div>
-          <h3>Lightning Fast</h3>
-          <p>Optimized code and images ensure your website loads in under 3 seconds — improving experience and SEO.</p>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">2</div>
+          <h4>Design</h4>
+          <p>Wireframes and mockups that bring your vision to life.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>SEO Optimized</h3>
-          <p>Built with search engines in mind — clean code, proper headings, and schema markup to help you rank.</p>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">3</div>
+          <h4>Development</h4>
+          <p>Clean coding, e-commerce setup, and feature integration.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3>Custom Design</h3>
-          <p>No templates. Every website is uniquely designed to reflect your brand identity and stand out.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Conversion Focused</h3>
-          <p>Strategic calls-to-action and user flows that guide visitors toward becoming customers.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Secure & Reliable</h3>
-          <p>SSL certificates, regular updates, and secure hosting to protect your business and customer data.</p>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">4</div>
+          <h4>Launch & Support</h4>
+          <p>Testing, deployment, and ongoing maintenance.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- INTEGRATION NOTE -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="integration-note" data-aos="fade-up">
-      <h3>Brand + Web = Seamless Experience</h3>
-      <p>When we design your brand and website together, every element aligns. Your colors become your site's palette. Your typography flows into every heading. Your brand voice shapes every word. The result? A cohesive, professional presence that builds trust at every touchpoint.</p>
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number">50+</div>
+          <p>Websites Launched</p>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number">₦1.5B+</div>
+          <p>Client Revenue Generated</p>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number">98%</div>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OUR PROCESS SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">From Strategy to Launch</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
-        <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We learn about your business, audience, goals, and competition.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
-        <div class="step-number">2</div>
-        <h4>Brand Strategy</h4>
-        <p class="text-secondary">We define your positioning, voice, and visual direction.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
-        <div class="step-number">3</div>
-        <h4>Visual Identity</h4>
-        <p class="text-secondary">We create your logo, colors, typography, and guidelines.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
-        <div class="step-number">4</div>
-        <h4>Web Design</h4>
-        <p class="text-secondary">We bring your brand to life online with a stunning, functional website.</p>
+  <!-- PORTFOLIO SNIPPET -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Recent Success Stories</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">See how we've helped businesses like yours grow</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
+          <i class="fas fa-store"></i>
+          <h4>MarketHub</h4>
+          <p>E-commerce transformation</p>
+          <div class="portfolio-stats">📈 +240% sales in 3 months</div>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-truck"></i>
+          <h4>SwiftLogistics</h4>
+          <p>Custom website + WhatsApp API</p>
+          <div class="portfolio-stats">⚡ 70% faster response time</div>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-university"></i>
+          <h4>PrimeTrust</h4>
+          <p>SEO + content strategy</p>
+          <div class="portfolio-stats">🏆 #1 for 15+ keywords</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BENEFITS SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/cohesive.jpg" alt="Brand and web benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Cohesive+Presence'">
-      </div>
-      
-      <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">The Integrated Advantage</span>
-        <h2 class="section-title mb-4">Why Do Both Together?</h2>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
-          <div class="benefit-text">
-            <h4>Consistency</h4>
-            <p>Every touchpoint feels like the same brand. Your logo, colors, and voice appear perfectly across your site.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-          <div class="benefit-text">
-            <h4>Faster Launch</h4>
-            <p>No back-and-forth between separate designers. One team, one vision, streamlined process.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
-          <div class="benefit-text">
-            <h4>Better Value</h4>
-            <p>Bundled pricing saves you money compared to hiring separate brand and web designers.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-          <div class="benefit-text">
-            <h4>Stronger Impact</h4>
-            <p>A cohesive brand + website builds trust faster and leaves a lasting impression.</p>
-          </div>
-        </div>
-      </div>
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Ready to Build Your Online Store?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your website or e-commerce project.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Quote →</a>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<!-- PORTFOLIO SNIPPET -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Recent Work</span>
-      <h2 class="section-title-center" data-aos="fade-up">Brands + Websites We've Built</h2>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="portfolio-card">
-          <img src="image/portfolio-restaurant.jpg" alt="Restaurant brand and website" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Restaurant+Brand'">
-          <div class="card-body">
-            <h4>South African Restaurant</h4>
-            <p class="text-secondary">Complete brand identity + website with online ordering</p>
-          </div>
-        </div>
+<footer>
+  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ODDS</h4>
+        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-card">
-          <img src="image/portfolio-fashion.jpg" alt="Fashion boutique brand" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Fashion+Brand'">
-          <div class="card-body">
-            <h4>Abuja Fashion</h4>
-            <p class="text-secondary">Brand identity + e-commerce website</p>
-          </div>
-        </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="web-design.html">Web & E‑commerce</a>
+        <a href="seo.html">SEO & Local SEO</a>
+        <a href="digital-marketing.html">Digital Marketing</a>
+        <a href="ai-automation.html">AI & Automation</a>
       </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-card">
-          <img src="image/portfolio-legal.jpg" alt="Legal consultancy brand" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Legal+Brand'">
-          <div class="card-body">
-            <h4>PH Legal</h4>
-            <p class="text-secondary">Professional brand + website</p>
-          </div>
-        </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About ODDS</a>
+        <a href="portfolio.html">Results</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <p>hello@odds.ng</p>
+        <p>+234 803 966 1354</p>
+        <p>Remote-first / Osogbo</p>
       </div>
     </div>
-    
-    <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">FAQ</span>
-      <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="faq-item" data-aos="fade-up">
-          <h4>Should I do brand design before web design?</h4>
-          <p>Ideally, yes. Your brand identity (logo, colors, fonts) should be established before we build your website. That's why our integrated approach works so well — we do both in the right order.</p>
-        </div>
-        
-        <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a logo?</h4>
-          <p>Perfect! We can work with your existing brand assets or refresh them as part of the process. We'll build your website around your established identity.</p>
-        </div>
-        
-        <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the full process take?</h4>
-          <p>A complete brand + website project typically takes 4-6 weeks. Brand strategy and design (2-3 weeks) followed by web design and development (2-3 weeks).</p>
-        </div>
-        
-        <div class="faq-item" data-aos="fade-up">
-          <h4>How much does brand + web design cost?</h4>
-          <p>Combined packages start from ₦450,000, representing better value than hiring separate designers. Contact us for a custom quote based on your needs.</p>
-        </div>
-        
-        <div class="faq-item" data-aos="fade-up">
-          <h4>Can I update the website myself?</h4>
-          <p>Yes! We build on easy-to-use content management systems. We'll train you so you can make updates confidently.</p>
-        </div>
-        
-        <div class="faq-item" data-aos="fade-up">
-          <h4>Do you provide brand guidelines?</h4>
-          <p>Absolutely. You'll receive a complete brand guide showing how to use your logo, colors, typography, and visual elements correctly across all media.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA SECTION -->
-<section class="cta-section text-white text-center">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Stand Out?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Brand & Website</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation and quote for your integrated project.</p>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Start Your Project</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Portfolio</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h5 class="fw-bold">ODDS</h5>
-        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
-        <div class="social-links">
-          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html">Home</a></li>
-          <li class="mb-2"><a href="about.html">About Us</a></li>
-          <li class="mb-2"><a href="services.html">Services</a></li>
-          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
-          <li class="mb-2"><a href="contact.html">Contact</a></li>
-          <li class="mb-2"><a href="founder.html">Founder</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h6>Contact Info</h6>
-        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
-        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
-      </div>
-      
-      <div class="col-lg-3 mb-4">
-        <h6>Stay Updated</h6>
-        <p class="small text-secondary">Get growth tips & exclusive offers</p>
-        <form class="d-flex">
-          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
-          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
-        </form>
-      </div>
-    </div>
-    
-    <hr class="border-secondary" />
-    
-    <div class="text-center small">
-      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
-      <p class="mt-2">
-        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
-        <a href="terms.html" class="text-secondary me-3">Terms</a>
-        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
-      </p>
+    <div class="copyright">
+      <p>&copy; 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
     </div>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-  });
+  AOS.init({ duration: 800, once: true, offset: 100 });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobileMenu');
+  const nav = document.getElementById('navList');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
+  }
 </script>
 </body>
 </html>

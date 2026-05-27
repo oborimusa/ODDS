@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Social Media Management | Content, Engagement & Growth – ODDS</title>
-  <meta name="description" content="Professional social media management for Instagram, Facebook, TikTok, and LinkedIn. Content creation, engagement, and growth to build a loyal community around your brand.">
+  <title>Cybersecurity & IT Support | Protect Your Business – ODDS</title>
+  <meta name="description" content="Protect your business from digital threats with regular updates, security monitoring, backups, and 24/7 technical support. Comprehensive IT security for Nigerian SMEs.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -43,6 +43,9 @@
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+      --security-green: #10b981;
+      --security-red: #ef4444;
+      --security-blue: #3b82f6;
     }
 
     .container {
@@ -281,48 +284,68 @@
       line-height: 1.6;
     }
 
-    /* PLATFORM CARDS */
-    .platforms-section {
+    /* THREAT STATS SECTION */
+    .threat-stats {
       background: var(--gray-100);
-      padding: 80px 0;
+      padding: 60px 0;
     }
-    .platforms-grid {
+    .threat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
+      text-align: center;
+    }
+    .threat-stat {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+    }
+    .threat-stat .number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    /* PROTECTION LAYERS */
+    .protection-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .protection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
       margin-top: 40px;
     }
-    .platform-card {
-      background: white;
-      border-radius: 20px;
+    .protection-card {
+      background: var(--gray-100);
+      border-radius: 24px;
       padding: 32px;
       text-align: center;
       transition: all 0.3s;
-      border: 1px solid var(--gray-200);
     }
-    .platform-card:hover {
+    .protection-card:hover {
       transform: translateY(-5px);
-      border-color: var(--accent);
+      background: white;
       box-shadow: var(--shadow-md);
+      border: 1px solid var(--accent);
     }
-    .platform-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
+    .protection-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
-    .platform-icon .fa-instagram { color: #E4405F; }
-    .platform-icon .fa-facebook { color: #1877F2; }
-    .platform-icon .fa-tiktok { color: #000000; }
-    .platform-icon .fa-linkedin { color: #0077B5; }
-    .platform-card h4 {
+    .protection-card h4 {
       font-size: 1.2rem;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: var(--primary);
     }
 
     /* PROCESS SECTION */
     .process-section {
+      background: var(--gray-100);
       padding: 80px 0;
-      background: white;
     }
     .steps-grid {
       display: grid;
@@ -333,15 +356,14 @@
     .step-card {
       text-align: center;
       padding: 32px;
-      background: var(--gray-100);
+      background: white;
       border-radius: 24px;
       transition: all 0.3s;
     }
     .step-card:hover {
       transform: translateY(-5px);
-      background: white;
+      border-color: var(--accent);
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
     }
     .step-number {
       width: 60px;
@@ -356,63 +378,40 @@
       font-weight: 800;
       margin: 0 auto 20px;
     }
-    .step-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--primary);
-    }
-    .step-card p {
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
 
-    /* STATS SECTION */
-    .stats-section {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 60px 0;
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    /* PORTFOLIO SECTION */
-    .portfolio-section {
+    /* WHY CHOOSE US */
+    .why-choose {
       padding: 80px 0;
-      background: var(--gray-100);
+      background: white;
     }
-    .portfolio-grid {
+    .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
-    .portfolio-card {
-      background: white;
-      border-radius: 20px;
-      padding: 28px;
+    .benefit-card {
       text-align: center;
-      border: 1px solid var(--gray-200);
+      padding: 32px;
+      background: var(--gray-100);
+      border-radius: 24px;
       transition: all 0.3s;
     }
-    .portfolio-card:hover {
+    .benefit-card:hover {
       transform: translateY(-5px);
-      border-color: var(--accent);
+      background: white;
       box-shadow: var(--shadow-md);
+      border: 1px solid var(--accent);
     }
-    .portfolio-card i {
+    .benefit-icon {
       font-size: 2rem;
       color: var(--accent);
       margin-bottom: 16px;
     }
-    .portfolio-stats {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 12px;
+    .benefit-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
     }
 
     /* CTA SECTION */
@@ -549,9 +548,9 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Social Media Management</div>
-      <h1 data-aos="fade-up" data-aos-delay="100">Build a Loyal <span>Community</span> Around Your Brand</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Professional content creation, engagement, and growth on Instagram, Facebook, TikTok, and LinkedIn. We turn followers into customers.</p>
+      <div class="sme-badge" data-aos="fade-down">Cybersecurity & IT Support</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Protect Your Business <span>From Digital Threats</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Regular updates, security monitoring, automated backups, and 24/7 technical support to keep your business safe and running smoothly.</p>
     </div>
   </section>
 
@@ -559,67 +558,89 @@
   <section class="services-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Complete social media management that drives real results</p>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Comprehensive security and IT support for peace of mind</p>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-icon"><i class="fas fa-image"></i></div>
-          <h3>Content Creation</h3>
-          <p>High-quality photos, graphics, videos, and carousels designed to stop the scroll and engage your audience.</p>
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Security Monitoring</h3>
+          <p>24/7 monitoring for threats, intrusions, and suspicious activity. We detect and respond to incidents before they impact your business.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h3>Content Strategy & Planning</h3>
-          <p>Strategic content calendars aligned with your business goals, seasons, and audience preferences.</p>
+          <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Regular Updates & Patching</h3>
+          <p>Automated software updates, security patches, and vulnerability management to keep your systems secure.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>Community Engagement</h3>
-          <p>Active engagement with your followers – responding to comments, DMs, and mentions to build loyalty.</p>
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Automated Backups</h3>
+          <p>Daily automated backups with secure offsite storage. Quick recovery in case of data loss or ransomware attack.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Growth Strategy</h3>
-          <p>Data-driven growth tactics to increase followers, reach, and engagement organically.</p>
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Technical Support</h3>
+          <p>Round-the-clock IT support for emergencies, troubleshooting, and technical assistance whenever you need it.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
-          <h3>Analytics & Reporting</h3>
-          <p>Monthly reports showing follower growth, engagement rates, top-performing content, and ROI.</p>
+          <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+          <h3>Employee Training</h3>
+          <p>Cybersecurity awareness training to help your team identify phishing attempts and follow security best practices.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon"><i class="fas fa-ad"></i></div>
-          <h3>Social Media Advertising</h3>
-          <p>Targeted ad campaigns on Facebook, Instagram, and TikTok to accelerate your growth.</p>
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Compliance & Reporting</h3>
+          <p>Regular security audits and compliance reports for regulatory requirements and internal standards.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PLATFORMS WE MANAGE -->
-  <section class="platforms-section">
+  <!-- THREAT STATISTICS -->
+  <section class="threat-stats">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Platforms We Master</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We speak the language of every major social network</p>
-      <div class="platforms-grid">
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="platform-icon"><i class="fab fa-instagram"></i></div>
-          <h4>Instagram</h4>
-          <p>Reels, Stories, Posts & Engagement</p>
+      <h2 class="section-title" data-aos="fade-up">The Reality of Cyber Threats</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Why cybersecurity matters for your business</p>
+      <div class="threat-grid">
+        <div class="threat-stat" data-aos="fade-up" data-aos-delay="0">
+          <div class="number">60%</div>
+          <p>of small businesses close within 6 months of a cyber attack</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="platform-icon"><i class="fab fa-facebook"></i></div>
-          <h4>Facebook</h4>
-          <p>Pages, Groups, Ads & Community</p>
+        <div class="threat-stat" data-aos="fade-up" data-aos-delay="100">
+          <div class="number">43%</div>
+          <p>of cyber attacks target small businesses</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
-          <h4>TikTok</h4>
-          <p>Short-form Video & Viral Trends</p>
+        <div class="threat-stat" data-aos="fade-up" data-aos-delay="200">
+          <div class="number">₦15M+</div>
+          <p>average cost of a data breach for Nigerian SMEs</p>
         </div>
-        <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="platform-icon"><i class="fab fa-linkedin"></i></div>
-          <h4>LinkedIn</h4>
-          <p>Thought Leadership & B2B Growth</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTECTION LAYERS -->
+  <section class="protection-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Security Layers</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Defense in depth approach to protect your business</p>
+      <div class="protection-grid">
+        <div class="protection-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="protection-icon"><i class="fas fa-firewall"></i></div>
+          <h4>Next-Gen Firewall</h4>
+          <p>Advanced threat protection and intrusion prevention.</p>
+        </div>
+        <div class="protection-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="protection-icon"><i class="fas fa-skull-crossbones"></i></div>
+          <h4>Antivirus & Anti-malware</h4>
+          <p>Real-time protection against viruses, ransomware, and malware.</p>
+        </div>
+        <div class="protection-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="protection-icon"><i class="fas fa-envelope"></i></div>
+          <h4>Email Security</h4>
+          <p>Phishing detection and spam filtering for your business email.</p>
+        </div>
+        <div class="protection-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="protection-icon"><i class="fas fa-wifi"></i></div>
+          <h4>Secure Wi-Fi & VPN</h4>
+          <p>Encrypted connections for remote work and secure browsing.</p>
         </div>
       </div>
     </div>
@@ -628,81 +649,58 @@
   <!-- HOW IT WORKS -->
   <section class="process-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Our Social Media Process</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A strategic system for building your brand online</p>
+      <h2 class="section-title" data-aos="fade-up">Our Security Process</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A proactive approach to keeping you safe</p>
       <div class="steps-grid">
         <div class="step-card" data-aos="fade-up" data-aos-delay="0">
           <div class="step-number">1</div>
-          <h4>Discovery & Audit</h4>
-          <p>We analyze your current social media presence and competitors.</p>
+          <h4>Security Audit</h4>
+          <p>We assess your current security posture and identify vulnerabilities.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">2</div>
-          <h4>Strategy & Planning</h4>
-          <p>Custom content strategy, posting schedule, and platform selection.</p>
+          <h4>Implementation</h4>
+          <p>We deploy security solutions tailored to your business.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">3</div>
-          <h4>Content Creation</h4>
-          <p>Design, copywriting, and video production tailored to each platform.</p>
+          <h4>Monitoring</h4>
+          <p>24/7 surveillance and threat detection.</p>
         </div>
         <div class="step-card" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">4</div>
-          <h4>Publish & Engage</h4>
-          <p>Scheduled posting and active community engagement.</p>
-        </div>
-        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="step-number">5</div>
-          <h4>Analyze & Optimize</h4>
-          <p>Monthly reporting and continuous improvement.</p>
+          <h4>Response & Recovery</h4>
+          <p>Immediate incident response and data recovery.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS SECTION -->
-  <section class="stats-section">
+  <!-- WHY CHOOSE ODDS -->
+  <section class="why-choose">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="stat-number">300%+</div>
-          <p>Average Follower Growth</p>
+      <h2 class="section-title" data-aos="fade-up">Why Choose ODDS for Security?</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We don't just install software – we build security cultures</p>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <h4>24/7 Protection</h4>
+          <p>Round-the-clock monitoring and support for peace of mind.</p>
         </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">5x</div>
-          <p>Higher Engagement Rates</p>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Proactive Approach</h4>
+          <p>We prevent attacks before they happen, not just respond to them.</p>
         </div>
-        <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number">50+</div>
-          <p>Active Accounts Managed</p>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Compliance Ready</h4>
+          <p>We help you meet regulatory requirements and industry standards.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO SNIPPET -->
-  <section class="portfolio-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Social Media Success Stories</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real growth from real brands</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fab fa-instagram"></i>
-          <h4>CFAMI Media</h4>
-          <p>Instagram growth campaign</p>
-          <div class="portfolio-stats">📈 2k → 25k followers (6 months)</div>
-        </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fab fa-facebook"></i>
-          <h4>MarketHub</h4>
-          <p>Facebook community building</p>
-          <div class="portfolio-stats">👥 10k+ engaged group members</div>
-        </div>
-        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-tiktok"></i>
-          <h4>Zena Beauty</h4>
-          <p>TikTok viral strategy</p>
-          <div class="portfolio-stats">🎬 2M+ views, 50k+ followers</div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+          <h4>Rapid Response</h4>
+          <p>Immediate support when you need it most.</p>
         </div>
       </div>
     </div>
@@ -711,15 +709,15 @@
   <!-- CTA SECTION -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-aos="fade-up">Ready to Grow Your Social Media Presence?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Get a free social media audit. We'll analyze your current accounts and show you exactly how to grow.</p>
-      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Social Media Audit →</a>
+      <h2 data-aos="fade-up">Ready to Secure Your Business?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Get a free security assessment. We'll identify vulnerabilities and recommend the right protection for your business.</p>
+      <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Security Audit →</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>ODDS</h4>
@@ -730,7 +728,8 @@
         <a href="web-design.html">Web & E‑commerce</a>
         <a href="seo.html">SEO & Local SEO</a>
         <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="social-media.html">Social Media Management</a>
+        <a href="ai-automation.html">AI & Automation</a>
+        <a href="it-security.html">Cybersecurity & IT</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
