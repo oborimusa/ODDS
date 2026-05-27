@@ -354,19 +354,44 @@
       background: var(--accent-light);
     }
 
-    /* FOOTER */
+     /* FOOTER */
     footer {
       background: var(--primary);
       color: var(--gray-300);
-      padding: 40px 0 30px;
-      text-align: center;
+      padding: 60px 0 30px;
     }
-    footer a {
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .footer-col a {
+      display: block;
       color: var(--gray-300);
       text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
     }
-    footer a:hover {
+    .footer-col a:hover {
       color: var(--accent);
+    }
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
     }
     @media (max-width: 768px) {
       .section-title { font-size: 1.8rem; }
@@ -516,13 +541,14 @@
 </main>
 
 <footer>
-  <div class="container">
-    <p>&copy; 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-    <p style="margin-top: 12px;">
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a> | 
-      <a href="contact.html">Contact Us</a>
-    </p>
+  <div class="container" style="max-width: 1200px; color: var(--white);">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>ODDS</h4><p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p><div class="social-icons"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a></div></div>
+      <div class="footer-col"><h4>Services</h4><a href="web.html">Web & E‑commerce</a><a href="digital.html">Digital Marketing</a><a href="#">AI & Automation</a><a href="#">Cybersecurity</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About ODDS</a><a href="#">Case Studies</a><a href="#">Careers</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Get in touch</h4><p>hello@odds.ng</p><p>+234 803 966 1354</p><p>Remote-first / Osogbo</p></div>
+    </div>
+    <div class="copyright"><p>© 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p></div>
   </div>
 </footer>
 
