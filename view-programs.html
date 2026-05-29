@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ODDSolutions Training Programs | Practical Digital Skills for SMEs</title>
+  <meta name="description" content="Explore ODDS practical training programs: Web Design, SEO, Digital Marketing, AI Automation, Cybersecurity, and Canva Design. Hands-on learning with certificates.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1e293b;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 991px) {
+      body { padding-top: 65px; }
+      .navbar-collapse {
+        background: var(--primary);
+        padding: 1rem;
+        border-radius: 0 0 20px 20px;
+      }
+      .navbar-nav { flex-direction: column; gap: 0.5rem; }
+      .nav-link {
+        padding: 12px 20px !important;
+        text-align: center;
+        border-radius: 8px;
+        color: white !important;
+      }
+      .nav-link.active { background: var(--accent); color: var(--primary-dark) !important; }
+    }
+
+    /* Hero */
+    .page-hero {
+      background: var(--gradient-primary);
+      padding: 80px 0 60px;
+      text-align: center;
+      color: white;
+    }
+    .page-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 1rem;
+    }
+    .page-hero h1 span {
+      color: var(--accent);
+    }
+    .page-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+      .page-hero { padding: 60px 0 40px; }
+      .page-hero h1 { font-size: 2rem; }
+    }
+
+    /* Programs Grid */
+    .programs-section {
+      padding: 80px 0;
+      background: white;
+    }
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 48px;
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--primary);
+    }
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .program-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+    .program-header {
+      background: var(--gradient-primary);
+      padding: 24px;
+      color: white;
+    }
+    .program-header i {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .program-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .duration {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .program-body {
+      padding: 24px;
+    }
+    .program-body p {
+      color: var(--gray-600);
+      margin-bottom: 20px;
+    }
+    .skills-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .skills-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .skills-list li i {
+      color: var(--accent);
+    }
+    .btn-enroll {
+      display: inline-block;
+      background: var(--gradient-primary);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+      transition: 0.2s;
+      border: none;
+    }
+    .btn-enroll:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: var(--gradient-primary);
+      text-align: center;
+      padding: 60px 0;
+      color: white;
+    }
+    .cta-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .btn-glow {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 14px 40px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .btn-glow:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--gray-200);
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 680px) {
+      .container { padding: 0 20px; }
+      .programs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <a href="index.html" class="logo" style="text-decoration: none;">
+        <div class="logo">
+          <img src="image/ODDS.jpeg" alt="ODDS Logo">
+          <div class="logo-text">
+            <h1>ODDSolutions<span style="color:#c5a059;">®</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
+          </div>
+        </div>
+      </a>
+      <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-aos="fade-up">Explore Our <span>Training Programs</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100">Practical, hands‑on digital skills for individuals and teams. Get certified and stay competitive.</p>
+    </div>
+  </section>
+
+  <section class="programs-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Choose Your Path</h2>
+      <div class="programs-grid">
+        <!-- Web Design -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="program-header">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Web Design & Development</h3>
+            <div class="duration"><i class="far fa-clock"></i> 8 weeks • 40 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Build professional, responsive websites from scratch using HTML5, CSS3, and WordPress.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> HTML5, CSS3, Flexbox, Grid</li>
+              <li><i class="fas fa-check-circle"></i> WordPress & Elementor</li>
+              <li><i class="fas fa-check-circle"></i> Website deployment (Netlify, cPanel)</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+
+        <!-- SEO Mastery -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="program-header">
+            <i class="fas fa-chart-line"></i>
+            <h3>SEO Mastery</h3>
+            <div class="duration"><i class="far fa-clock"></i> 6 weeks • 30 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Rank #1 on Google. Master keyword research, on‑page SEO, technical SEO, and local SEO.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> Keyword research & strategy</li>
+              <li><i class="fas fa-check-circle"></i> Google Search Console & GA4</li>
+              <li><i class="fas fa-check-circle"></i> Local SEO for Nigerian businesses</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="program-header">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Digital Marketing</h3>
+            <div class="duration"><i class="far fa-clock"></i> 8 weeks • 40 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Master social media, Google Ads, email marketing, and content strategy for business growth.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> Social media management & ads</li>
+              <li><i class="fas fa-check-circle"></i> Google Ads & PPC campaigns</li>
+              <li><i class="fas fa-check-circle"></i> Analytics & conversion tracking</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+
+        <!-- AI Automation -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="program-header">
+            <i class="fas fa-robot"></i>
+            <h3>AI Automation</h3>
+            <div class="duration"><i class="far fa-clock"></i> 6 weeks • 36 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Build no‑code AI workflows, chatbots, and automations that save 10+ hours weekly.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> Make, n8n, Zapier</li>
+              <li><i class="fas fa-check-circle"></i> ChatGPT & API integration</li>
+              <li><i class="fas fa-check-circle"></i> Lead capture & routing automation</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="program-header">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Cybersecurity for SMEs</h3>
+            <div class="duration"><i class="far fa-clock"></i> 4 weeks • 20 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Protect your business from phishing, data breaches, and online threats.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> Password security & 2FA</li>
+              <li><i class="fas fa-check-circle"></i> Phishing detection & prevention</li>
+              <li><i class="fas fa-check-circle"></i> Secure backups & recovery</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+
+        <!-- Canva & Content Design -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="program-header">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Canva & Content Design</h3>
+            <div class="duration"><i class="far fa-clock"></i> 3 weeks • 15 hours</div>
+          </div>
+          <div class="program-body">
+            <p>Create stunning social media graphics, flyers, and brand assets without hiring a designer.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle"></i> Canva mastery (templates, branding)</li>
+              <li><i class="fas fa-check-circle"></i> Social media graphics & carousels</li>
+              <li><i class="fas fa-check-circle"></i> Flyers, posters, business cards</li>
+            </ul>
+            <a href="#" class="btn-enroll">Enroll Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <div class="container">
+      <h3 data-aos="fade-up">Ready to upskill your team?</h3>
+      <p data-aos="fade-up" data-aos-delay="100">Contact us for custom corporate training packages and group discounts.</p>
+      <a href="contact.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Request a Quote →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 ODDSolutions — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+    <p><a href="training.html">View all training programs</a> | <a href="contact.html">Contact us</a></p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 100 });
+
+  const toggle = document.getElementById('mobileMenu');
+  const nav = document.getElementById('navList');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
+  }
+</script>
+</body>
+</html>
