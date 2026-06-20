@@ -66,6 +66,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      text-decoration: none;
     }
 
     .logo img {
@@ -190,7 +191,9 @@
       margin-bottom: 8px;
       color: var(--gray-800);
     }
-    .form-group input, .form-group select, .form-group textarea {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 14px 18px;
       border: 1px solid var(--gray-200);
@@ -199,7 +202,9 @@
       font-size: 1rem;
       transition: all 0.3s;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
       outline: none;
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(197,160,89,0.1);
@@ -215,18 +220,61 @@
       font-size: 1rem;
       cursor: pointer;
       transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
     .submit-btn:hover {
       background: var(--primary-dark);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
     }
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .submit-btn .spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .submit-btn.loading .spinner { display: inline-block; }
+    .submit-btn.loading .btn-text { display: none; }
+
     .form-note {
       font-size: 0.7rem;
       text-align: center;
       margin-top: 16px;
       color: var(--gray-600);
     }
+
+    /* Form feedback */
+    .form-success, .form-error {
+      display: none;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 16px;
+      font-weight: 500;
+    }
+    .form-success {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #10b981;
+    }
+    .form-error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #ef4444;
+    }
+    .form-success.show, .form-error.show { display: block; }
+
     @media (max-width: 880px) {
       .container { padding: 0 20px; }
       .audit-content h1 { font-size: 2rem; }
@@ -292,10 +340,20 @@
       padding: 40px 0;
       text-align: center;
     }
-    .trust-banner .stat-number {
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .trust-item .stat-number {
       font-size: 2rem;
       font-weight: 800;
       color: var(--accent);
+    }
+    .trust-item p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
     }
 
     /* TESTIMONIAL SECTION */
@@ -354,7 +412,7 @@
       background: var(--accent-light);
     }
 
-     /* FOOTER */
+    /* FOOTER */
     footer {
       background: var(--primary);
       color: var(--gray-300);
@@ -404,7 +462,7 @@
 
 <header>
   <div class="container">
-    <a href="index.html" class="logo" style="text-decoration: none;">
+    <a href="index.html" class="logo">
       <div class="logo">
         <img src="image/ODDS.jpeg" alt="ODDS Logo">
         <div class="logo-text">
@@ -461,7 +519,12 @@
               <label>What's your biggest digital challenge right now?</label>
               <textarea rows="3" name="challenge" id="challenge" placeholder="E.g., low website traffic, poor sales, inactive social media..."></textarea>
             </div>
-            <button type="submit" class="submit-btn">Claim My Free Audit →</button>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="spinner"></span>
+              <span class="btn-text">Claim My Free Audit →</span>
+            </button>
+            <div id="formSuccess" class="form-success">✅ Your audit request has been received! We'll contact you within 24 hours.</div>
+            <div id="formError" class="form-error">❌ Something went wrong. Please try again or email us directly at onorimusa@gmail.com.</div>
             <div class="form-note">✅ No spam. Your data is safe. We respond within 24 hours.</div>
           </form>
         </div>
@@ -502,16 +565,16 @@
   <!-- TRUST BANNER -->
   <div class="trust-banner">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
+      <div class="trust-row">
+        <div class="trust-item">
           <div class="stat-number">50+</div>
           <p>Businesses Audited</p>
         </div>
-        <div class="col-md-4">
+        <div class="trust-item">
           <div class="stat-number">98%</div>
           <p>Would Recommend</p>
         </div>
-        <div class="col-md-4">
+        <div class="trust-item">
           <div class="stat-number">₦200M+</div>
           <p>Revenue Generated</p>
         </div>
@@ -543,10 +606,35 @@
 <footer>
   <div class="container" style="max-width: 1200px; color: var(--white);">
     <div class="footer-grid">
-      <div class="footer-col"><h4>ODDS</h4><p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p><div class="social-icons"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a></div></div>
-      <div class="footer-col"><h4>Services</h4><a href="web.html">Web & E‑commerce</a><a href="digital.html">Digital Marketing</a><a href="#">AI & Automation</a><a href="#">Cybersecurity</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About ODDS</a><a href="#">Case Studies</a><a href="#">Careers</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h4>Get in touch</h4><p>oborimusa@gmail.com</p><p>+234 803 966 1354</p><p>Remote-first / Osogbo</p></div>
+      <div class="footer-col">
+        <h4>ODDS</h4>
+        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="web.html">Web & E‑commerce</a>
+        <a href="digital.html">Digital Marketing</a>
+        <a href="#">AI & Automation</a>
+        <a href="#">Cybersecurity</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About ODDS</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <p>onorimusa@gmail.com</p>
+        <p>+234 803 966 1354</p>
+        <p>Remote-first / Osogbo</p>
+      </div>
     </div>
     <div class="copyright"><p>© 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p></div>
   </div>
@@ -557,21 +645,70 @@
   AOS.init({ duration: 800, once: true, offset: 100 });
 
   const form = document.getElementById('auditForm');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name')?.value || '';
-      const email = document.getElementById('email')?.value || '';
-      
-      if (!name || !email) {
-        alert('Please fill in your name and email address.');
-        return;
+  const submitBtn = document.getElementById('submitBtn');
+  const successDiv = document.getElementById('formSuccess');
+  const errorDiv = document.getElementById('formError');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (!name || !email) {
+      errorDiv.textContent = '❌ Please fill in your name and email address.';
+      errorDiv.classList.add('show');
+      setTimeout(() => errorDiv.classList.remove('show'), 5000);
+      return;
+    }
+
+    // Collect form data
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Show loading state
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    successDiv.classList.remove('show');
+    errorDiv.classList.remove('show');
+
+    try {
+      const response = await fetch('https://formsubmit.co/onorimusa@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        successDiv.classList.add('show');
+        form.reset();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => successDiv.classList.remove('show'), 10000);
+      } else {
+        errorDiv.textContent = '❌ Something went wrong. Please try again or email us directly at onorimusa@gmail.com.';
+        errorDiv.classList.add('show');
+        setTimeout(() => errorDiv.classList.remove('show'), 6000);
       }
-      
-      alert('Thank you! Your audit request has been received. A member of our team will contact you within 24 hours with your custom audit report.');
-      form.reset();
+    } catch (err) {
+      errorDiv.textContent = '❌ Network error. Please check your connection and try again.';
+      errorDiv.classList.add('show');
+      setTimeout(() => errorDiv.classList.remove('show'), 6000);
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    }
+  });
+
+  // Auto-hide error/success on typing
+  document.querySelectorAll('#auditForm input, #auditForm textarea').forEach(el => {
+    el.addEventListener('input', () => {
+      successDiv.classList.remove('show');
+      errorDiv.classList.remove('show');
     });
-  }
+  });
 </script>
 </body>
 </html>
