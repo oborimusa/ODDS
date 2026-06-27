@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   
-  <title>About ODD Solutions · Your Complete Digital Ecosystem Partner</title>
-  <meta name="description" content="ODD Solutions is a premium digital agency empowering Nigerian SMEs since 2020. We build, grow, and secure digital assets for ambitious businesses." />
-  <meta name="keywords" content="digital agency Nigeria, about ODD Solutions, web design company Lagos, SME solutions Nigeria" />
-  <meta name="author" content="ODD Solutions · Obori Designs & Digital Solutions" />
+  <title>About OneStack Digital Agency · Your Complete Digital Ecosystem Partner</title>
+  <meta name="description" content="OneStack Digital Agency is a premium digital agency empowering Nigerian SMEs since 2020." />
+  <meta name="keywords" content="digital agency Nigeria, about OneStack, web design company Lagos, SME solutions Nigeria" />
+  <meta name="author" content="OneStack Digital Agency" />
   
-  <meta property="og:title" content="About ODD Solutions · Your Complete Digital Ecosystem Partner" />
-  <meta property="og:description" content="Empowering Nigerian SMEs with premium digital solutions since 2020." />
+  <meta property="og:title" content="About OneStack Digital Agency · Your Complete Digital Ecosystem Partner" />
+  <meta property="og:description" content="Empowering Nigerian SMEs with premium digital solutions." />
   <meta property="og:type" content="website" />
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -39,12 +39,17 @@
       --gray-600: #475569;
       --gray-800: #1e293b;
       --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
     }
 
     body {
       font-family: 'Inter', sans-serif;
       color: var(--gray-800);
-      background-color: var(--white);
+      background: #ffffff;
       padding-top: 76px;
     }
 
@@ -68,7 +73,8 @@
       font-weight: 700;
       display: inline-block;
       margin-bottom: 1.5rem;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
     }
 
     .section-title {
@@ -79,7 +85,6 @@
       display: inline-block;
       color: var(--primary);
     }
-
     .section-title::after {
       content: '';
       position: absolute;
@@ -90,6 +95,10 @@
       height: 3px;
       background: var(--accent);
       border-radius: 3px;
+    }
+    .section-title.text-start::after {
+      left: 0;
+      transform: none;
     }
 
     /* BUTTONS */
@@ -126,7 +135,7 @@
       transform: translateY(-2px);
     }
 
-    /* NAVBAR */
+    /* NAVBAR - IDENTICAL TO HOME */
     .navbar {
       background: var(--primary) !important;
       padding: 1rem 0;
@@ -199,21 +208,37 @@
       }
     }
 
-    /* HERO */
+    /* HERO - IDENTICAL TO HOME */
     .hero {
-      background: var(--primary);
-      padding: 80px 0;
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
       text-align: center;
       color: white;
+      position: relative;
+      overflow: hidden;
     }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .hero-content { position: relative; z-index: 1; }
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 20px;
     }
-    .hero h1 span {
-      color: var(--accent);
-    }
+    .hero h1 span { color: var(--accent); }
     .hero p {
       font-size: 1.2rem;
       opacity: 0.9;
@@ -226,7 +251,7 @@
       .hero p { font-size: 1rem; }
     }
 
-    /* STATS */
+    /* STATS - IDENTICAL TO HOME */
     .stats-section {
       background: var(--primary);
       color: white;
@@ -242,9 +267,15 @@
       .stat-number { font-size: 2rem; }
     }
 
-    /* VALUE CARDS */
+    /* ABOUT STORY SECTION - CLEAN WHITE */
+    .story-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    /* VALUE CARDS - IMPROVED */
     .value-card {
-      background: var(--white);
+      background: white;
       border-radius: 24px;
       padding: 2rem;
       text-align: center;
@@ -255,6 +286,7 @@
     .value-card:hover {
       transform: translateY(-8px);
       border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
     }
     .value-icon {
       width: 70px;
@@ -266,7 +298,6 @@
       justify-content: center;
       margin: 0 auto 1.5rem;
       font-size: 2rem;
-      font-weight: 800;
       color: var(--primary-dark);
     }
     .value-card h4 {
@@ -274,62 +305,22 @@
       margin-bottom: 1rem;
       color: var(--primary);
     }
-    .value-card p {
-      color: var(--gray-600);
+    .value-card p { color: var(--gray-600); }
+
+    /* VALUES SECTION - CLEAN WHITE (no gray) */
+    .values-section {
+      padding: 100px 0;
+      background: white;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
     }
 
-    /* TEAM CARDS */
-    .team-card {
-      border-radius: 24px;
-      overflow: hidden;
-      background: var(--white);
-      height: 100%;
-      transition: all 0.3s;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
-    .team-card:hover {
-      transform: translateY(-8px);
-    }
-    .team-card .position-relative {
-      height: 280px;
-      overflow: hidden;
-    }
-    .team-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .team-card .card-body {
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .team-card .card-title {
-      font-size: 1.3rem;
-      color: var(--primary);
-      margin-bottom: 0.3rem;
-    }
-    .team-card .card-text {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .team-social {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: var(--accent);
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-    }
-    .team-social a {
-      color: var(--primary-dark);
-      margin: 0 5px;
-    }
-    @media (max-width: 768px) {
-      .team-card .position-relative { height: 240px; }
+    /* TIMELINE SECTION - CLEAN WHITE */
+    .timeline-section {
+      padding: 100px 0;
+      background: white;
     }
 
-    /* TIMELINE */
     .timeline {
       position: relative;
       max-width: 800px;
@@ -358,41 +349,111 @@
       text-align: right;
     }
     .timeline-content {
-      background: var(--white);
+      background: var(--off-white);
       border-radius: 20px;
       padding: 1.5rem;
       border: 1px solid var(--gray-200);
       flex: 1;
+      transition: all 0.3s;
     }
-    .timeline-content h4 {
-      color: var(--primary);
-      margin-bottom: 0.5rem;
+    .timeline-content:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
     }
+    .timeline-content h4 { color: var(--primary); margin-bottom: 0.5rem; }
     @media (max-width: 768px) {
       .timeline::before { left: 30px; }
       .timeline-item { flex-direction: column; gap: 0.5rem; }
       .timeline-year { text-align: left; padding-left: 30px; }
     }
 
-    /* TESTIMONIAL */
+    /* TEAM SECTION - CLEAN WHITE */
+    .team-section {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .team-card {
+      border-radius: 24px;
+      overflow: hidden;
+      background: white;
+      height: 100%;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-card .position-relative {
+      height: 280px;
+      overflow: hidden;
+      background: var(--primary);
+    }
+    .team-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .team-card .card-body { padding: 1.5rem; text-align: center; }
+    .team-card .card-title { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.3rem; }
+    .team-card .card-text { color: var(--accent); font-weight: 600; margin-bottom: 0.75rem; }
+    .team-social {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+    }
+    .team-social a { color: var(--primary-dark); margin: 0 5px; }
+    @media (max-width: 768px) {
+      .team-card .position-relative { height: 240px; }
+    }
+
+    /* TESTIMONIAL SECTION - CLEAN WHITE */
+    .testimonial-section {
+      padding: 100px 0;
+      background: white;
+    }
     .testimonial-quote {
       border-left: 4px solid var(--accent);
-      padding: 1.5rem;
-      background: var(--gray-100);
+      padding: 2rem;
+      background: var(--off-white);
       border-radius: 20px;
     }
 
-    /* CTA */
+    /* CTA - IDENTICAL TO HOME */
     .cta-section {
-      background: var(--primary);
+      background: var(--gradient-primary);
       padding: 80px 0;
       text-align: center;
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
     }
     .cta-section h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: white;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-section p {
+      position: relative;
+      z-index: 1;
     }
     .cta-section .btn-light {
       background: var(--accent);
@@ -403,6 +464,7 @@
       text-decoration: none;
       display: inline-block;
       margin: 0 10px;
+      transition: all 0.3s;
     }
     .cta-section .btn-light:hover {
       background: var(--accent-light);
@@ -417,6 +479,7 @@
       text-decoration: none;
       display: inline-block;
       margin: 0 10px;
+      transition: all 0.3s;
     }
     .cta-section .btn-outline-light:hover {
       background: white;
@@ -431,23 +494,15 @@
       }
     }
 
-    /* FOOTER */
+    /* FOOTER - IDENTICAL TO HOME */
     .footer {
       background: var(--primary);
-      color: var(--gray-300);
+      color: var(--white);
       padding: 3rem 0 2rem;
     }
-    .footer h5, .footer h6 {
-      color: white;
-      margin-bottom: 1.5rem;
-    }
-    .footer a {
-      color: var(--gray-300);
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: var(--accent);
-    }
+    .footer h5, .footer h6 { color: white; margin-bottom: 1.5rem; }
+    .footer a { color: var(--gray-300); text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
     .newsletter-input {
       background: rgba(255,255,255,0.1);
       border: none;
@@ -475,9 +530,9 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <div class="logo">
-        <img src="image/ODDS.jpeg" alt="ODDS Logo">
+        <img src="image/logo-placeholder.jpg" alt="OneStack Logo" onerror="this.style.display='none'">
         <div class="logo-text">
-          <h1>ODD Solutions<span style="color:#c5a059;">®</span></h1>
+          <h1>OneStack<span style="color:#c5a059;">®</span></h1>
           <p>COMPLETE DIGITAL ECOSYSTEM</p>
         </div>
       </div>
@@ -500,13 +555,11 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-content" data-aos="fade-up">
-      <span class="sme-badge" data-aos="fade-down">Our Story</span>
-      <h1 data-aos="fade-up" data-aos-delay="100">Empowering Nigerian SMEs <span>Since 2020</span></h1>
-      <p data-aos="fade-up" data-aos-delay="200">We're on a mission to transform local businesses into digital powerhouses through premium design, technology, and strategy.</p>
-      <a href="#story" class="btn-primary-custom" data-aos="fade-up" data-aos-delay="300">Discover Our Journey →</a>
-    </div>
+  <div class="container hero-content">
+    <span class="sme-badge" data-aos="fade-down">Our Story</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Empowering Nigerian SMEs <span>Since 2020</span></h1>
+    <p data-aos="fade-up" data-aos-delay="200">We're on a mission to transform local businesses into digital powerhouses through premium design, technology, and strategy.</p>
+    <a href="audit.html" class="btn-primary-custom" data-aos="fade-up" data-aos-delay="300">Claim Your Free Audit →</a>
   </div>
 </section>
 
@@ -515,7 +568,7 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
-        <div class="stat-number">150+</div>
+        <div class="stat-number">50+</div>
         <div>Active Clients</div>
       </div>
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -527,22 +580,22 @@
         <div>Years Excellence</div>
       </div>
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-number">₦2B+</div>
-        <div>Client Revenue</div>
+        <div class="stat-number">₦200M+</div>
+        <div>Client Revenue Generated</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<section class="py-5" id="story">
+<!-- ABOUT STORY -->
+<section class="story-section" id="story">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
         <span class="sme-badge">Who We Are</span>
-        <h2 class="section-title text-start" style="text-align: left !important;">More Than Just a Digital Agency</h2>
-        <p class="lead mb-4" style="color: var(--gray-600);">ODDSolutions (Obori Designs & Digital Solutions) was born from a simple belief: Nigerian SMEs deserve world-class digital solutions without the enterprise price tag.</p>
-        <p class="mb-4" style="color: var(--gray-600);">We're a team of strategists, designers, and developers passionate about helping local businesses compete globally.</p>
+        <h2 class="section-title text-start">More Than Just a Digital Agency</h2>
+        <p class="lead mb-4" style="color: var(--gray-600);">OneStack was born from a simple belief: Nigerian SMEs deserve world-class digital solutions without the enterprise price tag.</p>
+        <p class="mb-4" style="color: var(--gray-600);">We're a team of strategists, designers, and developers passionate about helping local businesses compete globally. We don't just build websites — we build complete digital ecosystems that drive real growth.</p>
         <div class="row mt-5">
           <div class="col-md-6 mb-3">
             <h3 class="h5 fw-bold" style="color: var(--primary);">Vision</h3>
@@ -555,47 +608,47 @@
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/about-team.jpg" alt="ODDSolutions Team" class="img-fluid rounded-4 shadow-lg" style="border-radius: 24px;" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=ODDSolutions+Team'">
+        <img src="image/about-team.jpg" alt="OneStack Team" class="img-fluid rounded-4 shadow-lg" style="border-radius: 24px; width: 100%;" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=OneStack+Team'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- VALUES SECTION -->
-<section class="py-5 bg-light">
+<!-- VALUES -->
+<section class="values-section">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our DNA</span>
-      <h2 class="section-title" data-aos="fade-up">The ODDSolutions Values</h2>
+      <h2 class="section-title" data-aos="fade-up">The OneStack Values</h2>
       <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">The principles that guide everything we do</p>
     </div>
     <div class="row g-4">
       <div class="col-md-3 col-sm-6" data-aos="fade-up">
         <div class="value-card">
-          <div class="value-icon"><strong>O</strong></div>
-          <h4>Ownership</h4>
-          <p>We take full responsibility for every project, treating your business like our own.</p>
+          <div class="value-icon"><i class="fas fa-rocket"></i></div>
+          <h4>One Goal</h4>
+          <p>We're obsessed with one thing: your measurable business growth. Everything else is secondary.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
         <div class="value-card">
-          <div class="value-icon"><strong>D</strong></div>
-          <h4>Design Thinking</h4>
-          <p>We solve problems creatively, always putting user experience first.</p>
+          <div class="value-icon"><i class="fas fa-cubes"></i></div>
+          <h4>Stacked Expertise</h4>
+          <p>Design, development, SEO, ads, AI — all under one roof. No fragmentation, no handoffs.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
         <div class="value-card">
-          <div class="value-icon"><strong>D</strong></div>
-          <h4>Delivery</h4>
-          <p>We consistently deliver high-quality work on time and on budget.</p>
+          <div class="value-icon"><i class="fas fa-handshake"></i></div>
+          <h4>No BS Guarantee</h4>
+          <p>We put our money where our mouth is. If we don't hit your KPIs, you don't pay. Simple.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
         <div class="value-card">
-          <div class="value-icon"><strong>S</strong></div>
-          <h4>Solutions</h4>
-          <p>We focus on results, not just deliverables — building what actually works.</p>
+          <div class="value-icon"><i class="fas fa-africa"></i></div>
+          <h4>Built for Nigeria</h4>
+          <p>We understand the local market, payment systems, and consumer behavior. No foreign template fits.</p>
         </div>
       </div>
     </div>
@@ -603,7 +656,7 @@
 </section>
 
 <!-- TIMELINE -->
-<section class="py-5">
+<section class="timeline-section">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">Our Journey</span>
@@ -612,7 +665,7 @@
     <div class="timeline">
       <div class="timeline-item" data-aos="fade-right">
         <div class="timeline-year">2020</div>
-        <div class="timeline-content"><h4>The Beginning</h4><p>ODD Solutions was founded to help local businesses go digital. First office opened with 2 team members.</p></div>
+        <div class="timeline-content"><h4>The Beginning</h4><p>OneStack was founded to help local businesses go digital. First office opened with 2 team members.</p></div>
       </div>
       <div class="timeline-item" data-aos="fade-left">
         <div class="timeline-year">2022</div>
@@ -620,7 +673,7 @@
       </div>
       <div class="timeline-item" data-aos="fade-right">
         <div class="timeline-year">2024</div>
-        <div class="timeline-content"><h4>150+ SMEs Served</h4><p>Celebrated serving over 150 businesses. Launched complete digital ecosystem.</p></div>
+        <div class="timeline-content"><h4>50+ SMEs Served</h4><p>Celebrated serving over 50 businesses. Launched complete digital ecosystem.</p></div>
       </div>
       <div class="timeline-item" data-aos="fade-left">
         <div class="timeline-year">2025</div>
@@ -630,12 +683,12 @@
   </div>
 </section>
 
-<!-- TEAM SECTION -->
-<section class="py-5 bg-light">
+<!-- TEAM -->
+<section class="team-section">
   <div class="container">
     <div class="text-center mb-5">
       <span class="sme-badge" data-aos="fade-down">The Dream Team</span>
-      <h2 class="section-title" data-aos="fade-up">Meet the Minds Behind ODD Solutions</h2>
+      <h2 class="section-title" data-aos="fade-up">Meet the Minds Behind OneStack</h2>
       <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Passionate experts dedicated to your success</p>
     </div>
     <div class="row g-4">
@@ -669,7 +722,7 @@
           <div class="card-body">
             <h4 class="card-title">Augustina Ibeh</h4>
             <p class="card-text">Creative Director</p>
-            <p class="text-secondary small">Award-winning designer passionate about brand storytelling and user-centered design.</p>
+            <p class="text-secondary small">Award-winning designer passionate about brand storytelling and user-centered design. Specializes in UI/UX and visual identity.</p>
           </div>
         </div>
       </div>
@@ -685,7 +738,7 @@
           <div class="card-body">
             <h4 class="card-title">Ismail Musa</h4>
             <p class="card-text">Technical Lead</p>
-            <p class="text-secondary small">Full-stack architect specializing in scalable web applications and cloud infrastructure.</p>
+            <p class="text-secondary small">Full-stack architect specializing in scalable web applications, cloud infrastructure, and AI integration.</p>
           </div>
         </div>
       </div>
@@ -698,15 +751,15 @@
 </section>
 
 <!-- TESTIMONIAL -->
-<section class="py-5">
+<section class="testimonial-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right">
         <span class="sme-badge">Trusted By</span>
-        <h2 class="section-title text-start" style="text-align: left !important;">What Our Clients Say</h2>
+        <h2 class="section-title text-start">What Our Clients Say</h2>
         <div class="testimonial-quote">
           <i class="fas fa-quote-left fa-2x mb-3" style="color: var(--accent); opacity: 0.5;"></i>
-          <p class="lead mb-3">"ODD Solutions didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching."</p>
+          <p class="lead mb-3">"OneStack didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching."</p>
           <div class="d-flex align-items-center">
             <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">AO</div>
             <div class="ms-3">
@@ -717,7 +770,7 @@
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/client-meeting.jpg" alt="Client meeting" class="img-fluid rounded-4 shadow-lg" style="border-radius: 24px;" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Happy+Clients'">
+        <img src="image/client-meeting.jpg" alt="Client meeting" class="img-fluid rounded-4 shadow-lg" style="border-radius: 24px; width: 100%;" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Happy+Clients'">
       </div>
     </div>
   </div>
@@ -729,10 +782,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <span class="sme-badge bg-light text-dark" data-aos="fade-down">Let's Work Together</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready to Write Your Success Story?</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Join 150+ Nigerian SMEs who trust ODDS for their digital growth.</p>
+        <h2 data-aos="fade-up">Ready to Write Your Success Story?</h2>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs who trust OneStack for their digital growth.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn-light">Start Your Journey →</a>
+          <a href="audit.html" class="btn-light">Claim Free Audit →</a>
           <a href="services.html" class="btn-outline-light">Explore Services</a>
         </div>
       </div>
@@ -742,10 +795,10 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container" style="max-width: 1200px; color: var(--white);">
+  <div class="container" style="max-width: 1200px;">
     <div class="row">
       <div class="col-lg-4 mb-4">
-        <h5>ODD Solutions</h5>
+        <h5>OneStack</h5>
         <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
         <div class="d-flex gap-3 mt-3">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -761,7 +814,7 @@
       <div class="col-lg-3 col-md-6 mb-4">
         <h6>Contact</h6>
         <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:hello@odds.ng">oborimusa@gmail.com</a></p>
+        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:hello@onestack.ng">oborimusa@gmail.com</a></p>
         <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo, Nigeria</p>
       </div>
       <div class="col-lg-3 mb-4">
@@ -774,7 +827,7 @@
     </div>
     <hr>
     <div class="text-center small">
-      <p>&copy; 2026 ODDSolutions — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+      <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
     </div>
   </div>
 </footer>
