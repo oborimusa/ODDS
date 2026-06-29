@@ -11,16 +11,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
   <!-- ===== SEO ===== -->
-  <title>About OneStack Digital Agency · Your Complete Digital Ecosystem Partner</title>
-  <meta name="description" content="OneStack Digital Agency is a premium digital agency empowering Nigerian SMEs since 2020. We build, grow, and secure digital assets for ambitious businesses." />
-  <meta name="keywords" content="digital agency Nigeria, about OneStack, web design company Lagos, SME solutions Nigeria, digital ecosystem" />
+  <title>Our Journey | OneStack Digital Agency · Empowering Nigerian SMEs Since 2020</title>
+  <meta name="description" content="Discover the inspiring journey of OneStack — from a small startup in Osogbo to a premium digital agency serving SMEs across Nigeria. Milestones, team, and vision." />
+  <meta name="keywords" content="OneStack journey, digital agency story, Nigerian SME success, company milestones" />
   <meta name="author" content="OneStack Digital Agency" />
 
   <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="About OneStack Digital Agency · Your Complete Digital Ecosystem Partner" />
-  <meta property="og:description" content="Empowering Nigerian SMEs with premium digital solutions since 2020." />
+  <meta property="og:title" content="Our Journey | OneStack Digital Agency · Empowering Nigerian SMEs" />
+  <meta property="og:description" content="Discover the inspiring journey of OneStack — from a small startup in Osogbo to a premium digital agency serving SMEs across Nigeria." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://onestack.ng/about.html" />
+  <meta property="og:url" content="https://onestack.ng/journey.html" />
 
   <!-- ===== GOOGLE FONTS ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -186,27 +186,33 @@
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
       color: var(--primary);
     }
 
     .section-title::after {
       content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
+      display: block;
       width: 80px;
       height: 3px;
       background: var(--accent);
+      margin: 12px auto 0;
       border-radius: 3px;
     }
 
-    .section-title.text-start::after {
+    .section-title-left::after {
       left: 0;
       transform: none;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      max-width: 700px;
+      margin: 0 auto 56px;
+      font-size: 1.1rem;
     }
 
     /* ===== BUTTONS ===== */
@@ -268,8 +274,15 @@
     }
 
     @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
 
     .hero-content {
@@ -295,23 +308,9 @@
       margin: 0 auto;
     }
 
-    /* ===== STATS ===== */
-    .stats-section {
-      background: var(--primary);
-      color: white;
-      padding: 60px 0;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
     /* ===== STORY SECTION ===== */
     .story-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: white;
     }
 
@@ -330,57 +329,31 @@
       margin: 2rem 0;
     }
 
-    /* ===== VALUES ===== */
-    .values-section {
-      padding: 100px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
+    /* ===== STATS ===== */
+    .stats-section {
+      background: var(--primary);
+      color: white;
+      padding: 60px 0;
     }
 
-    .value-card {
-      background: white;
-      border-radius: 24px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s;
-      border: 1px solid var(--gray-200);
-      height: 100%;
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
     }
 
-    .value-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .value-icon {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2rem;
-      color: var(--primary-dark);
-    }
-
-    .value-card h4 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .value-card p {
-      color: var(--gray-600);
+    .stat-label {
+      font-size: 0.95rem;
+      opacity: 0.8;
     }
 
     /* ===== TIMELINE ===== */
     .timeline-section {
-      padding: 100px 0;
-      background: white;
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
     }
 
     .timeline {
@@ -403,9 +376,9 @@
     .timeline-item {
       display: flex;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       padding: 1.5rem 2rem;
-      background: var(--off-white);
+      background: white;
       border-radius: 20px;
       border: 1px solid var(--gray-200);
       transition: all 0.3s;
@@ -436,9 +409,7 @@
     /* ===== MILESTONES ===== */
     .milestones-section {
       padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
+      background: white;
     }
 
     .milestone-card {
@@ -491,8 +462,10 @@
 
     /* ===== TEAM ===== */
     .team-section {
-      padding: 100px 0;
-      background: white;
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
     }
 
     .team-card {
@@ -560,20 +533,40 @@
       margin: 0 5px;
     }
 
-    /* ===== TESTIMONIAL ===== */
-    .testimonial-section {
-      padding: 100px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
+    /* ===== VALUES ===== */
+    .values-section {
+      padding: 80px 0;
+      background: white;
     }
 
-    .testimonial-quote {
-      border-left: 4px solid var(--accent);
-      padding: 2rem;
-      background: white;
-      border-radius: 20px;
-      border: 1px solid var(--gray-200);
+    .value-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .value-icon-box {
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+    }
+
+    .value-item h5 {
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .value-item p {
+      color: var(--gray-600);
+      margin: 0;
     }
 
     /* ===== CTA ===== */
@@ -597,20 +590,21 @@
       border-radius: 50%;
     }
 
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
     .cta-section h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: white;
-      position: relative;
-      z-index: 1;
     }
 
     .cta-section p {
       max-width: 600px;
       margin: 0 auto 32px;
       opacity: 0.9;
-      position: relative;
-      z-index: 1;
     }
 
     .cta-section .btn-light {
@@ -626,8 +620,8 @@
     }
 
     .cta-section .btn-light:hover {
-      background: var(--accent-light);
       transform: translateY(-3px);
+      background: var(--accent-light);
     }
 
     .cta-section .btn-outline-light {
@@ -651,7 +645,7 @@
     /* ===== FOOTER ===== */
     footer {
       background: var(--primary);
-      color: var(--off-white);
+      color: var(--gray-300);
       padding: 60px 0 30px;
     }
 
@@ -778,23 +772,17 @@
         display: block;
         margin: 10px 20px;
       }
+
+      .value-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
 
     @media (max-width: 550px) {
       .hero h1 {
         font-size: 1.6rem;
-      }
-
-      .stat-number {
-        font-size: 1.5rem;
-      }
-
-      .value-card {
-        padding: 1.5rem;
-      }
-
-      .testimonial-quote {
-        padding: 1.5rem;
       }
 
       .milestone-card {
@@ -805,6 +793,10 @@
         width: 60px;
         height: 60px;
         font-size: 1.8rem;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -827,12 +819,13 @@
         </div>
         <ul class="nav-links" id="navList">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="results.html">Results</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="founder.html">Founder</a></li>
+          <li><a href="journey.html" class="active">Journey</a></li>
           <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
         </ul>
       </div>
@@ -843,9 +836,8 @@
   <section class="hero">
     <div class="container hero-content">
       <span class="sme-badge" data-aos="fade-down">Our Story</span>
-      <h1 data-aos="fade-up" data-aos-delay="100">Empowering Nigerian SMEs <span>Since 2020</span></h1>
-      <p data-aos="fade-up" data-aos-delay="200">We're on a mission to transform local businesses into digital powerhouses through premium design, technology, and strategy.</p>
-      <a href="audit.html" class="btn-primary-custom" data-aos="fade-up" data-aos-delay="300" style="margin-top: 24px;">Claim Your Free Audit →</a>
+      <h1 data-aos="fade-up" data-aos-delay="100">The <span>OneStack</span> Journey</h1>
+      <p data-aos="fade-up" data-aos-delay="200">From humble beginnings to empowering SMEs across Nigeria — a story of passion, resilience, and purpose.</p>
     </div>
   </section>
 
@@ -853,88 +845,55 @@
   <section class="stats-section">
     <div class="container">
       <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="0">
           <div class="stat-number">2020</div>
-          <div>Founded</div>
+          <div class="stat-label">Founded</div>
         </div>
         <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
           <div class="stat-number">50+</div>
-          <div>Active Clients</div>
+          <div class="stat-label">SME Partners</div>
         </div>
         <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-number">100+</div>
-          <div>Projects</div>
+          <div class="stat-label">Projects</div>
         </div>
         <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
-          <div class="stat-number">₦200M+</div>
-          <div>Client Revenue</div>
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Team Members</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== STORY ===== -->
-  <section class="story-section" id="story">
+  <section class="story-section">
     <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <span class="sme-badge">Who We Are</span>
-          <h2 class="section-title text-start" style="text-align: left !important;">More Than Just a Digital Agency</h2>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="sme-badge" data-aos="fade-down">How It Started</span>
+          <h2 class="section-title" data-aos="fade-up">Our Story</h2>
+        </div>
+
+        <div class="story-content" data-aos="fade-up">
+          <p style="font-size: 1.15rem; margin-bottom: 24px; color: var(--gray-700);">
+            At OneStack, we started with a vision: to empower Nigerian SMEs through premium design and technology. What began as a one-person operation in Osogbo has grown into a full-service digital agency serving businesses across the nation.
+          </p>
 
           <div class="story-quote">
             "We believe every Nigerian business deserves world-class digital solutions — without the enterprise price tag."
           </div>
 
-          <p style="font-size: 1.15rem; color: var(--gray-600); margin-bottom: 20px;">OneStack was born from a simple belief: Nigerian SMEs deserve world-class digital solutions without the enterprise price tag.</p>
+          <p style="margin-bottom: 16px;">
+            Our founder, Dahiru Obori, started OneStack in 2020 with a laptop, a passion for coding, and an unwavering belief in the potential of local businesses. The name "OneStack" represents our commitment to providing complete digital ecosystems — all your digital needs, stacked in one place.
+          </p>
 
-          <p style="color: var(--gray-600); margin-bottom: 30px;">We're a team of strategists, designers, and developers passionate about helping local businesses compete globally. We don't just build websites — we build complete digital ecosystems that drive real growth.</p>
+          <p style="margin-bottom: 16px;">
+            Over the years, our team has grown, our solutions have evolved, and our passion has only intensified. From building websites for startups to transforming brands for regional impact, our journey has been fueled by innovation, resilience, and a genuine love for what we do.
+          </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 200px;">
-              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary);">Vision</h3>
-              <p style="color: var(--gray-600);">To be the leading digital partner for Nigerian SMEs, setting the standard for innovation and excellence.</p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary);">Mission</h3>
-              <p style="color: var(--gray-600);">To empower businesses with premium digital tools and strategies that drive real, measurable growth.</p>
-            </div>
-          </div>
-        </div>
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <img src="image/about-team.jpg" alt="OneStack Team" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=OneStack+Team'">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VALUES ===== -->
-  <section class="values-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Our DNA</span>
-        <h2 class="section-title" data-aos="fade-up">The OneStack Values</h2>
-        <p style="color: var(--gray-600); max-width: 700px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">The principles that guide everything we do</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-        <div class="value-card" data-aos="fade-up">
-          <div class="value-icon"><i class="fas fa-rocket"></i></div>
-          <h4>One Goal</h4>
-          <p>We're obsessed with one thing: your measurable business growth. Everything else is secondary.</p>
-        </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="value-icon"><i class="fas fa-cubes"></i></div>
-          <h4>Stacked Expertise</h4>
-          <p>Design, development, SEO, ads, AI — all under one roof. No fragmentation, no handoffs.</p>
-        </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="value-icon"><i class="fas fa-handshake"></i></div>
-          <h4>No BS Guarantee</h4>
-          <p>We put our money where our mouth is. If we don't hit your KPIs, you don't pay. Simple.</p>
-        </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="value-icon"><i class="fas fa-africa"></i></div>
-          <h4>Built for Nigeria</h4>
-          <p>We understand the local market, payment systems, and consumer behavior. No foreign template fits.</p>
+          <p>
+            Today, we're proud to be the trusted digital partner for over 50 SMEs across Nigeria, with operations in Lagos and Osogbo. But we're just getting started.
+          </p>
         </div>
       </div>
     </div>
@@ -946,7 +905,6 @@
       <div style="text-align: center; margin-bottom: 48px;">
         <span class="sme-badge" data-aos="fade-down">The Path</span>
         <h2 class="section-title" data-aos="fade-up">Our Journey Through Time</h2>
-        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">From humble beginnings to empowering SMEs across Nigeria</p>
       </div>
 
       <div class="timeline">
@@ -1095,32 +1053,55 @@
       </div>
 
       <div style="text-align: center; margin-top: 48px;">
-        <a href="contact.html" class="btn-primary-custom">Join Our Team</a>
+        <a href="about.html" class="btn-primary-custom">Meet the Full Team</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIAL ===== -->
-  <section class="testimonial-section">
+  <!-- ===== VALUES ===== -->
+  <section class="values-section">
     <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
         <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <span class="sme-badge">Trusted By</span>
-          <h2 class="section-title text-start" style="text-align: left !important;">What Our Clients Say</h2>
-          <div class="testimonial-quote">
-            <i class="fas fa-quote-left fa-2x" style="color: var(--accent); opacity: 0.4; display: block; margin-bottom: 16px;"></i>
-            <p style="font-size: 1.15rem; margin-bottom: 20px; color: var(--gray-800);">"OneStack didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching."</p>
-            <div style="display: flex; align-items: center; gap: 16px;">
-              <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">AO</div>
-              <div>
-                <h5 style="margin: 0; color: var(--primary);">Amara Okafor</h5>
-                <p style="margin: 0; color: var(--gray-600);">Lagos Restaurant Owner</p>
-              </div>
+          <span class="sme-badge">Our DNA</span>
+          <h2 class="section-title-left" style="text-align: left; display: inline-block;">What Drives Us</h2>
+          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 32px;">Our values shape every project, every interaction, and every relationship.</p>
+
+          <div class="value-item">
+            <div class="value-icon-box">1</div>
+            <div>
+              <h5>One Goal</h5>
+              <p>We're obsessed with one thing: your measurable business growth. Everything else is secondary.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon-box">2</div>
+            <div>
+              <h5>Stacked Expertise</h5>
+              <p>Design, development, SEO, ads, AI — all under one roof. No fragmentation, no handoffs.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon-box">3</div>
+            <div>
+              <h5>No BS Guarantee</h5>
+              <p>We put our money where our mouth is. If we don't hit your KPIs, you don't pay. Simple.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon-box">4</div>
+            <div>
+              <h5>Built for Nigeria</h5>
+              <p>We understand the local market, payment systems, and consumer behavior. No foreign template fits.</p>
             </div>
           </div>
         </div>
+
         <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <img src="image/client-meeting.jpg" alt="Client meeting" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Happy+Clients'">
+          <img src="image/team-collaboration.jpg" alt="OneStack team collaborating" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Team+Culture'">
         </div>
       </div>
     </div>
@@ -1130,9 +1111,9 @@
   <section class="cta-section">
     <div class="container">
       <div style="max-width: 800px; margin: 0 auto;">
-        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Let's Work Together</span>
-        <h2 data-aos="fade-up">Ready to Write Your Success Story?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs who trust OneStack for their digital growth.</p>
+        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Join Our Story</span>
+        <h2 data-aos="fade-up">Ready to Be Part of Our Journey?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Let's build something extraordinary together.</p>
         <div data-aos="fade-up" data-aos-delay="200">
           <a href="audit.html" class="btn-light">Claim Free Audit →</a>
           <a href="services.html" class="btn-outline-light">Explore Services</a>

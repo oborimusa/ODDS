@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Cybersecurity & IT Support | Protect Your Business – ODDS</title>
-  <meta name="description" content="Protect your business from digital threats with regular updates, security monitoring, backups, and 24/7 technical support. Comprehensive IT security for Nigerian SMEs.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
+  <title>Cybersecurity & IT Support | Protect Your Business – OneStack Digital Agency</title>
+  <meta name="description" content="Protect your business from digital threats with regular updates, security monitoring, backups, and 24/7 technical support. Comprehensive IT security for Nigerian SMEs." />
+  <meta name="keywords" content="cybersecurity Nigeria, IT support Lagos, business security, data protection, network security, SME IT support" />
+  <meta name="author" content="OneStack Digital Agency" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Cybersecurity & IT Support | Protect Your Business – OneStack Digital Agency" />
+  <meta property="og:description" content="Protect your business from digital threats with regular updates, security monitoring, backups, and 24/7 technical support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onestack.ng/cybersecurity.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== AOS ===== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
@@ -21,6 +44,7 @@
       color: #1e293b;
       line-height: 1.5;
       scroll-behavior: smooth;
+      padding-top: 76px;
     }
 
     :root {
@@ -43,9 +67,6 @@
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-      --security-green: #10b981;
-      --security-red: #ef4444;
-      --security-blue: #3b82f6;
     }
 
     .container {
@@ -54,12 +75,14 @@
       padding: 0 32px;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     header {
-      background: rgba(255,255,255,0.98);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(8px);
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       border-bottom: 1px solid var(--gray-200);
     }
@@ -76,6 +99,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      text-decoration: none;
     }
 
     .logo img {
@@ -106,101 +130,49 @@
       list-style: none;
       align-items: center;
     }
+
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
       color: var(--gray-800);
       transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
     }
+
     .nav-links a:hover {
       color: var(--accent);
     }
+
+    .nav-links a.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
     .btn-consult {
       background: var(--gradient-primary);
       color: white !important;
-      padding: 8px 22px;
+      padding: 10px 28px !important;
       border-radius: 40px;
       font-weight: 600;
       box-shadow: var(--shadow-sm);
     }
+
     .btn-consult:hover {
       background: var(--primary-dark);
       transform: translateY(-2px);
+      color: white !important;
     }
+
     .menu-toggle {
       display: none;
       font-size: 1.6rem;
       cursor: pointer;
     }
 
-    @media (min-width: 992px) {
-      .nav-link {
-        color: var(--gray-800) !important;
-        margin: 0 5px;
-        padding: 8px 16px !important;
-        border-radius: 50px;
-        font-weight: 500;
-      }
-      .nav-link:hover,
-      .nav-link.active {
-        background: var(--accent);
-        color: var(--primary-dark) !important;
-      }
-    }
-
-    @media (max-width: 991px) {
-      body { padding-top: 65px; }
-      .navbar-collapse {
-        background: var(--primary);
-        padding: 1rem;
-        border-radius: 0 0 20px 20px;
-      }
-      .navbar-nav {
-        flex-direction: column !important;
-        gap: 0.5rem;
-      }
-      .nav-link {
-        padding: 12px 20px !important;
-        text-align: center;
-        border-radius: 8px;
-        color: white !important;
-      }
-      .nav-link.active {
-        background: var(--accent);
-        color: var(--primary-dark) !important;
-      }
-    }
-
-    /* HERO SECTION */
-    .hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-    @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
+    /* ===== BADGE ===== */
     .sme-badge {
-      background: var(--gradient-accent);
+      background: var(--accent);
       color: var(--primary-dark);
       padding: 0.5rem 1.5rem;
       border-radius: 50px;
@@ -208,33 +180,9 @@
       display: inline-block;
       margin-bottom: 1.5rem;
       font-size: 0.8rem;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-    .hero h1 span {
-      color: var(--accent);
-    }
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      .hero { padding: 60px 0; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
+      box-shadow: var(--shadow-accent);
     }
 
-    /* SERVICES OVERVIEW */
-    .services-section {
-      padding: 80px 0;
-      background: white;
-    }
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
@@ -243,6 +191,17 @@
       font-family: 'Space Grotesk', sans-serif;
       color: var(--primary);
     }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+
     .section-sub {
       text-align: center;
       color: var(--gray-600);
@@ -250,11 +209,94 @@
       margin: 0 auto 56px;
       font-size: 1.1rem;
     }
+
+    /* ===== BUTTONS ===== */
+    .btn-glow {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 16px 48px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      font-size: 1rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 60px 0; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+
+    /* ===== SERVICES OVERVIEW ===== */
+    .services-section {
+      padding: 80px 0;
+      background: white;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 32px;
     }
+
     .service-card {
       background: white;
       border-radius: 24px;
@@ -263,108 +305,146 @@
       border: 1px solid var(--gray-200);
       height: 100%;
     }
+
     .service-card:hover {
       transform: translateY(-8px);
       border-color: var(--accent);
       box-shadow: var(--shadow-lg);
     }
+
     .service-icon {
       font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 20px;
     }
+
     .service-card h3 {
       font-size: 1.35rem;
       margin-bottom: 12px;
       font-weight: 700;
       color: var(--primary);
     }
+
     .service-card p {
       color: var(--gray-600);
       line-height: 1.6;
     }
 
-    /* THREAT STATS SECTION */
+    /* ===== THREAT STATS ===== */
     .threat-stats {
-      background: var(--gray-100);
+      background: var(--off-white);
       padding: 60px 0;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
     }
+
     .threat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
       text-align: center;
     }
+
     .threat-stat {
       background: white;
       padding: 32px;
       border-radius: 20px;
       border: 1px solid var(--gray-200);
+      transition: all 0.3s;
     }
+
+    .threat-stat:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
     .threat-stat .number {
       font-size: 2.5rem;
       font-weight: 800;
       color: var(--accent);
     }
 
-    /* PROTECTION LAYERS */
+    .threat-stat p {
+      color: var(--gray-600);
+    }
+
+    /* ===== PROTECTION LAYERS ===== */
     .protection-section {
       padding: 80px 0;
       background: white;
     }
+
     .protection-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
+
     .protection-card {
-      background: var(--gray-100);
+      background: var(--off-white);
       border-radius: 24px;
       padding: 32px;
       text-align: center;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
+
     .protection-card:hover {
       transform: translateY(-5px);
       background: white;
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
+      border-color: var(--accent);
     }
+
     .protection-icon {
       font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 20px;
     }
+
     .protection-card h4 {
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--primary);
     }
 
-    /* PROCESS SECTION */
-    .process-section {
-      background: var(--gray-100);
-      padding: 80px 0;
+    .protection-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
     }
+
+    /* ===== PROCESS ===== */
+    .process-section {
+      background: var(--off-white);
+      padding: 80px 0;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
+
     .step-card {
       text-align: center;
       padding: 32px;
       background: white;
       border-radius: 24px;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
+
     .step-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
+
     .step-number {
       width: 60px;
       height: 60px;
@@ -379,42 +459,64 @@
       margin: 0 auto 20px;
     }
 
-    /* WHY CHOOSE US */
+    .step-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .step-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== WHY CHOOSE ===== */
     .why-choose {
       padding: 80px 0;
       background: white;
     }
+
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 32px;
       margin-top: 40px;
     }
+
     .benefit-card {
       text-align: center;
       padding: 32px;
-      background: var(--gray-100);
+      background: var(--off-white);
       border-radius: 24px;
       transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
+
     .benefit-card:hover {
       transform: translateY(-5px);
       background: white;
       box-shadow: var(--shadow-md);
-      border: 1px solid var(--accent);
+      border-color: var(--accent);
     }
+
     .benefit-icon {
       font-size: 2rem;
       color: var(--accent);
       margin-bottom: 16px;
     }
+
     .benefit-card h4 {
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--primary);
     }
 
-    /* CTA SECTION */
+    .benefit-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== CTA ===== */
     .cta-section {
       background: var(--gradient-primary);
       text-align: center;
@@ -422,6 +524,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .cta-section::after {
       content: '';
       position: absolute;
@@ -429,9 +532,10 @@
       left: -20%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
       border-radius: 50%;
     }
+
     .cta-section h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
@@ -439,6 +543,7 @@
       position: relative;
       z-index: 1;
     }
+
     .cta-section p {
       max-width: 600px;
       margin: 0 auto 32px;
@@ -447,58 +552,63 @@
       position: relative;
       z-index: 1;
     }
-    .btn-glow {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 14px 48px;
-      border-radius: 60px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      transition: all 0.3s;
-    }
-    .btn-glow:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       background: var(--primary);
       color: var(--gray-300);
       padding: 60px 0 30px;
     }
+
     .footer-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
       justify-content: space-between;
     }
+
     .footer-col h4 {
       color: white;
       margin-bottom: 20px;
       font-size: 1rem;
     }
+
     .footer-col a {
       display: block;
       color: var(--gray-300);
       text-decoration: none;
       margin-bottom: 12px;
       font-size: 0.9rem;
+      transition: color 0.2s;
     }
+
     .footer-col a:hover {
       color: var(--accent);
     }
+
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
     .copyright {
       text-align: center;
       padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       margin-top: 40px;
       font-size: 0.8rem;
     }
 
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 880px) {
       .nav-links {
         display: none;
@@ -508,44 +618,128 @@
         padding: 20px 0;
         gap: 1rem;
       }
-      .nav-links.active { display: flex; }
-      .menu-toggle { display: block; }
-      .container { padding: 0 20px; }
-      .section-title { font-size: 1.8rem; }
-      .hero h1 { font-size: 2rem; }
-      .cta-section h2 { font-size: 1.8rem; }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .threat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .protection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer .social-icons {
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .btn-glow {
+        padding: 14px 32px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .threat-stat .number {
+        font-size: 2rem;
+      }
+
+      .service-card {
+        padding: 24px;
+      }
+
+      .protection-card {
+        padding: 24px;
+      }
+
+      .step-card {
+        padding: 24px;
+      }
+
+      .benefit-card {
+        padding: 24px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <div class="navbar">
-      <a href="index.html" class="logo" style="text-decoration: none;">
-        <div class="logo">
-          <img src="image/ODDS.jpeg" alt="ODDS Logo">
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
           <div class="logo-text">
-            <h1>ODDS<span style="color:#c5a059;">®</span></h1>
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
             <p>COMPLETE DIGITAL ECOSYSTEM</p>
           </div>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
         </div>
-      </a>
-      <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
-      <ul class="nav-links" id="navList">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="portfolio.html">Results</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul class="nav-links" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- HERO SECTION -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
       <div class="sme-badge" data-aos="fade-down">Cybersecurity & IT Support</div>
@@ -554,11 +748,12 @@
     </div>
   </section>
 
-  <!-- SERVICES OVERVIEW -->
+  <!-- ===== SERVICES OVERVIEW ===== -->
   <section class="services-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What We Deliver</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Comprehensive security and IT support for peace of mind</p>
+
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
           <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
@@ -594,11 +789,12 @@
     </div>
   </section>
 
-  <!-- THREAT STATISTICS -->
+  <!-- ===== THREAT STATISTICS ===== -->
   <section class="threat-stats">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">The Reality of Cyber Threats</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Why cybersecurity matters for your business</p>
+
       <div class="threat-grid">
         <div class="threat-stat" data-aos="fade-up" data-aos-delay="0">
           <div class="number">60%</div>
@@ -616,11 +812,12 @@
     </div>
   </section>
 
-  <!-- PROTECTION LAYERS -->
+  <!-- ===== PROTECTION LAYERS ===== -->
   <section class="protection-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Our Security Layers</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Defense in depth approach to protect your business</p>
+
       <div class="protection-grid">
         <div class="protection-card" data-aos="fade-up" data-aos-delay="0">
           <div class="protection-icon"><i class="fas fa-firewall"></i></div>
@@ -646,11 +843,12 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- ===== PROCESS ===== -->
   <section class="process-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Our Security Process</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A proactive approach to keeping you safe</p>
+
       <div class="steps-grid">
         <div class="step-card" data-aos="fade-up" data-aos-delay="0">
           <div class="step-number">1</div>
@@ -676,11 +874,12 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE ODDS -->
+  <!-- ===== WHY CHOOSE ===== -->
   <section class="why-choose">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Why Choose ODDS for Security?</h2>
+      <h2 class="section-title" data-aos="fade-up">Why Choose OneStack for Security?</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We don't just install software – we build security cultures</p>
+
       <div class="benefits-grid">
         <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
           <div class="benefit-icon"><i class="fas fa-clock"></i></div>
@@ -706,7 +905,7 @@
     </div>
   </section>
 
-  <!-- CTA SECTION -->
+  <!-- ===== CTA ===== -->
   <section class="cta-section">
     <div class="container">
       <h2 data-aos="fade-up">Ready to Secure Your Business?</h2>
@@ -714,55 +913,68 @@
       <a href="audit.html" class="btn-glow" data-aos="fade-up" data-aos-delay="200">Get Free Security Audit →</a>
     </div>
   </section>
-</main>
 
-<footer>
-    <div class="container" style="max-width: 1200px; color: var(--white);">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>ODDS</h4>
-        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">SEO & Local SEO</a>
+          <a href="services.html">Google Ads & PPC</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="cybersecurity.html">Cybersecurity & IT</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="web-design.html">Web & E‑commerce</a>
-        <a href="seo.html">SEO & Local SEO</a>
-        <a href="google-ads.html">Google Ads & PPC</a>
-        <a href="ai-automation.html">AI & Automation</a>
-        <a href="it-security.html">Cybersecurity & IT</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About ODDS</a>
-        <a href="portfolio.html">Results</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Get in touch</h4>
-        <p>hello@odds.ng</p>
-        <p>+234 803 966 1354</p>
-        <p>Remote-first / Osogbo</p>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
       </div>
     </div>
-    <div class="copyright">
-      <p>&copy; 2026 ODDS — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true, offset: 100 });
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
 
-  // Mobile menu toggle
-  const toggle = document.getElementById('mobileMenu');
-  const nav = document.getElementById('navList');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
-  }
-</script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

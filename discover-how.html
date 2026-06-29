@@ -2,32 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- === SEO META TAGS === -->
-  <title>Discover How ODDS Empowers Nigerian SMEs | Digital Growth Partners</title>
-  <meta name="description" content="Discover how ODDS helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions. Your success story starts here." />
-  <meta name="keywords" content="digital agency Nigeria, SME growth solutions, web design Lagos, business growth strategy, ODDS process" />
-  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
-  
-  <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Discover How ODDS Empowers Nigerian SMEs" />
-  <meta property="og:description" content="Discover how ODDS helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions." />
-  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/discover-how.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
+  <title>Discover How OneStack Empowers Nigerian SMEs | Digital Growth Partners</title>
+  <meta name="description" content="Discover how OneStack helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions. Your success story starts here." />
+  <meta name="keywords" content="digital agency Nigeria, SME growth solutions, web design Lagos, business growth strategy, OneStack process" />
+  <meta name="author" content="OneStack Digital Agency" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Discover How OneStack Empowers Nigerian SMEs" />
+  <meta property="og:description" content="Discover how OneStack helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions." />
   <meta property="og:type" content="website" />
-  
-  <!-- === FAVICON === -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  
-  <!-- === CSS LIBRARIES === -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <meta property="og:url" content="https://onestack.ng/discover-how.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== AOS ===== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
+
   <style>
-    /* ===== RESET & VARIABLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      padding-top: 76px;
+    }
+
     :root {
       --primary: #0a2647;
       --primary-dark: #051a34;
@@ -39,7 +58,6 @@
       --off-white: #f8fafc;
       --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
       --gray-600: #475569;
       --gray-800: #1e293b;
       --dark: #0f172a;
@@ -51,18 +69,118 @@
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
-    /* ===== GLOBAL STYLES ===== */
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      overflow-x: hidden;
-      background-color: var(--white);
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: "Space Grotesk", monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
       font-weight: 600;
-      letter-spacing: -0.02em;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 10px 28px !important;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: white !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ===== BADGE ===== */
+    .sme-badge {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
     }
 
     .section-title {
@@ -71,6 +189,7 @@
       margin-bottom: 1rem;
       position: relative;
       display: inline-block;
+      color: var(--primary);
     }
 
     .section-title::after {
@@ -81,7 +200,7 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 3px;
     }
 
@@ -90,131 +209,105 @@
       transform: none;
     }
 
-    .section-subtitle {
-      color: var(--accent);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .sme-badge {
-      background: var(--gradient-accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .btn {
-      padding: 12px 32px;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-
-    .btn-primary {
+    /* ===== BUTTONS ===== */
+    .btn-primary-custom {
       background: var(--gradient-primary);
+      color: white;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
       border: none;
-      box-shadow: var(--shadow-md);
     }
 
-    .btn-primary:hover {
+    .btn-primary-custom:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
-      background: var(--gradient-primary);
     }
 
-    .btn-outline-primary {
-      border: 2px solid var(--primary);
-      color: var(--primary);
+    .btn-outline-custom {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
     }
 
-    .btn-outline-primary:hover {
-      background: var(--primary);
-      color: white;
+    .btn-outline-custom:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
       transform: translateY(-2px);
     }
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      background: var(--gradient-primary) !important;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-    }
-
-    .navbar-brand {
-      font-weight: 800;
-      font-size: 1.8rem;
-    }
-
-    .navbar-nav .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      margin: 0 0.25rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .navbar-nav .nav-link.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    /* ===== HERO SECTION ===== */
-    .discover-hero {
-      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%), url('image/empowering-business.jpg') center/cover no-repeat;
-      padding: 120px 0;
-      color: white;
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
       text-align: center;
-      margin-top: 76px;
+      color: white;
+      position: relative;
+      overflow: hidden;
     }
 
-    .discover-hero h1 {
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
+      font-family: "Space Grotesk", sans-serif;
     }
 
-    .discover-hero .lead {
-      font-size: 1.3rem;
-      max-width: 800px;
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
       margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-      .discover-hero h1 {
-        font-size: 2.5rem;
-      }
     }
 
     /* ===== FEATURE CARDS ===== */
     .feature-card {
-      background: var(--white);
+      background: white;
       border-radius: 20px;
       padding: 2rem;
-      transition: all 0.4s ease;
+      transition: all 0.3s;
       border: 1px solid var(--gray-200);
       height: 100%;
       box-shadow: var(--shadow-sm);
     }
 
     .feature-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
@@ -222,7 +315,7 @@
     .feature-icon {
       width: 70px;
       height: 70px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -235,6 +328,7 @@
     .feature-card h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
+      color: var(--primary);
     }
 
     .feature-card p {
@@ -242,17 +336,38 @@
       line-height: 1.7;
     }
 
-    /* ===== PROCESS STEPS ===== */
+    /* ===== PROCESS ===== */
+    .process-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
     .process-step {
       text-align: center;
-      padding: 2rem;
-      position: relative;
+      padding: 32px;
+      background: var(--off-white);
+      border-radius: 24px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
     }
 
     .step-number {
       width: 70px;
       height: 70px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       color: var(--primary-dark);
       border-radius: 50%;
       display: flex;
@@ -264,453 +379,623 @@
       box-shadow: var(--shadow-accent);
     }
 
-    /* ===== BENEFITS LIST ===== */
+    .process-step h4 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== BENEFITS ===== */
+    .benefits-section {
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
     .benefit-item {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 16px;
+      margin-bottom: 24px;
     }
 
     .benefit-icon {
       width: 50px;
       height: 50px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary-dark);
       font-size: 1.2rem;
+      color: var(--primary-dark);
       flex-shrink: 0;
     }
 
     .benefit-text h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
+      color: var(--primary);
+      margin-bottom: 4px;
     }
 
     .benefit-text p {
       color: var(--gray-600);
-      margin-bottom: 0;
+      margin: 0;
     }
 
-    /* ===== STATS SECTION ===== */
+    /* ===== STATS ===== */
     .stats-section {
-      background: var(--gradient-primary);
-      color: var(--white);
-      padding: 5rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-item {
-      text-align: center;
+      background: var(--primary);
+      color: white;
+      padding: 60px 0;
     }
 
     .stat-number {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 800;
-      font-family: 'Playfair Display', serif;
       color: var(--accent);
       margin-bottom: 0.5rem;
     }
 
     .stat-label {
-      font-size: 1.1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 0.95rem;
+      opacity: 0.8;
     }
 
-    /* ===== CTA SECTION ===== */
+    /* ===== TESTIMONIAL ===== */
+    .testimonial-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .testimonial-quote {
+      border-left: 4px solid var(--accent);
+      padding: 2rem;
+      background: var(--off-white);
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+    }
+
+    /* ===== CTA ===== */
     .cta-section {
-      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      background: var(--gradient-primary);
+      padding: 80px 0;
+      text-align: center;
+      color: white;
       position: relative;
       overflow: hidden;
-      padding: 80px 0;
+    }
+
+    .cta-section::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    .cta-section .btn-light {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 14px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    .cta-section .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+      padding: 14px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
 
     /* ===== FOOTER ===== */
-    .footer {
-      background: var(--dark);
-      color: var(--gray-300);
+    footer {
+      background: var(--primary);
+      color: var(--off-white);
+      padding: 60px 0 30px;
     }
 
-    .footer h5, .footer h6 {
-      color: var(--white);
-      margin-bottom: 1.5rem;
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
     }
 
-    .footer a {
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
       color: var(--gray-300);
-      transition: all 0.3s ease;
       text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
-    .footer a:hover {
+    .footer-col a:hover {
       color: var(--accent);
-      transform: translateX(5px);
     }
 
-    .footer .social-links a {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
       text-align: center;
-      line-height: 40px;
-      margin-right: 10px;
-      transition: all 0.3s ease;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
     }
 
-    .footer .social-links a:hover {
-      background: var(--accent);
-      color: var(--primary-dark);
-      transform: translateY(-3px);
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .testimonial-quote {
+        padding: 1.5rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer .social-icons {
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .cta-section .btn-light,
+      .cta-section .btn-outline-light {
+        display: block;
+        margin: 10px 20px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
+      }
+
+      .feature-card {
+        padding: 1.5rem;
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
-      <span class="fw-bold">ODDS</span>
-      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
-      </ul>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
+          </div>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </header>
 
-<!-- HERO SECTION -->
-<section class="discover-hero">
-  <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Your Growth Journey Starts Here</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Discover How We <span style="color: var(--accent);">Transform</span> Nigerian SMEs</h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">We combine strategy, design, and technology to build digital assets that drive real business growth. Here's how we do it.</p>
-  </div>
-</section>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="sme-badge" data-aos="fade-down">Your Growth Journey Starts Here</span>
+      <h1 data-aos="fade-up" data-aos-delay="100">Discover How We <span>Transform</span> Nigerian SMEs</h1>
+      <p data-aos="fade-up" data-aos-delay="200">We combine strategy, design, and technology to build digital assets that drive real business growth. Here's how we do it.</p>
+    </div>
+  </section>
 
-<!-- STATS SECTION -->
-<section class="stats-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="stat-item">
+  <!-- ===== STATS ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="0">
           <div class="stat-number">50+</div>
           <div class="stat-label">SME Partners</div>
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="stat-item">
-          <div class="stat-number">150+</div>
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number">100+</div>
           <div class="stat-label">Projects</div>
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-item">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-number">98%</div>
           <div class="stat-label">Satisfaction</div>
         </div>
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-item">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
           <div class="stat-number">5+</div>
           <div class="stat-label">Years</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- HOW WE HELP SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Our Approach</span>
-        <h2 class="section-title-left mb-4">How We Help Your Business Thrive</h2>
-        <p class="lead mb-4">We don't just build websites — we build comprehensive digital ecosystems tailored to your unique business needs.</p>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
-          <div class="benefit-text">
-            <h4>Customized Design Solutions</h4>
-            <p>Unique, mobile-responsive designs that reflect your brand and captivate your audience.</p>
+  <!-- ===== HOW WE HELP ===== -->
+  <section style="padding: 80px 0; background: white;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <span class="sme-badge">Our Approach</span>
+          <h2 class="section-title-left" style="display: inline-block;">How We Help Your Business Thrive</h2>
+          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 16px;">We don't just build websites — we build comprehensive digital ecosystems tailored to your unique business needs.</p>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+            <div class="benefit-text">
+              <h4>Customized Design Solutions</h4>
+              <p>Unique, mobile-responsive designs that reflect your brand and captivate your audience.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
+            <div class="benefit-text">
+              <h4>Digital Marketing</h4>
+              <p>Data-driven campaigns that attract qualified leads and maximize your ROI.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-code"></i></div>
+            <div class="benefit-text">
+              <h4>Technology Solutions</h4>
+              <p>Scalable web applications, e-commerce platforms, and cloud solutions built for growth.</p>
+            </div>
           </div>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
-          <div class="benefit-text">
-            <h4>Digital Marketing</h4>
-            <p>Data-driven campaigns that attract qualified leads and maximize your ROI.</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-code"></i></div>
-          <div class="benefit-text">
-            <h4>Technology Solutions</h4>
-            <p>Scalable web applications, e-commerce platforms, and cloud solutions built for growth.</p>
-          </div>
+
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <img src="image/empowering-business.jpg" alt="OneStack team working with client" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=OneStack+Approach'">
         </div>
       </div>
-      
-      <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/empowering-business.jpg" alt="ODDS team working with client" class="img-fluid rounded-3 shadow-lg" style="border-radius: 20px;" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=ODDS+Approach'">
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OUR EXPERTISE SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Our Expertise</span>
-      <h2 class="section-title" data-aos="fade-up">What We Do Best</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Specialized solutions for Nigerian SMEs</p>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
+  <!-- ===== OUR EXPERTISE ===== -->
+  <section style="padding: 80px 0; background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Our Expertise</span>
+        <h2 class="section-title" data-aos="fade-up">What We Do Best</h2>
+        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">Specialized solutions for Nigerian SMEs</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Web Design</h3>
           <p>We'll create visually captivating and user-friendly websites that engage visitors and drive conversions. Fully responsive and SEO-optimized.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-pen-nib"></i></div>
           <h3>Branding</h3>
           <p>Our team will define strong brand identities through compelling logos, color schemes, and brand guidelines that make you unforgettable.</p>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-shopping-cart"></i></div>
           <h3>E-commerce Solutions</h3>
           <p>We'll build secure and seamless e-commerce websites, optimizing the buying process for maximum conversions and repeat customers.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OUR PROCESS SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title" data-aos="fade-up">How We Deliver Excellence</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
-        <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p class="text-secondary">We dive deep into your business goals, audience, and competition.</p>
+  <!-- ===== OUR PROCESS ===== -->
+  <section class="process-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Our Process</span>
+        <h2 class="section-title" data-aos="fade-up">How We Deliver Excellence</h2>
       </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
-        <div class="step-number">2</div>
-        <h4>Strategy</h4>
-        <p class="text-secondary">Custom roadmap crafted with clear milestones and KPIs.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
-        <div class="step-number">3</div>
-        <h4>Execution</h4>
-        <p class="text-secondary">Premium design & development with regular updates.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
-        <div class="step-number">4</div>
-        <h4>Growth</h4>
-        <p class="text-secondary">Ongoing optimization, support, and scaling.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- BENEFITS SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/benefits.jpg" alt="Business growth benefits" class="img-fluid rounded-3 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Growth+Benefits'">
-      </div>
-      
-      <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">Why Choose Us</span>
-        <h2 class="section-title-left mb-4">Benefits of Working with ODDS</h2>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-          <div class="benefit-text">
-            <h4>Increased Efficiency</h4>
-            <p>Streamlined processes and automation that save you time and reduce operational costs.</p>
-          </div>
+      <div class="process-grid">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <h4>Discovery</h4>
+          <p>We dive deep into your business goals, audience, and competition.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-smile"></i></div>
-          <div class="benefit-text">
-            <h4>Improved Customer Experience</h4>
-            <p>Intuitive designs and seamless interactions that keep customers coming back.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">2</div>
+          <h4>Strategy</h4>
+          <p>Custom roadmap crafted with clear milestones and KPIs.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
-          <div class="benefit-text">
-            <h4>Data-Driven Insights</h4>
-            <p>Analytics and reporting that help you make informed business decisions.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">3</div>
+          <h4>Execution</h4>
+          <p>Premium design & development with regular updates.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="benefit-text">
-            <h4>Competitive Advantage</h4>
-            <p>Stand out from competitors with premium digital assets that build trust.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">4</div>
+          <h4>Growth</h4>
+          <p>Ongoing optimization, support, and scaling.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TESTIMONIAL SNIPPET -->
-<section class="py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <span class="sme-badge" data-aos="fade-down">Client Success</span>
-        <h2 class="section-title mb-4" data-aos="fade-up">What Our Partners Say</h2>
-        <div class="testimonial-quote p-5 bg-light rounded-4" style="border-left: 4px solid var(--accent);" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-quote-left fa-3x mb-4" style="color: var(--accent); opacity: 0.5;"></i>
-          <p class="lead mb-4">"ODDS didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching, and our brand has never looked better."</p>
-          <div class="d-flex align-items-center justify-content-center">
-            <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">AO</div>
-            <div class="ms-3 text-start">
-              <h5 class="mb-0">Amara Okafor</h5>
-              <p class="text-secondary">Lagos Restaurant Owner</p>
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits-section">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <img src="image/benefits.jpg" alt="Business growth benefits" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Growth+Benefits'">
+        </div>
+
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <span class="sme-badge">Why Choose Us</span>
+          <h2 class="section-title-left" style="display: inline-block;">Benefits of Working with OneStack</h2>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+            <div class="benefit-text">
+              <h4>Increased Efficiency</h4>
+              <p>Streamlined processes and automation that save you time and reduce operational costs.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-smile"></i></div>
+            <div class="benefit-text">
+              <h4>Improved Customer Experience</h4>
+              <p>Intuitive designs and seamless interactions that keep customers coming back.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="benefit-text">
+              <h4>Data-Driven Insights</h4>
+              <p>Analytics and reporting that help you make informed business decisions.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="benefit-text">
+              <h4>Competitive Advantage</h4>
+              <p>Stand out from competitors with premium digital assets that build trust.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA SECTION -->
-<section class="cta-section text-white text-center">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Ready to Start?</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Build Your Success Story</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Take the first step toward transforming your business today.</p>
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="testimonial-section" style="background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Client Success</span>
+        <h2 class="section-title" data-aos="fade-up">What Our Partners Say</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="testimonial-quote" data-aos="fade-up">
+          <i class="fas fa-quote-left fa-2x" style="color: var(--accent); opacity: 0.4; display: block; margin-bottom: 16px;"></i>
+          <p style="font-size: 1.15rem; margin-bottom: 20px; color: var(--gray-800);">"OneStack didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching, and our brand has never looked better."</p>
+          <div style="display: flex; align-items: center; gap: 16px; justify-content: center;">
+            <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">AO</div>
+            <div style="text-align: left;">
+              <h5 style="margin: 0; color: var(--primary);">Amara Okafor</h5>
+              <p style="margin: 0; color: var(--gray-600);">Lagos Restaurant Owner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Ready to Start?</span>
+        <h2 data-aos="fade-up">Let's Build Your Success Story</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Take the first step toward transforming your business today.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Get Free Consultation</a>
-          <a href="services.html" class="btn btn-outline-light btn-lg">Explore Services</a>
+          <a href="audit.html" class="btn-light">Claim Free Audit →</a>
+          <a href="services.html" class="btn-outline-light">Explore Services</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h5 class="fw-bold">ODDS</h5>
-        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
-        <div class="social-links">
-          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="services.html">Cybersecurity</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
         </div>
       </div>
-      
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html">Home</a></li>
-          <li class="mb-2"><a href="about.html">About Us</a></li>
-          <li class="mb-2"><a href="services.html">Services</a></li>
-          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
-          <li class="mb-2"><a href="contact.html">Contact</a></li>
-          <li class="mb-2"><a href="founder.html">Founder</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h6>Contact Info</h6>
-        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
-        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
-      </div>
-      
-      <div class="col-lg-3 mb-4">
-        <h6>Stay Updated</h6>
-        <p class="small text-secondary">Get growth tips & exclusive offers</p>
-        <form class="d-flex">
-          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
-          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
-        </form>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
       </div>
     </div>
-    
-    <hr class="border-secondary" />
-    
-    <div class="text-center small">
-      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
-      <p class="mt-2">
-        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
-        <a href="terms.html" class="text-secondary me-3">Terms</a>
-        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-  });
-</script>
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
