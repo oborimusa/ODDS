@@ -1,792 +1,1209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dahiru Obori · Founder of OneStack Digital Agency | Tech Entrepreneur</title>
-  <meta name="description" content="Meet Dahiru Obori, founder of OneStack. Economist, tech architect, and business builder helping Nigerian SMEs scale with premium digital solutions." />
-  
-  <!-- CSS Libraries -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
-  <style>
-    /* Variables */
-    :root {
-      --primary: #0a2647;
-      --primary-dark: #051a34;
-      --primary-light: #1e3a5f;
-      --accent: #c5a059;
-      --accent-light: #d4b37a;
-      --accent-dark: #9e7b44;
-      --white: #ffffff;
-      --off-white: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-600: #475569;
-      --gray-800: #1e293b;
-      --dark: #0f172a;
-      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
-      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
-      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon-16x16.png"
+    />
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      background-color: var(--white);
-      padding-top: 76px;
-    }
+    <!-- ===== SEO ===== -->
+    <title>
+      Dahiru Obori · Founder of OneStack Digital Agency | Tech Entrepreneur
+    </title>
+    <meta
+      name="description"
+      content="Meet Dahiru Obori, founder of OneStack. Economist, tech architect, and business builder helping Nigerian SMEs scale with premium digital solutions."
+    />
+    <meta
+      name="keywords"
+      content="Dahiru Obori, OneStack founder, digital agency Nigeria, tech entrepreneur, SME solutions"
+    />
+    <meta name="author" content="OneStack Digital Agency" />
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-    }
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta
+      property="og:title"
+      content="Dahiru Obori · Founder of OneStack Digital Agency"
+    />
+    <meta
+      property="og:description"
+      content="Economist, tech architect, and business builder helping Nigerian SMEs scale with premium digital solutions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://onestack.ng/founder.html" />
 
-    .sme-badge {
-      background: var(--gradient-accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-      color: var(--primary);
-    }
+    <!-- ===== FONT AWESOME ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 3px;
-    }
-    .section-title.text-start::after {
-      left: 0;
-      transform: none;
-    }
+    <!-- ===== AOS ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    .btn-primary-custom {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 12px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      border: none;
-    }
-
-    .btn-primary-custom:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      color: white;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: var(--gradient-primary) !important;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1030;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .logo-text h1 {
-      font-family: 'Space Grotesk', monospace;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-      line-height: 1.2;
-    }
-
-    .logo-text p {
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    @media (min-width: 992px) {
-      .nav-link {
-        color: rgba(255,255,255,0.9) !important;
-        margin: 0 5px;
-        padding: 8px 16px !important;
-        border-radius: 50px;
-        font-weight: 500;
-        transition: all 0.3s;
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .nav-link:hover,
-      .nav-link.active {
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #1e293b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --primary: #0a2647;
+        --primary-dark: #051a34;
+        --primary-light: #1e3a5f;
+        --accent: #c5a059;
+        --accent-light: #d4b37a;
+        --accent-dark: #9e7b44;
+        --white: #ffffff;
+        --off-white: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-600: #475569;
+        --gray-800: #1e293b;
+        --dark: #0f172a;
+        --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+        --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+        --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* ===== HEADER ===== */
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .logo-text h1 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .logo-text p {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--gray-800);
+        transition: 0.2s;
+        padding: 8px 12px;
+        border-radius: 40px;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .nav-links a.active {
         background: var(--accent);
         color: var(--primary-dark) !important;
       }
-      .btn-consult-nav {
-        background: var(--accent) !important;
-        color: var(--primary-dark) !important;
-        padding: 8px 20px !important;
-        border-radius: 50px !important;
-        font-weight: 700 !important;
-      }
-      .btn-consult-nav:hover {
-        background: var(--accent-light) !important;
-        transform: translateY(-2px);
-        color: var(--primary-dark) !important;
-      }
-    }
 
-    @media (max-width: 991px) {
-      body {
-        padding-top: 65px;
-      }
-      .navbar-collapse {
+      .btn-consult {
         background: var(--gradient-primary);
-        padding: 1rem;
-        border-radius: 0 0 20px 20px;
+        color: white !important;
+        padding: 10px 28px !important;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
       }
-      .navbar-nav {
-        flex-direction: column !important;
-        gap: 0.5rem;
-      }
-      .nav-link {
-        padding: 12px 20px !important;
-        text-align: center;
-        border-radius: 8px;
+
+      .btn-consult:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
         color: white !important;
       }
-      .nav-link.active {
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      /* ===== BADGE ===== */
+      .sme-badge {
         background: var(--accent);
-        color: var(--primary-dark) !important;
+        color: var(--primary-dark);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow-accent);
       }
-      .btn-consult-nav {
-        background: var(--accent) !important;
-        color: var(--primary-dark) !important;
-        padding: 12px 20px !important;
-        border-radius: 8px !important;
-        font-weight: 700 !important;
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+        color: var(--primary);
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 3px;
+      }
+
+      .section-title.text-start::after {
+        left: 0;
+        transform: none;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn-primary-custom {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        border: none;
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
+
+      .btn-outline-custom {
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        background: transparent;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+
+      .btn-outline-custom:hover {
+        background: var(--accent);
+        color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: var(--gradient-primary);
+        padding: 100px 0 80px;
         text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
       }
-    }
 
-    /* Hero */
-    .founder-hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .founder-hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-    @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-    .founder-hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    .founder-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-    .founder-hero h1 span {
-      color: var(--accent);
-    }
-    .founder-hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-    @media (max-width: 768px) {
-      .founder-hero { padding: 60px 0; }
-      .founder-hero h1 { font-size: 2rem; }
-      .founder-hero p { font-size: 1rem; }
-    }
-
-    /* Founder Image */
-    .founder-image-wrapper {
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .founder-image-wrapper img {
-      width: 100%;
-      height: auto;
-    }
-
-    .founder-image-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-      color: white;
-      padding: 2rem 1.5rem 1.5rem;
-    }
-
-    .founder-image-caption h3 {
-      color: var(--accent);
-      margin-bottom: 0.25rem;
-      font-size: 1.3rem;
-    }
-
-    .founder-quote {
-      font-size: 1.3rem;
-      font-style: italic;
-      border-left: 4px solid var(--accent);
-      padding-left: 1.5rem;
-      margin: 2rem 0;
-      color: var(--gray-600);
-    }
-
-    /* Skill Tags */
-    .skill-tag {
-      display: inline-block;
-      background: var(--off-white);
-      padding: 0.5rem 1.2rem;
-      border-radius: 50px;
-      margin: 0.25rem;
-      font-size: 0.85rem;
-      border: 1px solid var(--gray-200);
-      font-weight: 500;
-    }
-
-    /* Achievement Cards */
-    .achievement-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-      transition: all 0.3s;
-    }
-
-    .achievement-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    .achievement-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2rem;
-      color: var(--primary-dark);
-    }
-
-    /* Timeline */
-    .timeline-item {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      padding: 1.5rem 2rem;
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-    .timeline-item:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-    }
-
-    .timeline-year {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      min-width: 100px;
-    }
-
-    @media (max-width: 768px) {
-      .timeline-item {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1.5rem;
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: softShift 15s ease infinite;
       }
-      .timeline-year {
-        min-width: auto;
+
+      @keyframes softShift {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
       }
-    }
 
-    /* CTA Section */
-    .cta-section {
-      background: var(--gradient-primary);
-      padding: 80px 0;
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-section::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .cta-section .container {
-      position: relative;
-      z-index: 1;
-    }
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: white;
-    }
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 32px;
-      opacity: 0.9;
-    }
-    .cta-section .btn-light {
-      background: white;
-      color: var(--primary-dark);
-      padding: 14px 40px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-    .cta-section .btn-light:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
-    .cta-section .btn-outline-light {
-      border: 2px solid white;
-      color: white;
-      padding: 14px 40px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-    .cta-section .btn-outline-light:hover {
-      background: white;
-      color: var(--primary-dark);
-      transform: translateY(-3px);
-    }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
 
-    @media (max-width: 768px) {
-      .cta-section h2 { font-size: 1.8rem; }
-      .cta-section .btn-light,
-      .cta-section .btn-outline-light {
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* ===== MAIN BIO ===== */
+      .bio-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .bio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: flex-start;
+      }
+
+      .bio-image-col {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .founder-image-wrapper {
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+      }
+
+      .founder-image-wrapper img {
+        width: 100%;
+        height: auto;
         display: block;
-        margin: 10px 20px;
       }
-    }
 
-    /* Footer */
-    .footer {
-      background: var(--primary);
-      color: var(--white);
-      padding: 3rem 0 2rem;
-    }
+      .founder-image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+        padding: 2rem 1.5rem 1.5rem;
+      }
 
-    .footer h5, .footer h6 {
-      color: white;
-      margin-bottom: 1.5rem;
-    }
+      .founder-image-caption h3 {
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+        font-size: 1.3rem;
+      }
 
-    .footer a {
-      color: var(--gray-300);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+      .founder-image-caption p {
+        opacity: 0.8;
+        font-size: 0.9rem;
+      }
 
-    .footer a:hover {
-      color: var(--accent);
-    }
+      .bio-text-col {
+        flex: 1.5;
+        min-width: 300px;
+      }
 
-    .newsletter-input {
-      background: rgba(255,255,255,0.1);
-      border: none;
-      padding: 12px 20px;
-      border-radius: 50px 0 0 50px;
-      color: white;
-    }
+      .founder-quote {
+        font-size: 1.3rem;
+        font-style: italic;
+        border-left: 4px solid var(--accent);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        color: var(--gray-600);
+      }
 
-    .newsletter-input::placeholder {
-      color: rgba(255,255,255,0.5);
-    }
+      .skill-tag {
+        display: inline-block;
+        background: var(--off-white);
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        margin: 0.25rem;
+        font-size: 0.85rem;
+        border: 1px solid var(--gray-200);
+        font-weight: 500;
+      }
 
-    .newsletter-btn {
-      background: var(--accent);
-      color: var(--primary-dark);
-      border: none;
-      padding: 12px 25px;
-      border-radius: 0 50px 50px 0;
-      transition: all 0.3s;
-    }
+      .venture-list {
+        list-style: none;
+        padding: 0;
+      }
 
-    .newsletter-btn:hover {
-      background: var(--accent-light);
-    }
+      .venture-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--gray-700);
+      }
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
+      .venture-list li i {
+        color: var(--accent);
+        min-width: 24px;
+        font-size: 1.1rem;
+      }
 
-    @media (max-width: 880px) {
-      .container { padding: 0 20px; }
-      .section-title { font-size: 1.8rem; }
-    }
-  </style>
-</head>
-<body>
+      .quick-facts {
+        background: var(--off-white);
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        border: 1px solid var(--gray-200);
+        margin-top: 24px;
+      }
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <div class="logo">
-        <img src="image/logo-placeholder.jpg" alt="OneStack Logo" onerror="this.style.display='none'">
-        <div class="logo-text">
-          <h1>OneStack<span style="color:#c5a059;">®</span></h1>
-          <p>COMPLETE DIGITAL ECOSYSTEM</p>
+      .quick-facts .fact-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .quick-facts .fact-row:last-child {
+        border-bottom: none;
+      }
+
+      .quick-facts .fact-label {
+        color: var(--gray-600);
+      }
+
+      .quick-facts .fact-value {
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .recognition-box {
+        background: var(--off-white);
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        border: 1px solid var(--gray-200);
+        margin-top: 24px;
+      }
+
+      .recognition-box i {
+        color: var(--accent);
+      }
+
+      /* ===== ACHIEVEMENTS ===== */
+      .achievements-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .achievement-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        border: 1px solid var(--gray-200);
+        height: 100%;
+        transition: all 0.3s;
+      }
+
+      .achievement-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent);
+      }
+
+      .achievement-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: var(--primary-dark);
+      }
+
+      .achievement-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .achievement-card p {
+        color: var(--gray-600);
+        font-size: 0.95rem;
+      }
+
+      /* ===== TIMELINE ===== */
+      .timeline-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: var(--accent);
+        opacity: 0.3;
+      }
+
+      .timeline-item {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 2rem;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
+      }
+
+      .timeline-item:hover {
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .timeline-year {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--accent);
+        min-width: 100px;
+      }
+
+      .timeline-content h4 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-content p {
+        color: var(--gray-600);
+        margin: 0;
+      }
+
+      /* ===== CTA ===== */
+      .cta-section {
+        background: var(--gradient-primary);
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .cta-section .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        max-width: 600px;
+        margin: 0 auto 32px;
+        opacity: 0.9;
+      }
+
+      .cta-section .btn-light {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 14px 40px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .cta-section .btn-light:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
+
+      .cta-section .btn-outline-light {
+        border: 2px solid white;
+        color: white;
+        padding: 14px 40px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .cta-section .btn-outline-light:hover {
+        background: white;
+        color: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--primary);
+        color: var(--gray-300);
+        padding: 60px 0 30px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+
+      .footer-col a {
+        display: block;
+        color: var(--gray-300);
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-col a:hover {
+        color: var(--accent);
+      }
+
+      .footer-col p {
+        margin-bottom: 8px;
+      }
+
+      .social-icons a {
+        margin-right: 18px;
+        font-size: 1.2rem;
+        color: var(--gray-300);
+      }
+
+      .social-icons a:hover {
+        color: var(--accent);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        font-size: 0.8rem;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 880px) {
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          background: white;
+          padding: 20px 0;
+          gap: 1rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .container {
+          padding: 0 20px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .bio-grid {
+          flex-direction: column;
+        }
+
+        .bio-image-col {
+          min-width: unset;
+        }
+
+        .bio-text-col {
+          min-width: unset;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 1.5rem;
+        }
+
+        .timeline-year {
+          min-width: unset;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer .social-icons {
+          justify-content: center;
+        }
+
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .cta-section .btn-light,
+        .cta-section .btn-outline-light {
+          display: block;
+          margin: 10px 20px;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+
+        .founder-image-caption {
+          padding: 1.5rem 1rem;
+        }
+
+        .founder-image-caption h3 {
+          font-size: 1.1rem;
+        }
+
+        .quick-facts {
+          padding: 1rem;
+        }
+
+        .quick-facts .fact-row {
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          padding: 0.8rem 0;
+        }
+
+        .recognition-box {
+          padding: 1rem;
+        }
+
+        .achievement-card {
+          padding: 1.5rem;
+        }
+
+        .timeline-item {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="image/onestack-logo.png"
+              alt="OneStack Digital Agency"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="logo-text">
+              <h1>One<span style="color: #c5a059">Stack</span></h1>
+              <p>COMPLETE DIGITAL ECOSYSTEM</p>
+            </div>
+          </a>
+          <div class="menu-toggle" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="founder.html" class="active">Founder</a></li>
+            <li>
+              <a href="audit.html" class="btn-consult">Get Free Audit →</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link active" href="founder.html">Founder</a></li>
-        <li class="nav-item"><a class="nav-link btn-consult-nav" href="audit.html">Get Free Audit →</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    </header>
 
-<!-- ===== HERO SECTION ===== -->
-<section class="founder-hero">
-  <div class="container">
-    <div class="text-center">
-      <span class="sme-badge">Founder & CEO</span>
-      <h1>Dahiru <span>Obori</span></h1>
-      <p>Economist · Tech Architect · Business Builder</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<section class="py-5">
-  <div class="container">
-    <div class="row g-5">
-      <!-- Left Column - Image -->
-      <div class="col-lg-5">
-        <div class="founder-image-wrapper">
-          <img src="image/obori5.png" alt="Dahiru Obori" class="img-fluid">
-          <div class="founder-image-caption">
-            <h3>Dahiru Obori</h3>
-            <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
-          </div>
-        </div>
-        
-        <div class="mt-4 p-4 bg-light rounded-4">
-          <h4 class="mb-3">Quick Facts</h4>
-          <div class="d-flex justify-content-between mb-2">
-            <span>Experience:</span>
-            <span class="fw-bold">6+ Years</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span>Ventures:</span>
-            <span class="fw-bold">5+</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span>Award:</span>
-            <span class="fw-bold">YouWin! Winner</span>
-          </div>
-          <div class="mt-3">
-            <a href="audit.html" class="btn-primary-custom d-block text-center">Book a Free Audit →</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Right Column - Bio -->
-      <div class="col-lg-7">
-        <span class="sme-badge">The Founder's Story</span>
-        <h2 class="section-title text-start">About Dahiru Obori</h2>
-        
-        <div class="founder-quote">
-          "I believe technology should empower people, not intimidate them."
-        </div>
-        
-        <p class="lead">
-          A rare hybrid of <strong>economist</strong> and <strong>technology architect</strong>. Dahiru doesn't just build websites—he builds profitable digital ecosystems.
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="sme-badge" data-aos="fade-down">Founder & CEO</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          Dahiru <span>Obori</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Economist · Tech Architect · Business Builder
         </p>
-        
-        <p>
-          With over 6 years of experience bridging the gap between complex code and market economics, he founded OneStack to give Nigerian SMEs a single, reliable partner for sustainable digital growth. His mission is simple: dismantle the technical barriers that hold African businesses back, and replace them with measurable ROI.
-        </p>
-        
-        <h4 class="mt-4">Technical Expertise</h4>
-        <div class="mb-4">
-          <span class="skill-tag">Full-Stack Development</span>
-          <span class="skill-tag">Cloud Infrastructure</span>
-          <span class="skill-tag">AI Integration</span>
-          <span class="skill-tag">Digital Strategy</span>
-          <span class="skill-tag">Economic Analysis</span>
-        </div>
-        
-        <h4>Ventures</h4>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="fas fa-building me-2" style="color: var(--accent);"></i> <strong>OneStack Digital Agency</strong> – Complete digital ecosystem for SMEs</li>
-          <li class="mb-2"><i class="fas fa-briefcase me-2" style="color: var(--accent);"></i> <strong>Jobpitality</strong> – Employment agency</li>
-         <li class="mb-2"><i class="fas fa-people-arrows me-2" style="color: var(--accent);"></i> <strong>Drecot Consults</strong> – Hospitality management firm</li>
-          <!-- <li class="mb-2"><i class="fas fa-truck me-2" style="color: var(--accent);"></i> <strong>Shopsafe Delivery Service</strong> – Logistics solutions</li>
-          <li class="mb-2"><i class="fas fa-store me-2" style="color: var(--accent);"></i> <strong>First Credmart</strong> – E-commerce platform</li> -->
-        </ul>
-        
-        <div class="bg-light p-4 rounded-4 mt-4">
-          <h5><i class="fas fa-trophy me-2" style="color: var(--accent);"></i> Recognition</h5>
-          <p class="mb-0">Early awardee of the <strong>Youth Enterprise with Innovation in Nigeria (YouWin!)</strong> program — a testament to his commitment to building businesses that solve real problems.</p>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== ACHIEVEMENTS SECTION ===== -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge">Milestones</span>
-      <h2 class="section-title">Key Achievements</h2>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="achievement-card">
-          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
-          <h4>YouWin! Awardee</h4>
-          <p>Early recipient of Nigeria's prestigious youth enterprise grant, validating his vision for business innovation.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="achievement-card">
-          <div class="achievement-icon"><i class="fas fa-briefcase"></i></div>
-          <h4>50+ SMEs Served</h4>
-          <p>Through OneStack, has helped over 50 Nigerian businesses build profitable digital presences.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="achievement-card">
-          <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
-          <h4>₦200M+ Revenue</h4>
-          <p>Collective revenue generated for OneStack clients through web design, SEO, and digital marketing strategies.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ===== BIO SECTION ===== -->
+    <section class="bio-section" id="story">
+      <div class="container">
+        <div class="bio-grid">
+          <!-- Left: Image -->
+          <div class="bio-image-col" data-aos="fade-right">
+            <div class="founder-image-wrapper">
+              <img src="image/obori5.png" alt="Dahiru Obori" />
+              <div class="founder-image-caption">
+                <h3>Dahiru Obori</h3>
+                <p>
+                  <i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo,
+                  Nigeria
+                </p>
+              </div>
+            </div>
 
-<!-- ===== TIMELINE SECTION ===== -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge">The Journey</span>
-      <h2 class="section-title">Path to Founding OneStack</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="timeline-item">
-          <div class="timeline-year">2015</div>
-          <div><h4>YouWin! Award Winner</h4><p>Received the prestigious grant that launched his entrepreneurial journey and validated his business acumen.</p></div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-year">2017</div>
-          <div><h4>Founded Drecot Consults</h4><p>Launched a hospitality consulting/management firm, gaining deep insight into the SME landscape in Nigeria.</p></div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-year">2020</div>
-          <div><h4>Founded OneStack</h4><p>Established a complete digital ecosystem to help Nigerian SMEs compete globally without the enterprise price tag.</p></div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <div><h4>50+ SMEs Served</h4><p>Expanded OneStack's reach in some states in Nigeria, delivering measurable results for a growing portfolio of clients.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- Quick Facts -->
+            <div class="quick-facts">
+              <h4 style="color: var(--primary); margin-bottom: 12px">
+                Quick Facts
+              </h4>
+              <div class="fact-row">
+                <span class="fact-label">Experience</span>
+                <span class="fact-value">6+ Years</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">Ventures</span>
+                <span class="fact-value">5+</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">Award</span>
+                <span class="fact-value">YouWin! Winner</span>
+              </div>
+              <div style="margin-top: 16px">
+                <a
+                  href="audit.html"
+                  class="btn-primary-custom"
+                  style="display: block; text-align: center"
+                  >Book a Free Audit →</a
+                >
+              </div>
+            </div>
+          </div>
 
-<!-- ===== CTA SECTION ===== -->
-<section class="cta-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark">Let's Connect</span>
-        <h2>Want to Build Your Digital Ecosystem?</h2>
-        <p>Available for speaking engagements, consulting, and mentorship. Book a free audit to get started.</p>
-        <div>
-          <a href="audit.html" class="btn-light">Book a Free Audit →</a>
-          <a href="https://linkedin.com/in/dahiru-obori" class="btn-outline-light">Connect on LinkedIn</a>
+          <!-- Right: Bio -->
+          <div class="bio-text-col" data-aos="fade-left">
+            <span class="sme-badge">The Founder's Story</span>
+            <h2
+              class="section-title text-start"
+              style="text-align: left !important"
+            >
+              About Dahiru Obori
+            </h2>
+
+            <div class="founder-quote">
+              "I believe technology should empower people, not intimidate them."
+            </div>
+
+            <p
+              style="
+                font-size: 1.1rem;
+                color: var(--gray-600);
+                margin-bottom: 16px;
+              "
+            >
+              A rare hybrid of <strong>economist</strong> and
+              <strong>technology architect</strong>. Dahiru doesn't just build
+              websites—he builds profitable digital ecosystems.
+            </p>
+
+            <p style="color: var(--gray-600); margin-bottom: 24px">
+              With over 6 years of experience bridging the gap between complex
+              code and market economics, he founded OneStack to give Nigerian
+              SMEs a single, reliable partner for sustainable digital growth.
+              His mission is simple: dismantle the technical barriers that hold
+              African businesses back, and replace them with measurable ROI.
+            </p>
+
+            <h4 style="color: var(--primary); margin-bottom: 12px">
+              Technical Expertise
+            </h4>
+            <div style="margin-bottom: 24px">
+              <span class="skill-tag">Full-Stack Development</span>
+              <span class="skill-tag">Cloud Infrastructure</span>
+              <span class="skill-tag">AI Integration</span>
+              <span class="skill-tag">Digital Strategy</span>
+              <span class="skill-tag">Business Strategy & Growth</span>
+            </div>
+
+            <h4 style="color: var(--primary); margin-bottom: 12px">Ventures</h4>
+            <ul class="venture-list">
+              <li>
+                <i class="fas fa-layer-group"></i>
+                <strong>OneStack Digital Agency</strong> – Complete digital
+                ecosystem for SMEs
+              </li>
+              <li>
+                <i class="fas fa-hotel"></i> <strong>Drecot Consults</strong> –
+                Hospitality management firm
+              </li>
+              <li>
+                <i class="fas fa-user-plus"></i> <strong>Jobpitality</strong> –
+                Employment agency
+              </li>
+              <li>
+                <i class="fas fa-trophy"></i>
+                <strong>AfriQuiz</strong> – Pan‑African trivia game
+              </li>
+              <!-- <li><i class="fas fa-truck"></i> <strong>Shopsafe Delivery Service</strong> – Logistics solutions</li> -->
+              <!-- <li><i class="fas fa-store"></i> <strong>First Credmart</strong> – E-commerce platform</li> -->
+            </ul>
+
+            <!-- Recognition -->
+            <div class="recognition-box">
+              <h5 style="color: var(--primary)">
+                <i class="fas fa-trophy me-2"></i> Recognition
+              </h5>
+              <p style="color: var(--gray-600); margin: 0">
+                Early awardee of the
+                <strong
+                  >Youth Enterprise with Innovation in Nigeria (YouWin!)</strong
+                >
+                program — a testament to his commitment to building businesses
+                that solve real problems.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h5>OneStack</h5>
-        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-        <div class="d-flex gap-3">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="achievements-section">
+      <div class="container">
+        <div class="text-center mb-5" style="margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">Milestones</span>
+          <h2 class="section-title" data-aos="fade-up">Key Achievements</h2>
+        </div>
+
+        <div
+          class="row"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+          "
+        >
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+            <h4>YouWin! Awardee</h4>
+            <p>
+              Early recipient of Nigeria's prestigious youth enterprise grant,
+              validating his vision for business innovation.
+            </p>
+          </div>
+
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="achievement-icon"><i class="fas fa-briefcase"></i></div>
+            <h4>50+ SMEs Served</h4>
+            <p>
+              Through OneStack, has helped over 50 Nigerian businesses build
+              profitable digital presences.
+            </p>
+          </div>
+
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+            <h4>₦200M+ Revenue</h4>
+            <p>
+              Collective revenue generated for OneStack clients through web
+              design, SEO, and digital marketing strategies.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h6>Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo / Remote-first</p>
-      </div>
-      <div class="col-lg-3 mb-4">
-        <h6>Newsletter</h6>
-        <form class="d-flex" id="footerNewsletter">
-          <input type="email" class="form-control newsletter-input" placeholder="Your email">
-          <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-        </form>
-      </div>
-    </div>
-    <hr>
-    <div class="text-center small">
-      <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true, offset: 100 });
+    <!-- ===== TIMELINE ===== -->
+    <section class="timeline-section">
+      <div class="container">
+        <div class="text-center mb-5" style="margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">The Journey</span>
+          <h2 class="section-title" data-aos="fade-up">
+            Path to Founding OneStack
+          </h2>
+        </div>
 
-  // Close mobile menu when clicking on nav links
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const navbar = document.querySelector('.navbar-collapse');
-      if (navbar && navbar.classList.contains('show')) {
-        navbar.classList.remove('show');
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h4>YouWin! Award Winner</h4>
+              <p>
+                Received the prestigious grant that launched his entrepreneurial
+                journey and validated his business acumen.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-year">2017</div>
+            <div class="timeline-content">
+              <h4>Founded Drecot Consults</h4>
+              <p>
+                Built a hospitality management firm that gave him front-line
+                exposure to the operational challenges Nigerian SMEs face daily.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h4>Founded OneStack</h4>
+              <p>
+                Established a complete digital ecosystem to help Nigerian SMEs
+                compete globally without the enterprise price tag.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h4>50+ SMEs Served</h4>
+              <p>
+                Expanded OneStack's reach across Nigeria, delivering measurable
+                results for a growing portfolio of clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto">
+          <span
+            class="sme-badge"
+            style="background: rgba(255, 255, 255, 0.15); color: var(--accent)"
+            data-aos="fade-down"
+            >Let's Connect</span
+          >
+          <h2 data-aos="fade-up">Want to Build Your Digital Ecosystem?</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Available for speaking engagements, consulting, and mentorship. Book
+            a free audit to get started.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <a href="audit.html" class="btn-light">Book a Free Audit →</a>
+            <a
+              href="https://linkedin.com/in/dahiru-obori"
+              class="btn-outline-light"
+              target="_blank"
+              >Connect on LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container" style="max-width: 1200px">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>OneStack</h4>
+            <p>
+              Complete Digital Ecosystem — We build, grow & secure your online
+              presence.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Web & E‑commerce</a>
+            <a href="services.html">Digital Marketing</a>
+            <a href="ai-automation.html">AI & Automation</a>
+            <a href="services.html">Cybersecurity</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="about.html">About OneStack</a>
+            <a href="results.html">Results</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Get in touch</h4>
+            <p>oborimusa@gmail.com</p>
+            <p>+234 803 966 1354</p>
+            <p>Remote-first / Osogbo</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem.
+            Built in Nigeria for African businesses.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("mobileMenu");
+      const nav = document.getElementById("navList");
+
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("active");
+          });
+        });
       }
-    });
-  });
-
-  // Newsletter form
-  const footerNewsletter = document.getElementById('footerNewsletter');
-  if (footerNewsletter) {
-    footerNewsletter.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.querySelector('input[type="email"]').value;
-      if (email) {
-        alert('Thank you for subscribing!');
-        this.reset();
-      }
-    });
-  }
-</script>
-</body>
+    </script>
+  </body>
 </html>

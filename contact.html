@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  
-  <!-- SEO META TAGS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
   <title>Contact OneStack Digital Agency · Let's Build Your Digital Ecosystem</title>
   <meta name="description" content="Get in touch with OneStack – your Complete Digital Ecosystem. Reach us via phone, email, WhatsApp, or visit our Osogbo office. We respond within 24 hours." />
   <meta name="keywords" content="contact OneStack, digital agency Lagos, web design consultation, SME digital solutions Nigeria" />
   <meta name="author" content="OneStack Digital Agency" />
-  
-  <!-- Open Graph -->
+
+  <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:title" content="Contact OneStack · Premium Digital Agency" />
   <meta property="og:description" content="Let's discuss your digital transformation journey." />
   <meta property="og:type" content="website" />
-  
-  <!-- CSS Libraries -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <meta property="og:url" content="https://onestack.ng/contact.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== AOS ===== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
-    /* Variables */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
     :root {
       --primary: #0a2647;
       --primary-dark: #051a34;
@@ -45,26 +68,108 @@
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      background-color: var(--white);
-      padding-top: 76px;
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Space Grotesk', sans-serif;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: "Space Grotesk", monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
       font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 10px 28px !important;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: white !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ===== BADGE ===== */
     .sme-badge {
-      background: var(--gradient-accent);
+      background: var(--accent);
       color: var(--primary-dark);
       padding: 0.5rem 1.5rem;
       border-radius: 50px;
@@ -95,113 +200,32 @@
       background: var(--accent);
       border-radius: 3px;
     }
+
     .section-title.text-start::after {
       left: 0;
       transform: none;
     }
 
-    /* Navbar */
-    .navbar {
-      background: var(--gradient-primary) !important;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1030;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .logo-text h1 {
-      font-family: 'Space Grotesk', monospace;
-      font-size: 1.5rem;
+    /* ===== BUTTONS ===== */
+    .btn-primary-custom {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 12px 32px;
+      border-radius: 50px;
       font-weight: 700;
-      color: white;
-      line-height: 1.2;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
     }
 
-    .logo-text p {
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 1px;
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
     }
 
-    @media (min-width: 992px) {
-      .nav-link {
-        color: rgba(255,255,255,0.9) !important;
-        margin: 0 5px;
-        padding: 8px 16px !important;
-        border-radius: 50px;
-        font-weight: 500;
-        transition: all 0.3s;
-      }
-      .nav-link:hover,
-      .nav-link.active {
-        background: var(--accent);
-        color: var(--primary-dark) !important;
-      }
-      .btn-consult-nav {
-        background: var(--accent) !important;
-        color: var(--primary-dark) !important;
-        padding: 8px 20px !important;
-        border-radius: 50px !important;
-        font-weight: 700 !important;
-      }
-      .btn-consult-nav:hover {
-        background: var(--accent-light) !important;
-        transform: translateY(-2px);
-      }
-    }
-
-    @media (max-width: 991px) {
-      body {
-        padding-top: 65px;
-      }
-      .navbar-collapse {
-        background: var(--gradient-primary);
-        padding: 1rem;
-        border-radius: 0 0 20px 20px;
-      }
-      .navbar-nav {
-        flex-direction: column !important;
-        gap: 0.5rem;
-      }
-      .nav-link {
-        padding: 12px 20px !important;
-        text-align: center;
-        border-radius: 8px;
-        color: white !important;
-      }
-      .nav-link.active {
-        background: var(--accent);
-        color: var(--primary-dark) !important;
-      }
-      .btn-consult-nav {
-        background: var(--accent) !important;
-        color: var(--primary-dark) !important;
-        padding: 12px 20px !important;
-        border-radius: 8px !important;
-        font-weight: 700 !important;
-        text-align: center;
-      }
-    }
-
-    /* Hero Section */
-    .contact-hero {
+    /* ===== HERO ===== */
+    .hero {
       background: var(--gradient-primary);
       padding: 100px 0 80px;
       text-align: center;
@@ -209,59 +233,62 @@
       position: relative;
       overflow: hidden;
     }
-    .contact-hero::before {
-      content: '';
+
+    .hero::before {
+      content: "";
       position: absolute;
       top: -50%;
       right: -20%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
       border-radius: 50%;
       animation: softShift 15s ease infinite;
     }
+
     @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
-    .contact-hero .container {
+
+    .hero-content {
       position: relative;
       z-index: 1;
     }
-    .contact-hero h1 {
+
+    .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
-      margin-bottom: 1rem;
-      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 20px;
+      font-family: "Space Grotesk", sans-serif;
     }
-    .contact-hero h1 span {
+
+    .hero h1 span {
       color: var(--accent);
     }
-    .contact-hero p {
+
+    .hero p {
       font-size: 1.2rem;
       opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
     }
-    @media (max-width: 768px) {
-      .contact-hero {
-        padding: 60px 0 40px;
-      }
-      .contact-hero h1 {
-        font-size: 2rem;
-      }
-      .contact-hero p {
-        font-size: 1rem;
-      }
-    }
 
-    /* Contact Info Cards */
+    /* ===== CONTACT INFO CARDS ===== */
     .contact-info-section {
       padding: 80px 0;
       background: white;
     }
+
     .contact-info-card {
-      background: var(--white);
+      background: white;
       border-radius: 24px;
       padding: 2rem;
       text-align: center;
@@ -280,7 +307,7 @@
     .contact-info-icon {
       width: 70px;
       height: 70px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -312,15 +339,16 @@
       color: var(--accent);
     }
 
-    /* Contact Form */
+    /* ===== CONTACT FORM & MAP ===== */
     .contact-form-section {
       padding: 80px 0;
       background: var(--off-white);
       border-top: 1px solid var(--gray-200);
       border-bottom: 1px solid var(--gray-200);
     }
+
     .contact-form-wrapper {
-      background: var(--white);
+      background: white;
       border-radius: 30px;
       padding: 2.5rem;
       box-shadow: var(--shadow-lg);
@@ -384,7 +412,7 @@
       background: var(--primary-dark);
     }
 
-    /* Map Section */
+    /* ===== MAP & OFFICE ===== */
     .map-container {
       border-radius: 20px;
       overflow: hidden;
@@ -397,9 +425,8 @@
       border: none;
     }
 
-    /* Office Info */
     .office-hours {
-      background: var(--white);
+      background: white;
       border-radius: 20px;
       padding: 1.5rem;
       border: 1px solid var(--gray-200);
@@ -438,23 +465,26 @@
       transition: all 0.3s;
       border: none;
     }
+
     .btn-whatsapp:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
       color: white;
     }
 
-    /* FAQ Section */
+    /* ===== FAQ ===== */
     .faq-section {
       padding: 80px 0;
       background: white;
     }
+
     .faq-grid {
       max-width: 800px;
       margin: 0 auto;
     }
+
     .faq-item {
-      background: var(--white);
+      background: white;
       border-radius: 20px;
       padding: 20px 28px;
       margin-bottom: 16px;
@@ -462,14 +492,17 @@
       border: 1px solid var(--gray-200);
       transition: all 0.3s;
     }
+
     .faq-item:hover {
       border-color: var(--accent);
       box-shadow: var(--shadow-sm);
     }
+
     .faq-item.active {
       border-color: var(--accent);
       box-shadow: var(--shadow-sm);
     }
+
     .faq-question {
       display: flex;
       justify-content: space-between;
@@ -478,24 +511,28 @@
       font-size: 1rem;
       color: var(--primary);
     }
+
     .faq-answer {
       margin-top: 16px;
       color: var(--gray-600);
       display: none;
       line-height: 1.6;
     }
+
     .faq-item.active .faq-answer {
       display: block;
     }
+
     .faq-question i {
       transition: transform 0.3s;
       color: var(--accent);
     }
+
     .faq-item.active .faq-question i {
       transform: rotate(180deg);
     }
 
-    /* CTA Section */
+    /* ===== CTA ===== */
     .cta-section {
       background: var(--gradient-primary);
       padding: 80px 0;
@@ -504,30 +541,35 @@
       position: relative;
       overflow: hidden;
     }
+
     .cta-section::after {
-      content: '';
+      content: "";
       position: absolute;
       top: -50%;
       left: -20%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
       border-radius: 50%;
     }
+
     .cta-section .container {
       position: relative;
       z-index: 1;
     }
+
     .cta-section h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: white;
     }
+
     .cta-section p {
       max-width: 600px;
       margin: 0 auto 32px;
       opacity: 0.9;
     }
+
     .cta-section .btn-light {
       background: var(--accent);
       color: var(--primary-dark);
@@ -539,433 +581,475 @@
       transition: all 0.3s;
       box-shadow: var(--shadow-lg);
     }
+
     .cta-section .btn-light:hover {
       transform: translateY(-3px);
       background: var(--accent-light);
     }
-    @media (max-width: 768px) {
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: var(--off-white);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--gray-300);
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .contact-form-wrapper {
+        padding: 1.5rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer .social-icons {
+        justify-content: center;
+      }
+
       .cta-section h2 {
         font-size: 1.8rem;
       }
     }
 
-    /* Footer */
-    .footer {
-      background: var(--primary);
-      color: var(--gray-300);
-      padding: 3rem 0 2rem;
-    }
-
-    .footer h5, .footer h6 {
-      color: white;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer a {
-      color: var(--gray-300);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer a:hover {
-      color: var(--accent);
-    }
-
-    .newsletter-input {
-      background: rgba(255,255,255,0.1);
-      border: none;
-      padding: 12px 20px;
-      border-radius: 50px 0 0 50px;
-      color: white;
-    }
-
-    .newsletter-input::placeholder {
-      color: rgba(255,255,255,0.5);
-    }
-
-    .newsletter-btn {
-      background: var(--accent);
-      color: var(--primary-dark);
-      border: none;
-      padding: 12px 25px;
-      border-radius: 0 50px 50px 0;
-      transition: all 0.3s;
-    }
-
-    .newsletter-btn:hover {
-      background: var(--accent-light);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .section-title {
-        font-size: 1.8rem;
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
       }
-      .contact-form-wrapper {
+
+      .contact-info-card {
         padding: 1.5rem;
       }
-      .container {
-        padding: 0 20px;
+
+      .faq-item {
+        padding: 16px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <div class="logo">
-        <img src="image/logo-placeholder.jpg" alt="OneStack Logo" onerror="this.style.display='none'">
-        <div class="logo-text">
-          <h1>OneStack<span style="color:#c5a059;">®</span></h1>
-          <p>COMPLETE DIGITAL ECOSYSTEM</p>
-        </div>
-      </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link btn-consult-nav" href="audit.html">Get Free Audit →</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ===== HERO SECTION ===== -->
-<section class="contact-hero">
-  <div class="container">
-    <div class="sme-badge" data-aos="fade-down">Get in Touch</div>
-    <h1 data-aos="fade-up" data-aos-delay="100">Let's <span>Connect</span> and Grow Together</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Ready to transform your digital presence? We're just a message away.</p>
-  </div>
-</section>
-
-<!-- ===== CONTACT INFO CARDS ===== -->
-<section class="contact-info-section">
-  <div class="container">
-    <div class="row g-4">
-      <!-- Phone -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="contact-info-card">
-          <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-          <h3>Phone</h3>
-          <p>Call us directly</p>
-          <a href="tel:+2348039661354">+234 803 966 1354</a>
-        </div>
-      </div>
-      
-      <!-- Email -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="contact-info-card">
-          <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-          <h3>Email</h3>
-          <p>Send us a message</p>
-          <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a>
-        </div>
-      </div>
-      
-      <!-- Location -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="contact-info-card">
-          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <h3>Location</h3>
-          <p>Remote-first</p>
-          <p>Serving Nigeria nationwide</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT FORM & MAP ===== -->
-<section class="contact-form-section">
-  <div class="container">
-    <div class="row g-5">
-      <!-- Contact Form -->
-      <div class="col-lg-6" data-aos="fade-right">
-        <div class="contact-form-wrapper">
-          <h2 class="section-title text-start">Send a Message</h2>
-          <p class="text-secondary mb-4">Fill out the form and we'll get back to you within 24 hours.</p>
-          
-          <form id="contactForm" action="https://formspree.io/f/maqkvreg" method="POST">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="service">Service Interested In *</label>
-              <select id="service" name="service" class="form-control" required>
-                <option value="">Select a service</option>
-                <option value="web-design">Web Design & Development</option>
-                <option value="digital-marketing">Digital Marketing</option>
-                <option value="branding">Branding & Identity</option>
-                <option value="ai-automation">AI Chatbot & Automation</option>
-                <option value="consulting">Digital Strategy Consulting</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" class="form-control" placeholder="Tell us about your project..." required></textarea>
-            </div>
-            
-            <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-          </form>
-          
-          <div id="formSuccess" class="alert alert-success mt-4" style="display: none;">
-            <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll contact you soon.
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
           </div>
-          <div id="formError" class="alert alert-danger mt-4" style="display: none;">
-            <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or call us directly.
-          </div>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
         </div>
-      </div>
-      
-      <!-- Map & Office Info -->
-      <div class="col-lg-6" data-aos="fade-left">
-        <!-- Map -->
-        <div class="map-container mb-4">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.92735657368!2d3.319104406722723!3d6.463208377937347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" allowfullscreen loading="lazy"></iframe>
-        </div>
-        
-        <!-- Office Hours -->
-        <div class="office-hours">
-          <h4><i class="fas fa-clock me-2" style="color: var(--accent);"></i> Office Hours</h4>
-          <div class="hour-item">
-            <span>Monday - Friday</span>
-            <span>9:00 AM - 6:00 PM</span>
-          </div>
-          <div class="hour-item">
-            <span>Saturday</span>
-            <span>10:00 AM - 2:00 PM</span>
-          </div>
-          <div class="hour-item">
-            <span>Sunday</span>
-            <span>Closed</span>
-          </div>
-        </div>
-        
-        <!-- WhatsApp CTA -->
-        <div class="mt-4 text-center">
-          <a href="https://wa.me/2348039661354?text=Hello%20OneStack%2C%20I%20need%20help%20with%20your%20digital%20services." class="btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ SECTION ===== -->
-<section class="faq-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Quick Answers</span>
-      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
-    </div>
-    
-    <div class="faq-grid">
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
-        <div class="faq-question">
-          <span>How fast do you reply?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">We typically respond within 2–4 hours during business days. For urgent inquiries, use the WhatsApp button – we reply within 1 hour.</div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="faq-question">
-          <span>Do you offer a free consultation?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">Yes. We offer a free 30‑minute digital audit call to understand your needs and recommend the right solutions. Just mention "free audit" in your message.</div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="faq-question">
-          <span>Can you serve clients outside Osogbo?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">Absolutely. We work remotely with clients across Lagos, Abuja, Port Harcourt, and nationwide. Our digital ecosystem is designed for seamless remote collaboration.</div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="faq-question">
-          <span>What payment methods do you accept?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">Bank transfer, card payments via Paystack, and USSD. We issue proper receipts/invoices for all transactions.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA SECTION ===== -->
-<section class="cta-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h2 data-aos="fade-up">Ready to Get Started?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a free strategy session with our team. No pressure, just possibilities.</p>
-        <a href="audit.html" class="btn-light" data-aos="fade-up" data-aos-delay="200">Schedule a Free Audit →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container" style="max-width: 1200px; color: var(--white);">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h5>OneStack</h5>
-        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-        <div class="d-flex gap-3 mt-3">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
+        <ul class="nav-links" id="navList">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="results.html">Results</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
         </ul>
       </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h6>Contact</h6>
-        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Osogbo / Remote-first</p>
-      </div>
-      <div class="col-lg-3 mb-4">
-        <h6>Newsletter</h6>
-        <form class="d-flex" id="footerNewsletter">
-          <input type="email" class="form-control newsletter-input" placeholder="Your email">
-          <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-        </form>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="sme-badge" data-aos="fade-down">Get in Touch</span>
+      <h1 data-aos="fade-up" data-aos-delay="100">Let's <span>Connect</span> and Grow Together</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Ready to transform your digital presence? We're just a message away.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT INFO CARDS ===== -->
+  <section class="contact-info-section">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        <!-- Phone -->
+        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="0">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+            <h3>Phone</h3>
+            <p>Call us directly</p>
+            <a href="tel:+2348039661354">+234 803 966 1354</a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p>Send us a message</p>
+            <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Location</h3>
+            <p>Remote-first</p>
+            <p>Serving Nigeria nationwide</p>
+          </div>
+        </div>
       </div>
     </div>
-    <hr>
-    <div class="text-center small">
-      <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+  </section>
+
+  <!-- ===== CONTACT FORM & MAP ===== -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
+
+        <!-- Contact Form -->
+        <div class="col-left" style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <div class="contact-form-wrapper">
+            <h2 class="section-title text-start" style="text-align: left !important;">Send a Message</h2>
+            <p style="color: var(--gray-600); margin-bottom: 24px;">Fill out the form and we'll get back to you within 24 hours.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/maqkvreg" method="POST">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Interested In *</label>
+                <select id="service" name="service" class="form-control" required>
+                  <option value="">Select a service</option>
+                  <option value="web-design">Web Design & Development</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="branding">Branding & Identity</option>
+                  <option value="ai-automation">AI Chatbot & Automation</option>
+                  <option value="consulting">Digital Strategy Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" class="form-control" placeholder="Tell us about your project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+            </form>
+
+            <div id="formSuccess" class="alert alert-success" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; background: #d1fae5; color: #065f46; border: 1px solid #10b981;">
+              <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll contact you soon.
+            </div>
+            <div id="formError" class="alert alert-danger" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; background: #fee2e2; color: #991b1b; border: 1px solid #ef4444;">
+              <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or call us directly.
+            </div>
+          </div>
+        </div>
+
+        <!-- Map & Office Info -->
+        <div class="col-right" style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <!-- Map -->
+          <div class="map-container" style="margin-bottom: 24px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.92735657368!2d3.319104406722723!3d6.463208377937347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <!-- Office Hours -->
+          <div class="office-hours" style="margin-bottom: 24px;">
+            <h4><i class="fas fa-clock me-2" style="color: var(--accent);"></i> Office Hours</h4>
+            <div class="hour-item">
+              <span>Monday - Friday</span>
+              <span>9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span>Saturday</span>
+              <span>10:00 AM - 2:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span>Sunday</span>
+              <span>Closed</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp CTA -->
+          <div style="text-align: center;">
+            <a href="https://wa.me/2348039661354?text=Hello%20OneStack%2C%20I%20need%20help%20with%20your%20digital%20services." class="btn-whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true, offset: 100 });
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="text-center mb-5" style="margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Quick Answers</span>
+        <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+      </div>
 
-  // Close mobile menu when clicking on nav links
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const navbar = document.querySelector('.navbar-collapse');
-      if (navbar && navbar.classList.contains('show')) {
-        navbar.classList.remove('show');
-      }
-    });
-  });
-  
-  // FAQ Accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-      if (!isActive) item.classList.add('active');
-    });
-  });
-  
-  // Contact Form Submission
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-  const formError = document.getElementById('formError');
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      
-      // Hide previous messages
-      formSuccess.style.display = 'none';
-      formError.style.display = 'none';
-      
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
-      
-      // Basic validation
-      if (!data.name || !data.email || !data.service || !data.message) {
-        formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill in all required fields.';
-        formError.style.display = 'block';
-        setTimeout(() => { formError.style.display = 'none'; }, 4000);
-        return;
-      }
-      
-      try {
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+      <div class="faq-grid">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="faq-question">
+            <span>How fast do you reply?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">We typically respond within 2–4 hours during business days. For urgent inquiries, use the WhatsApp button – we reply within 1 hour.</div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-question">
+            <span>Do you offer a free consultation?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes. We offer a free 30‑minute digital audit call to understand your needs and recommend the right solutions. Just mention "free audit" in your message.</div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="faq-question">
+            <span>Can you serve clients outside Osogbo?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Absolutely. We work remotely with clients across Lagos, Abuja, Port Harcourt, and nationwide. Our digital ecosystem is designed for seamless remote collaboration.</div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="faq-question">
+            <span>What payment methods do you accept?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Bank transfer, card payments via Paystack, and USSD. We issue proper receipts/invoices for all transactions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Let's Work Together</span>
+        <h2 data-aos="fade-up">Ready to Get Started?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Book a free strategy session with our team. No pressure, just possibilities.</p>
+        <a href="audit.html" class="btn-light" data-aos="fade-up" data-aos-delay="200">Schedule a Free Audit →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="services.html">Cybersecurity</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
         });
-        
-        if (response.ok) {
-          formSuccess.style.display = 'block';
-          contactForm.reset();
-          setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
-        } else {
-          throw new Error('Server error');
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // Contact Form Submission (Formspree)
+    const contactForm = document.getElementById('contactForm');
+    const successDiv = document.getElementById('formSuccess');
+    const errorDiv = document.getElementById('formError');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        successDiv.style.display = 'none';
+        errorDiv.style.display = 'none';
+
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        if (!data.name || !data.email || !data.service || !data.message) {
+          errorDiv.textContent = '❌ Please fill in all required fields.';
+          errorDiv.style.display = 'block';
+          setTimeout(() => { errorDiv.style.display = 'none'; }, 4000);
+          return;
         }
-      } catch (error) {
-        formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error sending message. Please call us directly at +234 803 966 1354.';
-        formError.style.display = 'block';
-        setTimeout(() => { formError.style.display = 'none'; }, 5000);
-      }
-    });
-  }
-  
-  // Newsletter form
-  const footerNewsletter = document.getElementById('footerNewsletter');
-  if (footerNewsletter) {
-    footerNewsletter.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.querySelector('input[type="email"]').value;
-      if (email) {
-        alert('Thank you for subscribing!');
-        this.reset();
-      }
-    });
-  }
-</script>
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            successDiv.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => { successDiv.style.display = 'none'; }, 5000);
+          } else {
+            throw new Error('Server error');
+          }
+        } catch (error) {
+          errorDiv.textContent = '❌ Error sending message. Please call us directly at +234 803 966 1354.';
+          errorDiv.style.display = 'block';
+          setTimeout(() => { errorDiv.style.display = 'none'; }, 5000);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

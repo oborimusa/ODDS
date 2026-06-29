@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Our Results | OneStack Digital Agency · Real Success Stories from Nigerian SMEs</title>
-  <meta name="description" content="See how OneStack helped Nigerian businesses grow with web design, SEO, digital marketing, and AI automation. Real metrics, real results.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
+  <title>Results | OneStack Digital Agency · Real Success Stories from Nigerian SMEs</title>
+  <meta name="description" content="See how OneStack helped Nigerian businesses grow with web design, SEO, digital marketing, and AI automation. Real metrics, real results." />
+  <meta name="keywords" content="digital agency results Nigeria, case studies, SME success stories, web design results" />
+  <meta name="author" content="OneStack Digital Agency" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Results | OneStack Digital Agency · Real Success Stories" />
+  <meta property="og:description" content="See how OneStack helped Nigerian businesses grow. Real metrics, real results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onestack.ng/results.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== AOS ===== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
@@ -16,7 +39,7 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background: #ffffff;
       color: #1e293b;
       line-height: 1.5;
@@ -35,7 +58,6 @@
       --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
       --gray-600: #475569;
-      --gray-700: #334155;
       --gray-800: #1e293b;
       --dark: #0f172a;
       --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
@@ -44,7 +66,6 @@
       --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-      --success-green: #10b981;
     }
 
     .container {
@@ -53,9 +74,9 @@
       padding: 0 32px;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     header {
-      background: rgba(255,255,255,0.98);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
@@ -75,25 +96,26 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      text-decoration: none;
     }
 
     .logo img {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
       object-fit: cover;
     }
 
     .logo-text h1 {
-      font-family: 'Space Grotesk', monospace;
-      font-size: 1.6rem;
+      font-family: "Space Grotesk", monospace;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--primary);
       line-height: 1.2;
     }
 
     .logo-text p {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 600;
       color: var(--accent);
       letter-spacing: 1px;
@@ -105,68 +127,49 @@
       list-style: none;
       align-items: center;
     }
+
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
       color: var(--gray-800);
       transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
     }
+
     .nav-links a:hover {
       color: var(--accent);
     }
+
     .nav-links a.active {
-      color: var(--accent);
-      font-weight: 600;
+      background: var(--accent);
+      color: var(--primary-dark) !important;
     }
+
     .btn-consult {
       background: var(--gradient-primary);
       color: white !important;
-      padding: 10px 28px;
+      padding: 10px 28px !important;
       border-radius: 40px;
       font-weight: 600;
       box-shadow: var(--shadow-sm);
     }
+
     .btn-consult:hover {
       background: var(--primary-dark);
       transform: translateY(-2px);
       color: white !important;
     }
+
     .menu-toggle {
       display: none;
       font-size: 1.6rem;
       cursor: pointer;
     }
 
-    /* HERO SECTION */
-    .results-hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .results-hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-    @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-    .results-hero .container {
-      position: relative;
-      z-index: 1;
-    }
+    /* ===== BADGE ===== */
     .sme-badge {
-      background: var(--gradient-accent);
+      background: var(--accent);
       color: var(--primary-dark);
       padding: 0.5rem 1.5rem;
       border-radius: 50px;
@@ -175,69 +178,16 @@
       margin-bottom: 1.5rem;
       font-size: 0.8rem;
     }
-    .results-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-    .results-hero h1 span {
-      color: var(--accent);
-    }
-    .results-hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      .results-hero { padding: 60px 0; }
-      .results-hero h1 { font-size: 2rem; }
-      .results-hero p { font-size: 1rem; }
-    }
 
-    /* STATS BANNER */
-    .stats-banner {
-      background: var(--primary);
-      color: white;
-      padding: 60px 0;
-    }
-    .stats-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-      text-align: center;
-    }
-    .stat-card h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    .stat-card p {
-      opacity: 0.8;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 768px) {
-      .stats-grid { justify-content: center; }
-      .stat-card { min-width: 140px; }
-      .stat-card h2 { font-size: 1.8rem; }
-    }
-
-    /* CASE STUDIES */
-    .case-studies {
-      padding: 100px 0;
-      background: white;
-    }
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
       text-align: center;
       margin-bottom: 16px;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: "Space Grotesk", sans-serif;
       color: var(--primary);
     }
+
     .section-title::after {
       content: '';
       display: block;
@@ -247,6 +197,7 @@
       margin: 12px auto 0;
       border-radius: 3px;
     }
+
     .section-sub {
       text-align: center;
       color: var(--gray-600);
@@ -254,11 +205,121 @@
       margin: 0 auto 56px;
       font-size: 1.1rem;
     }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary-custom {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+
+    @keyframes softShift {
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ===== STATS BANNER ===== */
+    .stats-banner {
+      background: var(--primary);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-card h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat-card p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* ===== CASE STUDIES ===== */
+    .case-studies {
+      padding: 100px 0;
+      background: white;
+    }
+
     .cases-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 40px;
     }
+
     .case-card {
       background: white;
       border-radius: 28px;
@@ -267,24 +328,29 @@
       transition: all 0.3s ease;
       box-shadow: var(--shadow-sm);
     }
+
     .case-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
+
     .case-image {
       background: var(--off-white);
       padding: 40px 20px;
       text-align: center;
       border-bottom: 1px solid var(--gray-200);
     }
+
     .case-image i {
       font-size: 3rem;
       color: var(--accent);
     }
+
     .case-content {
       padding: 28px;
     }
+
     .case-category {
       font-size: 0.7rem;
       text-transform: uppercase;
@@ -292,11 +358,13 @@
       color: var(--accent);
       font-weight: 600;
     }
+
     .case-content h3 {
       font-size: 1.4rem;
       margin: 10px 0 12px;
       color: var(--primary);
     }
+
     .metrics {
       background: var(--gray-100);
       border-radius: 20px;
@@ -307,20 +375,24 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+
     .metric {
       text-align: center;
     }
+
     .metric .number {
       font-size: 1.3rem;
       font-weight: 800;
       color: var(--accent);
     }
+
     .case-content p {
       color: var(--gray-600);
       margin-bottom: 20px;
       font-size: 0.9rem;
       line-height: 1.6;
     }
+
     .btn-case {
       color: var(--accent);
       text-decoration: none;
@@ -330,28 +402,27 @@
       gap: 8px;
       transition: all 0.3s;
     }
+
     .btn-case:hover {
       gap: 12px;
       color: var(--accent-dark);
     }
-    @media (max-width: 768px) {
-      .cases-grid { grid-template-columns: 1fr; }
-      .section-title { font-size: 1.8rem; }
-    }
 
-    /* TESTIMONIALS */
+    /* ===== TESTIMONIALS ===== */
     .testimonial-section {
       background: var(--off-white);
       padding: 100px 0;
       border-top: 1px solid var(--gray-200);
       border-bottom: 1px solid var(--gray-200);
     }
+
     .testimonial-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
       justify-content: center;
     }
+
     .testimonial-card {
       background: white;
       border-radius: 24px;
@@ -360,32 +431,37 @@
       border: 1px solid var(--gray-200);
       transition: all 0.3s;
     }
+
     .testimonial-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
+
     .testimonial-card i.fa-quote-left {
       color: var(--accent);
       opacity: 0.4;
       font-size: 2rem;
     }
+
     .testimonial-card p {
       margin: 16px 0;
       font-style: italic;
       color: var(--gray-700);
       line-height: 1.6;
     }
+
     .client-name {
       font-weight: 700;
       color: var(--primary);
     }
+
     .client-title {
       font-size: 0.8rem;
       color: var(--gray-600);
     }
 
-    /* CTA SECTION */
+    /* ===== CTA ===== */
     .cta-section {
       background: var(--gradient-primary);
       color: white;
@@ -394,30 +470,35 @@
       position: relative;
       overflow: hidden;
     }
+
     .cta-section::after {
-      content: '';
+      content: "";
       position: absolute;
       top: -50%;
       left: -20%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
       border-radius: 50%;
     }
+
     .cta-section .container {
       position: relative;
       z-index: 1;
     }
+
     .cta-section h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: white;
     }
+
     .cta-section p {
       max-width: 600px;
       margin: 0 auto 32px;
       opacity: 0.9;
     }
+
     .btn-glow {
       background: var(--accent);
       color: var(--primary-dark);
@@ -426,38 +507,36 @@
       font-weight: 700;
       text-decoration: none;
       display: inline-block;
-      position: relative;
-      z-index: 1;
       transition: all 0.3s;
       font-size: 1rem;
       box-shadow: var(--shadow-lg);
     }
+
     .btn-glow:hover {
       transform: translateY(-3px);
       background: var(--accent-light);
     }
-    @media (max-width: 768px) {
-      .cta-section h2 { font-size: 1.8rem; }
-      .btn-glow { padding: 14px 32px; width: 100%; }
-    }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       background: var(--primary);
-      color: var(--gray-300);
+      color: var(--off-white);
       padding: 60px 0 30px;
     }
+
     .footer-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
       justify-content: space-between;
     }
+
     .footer-col h4 {
       color: white;
       margin-bottom: 20px;
       font-size: 1rem;
     }
+
     .footer-col a {
       display: block;
       color: var(--gray-300);
@@ -466,28 +545,34 @@
       font-size: 0.9rem;
       transition: color 0.2s;
     }
+
     .footer-col a:hover {
       color: var(--accent);
     }
+
     .footer-col p {
       margin-bottom: 8px;
     }
+
     .social-icons a {
       margin-right: 18px;
       font-size: 1.2rem;
       color: var(--gray-300);
     }
+
     .social-icons a:hover {
       color: var(--accent);
     }
+
     .copyright {
       text-align: center;
       padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       margin-top: 40px;
       font-size: 0.8rem;
     }
 
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 880px) {
       .nav-links {
         display: none;
@@ -497,58 +582,128 @@
         padding: 20px 0;
         gap: 1rem;
       }
+
       .nav-links.active {
         display: flex;
       }
+
       .menu-toggle {
         display: block;
       }
+
       .container {
         padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .stats-grid {
+        justify-content: center;
+      }
+
+      .stat-card {
+        min-width: 140px;
+      }
+
+      .stat-card h2 {
+        font-size: 1.8rem;
+      }
+
+      .cases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer .social-icons {
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .case-content {
+        padding: 20px;
+      }
+
+      .metrics {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .btn-glow {
+        padding: 14px 32px;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <div class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="image/logo-placeholder.jpg" alt="OneStack Logo" onerror="this.style.display='none'">
-        </a>
-        <div class="logo-text">
-          <h1>OneStack<span style="color:#c5a059;">®</span></h1>
-          <p>COMPLETE DIGITAL ECOSYSTEM</p>
-        </div>
-      </div>
-      <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
-      <ul class="nav-links" id="navList">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="results.html" class="active">Results</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
-      </ul>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO SECTION -->
-  <section class="results-hero">
+  <!-- ===== HEADER ===== -->
+  <header>
     <div class="container">
-      <div class="sme-badge" data-aos="fade-down">Proven Track Record</div>
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
+          </div>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="results.html" class="active">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="sme-badge" data-aos="fade-down">Proven Track Record</span>
       <h1 data-aos="fade-up" data-aos-delay="100">Real <span>Results</span> for Real Businesses</h1>
       <p data-aos="fade-up" data-aos-delay="200">We don't just build websites — we deliver measurable growth. See how we've helped Nigerian SMEs scale their digital presence.</p>
     </div>
   </section>
 
-  <!-- KEY METRICS BANNER -->
-  <div class="stats-banner">
+  <!-- ===== STATS BANNER ===== -->
+  <section class="stats-banner">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
@@ -569,16 +724,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- CASE STUDIES GRID -->
+  <!-- ===== CASE STUDIES ===== -->
   <section class="case-studies">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Success Stories That Speak Volumes</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Every project comes with measurable outcomes. Here's a glimpse of what we've achieved.</p>
-      
+
       <div class="cases-grid">
-        <!-- Case 1 - E-commerce -->
+
+        <!-- Case 1: E-commerce -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="0">
           <div class="case-image"><i class="fas fa-store"></i></div>
           <div class="case-content">
@@ -590,11 +746,11 @@
               <div class="metric"><span class="number">₦45M</span><br>Revenue</div>
             </div>
             <p>Complete website overhaul + SEO + Google Ads. Within 3 months, CredMart saw a 240% increase in online sales and ranked #1 for 12 product keywords.</p>
-            <a href="case-study-credmart.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Case 2 - Logistics -->
+        <!-- Case 2: Logistics -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="100">
           <div class="case-image"><i class="fas fa-truck"></i></div>
           <div class="case-content">
@@ -605,11 +761,11 @@
               <div class="metric"><span class="number">300+</span><br>Leads/Month</div>
             </div>
             <p>Custom website + WhatsApp Business API integration. Customer response time dropped from hours to minutes, and inbound leads tripled in 60 days.</p>
-            <a href="case-study-shopsafe.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Case 3 - Media -->
+        <!-- Case 3: Media -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="200">
           <div class="case-image"><i class="fas fa-video"></i></div>
           <div class="case-content">
@@ -620,11 +776,11 @@
               <div class="metric"><span class="number">20k+</span><br>Followers</div>
             </div>
             <p>Social media strategy + content production. Grew from 1,000 to over 20,000 followers in 6 months, with engagement rates tripling.</p>
-            <a href="case-study-afrixpression.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Case 4 - Consulting -->
+        <!-- Case 4: Consulting -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="300">
           <div class="case-image"><i class="fas fa-university"></i></div>
           <div class="case-content">
@@ -635,11 +791,11 @@
               <div class="metric"><span class="number">+180%</span><br>Organic Traffic</div>
             </div>
             <p>SEO + content marketing strategy. Drecot Consults now ranks #1 on Google for 15 high-value keywords in their industry, driving consistent inbound leads.</p>
-            <a href="case-study-drecot.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Case 5 - Automation -->
+        <!-- Case 5: Automation -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="400">
           <div class="case-image"><i class="fas fa-robot"></i></div>
           <div class="case-content">
@@ -650,11 +806,11 @@
               <div class="metric"><span class="number">24/7</span><br>Chatbot Live</div>
             </div>
             <p>AI chatbot deployment on website and WhatsApp. Automated 60% of customer inquiries, freeing up staff and capturing leads after hours.</p>
-            <a href="case-study-zena.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Case 6 - Training -->
+        <!-- Case 6: Training -->
         <div class="case-card" data-aos="fade-up" data-aos-delay="500">
           <div class="case-image"><i class="fas fa-chalkboard-user"></i></div>
           <div class="case-content">
@@ -665,19 +821,20 @@
               <div class="metric"><span class="number">+40%</span><br>Productivity</div>
             </div>
             <p>Digital skills training for 50+ staff members in SEO, social media, and data analytics. Resulted in measurable productivity gains and better campaign performance.</p>
-            <a href="case-study-techmeright.html" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-case">Read full story <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- ===== TESTIMONIALS ===== -->
   <section class="testimonial-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
       <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Don't just take our word for it — hear from the businesses we've helped.</p>
-      
+
       <div class="testimonial-grid">
         <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
           <i class="fas fa-quote-left"></i>
@@ -695,13 +852,13 @@
           <i class="fas fa-quote-left"></i>
           <p>"Our social media presence exploded after working with OneStack. They're responsive, creative, and truly care about results."</p>
           <div class="client-name">— Pastor James</div>
-          <div class="client-title">AfriXpression</div>
+          <div class="client-title">CFAMI Media</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA SECTION -->
+  <!-- ===== CTA ===== -->
   <section class="cta-section">
     <div class="container">
       <h2 data-aos="fade-up">Ready to Become Our Next Success Story?</h2>
@@ -712,57 +869,67 @@
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="container" style="max-width: 1200px; color: var(--white);">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>OneStack</h4>
-        <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="services.html">Cybersecurity</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="services.html">Web & E‑commerce</a>
-        <a href="services.html">Digital Marketing</a>
-        <a href="services.html">AI & Automation</a>
-        <a href="services.html">Cybersecurity</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About OneStack</a>
-        <a href="results.html">Case Studies</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Get in touch</h4>
-        <p>oborimusa@gmail.com</p>
-        <p>+234 803 966 1354</p>
-        <p>Remote-first / Osogbo</p>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
       </div>
     </div>
-    <div class="copyright">
-      <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true, offset: 100 });
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
 
-  // Mobile menu toggle
-  const toggle = document.getElementById('mobileMenu');
-  const nav = document.getElementById('navList');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
-  }
-</script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

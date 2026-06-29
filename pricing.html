@@ -1,647 +1,1035 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing · OneStack Digital Agency</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* ---------- RESET & BASE ---------- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0A0F1E;
-            color: #E8EDF5;
-            line-height: 1.6;
-            padding: 2rem 1.5rem;
-        }
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
+  <!-- ===== SEO ===== -->
+  <title>Pricing | OneStack Digital Agency · Complete Digital Ecosystem for Nigerian SMEs</title>
+  <meta name="description" content="Transparent pricing for Nigerian SMEs. Get web design, SEO, AI automation, and marketing under one roof. No hidden fees. Guaranteed results." />
+  <meta name="keywords" content="digital agency pricing Nigeria, web design cost Lagos, SEO pricing, SME digital solutions Nigeria" />
+  <meta name="author" content="OneStack Digital Agency" />
 
-        /* ---------- NAVIGATION ---------- */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0 3rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Pricing | OneStack Digital Agency · Complete Digital Ecosystem" />
+  <meta property="og:description" content="Transparent pricing for Nigerian SMEs. No hidden fees. Guaranteed results or your money back." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onestack.ng/pricing.html" />
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-        .logo span {
-            color: #FF6B35;
-        }
-        .logo i {
-            color: #F4C430;
-            margin-right: 8px;
-        }
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: #A0AEC0;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: 0.2s;
-        }
-        .nav-links a:hover {
-            color: #FFFFFF;
-        }
-        .nav-cta {
-            background: #FF6B35;
-            color: #0A0F1E !important;
-            padding: 0.6rem 1.4rem;
-            border-radius: 40px;
-            font-weight: 700 !important;
-            transition: 0.2s;
-        }
-        .nav-cta:hover {
-            background: #F4C430;
-            transform: scale(1.02);
-        }
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-        /* ---------- HEADER ---------- */
-        .pricing-header {
-            text-align: center;
-            padding: 2rem 0 3rem 0;
-        }
-        .pricing-header h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            line-height: 1.2;
-        }
-        .pricing-header h1 span {
-            background: linear-gradient(135deg, #FF6B35, #F4C430);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .pricing-header p {
-            font-size: 1.2rem;
-            color: #8896AB;
-            max-width: 700px;
-            margin: 1rem auto 0;
-        }
+  <!-- ===== AOS ===== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-        /* ---------- PRICING GRID ---------- */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .pricing-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 28px;
-            padding: 2.5rem 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(255, 107, 53, 0.4);
-            box-shadow: 0 20px 40px -15px rgba(255, 107, 53, 0.15);
-        }
+    body {
+      font-family: "Inter", sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-        /* Popular Badge */
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #F4C430;
-            color: #0A0F1E;
-            font-weight: 800;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-        }
+    :root {
+      --primary: #0a2647;
+      --primary-dark: #051a34;
+      --primary-light: #1e3a5f;
+      --accent: #c5a059;
+      --accent-light: #d4b37a;
+      --accent-dark: #9e7b44;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --dark: #0f172a;
+      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
+    }
 
-        .card-tier {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            color: #FF6B35;
-            margin-bottom: 0.5rem;
-        }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-        .card-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-        }
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+    }
 
-        .card-price {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin: 1rem 0 0.2rem;
-            color: #FFFFFF;
-        }
-        .card-price small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #8896AB;
-        }
-        .setup-fee {
-            font-size: 0.9rem;
-            color: #8896AB;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 1.5rem;
-        }
-        .setup-fee strong {
-            color: #F4C430;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
 
-        .feature-list {
-            list-style: none;
-            flex: 1;
-            margin-bottom: 2rem;
-        }
-        .feature-list li {
-            padding: 0.6rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            font-size: 0.95rem;
-            color: #C9D0DF;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-        }
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-        .feature-list i {
-            color: #F4C430;
-            font-size: 1.1rem;
-            margin-top: 0.2rem;
-            min-width: 18px;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
 
-        .guarantee-tag {
-            background: rgba(255, 107, 53, 0.08);
-            border-left: 4px solid #FF6B35;
-            padding: 0.8rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #E8EDF5;
-            margin: 1rem 0 2rem;
-        }
-        .guarantee-tag strong {
-            color: #FF6B35;
-        }
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-        .btn-primary {
-            background: #FF6B35;
-            color: #0A0F1E;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 1rem;
-            border: none;
-            border-radius: 60px;
-            cursor: pointer;
-            transition: 0.25s;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            width: 100%;
-        }
-        .btn-primary:hover {
-            background: #F4C430;
-            transform: scale(1.01);
-        }
+    .logo-text h1 {
+      font-family: "Space Grotesk", monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
 
-        .btn-outline {
-            background: transparent;
-            color: #FFFFFF;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 1rem;
-            border: 2px solid rgba(255,255,255,0.15);
-            border-radius: 60px;
-            cursor: pointer;
-            transition: 0.25s;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            width: 100%;
-        }
-        .btn-outline:hover {
-            border-color: #FF6B35;
-            background: rgba(255, 107, 53, 0.05);
-        }
+    .logo-text p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
 
-        /* ---------- WHY SETUP FEE ---------- */
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 4rem;
-            margin-bottom: 2rem;
-        }
-        .section-title span {
-            color: #FF6B35;
-        }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
 
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0 3rem;
-        }
-        .value-item {
-            background: rgba(255,255,255,0.02);
-            padding: 1.8rem 1.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.04);
-            text-align: center;
-        }
-        .value-item i {
-            font-size: 2.2rem;
-            color: #F4C430;
-            margin-bottom: 1rem;
-        }
-        .value-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-        .value-item p {
-            font-size: 0.9rem;
-            color: #8896AB;
-        }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
+    }
 
-        /* ---------- GUARANTEE BOX ---------- */
-        .guarantee-box {
-            background: linear-gradient(145deg, rgba(255, 107, 53, 0.05), rgba(244, 196, 48, 0.02));
-            border: 2px solid rgba(255, 107, 53, 0.25);
-            border-radius: 28px;
-            padding: 3rem 2.5rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        .guarantee-box h2 {
-            font-size: 2rem;
-            font-weight: 800;
-        }
-        .guarantee-box h2 i {
-            color: #F4C430;
-            margin-right: 12px;
-        }
-        .guarantee-box p {
-            max-width: 700px;
-            margin: 1rem auto 0;
-            color: #C9D0DF;
-            font-size: 1.05rem;
-        }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-        /* ---------- FAQ ---------- */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0 4rem;
-        }
-        @media (max-width: 768px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .faq-item {
-            background: rgba(255,255,255,0.02);
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
-        .faq-item h4 {
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
-            color: #FFFFFF;
-        }
-        .faq-item p {
-            font-size: 0.95rem;
-            color: #8896AB;
-        }
+    .nav-links a.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
 
-        /* ---------- CTA ---------- */
-        .cta-section {
-            text-align: center;
-            padding: 3rem 0 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 2rem;
-        }
-        .cta-section h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-        }
-        .cta-section p {
-            color: #8896AB;
-            margin: 0.5rem 0 2rem;
-        }
-        .cta-btn-large {
-            background: #FF6B35;
-            color: #0A0F1E;
-            font-weight: 700;
-            font-size: 1.2rem;
-            padding: 1.2rem 4rem;
-            border: none;
-            border-radius: 60px;
-            cursor: pointer;
-            transition: 0.25s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .cta-btn-large:hover {
-            background: #F4C430;
-            transform: scale(1.03);
-        }
-        .fine-print {
-            font-size: 0.8rem;
-            color: #5A6A7A;
-            margin-top: 1.5rem;
-        }
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 10px 28px !important;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
 
-        /* ---------- FOOTER ---------- */
-        .footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.9rem;
-            color: #5A6A7A;
-        }
-        .footer a {
-            color: #8896AB;
-            text-decoration: none;
-            margin-left: 1.5rem;
-        }
-        .footer a:hover {
-            color: #FFFFFF;
-        }
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: white !important;
+    }
 
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 700px) {
-            body {
-                padding: 1rem;
-            }
-            .pricing-header h1 {
-                font-size: 2.2rem;
-            }
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nav-links {
-                gap: 1.2rem;
-                width: 100%;
-                justify-content: flex-start;
-            }
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            .card-price {
-                font-size: 2.2rem;
-            }
-            .guarantee-box {
-                padding: 2rem 1.2rem;
-            }
-            .cta-btn-large {
-                padding: 1rem 2rem;
-                width: 100%;
-            }
-            .footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .footer a {
-                margin: 0 0.8rem;
-            }
-        }
-    </style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ===== BADGE ===== */
+    .sme-badge {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--primary);
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      max-width: 700px;
+      margin: 0 auto 56px;
+      font-size: 1.1rem;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary-custom {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    .btn-outline-custom {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-custom:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+
+    @keyframes softShift {
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ===== PRICING GRID ===== */
+    .pricing-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 32px;
+      padding: 40px 32px;
+      text-align: left;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-accent);
+      transform: scale(1.02);
+      border-width: 2px;
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.02) translateY(-8px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-accent);
+      color: var(--primary-dark);
+      padding: 4px 16px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .pricing-card .tier {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--gray-600);
+    }
+
+    .price-note {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+
+    .pricing-card ul {
+      text-align: left;
+      margin: 16px 0 24px;
+      padding-left: 0;
+      list-style: none;
+      flex: 1;
+    }
+
+    .pricing-card li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--gray-800);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .pricing-card li i {
+      color: var(--accent);
+      margin-top: 3px;
+      min-width: 18px;
+    }
+
+    .guarantee-tag {
+      background: rgba(197, 160, 89, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--gray-800);
+      margin: 8px 0 20px;
+    }
+
+    .guarantee-tag strong {
+      color: var(--accent-dark);
+    }
+
+    .pricing-card .btn {
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      margin-top: auto;
+    }
+
+    .btn-primary-custom {
+      background: var(--gradient-primary);
+      color: white;
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gray-800);
+      border: 2px solid var(--gray-200);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ===== VALUE GRID ===== */
+    .value-section {
+      padding: 80px 0;
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .value-item {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .value-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-item i {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .value-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .value-item p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* ===== GUARANTEE BOX ===== */
+    .guarantee-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .guarantee-box {
+      background: var(--gradient-primary);
+      border-radius: 28px;
+      padding: 48px 40px;
+      text-align: center;
+      color: white;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .guarantee-box h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .guarantee-box h2 i {
+      color: var(--accent);
+      margin-right: 12px;
+    }
+
+    .guarantee-box p {
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .guarantee-box p strong {
+      color: var(--accent);
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: var(--gradient-primary);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    .cta-section .btn-light {
+      background: white;
+      color: var(--primary-dark);
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+      color: var(--primary-dark);
+    }
+
+    .cta-section .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: var(--off-white);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--gray-300);
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .pricing-card.featured:hover {
+        transform: scale(1) translateY(-8px);
+      }
+
+      .guarantee-box {
+        padding: 32px 20px;
+      }
+
+      .guarantee-box h2 {
+        font-size: 1.5rem;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer .social-icons {
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .cta-section .btn-light,
+      .cta-section .btn-outline-light {
+        display: block;
+        margin: 10px 20px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .price {
+        font-size: 2.2rem;
+      }
+
+      .pricing-card {
+        padding: 28px 20px;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
     <div class="container">
-
-        <!-- ======== NAV ======== -->
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-layer-group"></i> One<span>Stack</span>
-            </div>
-            <div class="nav-links">
-                <a href="#">Services</a>
-                <a href="#pricing" style="color:#FFFFFF;">Pricing</a>
-                <a href="#audit">Audit</a>
-                <a href="#contact">Contact</a>
-                <a href="#audit" class="nav-cta"><i class="fas fa-rocket"></i> Free Audit</a>
-            </div>
-        </nav>
-
-        <!-- ======== HEADER ======== -->
-        <header class="pricing-header">
-            <h1>Stop Paying for Hype. <br><span>Pay for Measurable Results.</span></h1>
-            <p>Transparent, fixed-cost digital packages for Nigerian SMEs. No fluff, no hidden fees, and a guarantee that actually protects you.</p>
-        </header>
-
-        <!-- ======== PRICING GRID ======== -->
-        <div class="pricing-grid" id="pricing">
-
-            <!-- Card 1: Essential -->
-            <div class="pricing-card">
-                <div class="card-tier">💼 Essential</div>
-                <div class="card-title">Startup</div>
-                <div class="card-price">₦120,000 <small>/ month</small></div>
-                <div class="setup-fee"><strong>+ ₦200,000</strong> one-time setup</div>
-
-                <ul class="feature-list">
-                    <li><i class="fas fa-check-circle"></i> 5-page custom website (hosting incl.)</li>
-                    <li><i class="fas fa-check-circle"></i> On-page SEO for 10 high-intent keywords</li>
-                    <li><i class="fas fa-check-circle"></i> Google My Business full optimization</li>
-                    <li><i class="fas fa-check-circle"></i> 4 blog posts / social captions per month</li>
-                    <li><i class="fas fa-check-circle"></i> Monthly 1-page performance dashboard</li>
-                    <li><i class="fas fa-check-circle"></i> Email support (48hr response SLA)</li>
-                </ul>
-
-                <div class="guarantee-tag">
-                    <strong>🔒 Guarantee:</strong> 15% increase in organic traffic within 90 days, or next month <strong>FREE</strong>.
-                </div>
-
-                <a href="#audit" class="btn-primary">Start with Essential</a>
-            </div>
-
-            <!-- Card 2: Business (Popular) -->
-            <div class="pricing-card" style="border-color: rgba(255, 107, 53, 0.3);">
-                <div class="popular-badge">🔥 Most Popular</div>
-                <div class="card-tier">🚀 Business</div>
-                <div class="card-title">Growth</div>
-                <div class="card-price">₦350,000 <small>/ month</small></div>
-                <div class="setup-fee"><strong>+ ₦200,000</strong> one-time setup</div>
-
-                <ul class="feature-list">
-                    <li><i class="fas fa-check-circle"></i> 10-page site + E-commerce (50 products)</li>
-                    <li><i class="fas fa-check-circle"></i> Advanced SEO (30 keywords + backlinks)</li>
-                    <li><i class="fas fa-check-circle"></i> Google Ads management (up to ₦500k spend)</li>
-                    <li><i class="fas fa-check-circle"></i> 1 custom AI chatbot for lead qualification</li>
-                    <li><i class="fas fa-check-circle"></i> 8 blogs + 4 video scripts per month</li>
-                    <li><i class="fas fa-check-circle"></i> Bi-weekly strategy calls + live dashboard</li>
-                    <li><i class="fas fa-check-circle"></i> Priority WhatsApp support (24hr SLA)</li>
-                </ul>
-
-                <div class="guarantee-tag">
-                    <strong>🔒 Guarantee:</strong> 20% increase in leads/sales conversions within 90 days, or next month <strong>FREE</strong>.
-                </div>
-
-                <a href="#audit" class="btn-primary">Start with Business</a>
-            </div>
-
-            <!-- Card 3: Enterprise -->
-            <div class="pricing-card">
-                <div class="card-tier">🏢 Enterprise</div>
-                <div class="card-title">Scale</div>
-                <div class="card-price" style="font-size:2.2rem;">Custom</div>
-                <div class="setup-fee">Starts at <strong>₦1,200,000</strong> / month · Setup quoted per project</div>
-
-                <ul class="feature-list">
-                    <li><i class="fas fa-check-circle"></i> Full infrastructure + CRM integration</li>
-                    <li><i class="fas fa-check-circle"></i> Omnichannel (SEO, Meta, Google, Email)</li>
-                    <li><i class="fas fa-check-circle"></i> Cybersecurity assessment & monitoring</li>
-                    <li><i class="fas fa-check-circle"></i> Dedicated PM, 2 Devs, 1 AI Specialist</li>
-                    <li><i class="fas fa-check-circle"></i> 99.9% uptime SLA (financial compensation)</li>
-                    <li><i class="fas fa-check-circle"></i> Free staff training on all systems</li>
-                </ul>
-
-                <div class="guarantee-tag">
-                    <strong>🔒 Guarantee:</strong> Minimum 3x ROAS on paid campaigns, or we refund management fees for the quarter.
-                </div>
-
-                <a href="#audit" class="btn-outline">Contact Enterprise</a>
-            </div>
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
+          </div>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
         </div>
-
-        <!-- ======== WHY SETUP FEE ======== -->
-        <h2 class="section-title">Why The <span>Setup Fee</span>? (And Why You Should Pay It)</h2>
-        <div class="value-grid">
-            <div class="value-item">
-                <i class="fas fa-users"></i>
-                <h4>Deep Discovery</h4>
-                <p>5 hours interviewing your team to understand your actual customers.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-chess-queen"></i>
-                <h4>Competitor Analysis</h4>
-                <p>We audit your top 3 Nigerian competitors and find their weaknesses.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-cogs"></i>
-                <h4>Infrastructure Build</h4>
-                <p>Hosting, tracking pixels, and CRM configured before Month 1 starts.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-file-pdf"></i>
-                <h4>Your First Audit</h4>
-                <p>A 20-page Digital Health Check PDF before we write a single line of code.</p>
-            </div>
-        </div>
-
-        <!-- ======== GUARANTEE ======== -->
-        <div class="guarantee-box">
-            <h2><i class="fas fa-shield-alt"></i> The "No-BS" Guarantee</h2>
-            <p>
-                If after 90 days we haven't met the specific KPI (Traffic % or Leads %) stated in your tier, 
-                you can either <strong>cancel immediately with zero penalties</strong> or get the next month 
-                of service <strong>completely free</strong>. No court cases, no fine print tricks.
-            </p>
-        </div>
-
-        <!-- ======== FAQ ======== -->
-        <h2 class="section-title" style="margin-top:0;">Quick <span>Answers</span></h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4>Can I cancel after 1 month?</h4>
-                <p>Absolutely. Monthly rolling contract. Pay the setup fee, cancel the management, and walk away. No drama.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Why Naira pricing?</h4>
-                <p>We buy hosting and pay developers in Naira. We price in Naira to protect you from exchange rate volatility.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Do I own my website if I leave?</h4>
-                <p>100% ownership. We hand over admin credentials, hosting login, and all source code upon your final payment.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Is this just AI-generated work?</h4>
-                <p>We use AI to speed up workflows, but every final code, ad copy, and strategy call is done by a human Nigerian expert.</p>
-            </div>
-        </div>
-
-        <!-- ======== CTA ======== -->
-        <div class="cta-section" id="audit">
-            <h2>Stop Reading. <span style="color:#FF6B35;">Start Growing.</span></h2>
-            <p>One 30-minute strategy call will show you exactly what's broken in your current digital setup.</p>
-            <a href="#" class="cta-btn-large" id="auditBtn"><i class="fas fa-calendar-check"></i> Book Your Free Digital Audit</a>
-            <p class="fine-print">
-                ⚡ <strong>P.S.</strong> If we don't find at least 3 major gaps in your digital presence, we'll give you ₦10,000 for wasting your time.
-            </p>
-        </div>
-
-        <!-- ======== FOOTER ======== -->
-        <div class="footer">
-            <div>© 2025 OneStack Digital Agency. Built in Lagos.</div>
-            <div>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="mailto:hello@onestack.ng">hello@onestack.ng</a>
-            </div>
-        </div>
-
+        <ul class="nav-links" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
 
-    <!-- ======== SIMPLE SCRIPT ======== -->
-    <script>
-        // When the "Book Audit" button is clicked, alert the user to connect their Calendly.
-        // Replace the '#' link with your actual Calendly link when ready.
-        document.getElementById('auditBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Sweet alert replacement (native)
-            alert('⚠️ ACTION REQUIRED:\n\nReplace the "#" link in the CTA button with your actual Calendly booking link.\n\nRecommended: https://calendly.com/yourusername/30min');
-            // If you want it to actually go somewhere, uncomment below and add your link:
-            // window.location.href = "https://calendly.com/yourusername/30min";
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="sme-badge" data-aos="fade-down">Transparent Pricing</span>
+      <h1 data-aos="fade-up" data-aos-delay="100">Invest in Growth. <span>Not Overhead.</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Compare what you'd pay for separate agencies vs. our unified ecosystem. No hidden fees. Guaranteed results.</p>
+    </div>
+  </section>
+
+  <!-- ===== PRICING GRID ===== -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Choose Your Package</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Everything you need to grow your digital presence</p>
+
+      <div class="pricing-grid">
+
+        <!-- ===== ESSENTIAL ===== -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="tier">💼 Essentials</div>
+          <h3>Startup</h3>
+          <div class="price">₦120,000 <span>/ month</span></div>
+          <div class="price-note">+ ₦200,000 one‑time setup</div>
+
+          <ul>
+            <li><i class="fas fa-check-circle"></i> 5-page custom website (hosting incl.)</li>
+            <li><i class="fas fa-check-circle"></i> On-page SEO for 10 high-intent keywords</li>
+            <li><i class="fas fa-check-circle"></i> Google My Business optimization</li>
+            <li><i class="fas fa-check-circle"></i> 4 blog posts / social captions per month</li>
+            <li><i class="fas fa-check-circle"></i> Monthly 1-page performance dashboard</li>
+            <li><i class="fas fa-check-circle"></i> Email support (48hr response SLA)</li>
+          </ul>
+
+          <div class="guarantee-tag">
+            <strong>🔒 Guarantee:</strong> 15% traffic increase in 90 days, or next month <strong>FREE</strong>.
+          </div>
+
+          <a href="audit.html" class="btn btn-outline">Start Essential</a>
+        </div>
+
+        <!-- ===== BUSINESS ===== (Featured) -->
+        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="popular-badge">🔥 MOST POPULAR</div>
+          <div class="tier">🚀 Business</div>
+          <h3>Growth</h3>
+          <div class="price">₦350,000 <span>/ month</span></div>
+          <div class="price-note">+ ₦200,000 one‑time setup</div>
+
+          <ul>
+            <li><i class="fas fa-check-circle"></i> 10-page site + E-commerce (50 products)</li>
+            <li><i class="fas fa-check-circle"></i> Advanced SEO (30 keywords + backlinks)</li>
+            <li><i class="fas fa-check-circle"></i> Google Ads management (up to ₦500k spend)</li>
+            <li><i class="fas fa-check-circle"></i> 1 custom AI chatbot for lead qualification</li>
+            <li><i class="fas fa-check-circle"></i> 8 blogs + 4 video scripts per month</li>
+            <li><i class="fas fa-check-circle"></i> Bi-weekly strategy calls + live dashboard</li>
+            <li><i class="fas fa-check-circle"></i> Priority WhatsApp support (24hr SLA)</li>
+          </ul>
+
+          <div class="guarantee-tag">
+            <strong>🔒 Guarantee:</strong> 20% lead/sales increase in 90 days, or next month <strong>FREE</strong>.
+          </div>
+
+          <a href="audit.html" class="btn btn-accent">Start Business →</a>
+        </div>
+
+        <!-- ===== ENTERPRISE ===== -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="tier">🏢 Enterprise</div>
+          <h3>Scale</h3>
+          <div class="price" style="font-size: 2.2rem;">Custom</div>
+          <div class="price-note">Starts at ₦1,200,000 / month · Setup quoted per project</div>
+
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Full infrastructure + CRM integration</li>
+            <li><i class="fas fa-check-circle"></i> Omnichannel (SEO, Meta, Google, Email)</li>
+            <li><i class="fas fa-check-circle"></i> Cybersecurity assessment & monitoring</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated PM, 2 Devs, 1 AI Specialist</li>
+            <li><i class="fas fa-check-circle"></i> 99.9% uptime SLA (financial compensation)</li>
+            <li><i class="fas fa-check-circle"></i> Free staff training on all systems</li>
+          </ul>
+
+          <div class="guarantee-tag">
+            <strong>🔒 Guarantee:</strong> Minimum 3x ROAS on campaigns, or we refund the quarter's management fee.
+          </div>
+
+          <a href="audit.html" class="btn btn-outline">Talk to Sales</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUE SECTION ===== -->
+  <section class="value-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Why The <span style="color: var(--accent);">Setup Fee</span>?</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">We don't just drag-and-drop templates. Here's what your ₦200,000 actually buys.</p>
+
+      <div class="value-grid">
+        <div class="value-item" data-aos="fade-up" data-aos-delay="0">
+          <i class="fas fa-users"></i>
+          <h4>Deep Discovery</h4>
+          <p>5 hours interviewing your team to understand your actual customers.</p>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-chess-queen"></i>
+          <h4>Competitor Audit</h4>
+          <p>We dissect your top 3 Nigerian competitors and find their weaknesses.</p>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-cogs"></i>
+          <h4>Infrastructure Build</h4>
+          <p>Hosting, tracking pixels, and CRM configured before Month 1 starts.</p>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-file-pdf"></i>
+          <h4>Your First Audit</h4>
+          <p>A 20-page Digital Health Check PDF before we write a single line of code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE ===== -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-box" data-aos="fade-up">
+        <h2><i class="fas fa-shield-alt"></i> The "No-BS" Guarantee</h2>
+        <p>
+          If after 90 days we haven't met the specific KPI (Traffic % or Leads %) stated in your tier,
+          you can either <strong>cancel immediately with zero penalties</strong> or get the next month
+          of service <strong>completely free</strong>. No court cases, no fine print tricks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Ready to Grow Your Business?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Book a free, no-obligation digital ecosystem audit. We'll map out exactly what your business needs to grow online.</p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <a href="audit.html" class="btn-light">Claim Free Audit →</a>
+        <a href="services.html" class="btn-outline-light">Explore Services</a>
+      </div>
+      <div style="margin-top: 24px; opacity: 0.8; font-size: 0.85rem;" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-shield-alt"></i> No commitment • 24h turnaround • 100% confidential
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="services.html">Cybersecurity</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
         });
-    </script>
-
+      });
+    }
+  </script>
 </body>
 </html>
