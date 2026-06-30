@@ -11,16 +11,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
   <!-- ===== SEO ===== -->
-  <title>Discover How OneStack Empowers Nigerian SMEs | Digital Growth Partners</title>
-  <meta name="description" content="Discover how OneStack helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions. Your success story starts here." />
-  <meta name="keywords" content="digital agency Nigeria, SME growth solutions, web design Lagos, business growth strategy, OneStack process" />
+  <title>Our Portfolio · OneStack Digital Agency Success Stories for Nigerian SMEs</title>
+  <meta name="description" content="Explore OneStack Digital Agency portfolio: real results for Nigerian SMEs. See case studies in web design, branding, e-commerce, digital marketing, and more." />
+  <meta name="keywords" content="OneStack portfolio, web design case studies, branding projects Nigeria, digital marketing results, SME success stories" />
   <meta name="author" content="OneStack Digital Agency" />
 
   <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="Discover How OneStack Empowers Nigerian SMEs" />
-  <meta property="og:description" content="Discover how OneStack helps Nigerian SMEs grow through premium web design, digital marketing, branding, and technology solutions." />
+  <meta property="og:title" content="Our Portfolio · OneStack Digital Agency Success Stories for Nigerian SMEs" />
+  <meta property="og:description" content="Real results for Nigerian SMEs. See case studies in web design, branding, e-commerce, and digital marketing." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://onestack.ng/discover-how.html" />
+  <meta property="og:url" content="https://onestack.ng/portfolio.html" />
 
   <!-- ===== GOOGLE FONTS ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -39,7 +39,7 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
+      font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #1e293b;
       line-height: 1.5;
@@ -110,7 +110,7 @@
     }
 
     .logo-text h1 {
-      font-family: "Space Grotesk", monospace;
+      font-family: 'Space Grotesk', monospace;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--primary);
@@ -186,27 +186,20 @@
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: 'Space Grotesk', sans-serif;
       color: var(--primary);
     }
 
     .section-title::after {
       content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
+      display: block;
       width: 80px;
       height: 3px;
       background: var(--accent);
+      margin: 12px auto 0;
       border-radius: 3px;
-    }
-
-    .section-title-left::after {
-      left: 0;
-      transform: none;
     }
 
     /* ===== BUTTONS ===== */
@@ -281,7 +274,7 @@
       font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 20px;
-      font-family: "Space Grotesk", sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     .hero h1 span {
@@ -295,135 +288,40 @@
       margin: 0 auto;
     }
 
-    /* ===== FEATURE CARDS ===== */
-    .feature-card {
-      background: white;
+    .hero img {
       border-radius: 20px;
-      padding: 2rem;
-      transition: all 0.3s;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .feature-card:hover {
-      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
+      border: 3px solid var(--accent);
+      transition: transform 0.3s ease;
+      max-width: 100%;
+      height: auto;
     }
 
-    .feature-icon {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      border-radius: 50%;
+    .hero img:hover {
+      transform: scale(1.02);
+    }
+
+    .founder-tag {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-grid {
       display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      color: var(--primary-dark);
     }
 
-    .feature-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
     }
 
-    .feature-card p {
-      color: var(--gray-600);
-      line-height: 1.7;
-    }
-
-    /* ===== PROCESS ===== */
-    .process-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-
-    .process-step {
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
       text-align: center;
-      padding: 32px;
-      background: var(--off-white);
-      border-radius: 24px;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .process-step:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      color: var(--primary-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 0 auto 1.5rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .process-step h4 {
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
-
-    /* ===== BENEFITS ===== */
-    .benefits-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .benefit-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .benefit-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      flex-shrink: 0;
-    }
-
-    .benefit-text h4 {
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .benefit-text p {
-      color: var(--gray-600);
-      margin: 0;
     }
 
     /* ===== STATS ===== */
@@ -445,18 +343,159 @@
       opacity: 0.8;
     }
 
-    /* ===== TESTIMONIAL ===== */
-    .testimonial-section {
+    /* ===== CASE STUDIES ===== */
+    .case-studies-section {
       padding: 80px 0;
       background: white;
     }
 
-    .testimonial-quote {
-      border-left: 4px solid var(--accent);
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .case-card {
+      background: white;
+      border-radius: 24px;
       padding: 2rem;
-      background: var(--off-white);
-      border-radius: 20px;
+      transition: all 0.3s;
       border: 1px solid var(--gray-200);
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .case-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .case-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .case-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .case-client {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .case-card p {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .case-result {
+      background: var(--off-white);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      border: 1px solid var(--gray-200);
+    }
+
+    .case-result strong {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .testimonial-quote {
+      font-size: 2rem;
+      color: var(--accent);
+      opacity: 0.3;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .author-info h5 {
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+    }
+
+    .author-info p {
+      margin-bottom: 0;
+      color: var(--gray-600);
+      font-size: 0.9rem;
     }
 
     /* ===== CTA ===== */
@@ -626,18 +665,17 @@
         font-size: 2rem;
       }
 
-      .process-grid {
+      .hero-grid {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .cases-grid {
         grid-template-columns: 1fr;
       }
 
-      .benefit-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .testimonial-quote {
-        padding: 1.5rem;
+      .testimonial-grid {
+        grid-template-columns: 1fr;
       }
 
       .footer-grid {
@@ -669,14 +707,12 @@
         font-size: 1.5rem;
       }
 
-      .feature-card {
+      .case-card {
         padding: 1.5rem;
       }
 
-      .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+      .testimonial-card {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -702,7 +738,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="results.html">Results</a></li>
+          <li><a href="results.html" class="active">Results</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="founder.html">Founder</a></li>
           <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
@@ -713,10 +749,19 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="container hero-content">
-      <span class="sme-badge" data-aos="fade-down">Your Growth Journey Starts Here</span>
-      <h1 data-aos="fade-up" data-aos-delay="100">Discover How We <span>Transform</span> Nigerian SMEs</h1>
-      <p data-aos="fade-up" data-aos-delay="200">We combine strategy, design, and technology to build digital assets that drive real business growth. Here's how we do it.</p>
+    <div class="container hero-grid">
+      <div class="hero-text" data-aos="fade-right">
+        <span class="sme-badge">Our Work</span>
+        <h1>Results That <span>Speak</span></h1>
+        <p>A showcase of how we've transformed ideas into digital success stories for Nigerian SMEs.</p>
+        <p style="margin-top: 24px;">
+          <span class="founder-tag">👋 Hello, I'm Dahiru Obori</span><br>
+          Founder of OneStack Digital Agency. I lead a team that turns business ideas into beautiful, functional digital products that deliver real results.
+        </p>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <img src="image/obori5.png" alt="Dahiru Obori - Founder of OneStack Digital Agency">
+      </div>
     </div>
   </section>
 
@@ -726,194 +771,144 @@
       <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
         <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="0">
           <div class="stat-number">50+</div>
-          <div class="stat-label">SME Partners</div>
-        </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">100+</div>
           <div class="stat-label">Projects</div>
         </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
           <div class="stat-number">98%</div>
           <div class="stat-label">Satisfaction</div>
         </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-number">5+</div>
           <div class="stat-label">Years</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW WE HELP ===== -->
-  <section style="padding: 80px 0; background: white;">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <span class="sme-badge">Our Approach</span>
-          <h2 class="section-title-left" style="display: inline-block;">How We Help Your Business Thrive</h2>
-          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 16px;">We don't just build websites — we build comprehensive digital ecosystems tailored to your unique business needs.</p>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
-            <div class="benefit-text">
-              <h4>Customized Design Solutions</h4>
-              <p>Unique, mobile-responsive designs that reflect your brand and captivate your audience.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
-            <div class="benefit-text">
-              <h4>Digital Marketing</h4>
-              <p>Data-driven campaigns that attract qualified leads and maximize your ROI.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-code"></i></div>
-            <div class="benefit-text">
-              <h4>Technology Solutions</h4>
-              <p>Scalable web applications, e-commerce platforms, and cloud solutions built for growth.</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <img src="image/empowering-business.jpg" alt="OneStack team working with client" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=OneStack+Approach'">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number">150%+</div>
+          <div class="stat-label">Avg. Traffic Increase</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== OUR EXPERTISE ===== -->
-  <section style="padding: 80px 0; background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="case-studies-section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Our Expertise</span>
-        <h2 class="section-title" data-aos="fade-up">What We Do Best</h2>
-        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">Specialized solutions for Nigerian SMEs</p>
+        <span class="sme-badge" data-aos="fade-down">Case Studies</span>
+        <h2 class="section-title" data-aos="fade-up">Success Stories</h2>
+        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">Real results for real businesses</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Web Design</h3>
-          <p>We'll create visually captivating and user-friendly websites that engage visitors and drive conversions. Fully responsive and SEO-optimized.</p>
+      <div class="cases-grid">
+        <!-- Case 1: CredMart -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="case-icon"><i class="fas fa-store"></i></div>
+          <h4>E-Commerce Transformation</h4>
+          <div class="case-client">CredMart</div>
+          <p>Complete website overhaul + SEO + Google Ads. Built a custom e-commerce platform with inventory management and payment integration.</p>
+          <div class="case-result">
+            <strong>+240%</strong> sales · <strong>150%</strong> traffic increase · <strong>#1</strong> for 12 keywords
+          </div>
         </div>
 
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-icon"><i class="fas fa-pen-nib"></i></div>
-          <h3>Branding</h3>
-          <p>Our team will define strong brand identities through compelling logos, color schemes, and brand guidelines that make you unforgettable.</p>
+        <!-- Case 2: Shopsafe Logistics -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-icon"><i class="fas fa-truck"></i></div>
+          <h4>Logistics Digital Transformation</h4>
+          <div class="case-client">Shopsafe Logistics</div>
+          <p>Custom website + WhatsApp Business API integration. Streamlined customer communication and lead management.</p>
+          <div class="case-result">
+            <strong>70%</strong> faster response · <strong>300+</strong> leads/month
+          </div>
         </div>
 
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-icon"><i class="fas fa-shopping-cart"></i></div>
-          <h3>E-commerce Solutions</h3>
-          <p>We'll build secure and seamless e-commerce websites, optimizing the buying process for maximum conversions and repeat customers.</p>
+        <!-- Case 3: Afrixpression -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-icon"><i class="fas fa-video"></i></div>
+          <h4>Social Media Growth</h4>
+          <div class="case-client">Afrixpression</div>
+          <p>Social media strategy + content production + community management. Built a loyal following from the ground up.</p>
+          <div class="case-result">
+            <strong>+1,150%</strong> social growth · <strong>20k+</strong> followers
+          </div>
+        </div>
+
+        <!-- Case 4: Drecot Consults -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="case-icon"><i class="fas fa-building"></i></div>
+          <h4>SEO Domination</h4>
+          <div class="case-client">Drecot Consults</div>
+          <p>Comprehensive SEO strategy including keyword research, on-page optimization, and link building for a consulting firm.</p>
+          <div class="case-result">
+            <strong>#1</strong> for 15+ keywords · <strong>180%</strong> organic traffic
+          </div>
+        </div>
+
+        <!-- Case 5: Zena Beauty -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-icon"><i class="fas fa-robot"></i></div>
+          <h4>AI Automation Implementation</h4>
+          <div class="case-client">Zena Beauty</div>
+          <p>AI chatbot deployment on website and WhatsApp. Automated customer inquiries and lead qualification.</p>
+          <div class="case-result">
+            <strong>60%</strong> less support load · <strong>24/7</strong> automated responses
+          </div>
+        </div>
+
+        <!-- Case 6: TechMeRight Academy -->
+        <div class="case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-icon"><i class="fas fa-chalkboard-user"></i></div>
+          <h4>Digital Skills Training</h4>
+          <div class="case-client">TechMeRight Academy</div>
+          <p>Comprehensive digital skills training for 50+ staff members in SEO, social media, and data analytics.</p>
+          <div class="case-result">
+            <strong>85%</strong> staff upskilled · <strong>+40%</strong> productivity
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== OUR PROCESS ===== -->
-  <section class="process-section">
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Our Process</span>
-        <h2 class="section-title" data-aos="fade-up">How We Deliver Excellence</h2>
+        <span class="sme-badge" data-aos="fade-down">Testimonials</span>
+        <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
       </div>
 
-      <div class="process-grid">
-        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-          <div class="step-number">1</div>
-          <h4>Discovery</h4>
-          <p>We dive deep into your business goals, audience, and competition.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-          <div class="step-number">2</div>
-          <h4>Strategy</h4>
-          <p>Custom roadmap crafted with clear milestones and KPIs.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-          <div class="step-number">3</div>
-          <h4>Execution</h4>
-          <p>Premium design & development with regular updates.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-          <div class="step-number">4</div>
-          <h4>Growth</h4>
-          <p>Ongoing optimization, support, and scaling.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BENEFITS ===== -->
-  <section class="benefits-section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <img src="image/benefits.jpg" alt="Business growth benefits" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=Growth+Benefits'">
-        </div>
-
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <span class="sme-badge">Why Choose Us</span>
-          <h2 class="section-title-left" style="display: inline-block;">Benefits of Working with OneStack</h2>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-            <div class="benefit-text">
-              <h4>Increased Efficiency</h4>
-              <p>Streamlined processes and automation that save you time and reduce operational costs.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-smile"></i></div>
-            <div class="benefit-text">
-              <h4>Improved Customer Experience</h4>
-              <p>Intuitive designs and seamless interactions that keep customers coming back.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
-            <div class="benefit-text">
-              <h4>Data-Driven Insights</h4>
-              <p>Analytics and reporting that help you make informed business decisions.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="benefit-text">
-              <h4>Competitive Advantage</h4>
-              <p>Stand out from competitors with premium digital assets that build trust.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"OneStack didn't just build our website — they became our growth partner. Our online sales have tripled since launching."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AO</div>
+            <div class="author-info">
+              <h5>Adeola O.</h5>
+              <p>Founder, CredMart</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== TESTIMONIAL ===== -->
-  <section class="testimonial-section" style="background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Client Success</span>
-        <h2 class="section-title" data-aos="fade-up">What Our Partners Say</h2>
-      </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Best decision we made. The team is responsive, strategic, and actually delivers. Our lead generation has never been better."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">HM</div>
+            <div class="author-info">
+              <h5>Habib M.</h5>
+              <p>CEO, Shopsafe Logistics</p>
+            </div>
+          </div>
+        </div>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="testimonial-quote" data-aos="fade-up">
-          <i class="fas fa-quote-left fa-2x" style="color: var(--accent); opacity: 0.4; display: block; margin-bottom: 16px;"></i>
-          <p style="font-size: 1.15rem; margin-bottom: 20px; color: var(--gray-800);">"OneStack didn't just build our website — they transformed our entire digital presence. Our online sales have tripled since launching, and our brand has never looked better."</p>
-          <div style="display: flex; align-items: center; gap: 16px; justify-content: center;">
-            <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">AO</div>
-            <div style="text-align: left;">
-              <h5 style="margin: 0; color: var(--primary);">Amara Okafor</h5>
-              <p style="margin: 0; color: var(--gray-600);">Lagos Restaurant Owner</p>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Our Google Ads ROI doubled in 2 months. The team at OneStack knows exactly how to drive results. I wish we found them earlier."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FE</div>
+            <div class="author-info">
+              <h5>Funmi E.</h5>
+              <p>Marketing Director</p>
             </div>
           </div>
         </div>
@@ -925,9 +920,9 @@
   <section class="cta-section">
     <div class="container">
       <div style="max-width: 800px; margin: 0 auto;">
-        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Ready to Start?</span>
+        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Ready for Results?</span>
         <h2 data-aos="fade-up">Let's Build Your Success Story</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Take the first step toward transforming your business today.</p>
+        <p data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs who trust OneStack for their digital growth.</p>
         <div data-aos="fade-up" data-aos-delay="200">
           <a href="audit.html" class="btn-light">Claim Free Audit →</a>
           <a href="services.html" class="btn-outline-light">Explore Services</a>
