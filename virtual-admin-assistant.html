@@ -2,32 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <!-- === SEO META TAGS === -->
-  <title>Virtual Admin Assistant for Nigerian SMEs · Remote Support | ODDS</title>
-  <meta name="description" content="ODDS virtual admin assistant services for Nigerian SMEs: professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently." />
-  <meta name="keywords" content="virtual assistant Nigeria, remote admin support, administrative assistant Lagos, email management, calendar management, customer support, SME admin help, ODDS virtual assistant" />
-  <meta name="author" content="ODDS · Obori Designs & Digital Solutions" />
-  
-  <!-- === OPEN GRAPH TAGS === -->
-  <meta property="og:title" content="Virtual Admin Assistant for Nigerian SMEs · Remote Support" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
+
+  <!-- ===== SEO ===== -->
+  <title>Virtual Admin Assistant for Nigerian SMEs · Remote Support | OneStack Digital Agency</title>
+  <meta name="description" content="OneStack virtual admin assistant services for Nigerian SMEs: professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently." />
+  <meta name="keywords" content="virtual assistant Nigeria, remote admin support, administrative assistant Lagos, email management, calendar management, customer support, SME admin help" />
+  <meta name="author" content="OneStack Digital Agency" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Virtual Admin Assistant for Nigerian SMEs · Remote Support | OneStack Digital Agency" />
   <meta property="og:description" content="Professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently." />
-  <meta property="og:image" content="https://odds-ng.netlify.app/images/odds-og-image.jpg" />
-  <meta property="og:url" content="https://odds-ng.netlify.app/services/virtual-assistant.html" />
   <meta property="og:type" content="website" />
-  
-  <!-- === FAVICON === -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  
-  <!-- === CSS LIBRARIES === -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <meta property="og:url" content="https://onestack.ng/virtual-assistant.html" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== AOS ===== -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
+
   <style>
-    /* ===== RESET & VARIABLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      padding-top: 76px;
+    }
+
     :root {
       --primary: #0a2647;
       --primary-dark: #051a34;
@@ -39,7 +58,6 @@
       --off-white: #f8fafc;
       --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
       --gray-600: #475569;
       --gray-800: #1e293b;
       --dark: #0f172a;
@@ -51,18 +69,138 @@
       --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
     }
 
-    /* ===== GLOBAL STYLES ===== */
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      overflow-x: hidden;
-      background-color: var(--white);
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 0.6rem;
       font-weight: 600;
-      letter-spacing: -0.02em;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--gray-800);
+      transition: 0.2s;
+      padding: 8px 12px;
+      border-radius: 40px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a.active {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+    }
+
+    .btn-consult {
+      background: var(--gradient-primary);
+      color: white !important;
+      padding: 10px 28px !important;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-consult:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: white !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 880px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 20px 0;
+        gap: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    /* ===== BADGE ===== */
+    .sme-badge {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-accent);
     }
 
     .section-title {
@@ -71,6 +209,7 @@
       margin-bottom: 1rem;
       position: relative;
       display: inline-block;
+      color: var(--primary);
     }
 
     .section-title::after {
@@ -80,7 +219,7 @@
       left: 0;
       width: 80px;
       height: 3px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 3px;
     }
 
@@ -89,153 +228,111 @@
       transform: translateX(-50%);
     }
 
-    .section-subtitle {
-      color: var(--accent);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .sme-badge {
-      background: var(--gradient-accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .btn {
-      padding: 12px 32px;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-
-    .btn-primary {
+    /* ===== BUTTONS ===== */
+    .btn-primary-custom {
       background: var(--gradient-primary);
+      color: white;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
       border: none;
-      box-shadow: var(--shadow-md);
     }
 
-    .btn-primary:hover {
+    .btn-primary-custom:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
-      background: var(--gradient-primary);
     }
 
-    .btn-outline-primary {
-      border: 2px solid var(--primary);
-      color: var(--primary);
+    .btn-outline-custom {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
     }
 
-    .btn-outline-primary:hover {
-      background: var(--primary);
-      color: white;
+    .btn-outline-custom:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
       transform: translateY(-2px);
     }
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      background: var(--gradient-primary) !important;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-    }
-
-    .navbar-brand {
-      font-weight: 800;
-      font-size: 1.8rem;
-    }
-
-    .navbar-nav .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      margin: 0 0.25rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .navbar-nav .nav-link.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    /* ===== HERO SECTION ===== */
-    .service-hero {
-      position: relative;
-      padding: 150px 0;
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-primary);
+      padding: 100px 0 80px;
       text-align: center;
-      color: var(--white);
+      color: white;
+      position: relative;
       overflow: hidden;
-      margin-top: 76px;
     }
 
-    .service-hero::before {
-      content: '';
+    .hero::before {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: softShift 15s ease infinite;
+    }
+
+    @keyframes softShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .hero .container {
+      position: relative;
       z-index: 1;
     }
 
-    .service-hero .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-hero h1 {
-      font-size: 4rem;
+    .hero h1 {
+      font-size: 3.5rem;
       font-weight: 800;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
-    .service-hero .lead {
-      font-size: 1.5rem;
-      font-weight: 300;
-      max-width: 800px;
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     @media (max-width: 768px) {
-      .service-hero h1 {
-        font-size: 2.5rem;
-      }
-      .service-hero .lead {
-        font-size: 1.2rem;
-      }
+      .hero { padding: 60px 0; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
     }
 
     /* ===== FEATURE CARDS ===== */
     .feature-card {
-      background: var(--white);
+      background: white;
       border-radius: 20px;
       padding: 2rem;
-      transition: all 0.4s ease;
+      transition: all 0.3s;
       border: 1px solid var(--gray-200);
       height: 100%;
       box-shadow: var(--shadow-sm);
     }
 
     .feature-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
@@ -243,7 +340,7 @@
     .feature-icon {
       width: 70px;
       height: 70px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -256,6 +353,7 @@
     .feature-card h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
+      color: var(--primary);
     }
 
     .feature-card p {
@@ -263,12 +361,12 @@
       line-height: 1.7;
     }
 
-    /* ===== TASK CATEGORY CARDS ===== */
+    /* ===== TASK CARDS ===== */
     .task-card {
-      background: var(--white);
+      background: white;
       border-radius: 20px;
       padding: 2rem;
-      transition: all 0.4s ease;
+      transition: all 0.3s;
       border: 1px solid var(--gray-200);
       height: 100%;
       text-align: center;
@@ -276,7 +374,7 @@
     }
 
     .task-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
       border-color: var(--accent);
     }
@@ -284,7 +382,7 @@
     .task-icon {
       width: 80px;
       height: 80px;
-      background: var(--gradient-accent);
+      background: var(--accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -297,6 +395,7 @@
     .task-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      color: var(--primary);
     }
 
     .task-card p {
@@ -308,92 +407,14 @@
       display: inline-block;
       background: var(--off-white);
       color: var(--primary);
-      padding: 0.4rem 1rem;
+      padding: 0.3rem 1rem;
       border-radius: 50px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: 600;
       margin: 0.2rem;
     }
 
-    /* ===== PROCESS STEPS ===== */
-    .process-step {
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: var(--gradient-accent);
-      color: var(--primary-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 0 auto 1.5rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    /* ===== BENEFITS LIST ===== */
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .benefit-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary-dark);
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .benefit-text h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .benefit-text p {
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* ===== METRICS CARDS ===== */
-    .metrics-card {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      height: 100%;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .metrics-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .metrics-label {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.9;
-    }
-
-    /* ===== TOOLS SECTION ===== */
+    /* ===== TOOLS ===== */
     .tool-badge {
       display: inline-block;
       background: var(--off-white);
@@ -403,8 +424,8 @@
       margin: 0.5rem;
       font-weight: 600;
       border: 1px solid var(--gray-200);
-      transition: all 0.3s ease;
-      font-size: 1rem;
+      transition: all 0.3s;
+      font-size: 0.95rem;
     }
 
     .tool-badge:hover {
@@ -419,239 +440,497 @@
       margin-right: 8px;
     }
 
-    /* ===== CASE STUDY CARD ===== */
-    .case-study-card {
-      background: var(--white);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.4s ease;
+    /* ===== METRICS ===== */
+    .metrics-section {
+      background: var(--primary);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .metric-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    /* ===== PROCESS ===== */
+    .process-section {
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 32px;
+      background: white;
+      border-radius: 24px;
       border: 1px solid var(--gray-200);
-      height: 100%;
+      transition: all 0.3s;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .process-step h4 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ===== BENEFITS ===== */
+    .benefits-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+    }
+
+    .benefit-text h4 {
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .benefit-text p {
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* ===== CASE STUDY ===== */
+    .casestudy-section {
+      padding: 80px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .case-study-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
     }
 
     .case-study-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
       border-color: var(--accent);
-    }
-
-    .case-study-card .card-body {
-      padding: 2rem;
-    }
-
-    .case-study-card h4 {
-      color: var(--primary);
-      margin-bottom: 0.5rem;
+      box-shadow: var(--shadow-md);
     }
 
     .case-study-card .industry {
       color: var(--accent);
       font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .case-study-card p {
-      color: var(--gray-600);
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
     }
 
     .case-study-card .result {
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--primary);
       border-top: 1px solid var(--gray-200);
-      padding-top: 1rem;
-      margin-bottom: 0;
+      padding-top: 16px;
+      margin-top: 16px;
     }
 
     .result-highlight {
       color: var(--accent);
       font-size: 1.5rem;
-      font-weight: 800;
     }
 
-    /* ===== FAQ SECTION ===== */
+    /* ===== FAQ ===== */
+    .faq-section {
+      padding: 80px 0;
+      background: white;
+    }
+
     .faq-item {
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
       background: var(--off-white);
-      border-radius: 15px;
-      transition: all 0.3s ease;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 16px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
     }
 
     .faq-item:hover {
-      background: var(--white);
-      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
     }
 
     .faq-item h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
       color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
     }
 
     .faq-item p {
       color: var(--gray-600);
-      margin-bottom: 0;
+      margin: 0;
     }
 
-    /* ===== CTA SECTION ===== */
+    /* ===== CTA ===== */
     .cta-section {
-      background: linear-gradient(135deg, #0a2647 0%, #1e3a5f 50%, #0a2647 100%);
+      background: var(--gradient-primary);
+      padding: 80px 0;
+      text-align: center;
+      color: white;
       position: relative;
       overflow: hidden;
-      padding: 80px 0;
+    }
+
+    .cta-section::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    .cta-section .btn-light {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 14px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-light:hover {
+      transform: translateY(-3px);
+      background: var(--accent-light);
+    }
+
+    .cta-section .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+      padding: 14px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .cta-section .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-dark);
+      transform: translateY(-3px);
     }
 
     /* ===== FOOTER ===== */
-    .footer {
-      background: var(--dark);
-      color: var(--gray-300);
+    footer {
+      background: var(--primary);
+      color: var(--off-white);
+      padding: 60px 0 30px;
     }
 
-    .footer h5, .footer h6 {
-      color: var(--white);
-      margin-bottom: 1.5rem;
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
     }
 
-    .footer a {
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
       color: var(--gray-300);
-      transition: all 0.3s ease;
       text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
-    .footer a:hover {
+    .footer-col a:hover {
       color: var(--accent);
-      transform: translateX(5px);
     }
 
-    .footer .social-links a {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
+    .footer-col p {
+      margin-bottom: 8px;
+    }
+
+    .social-icons a {
+      margin-right: 18px;
+      font-size: 1.2rem;
+      color: var(--gray-300);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
       text-align: center;
-      line-height: 40px;
-      margin-right: 10px;
-      transition: all 0.3s ease;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      font-size: 0.8rem;
     }
 
-    .footer .social-links a:hover {
-      background: var(--accent);
-      color: var(--primary-dark);
-      transform: translateY(-3px);
+    .copyright a {
+      color: var(--gray-300);
+      text-decoration: none;
+      margin: 0 12px;
+      transition: color 0.2s;
+    }
+
+    .copyright a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer .social-icons {
+        justify-content: center;
+      }
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+      .cta-section .btn-light,
+      .cta-section .btn-outline-light {
+        display: block;
+        margin: 10px 20px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .metric-number {
+        font-size: 2rem;
+      }
+      .task-card {
+        padding: 1.5rem;
+      }
+      .task-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+      }
+      .tool-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        margin: 0.3rem;
+      }
+      .case-study-card {
+        padding: 1.5rem;
+      }
+      .faq-item {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .metric-number {
+        font-size: 1.5rem;
+      }
+      .feature-card {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <img src="image/ODDS.jpeg" alt="ODDS Logo" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
-      <span class="fw-bold">ODDS</span>
-      <span class="ms-2 small" style="color: var(--accent);">· Premium</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
-        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="founder.html" class="nav-link">Founder</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="service-hero" style="background: url('image/va-hero.jpg') center center/cover no-repeat;">
-  <div class="container">
-    <span class="sme-badge" data-aos="fade-down">Virtual Admin Assistant</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Your Time, <span style="color: var(--accent);">Reclaimed</span></h1>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">Professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently.</p>
-  </div>
-</section>
-
-<!-- INTRO SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <span class="sme-badge">Focus on What Matters</span>
-        <h2 class="section-title mb-4">Stop Doing. <span style="color: var(--accent);">Start Leading.</span></h2>
-        <p class="lead mb-4">You didn't start your business to spend hours on emails and scheduling.</p>
-        <p class="mb-4">At ODDS, we provide professional virtual admin assistants who handle your daily tasks so you can focus on growing your business. From managing your calendar to responding to customer inquiries, we become an extension of your team — reliable, efficient, and always professional.</p>
-        <div class="row mt-4">
-          <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-clock me-2" style="color: var(--accent);"></i>Save 20+ Hours</h4>
-            <p class="text-secondary small">Every week</p>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">
+          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <h1>One<span style="color:#c5a059;">Stack</span></h1>
+            <p>COMPLETE DIGITAL ECOSYSTEM</p>
           </div>
-          <div class="col-6">
-            <h4 class="h5 fw-bold" style="color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>Professional</h4>
-            <p class="text-secondary small">Trained & vetted</p>
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="sme-badge" data-aos="fade-down">Virtual Admin Assistant</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Your Time, <span>Reclaimed</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Professional remote administrative support to manage your daily tasks, scheduling, email management, and customer inquiries efficiently.</p>
+    </div>
+  </section>
+
+  <!-- ===== METRICS ===== -->
+  <section class="metrics-section">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="0">
+          <div class="metric-number">20+</div>
+          <div class="metric-label">Hours Saved/Week</div>
+        </div>
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
+          <div class="metric-number">40%</div>
+          <div class="metric-label">Productivity Gain</div>
+        </div>
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
+          <div class="metric-number">24h</div>
+          <div class="metric-label">Response Time</div>
+        </div>
+        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Nigerian-based</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section style="padding: 80px 0; background: white;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <span class="sme-badge">Focus on What Matters</span>
+          <h2 class="section-title" style="display: inline-block;">Stop Doing. <span style="color: var(--accent);">Start Leading.</span></h2>
+          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 16px;">You didn't start your business to spend hours on emails and scheduling.</p>
+          <p style="color: var(--gray-600); margin-bottom: 24px;">At OneStack, we provide professional virtual admin assistants who handle your daily tasks so you can focus on growing your business. From managing your calendar to responding to customer inquiries, we become an extension of your team — reliable, efficient, and always professional.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 160px;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary);"><i class="fas fa-clock me-2" style="color: var(--accent);"></i>Save 20+ Hours</h4>
+              <p style="color: var(--gray-600); font-size: 0.9rem;">Every week</p>
+            </div>
+            <div style="flex: 1; min-width: 160px;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary);"><i class="fas fa-check-circle me-2" style="color: var(--accent);"></i>Professional</h4>
+              <p style="color: var(--gray-600); font-size: 0.9rem;">Trained & vetted</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <img src="image/va-showcase.jpg" alt="Virtual assistant at work" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Virtual+Assistant'">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <img src="image/va-showcase.jpg" alt="Virtual assistant at work" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Virtual+Assistant'">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- METRICS BANNER -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
-        <div class="metrics-card">
-          <div class="metrics-number">20+</div>
-          <div class="metrics-label">Hours Saved/Week</div>
-        </div>
+  <!-- ===== TASK CATEGORIES ===== -->
+  <section style="padding: 80px 0; background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">What We Handle</span>
+        <h2 class="section-title-center" data-aos="fade-up">Tasks We Take Off Your Plate</h2>
       </div>
-      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="metrics-card">
-          <div class="metrics-number">40%</div>
-          <div class="metrics-label">Productivity Increase</div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="metrics-card">
-          <div class="metrics-number">24h</div>
-          <div class="metrics-label">Response Time</div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="metrics-card">
-          <div class="metrics-number">100%</div>
-          <div class="metrics-label">Nigerian-based</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TASK CATEGORIES SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">What We Handle</span>
-      <h2 class="section-title-center" data-aos="fade-up">Tasks We Take Off Your Plate</h2>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-calendar-alt"></i>
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div class="task-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="task-icon"><i class="fas fa-calendar-alt"></i></div>
           <h3>Scheduling</h3>
           <p>Calendar management, appointment booking, meeting coordination, and reminder follow-ups.</p>
           <div>
@@ -660,13 +939,9 @@
             <span class="task-tag">Reminders</span>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
+
+        <div class="task-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="task-icon"><i class="fas fa-envelope"></i></div>
           <h3>Email Management</h3>
           <p>Inbox organization, drafting responses, filtering spam, and ensuring important messages get your attention.</p>
           <div>
@@ -675,13 +950,9 @@
             <span class="task-tag">Filtering</span>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-headset"></i>
-          </div>
+
+        <div class="task-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="task-icon"><i class="fas fa-headset"></i></div>
           <h3>Customer Support</h3>
           <p>Responding to inquiries, handling complaints, FAQ management, and ensuring customer satisfaction.</p>
           <div>
@@ -690,13 +961,9 @@
             <span class="task-tag">FAQ Mgmt</span>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-file-alt"></i>
-          </div>
+
+        <div class="task-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="task-icon"><i class="fas fa-file-alt"></i></div>
           <h3>Document Management</h3>
           <p>Organizing files, data entry, transcription, formatting documents, and cloud storage organization.</p>
           <div>
@@ -705,13 +972,9 @@
             <span class="task-tag">File Organization</span>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-tasks"></i>
-          </div>
+
+        <div class="task-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="task-icon"><i class="fas fa-tasks"></i></div>
           <h3>Project Coordination</h3>
           <p>Task tracking, deadline monitoring, team coordination, and progress reporting.</p>
           <div>
@@ -720,13 +983,9 @@
             <span class="task-tag">Reporting</span>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="task-card">
-          <div class="task-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
+
+        <div class="task-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="task-icon"><i class="fas fa-phone-alt"></i></div>
           <h3>Call Handling</h3>
           <p>Professional phone answering, message taking, call screening, and appointment setting.</p>
           <div>
@@ -737,277 +996,265 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TOOLS SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Tools We Use</span>
-      <h2 class="section-title-center" data-aos="fade-up">Seamless Integration With Your Workflow</h2>
-      <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">We're proficient in all major productivity tools</p>
-    </div>
-    
-    <div class="text-center" data-aos="fade-up">
-      <span class="tool-badge"><i class="fab fa-microsoft"></i> Office 365</span>
-      <span class="tool-badge"><i class="fab fa-google"></i> Google Workspace</span>
-      <span class="tool-badge"><i class="fas fa-calendar"></i> Calendly</span>
-      <span class="tool-badge"><i class="fab fa-slack"></i> Slack</span>
-      <span class="tool-badge"><i class="fab fa-trello"></i> Trello</span>
-      <span class="tool-badge"><i class="fab fa-asana"></i> Asana</span>
-      <span class="tool-badge"><i class="fab fa-microsoft"></i> Teams</span>
-      <span class="tool-badge"><i class="fas fa-envelope"></i> Outlook</span>
-      <span class="tool-badge"><i class="fas fa-cloud"></i> Dropbox</span>
-      <span class="tool-badge"><i class="fab fa-whatsapp"></i> WhatsApp</span>
-      <span class="tool-badge"><i class="fas fa-phone"></i> Zoom</span>
-      <span class="tool-badge"><i class="fab fa-skype"></i> Skype</span>
-    </div>
-  </div>
-</section>
+  <!-- ===== TOOLS ===== -->
+  <section style="padding: 80px 0; background: white;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Tools We Use</span>
+        <h2 class="section-title-center" data-aos="fade-up">Seamless Integration</h2>
+        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">We're proficient in all major productivity tools</p>
+      </div>
 
-<!-- OUR PROCESS SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Our Process</span>
-      <h2 class="section-title-center" data-aos="fade-up">How It Works</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="0">
-        <div class="step-number">1</div>
-        <h4>Discovery Call</h4>
-        <p class="text-secondary">We learn about your tasks, preferences, and expectations.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="100">
-        <div class="step-number">2</div>
-        <h4>Matching</h4>
-        <p class="text-secondary">We assign the perfect VA based on your needs.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="200">
-        <div class="step-number">3</div>
-        <h4>Onboarding</h4>
-        <p class="text-secondary">We set up tools, processes, and communication channels.</p>
-      </div>
-      <div class="col-md-3 process-step" data-aos="fade-up" data-aos-delay="300">
-        <div class="step-number">4</div>
-        <h4>Ongoing Support</h4>
-        <p class="text-secondary">Regular check-ins, feedback, and task management.</p>
+      <div style="text-align: center;" data-aos="fade-up">
+        <span class="tool-badge"><i class="fab fa-microsoft"></i> Office 365</span>
+        <span class="tool-badge"><i class="fab fa-google"></i> Google Workspace</span>
+        <span class="tool-badge"><i class="fas fa-calendar"></i> Calendly</span>
+        <span class="tool-badge"><i class="fab fa-slack"></i> Slack</span>
+        <span class="tool-badge"><i class="fab fa-trello"></i> Trello</span>
+        <span class="tool-badge"><i class="fab fa-asana"></i> Asana</span>
+        <span class="tool-badge"><i class="fab fa-microsoft"></i> Teams</span>
+        <span class="tool-badge"><i class="fas fa-envelope"></i> Outlook</span>
+        <span class="tool-badge"><i class="fas fa-cloud"></i> Dropbox</span>
+        <span class="tool-badge"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+        <span class="tool-badge"><i class="fas fa-phone"></i> Zoom</span>
+        <span class="tool-badge"><i class="fab fa-skype"></i> Skype</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BENEFITS SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="image/va-benefits.jpg" alt="Virtual assistant benefits" class="img-fluid rounded-4 shadow-lg" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=More+Time+for+Growth'">
+  <!-- ===== PROCESS ===== -->
+  <section class="process-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Our Process</span>
+        <h2 class="section-title-center" data-aos="fade-up">How It Works</h2>
       </div>
-      
-      <div class="col-lg-6" data-aos="fade-left">
-        <span class="sme-badge">Why You Need a VA</span>
-        <h2 class="section-title mb-4">The Power of Delegation</h2>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-          <div class="benefit-text">
-            <h4>Reclaim Your Time</h4>
-            <p>Focus on high-value activities that grow your business. Leave the routine tasks to us.</p>
-          </div>
+
+      <div class="process-grid">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <h4>Discovery Call</h4>
+          <p>We learn about your tasks, preferences, and expectations.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
-          <div class="benefit-text">
-            <h4>Cost-Effective</h4>
-            <p>Pay only for the hours you need. No employee overhead — no office space, equipment, or benefits.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">2</div>
+          <h4>Matching</h4>
+          <p>We assign the perfect VA based on your needs.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-          <div class="benefit-text">
-            <h4>Scale Quickly</h4>
-            <p>Need more support? Increase hours instantly. No hiring delays, no training costs.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">3</div>
+          <h4>Onboarding</h4>
+          <p>We set up tools, processes, and communication channels.</p>
         </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
-          <div class="benefit-text">
-            <h4>Less Stress</h4>
-            <p>No more overwhelm. Your VA handles the chaos so you can breathe and lead.</p>
-          </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">4</div>
+          <h4>Ongoing Support</h4>
+          <p>Regular check-ins, feedback, and task management.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CASE STUDY SECTION -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">Success Story</span>
-      <h2 class="section-title-center" data-aos="fade-up">Real Impact, Real Results</h2>
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits-section" style="background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <img src="image/va-benefits.jpg" alt="Virtual assistant benefits" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=More+Time+for+Growth'">
+        </div>
+
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <span class="sme-badge">Why You Need a VA</span>
+          <h2 class="section-title" style="display: inline-block;">The Power of Delegation</h2>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+            <div class="benefit-text">
+              <h4>Reclaim Your Time</h4>
+              <p>Focus on high-value activities that grow your business. Leave the routine tasks to us.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+            <div class="benefit-text">
+              <h4>Cost-Effective</h4>
+              <p>Pay only for the hours you need. No employee overhead — no office space, equipment, or benefits.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+            <div class="benefit-text">
+              <h4>Scale Quickly</h4>
+              <p>Need more support? Increase hours instantly. No hiring delays, no training costs.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+            <div class="benefit-text">
+              <h4>Less Stress</h4>
+              <p>No more overwhelm. Your VA handles the chaos so you can breathe and lead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+  </section>
+
+  <!-- ===== CASE STUDY ===== -->
+  <section class="casestudy-section" style="background: white;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">Success Story</span>
+        <h2 class="section-title-center" data-aos="fade-up">Real Impact, Real Results</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
         <div class="case-study-card" data-aos="fade-up">
-          <div class="card-body">
-            <h4>Real Estate Agency</h4>
-            <p class="industry">Real Estate · Lagos</p>
-            <p>A busy real estate agent was overwhelmed with client inquiries, appointment scheduling, and paperwork. We provided a dedicated virtual assistant who:</p>
-            <ul class="text-secondary mb-3">
-              <li>Managed all client inquiries via email, calls, and WhatsApp</li>
-              <li>Scheduled property viewings and coordinated with clients</li>
-              <li>Organized property listings and documentation</li>
-              <li>Followed up with leads and maintained the CRM</li>
-            </ul>
-            <p class="result"><span class="result-highlight">40%</span> more viewings scheduled · <span class="result-highlight">30%</span> increase in closed deals</p>
-          </div>
+          <h4>Drecot Consults</h4>
+          <p class="industry">Consulting · Lagos</p>
+          <p>A busy consulting firm was overwhelmed with client inquiries, appointment scheduling, and paperwork. We provided a dedicated virtual assistant who:</p>
+          <ul style="color: var(--gray-600); margin: 12px 0 16px; padding-left: 20px;">
+            <li>Managed all client inquiries via email, calls, and WhatsApp</li>
+            <li>Scheduled consultations and coordinated with clients</li>
+            <li>Organized documents and maintained the CRM</li>
+            <li>Followed up with leads and managed client relationships</li>
+          </ul>
+          <p class="result"><span class="result-highlight">40%</span> more appointments scheduled · <span class="result-highlight">30%</span> increase in revenue</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="results.html" class="btn-primary-custom">View More Success Stories</a>
         </div>
       </div>
     </div>
-    
-    <div class="text-center mt-5">
-      <a href="portfolio.html" class="btn btn-primary">View More Success Stories</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ SECTION -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="sme-badge" data-aos="fade-down">FAQ</span>
-      <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" style="background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="sme-badge" data-aos="fade-down">FAQ</span>
+        <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
         <div class="faq-item" data-aos="fade-up">
           <h4>How many hours per week can I get?</h4>
           <p>We offer flexible packages from 10 to 40+ hours per week. You can start small and scale up as needed.</p>
         </div>
-        
+
         <div class="faq-item" data-aos="fade-up">
           <h4>How much does a virtual assistant cost?</h4>
           <p>Our rates start from ₦150,000/month for 20 hours. Contact us for a custom quote based on your needs.</p>
         </div>
-        
+
         <div class="faq-item" data-aos="fade-up">
           <h4>How are VAs matched to my business?</h4>
           <p>We learn about your tasks, industry, and preferences. We then match you with a VA whose skills and experience align with your needs.</p>
         </div>
-        
+
         <div class="faq-item" data-aos="fade-up">
           <h4>Can I communicate directly with my VA?</h4>
           <p>Absolutely! You'll have direct communication via email, Slack, WhatsApp, or any channel you prefer.</p>
         </div>
-        
+
         <div class="faq-item" data-aos="fade-up">
           <h4>What if I need to change my VA?</h4>
           <p>We want you to be happy. If it's not a perfect match, we'll provide a replacement at no cost.</p>
         </div>
-        
+
         <div class="faq-item" data-aos="fade-up">
           <h4>Are your VAs trained and vetted?</h4>
           <p>Yes. All our VAs undergo rigorous screening, background checks, and skills assessments. They're also trained on our standards.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA SECTION -->
-<section class="cta-section text-white text-center">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <span class="sme-badge bg-light text-dark" data-aos="fade-down">Get Your Time Back</span>
-        <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Ready to Delegate?</h2>
-        <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation. Let's discuss how a VA can transform your business.</p>
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Get Your Time Back</span>
+        <h2 data-aos="fade-up">Ready to Delegate?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Get a free consultation. Let's discuss how a VA can transform your business.</p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="contact.html" class="btn btn-light btn-lg me-3">Find Your VA</a>
-          <a href="portfolio.html" class="btn btn-outline-light btn-lg">View Success Stories</a>
+          <a href="audit.html" class="btn-light">Claim Free Audit →</a>
+          <a href="results.html" class="btn-outline-light">View Success Stories</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h5 class="fw-bold">ODDS</h5>
-        <p class="text-secondary mb-3">Obori Designs & Digital Solutions — Premium digital partner for Nigerian SMEs. We build market-dominating digital assets.</p>
-        <div class="social-links">
-          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container" style="max-width: 1200px;">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>OneStack</h4>
+          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Web & E‑commerce</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="ai-automation.html">AI & Automation</a>
+          <a href="services.html">Cybersecurity</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About OneStack</a>
+          <a href="results.html">Results</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>oborimusa@gmail.com</p>
+          <p>+234 803 966 1354</p>
+          <p>Remote-first / Osogbo</p>
         </div>
       </div>
-      
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html">Home</a></li>
-          <li class="mb-2"><a href="about.html">About Us</a></li>
-          <li class="mb-2"><a href="services.html">Services</a></li>
-          <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
-          <li class="mb-2"><a href="contact.html">Contact</a></li>
-          <li class="mb-2"><a href="founder.html">Founder</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h6>Contact Info</h6>
-        <p><i class="fas fa-phone me-2"></i> <a href="tel:+2348039661354">+234 803 966 1354</a></p>
-        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@odds.ng">contact@odds.ng</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lagos & Osogbo, Nigeria</p>
-        <p class="small text-secondary">Mon-Fri: 9am-6pm | Sat: 10am-2pm</p>
-      </div>
-      
-      <div class="col-lg-3 mb-4">
-        <h6>Stay Updated</h6>
-        <p class="small text-secondary">Get growth tips & exclusive offers</p>
-        <form class="d-flex">
-          <input type="email" class="form-control form-control-sm me-2" placeholder="Your email" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;">
-          <button class="btn btn-sm" style="background: var(--accent); color: var(--primary-dark); font-weight: 600;" type="submit">→</button>
-        </form>
+      <div class="copyright">
+        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+        <p style="margin-top: 8px;">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-conditions.html">Terms & Conditions</a>
+        </p>
       </div>
     </div>
-    
-    <hr class="border-secondary" />
-    
-    <div class="text-center small">
-      <p class="mb-0">&copy; 2025 ODDS · Premium Digital Solutions for Nigerian SMEs. All rights reserved.</p>
-      <p class="mt-2">
-        <a href="privacy.html" class="text-secondary me-3">Privacy</a>
-        <a href="terms.html" class="text-secondary me-3">Terms</a>
-        <a href="sitemap.xml" class="text-secondary">Sitemap</a>
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-  });
-</script>
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navList');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

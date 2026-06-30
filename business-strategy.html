@@ -1,1225 +1,1529 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-  <!-- ===== FAVICON ===== -->
-  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
-
-  <!-- ===== SEO ===== -->
-  <title>Business Strategy for Nigerian SMEs · Digital Strategy & Growth Planning | OneStack Digital Agency</title>
-  <meta name="description" content="OneStack business strategy services for Nigerian SMEs: align your digital presence with long-term goals through expert market analysis, competitor research, and strategic planning." />
-  <meta name="keywords" content="business strategy Nigeria, digital strategy Lagos, market analysis, competitor research, strategic planning, SME growth strategy, OneStack consulting" />
-  <meta name="author" content="OneStack Digital Agency" />
-
-  <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="Business Strategy for Nigerian SMEs · Digital Strategy & Growth Planning" />
-  <meta property="og:description" content="Align your digital presence with your long-term goals through expert market analysis, competitor research, and strategic planning." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://onestack.ng/business-strategy.html" />
-
-  <!-- ===== GOOGLE FONTS ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- ===== FONT AWESOME ===== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- ===== AOS ===== -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-      padding-top: 76px;
-    }
-
-    :root {
-      --primary: #0a2647;
-      --primary-dark: #051a34;
-      --primary-light: #1e3a5f;
-      --accent: #c5a059;
-      --accent-light: #d4b37a;
-      --accent-dark: #9e7b44;
-      --white: #ffffff;
-      --off-white: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-600: #475569;
-      --gray-800: #1e293b;
-      --dark: #0f172a;
-      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
-      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
-      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .logo-text h1 {
-      font-family: "Space Grotesk", monospace;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-    }
-
-    .logo-text p {
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--gray-800);
-      transition: 0.2s;
-      padding: 8px 12px;
-      border-radius: 40px;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-links a.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    .btn-consult {
-      background: var(--gradient-primary);
-      color: white !important;
-      padding: 10px 28px !important;
-      border-radius: 40px;
-      font-weight: 600;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-consult:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      color: white !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    /* ===== BADGE ===== */
-    .sme-badge {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-      color: var(--primary);
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 80px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 3px;
-    }
-
-    .section-title-center::after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn-primary-custom {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 12px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      border: none;
-    }
-
-    .btn-primary-custom:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .btn-outline-custom {
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      background: transparent;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-    }
-
-    .btn-outline-custom:hover {
-      background: var(--accent);
-      color: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-
-    @keyframes softShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      font-family: "Space Grotesk", sans-serif;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    /* ===== METRICS ===== */
-    .metrics-section {
-      background: var(--primary);
-      color: white;
-      padding: 60px 0;
-    }
-
-    .metric-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .metric-label {
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    /* ===== PILLARS ===== */
-    .pillars-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .pillar-card {
-      background: var(--gradient-primary);
-      color: white;
-      border-radius: 24px;
-      padding: 2rem;
-      transition: all 0.3s;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      height: 100%;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .pillar-icon {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      color: var(--primary-dark);
-    }
-
-    .pillar-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    .pillar-card p {
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.6;
-    }
-
-    /* ===== FRAMEWORK ===== */
-    .framework-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .framework-item {
-      display: flex;
-      gap: 1.5rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 16px;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-      margin-bottom: 16px;
-    }
-
-    .framework-item:hover {
-      transform: translateX(8px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .framework-letter {
-      width: 60px;
-      height: 60px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      flex-shrink: 0;
-    }
-
-    .framework-content h4 {
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .framework-content p {
-      color: var(--gray-600);
-      margin: 0;
-    }
-
-    /* ===== PROCESS ===== */
-    .process-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-
-    .process-step {
-      text-align: center;
-      padding: 32px;
-      background: var(--off-white);
-      border-radius: 24px;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .process-step:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      color: var(--primary-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 0 auto 1.5rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .process-step h4 {
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
-
-    /* ===== BENEFITS ===== */
-    .benefits-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .benefit-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .benefit-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      flex-shrink: 0;
-    }
-
-    .benefit-text h4 {
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .benefit-text p {
-      color: var(--gray-600);
-      margin: 0;
-    }
-
-    /* ===== CASE STUDY ===== */
-    .casestudy-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .case-study-card {
-      background: var(--off-white);
-      border-radius: 24px;
-      padding: 2rem;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .case-study-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-    }
-
-    .case-study-card .industry {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .case-study-card .result {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary);
-      border-top: 1px solid var(--gray-200);
-      padding-top: 16px;
-      margin-top: 16px;
-    }
-
-    .result-highlight {
-      color: var(--accent);
-      font-size: 1.5rem;
-    }
-
-    /* ===== FAQ ===== */
-    .faq-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .faq-item {
-      background: white;
-      border-radius: 16px;
-      padding: 1.5rem;
-      margin-bottom: 16px;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .faq-item:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .faq-item h4 {
-      color: var(--primary);
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
-    .faq-item p {
-      color: var(--gray-600);
-      margin: 0;
-    }
-
-    /* ===== CTA ===== */
-    .cta-section {
-      background: var(--gradient-primary);
-      padding: 80px 0;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-section .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 32px;
-      opacity: 0.9;
-    }
-
-    .cta-section .btn-light {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 14px 40px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-
-    .cta-section .btn-light:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
-
-    .cta-section .btn-outline-light {
-      border: 2px solid white;
-      color: white;
-      padding: 14px 40px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-
-    .cta-section .btn-outline-light:hover {
-      background: white;
-      color: var(--primary-dark);
-      transform: translateY(-3px);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--primary);
-      color: var(--off-white);
-      padding: 60px 0 30px;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-    }
-
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    .footer-col a {
-      display: block;
-      color: var(--gray-300);
-      text-decoration: none;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent);
-    }
-
-    .footer-col p {
-      margin-bottom: 8px;
-    }
-
-    .social-icons a {
-      margin-right: 18px;
-      font-size: 1.2rem;
-      color: var(--gray-300);
-    }
-
-    .social-icons a:hover {
-      color: var(--accent);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
-      font-size: 0.8rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 880px) {
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background: white;
-        padding: 20px 0;
-        gap: 1rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon-16x16.png"
+    />
+
+    <!-- ===== SEO ===== -->
+    <title>
+      Business Strategy for Nigerian SMEs · Digital Strategy & Growth Planning |
+      OneStack Digital Agency
+    </title>
+    <meta
+      name="description"
+      content="OneStack business strategy services for Nigerian SMEs: align your digital presence with long-term goals through expert market analysis, competitor research, and strategic planning."
+    />
+    <meta
+      name="keywords"
+      content="business strategy Nigeria, digital strategy Lagos, market analysis, competitor research, strategic planning, SME growth strategy, OneStack consulting"
+    />
+    <meta name="author" content="OneStack Digital Agency" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta
+      property="og:title"
+      content="Business Strategy for Nigerian SMEs · Digital Strategy & Growth Planning"
+    />
+    <meta
+      property="og:description"
+      content="Align your digital presence with your long-term goals through expert market analysis, competitor research, and strategic planning."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://onestack.ng/business-strategy.html"
+    />
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- ===== AOS ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .nav-links.active {
-        display: flex;
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #1e293b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+        padding-top: 76px;
       }
 
-      .menu-toggle {
-        display: block;
+      :root {
+        --primary: #0a2647;
+        --primary-dark: #051a34;
+        --primary-light: #1e3a5f;
+        --accent: #c5a059;
+        --accent-light: #d4b37a;
+        --accent-dark: #9e7b44;
+        --white: #ffffff;
+        --off-white: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-600: #475569;
+        --gray-800: #1e293b;
+        --dark: #0f172a;
+        --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+        --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+        --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
       }
 
       .container {
-        padding: 0 20px;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
       }
 
-      .hero h1 {
-        font-size: 2rem;
+      /* ===== HEADER ===== */
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--gray-200);
       }
 
-      .hero p {
-        font-size: 1rem;
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .logo-text h1 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .logo-text p {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--gray-800);
+        transition: 0.2s;
+        padding: 8px 12px;
+        border-radius: 40px;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .nav-links a.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+
+      .btn-consult {
+        background: var(--gradient-primary);
+        color: white !important;
+        padding: 10px 28px !important;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .btn-consult:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        color: white !important;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      /* ===== BADGE ===== */
+      .sme-badge {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow-accent);
       }
 
       .section-title {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+        color: var(--primary);
       }
 
-      .metric-number {
-        font-size: 2rem;
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 3px;
       }
 
-      .pillar-card {
-        padding: 1.5rem;
+      .section-title-center::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      .framework-item {
-        flex-direction: column;
+      /* ===== BUTTONS ===== */
+      .btn-primary-custom {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        border: none;
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .btn-outline-custom {
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        background: transparent;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+
+      .btn-outline-custom:hover {
+        background: var(--accent);
+        color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: var(--gradient-primary);
+        padding: 100px 0 80px;
         text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
       }
 
-      .framework-letter {
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: softShift 15s ease infinite;
+      }
+
+      @keyframes softShift {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
         margin: 0 auto;
       }
 
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .benefit-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .footer-grid {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer .social-icons {
-        justify-content: center;
-      }
-
-      .cta-section h2 {
-        font-size: 1.8rem;
-      }
-
-      .cta-section .btn-light,
-      .cta-section .btn-outline-light {
-        display: block;
-        margin: 10px 20px;
-      }
-    }
-
-    @media (max-width: 550px) {
-      .hero h1 {
-        font-size: 1.6rem;
+      /* ===== METRICS ===== */
+      .metrics-section {
+        background: var(--primary);
+        color: white;
+        padding: 60px 0;
       }
 
       .metric-number {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .metric-label {
+        font-size: 0.95rem;
+        opacity: 0.8;
+      }
+
+      /* ===== PILLARS ===== */
+      .pillars-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .pillar-card {
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 24px;
+        padding: 2rem;
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 100%;
+      }
+
+      .pillar-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
       }
 
       .pillar-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        color: var(--primary-dark);
+      }
+
+      .pillar-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+      }
+
+      .pillar-card p {
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+      }
+
+      /* ===== FRAMEWORK ===== */
+      .framework-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .framework-item {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 16px;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
+        margin-bottom: 16px;
+      }
+
+      .framework-item:hover {
+        transform: translateX(8px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .framework-letter {
         width: 60px;
         height: 60px;
-        font-size: 1.5rem;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--primary-dark);
+        flex-shrink: 0;
+      }
+
+      .framework-content h4 {
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+
+      .framework-content p {
+        color: var(--gray-600);
+        margin: 0;
+      }
+
+      /* ===== PROCESS ===== */
+      .process-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .process-step {
+        text-align: center;
+        padding: 32px;
+        background: var(--off-white);
+        border-radius: 24px;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
+      }
+
+      .process-step:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .step-number {
+        width: 70px;
+        height: 70px;
+        background: var(--accent);
+        color: var(--primary-dark);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 auto 1.5rem;
+        box-shadow: var(--shadow-accent);
+      }
+
+      .process-step h4 {
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+
+      .process-step p {
+        color: var(--gray-600);
+        font-size: 0.9rem;
+      }
+
+      /* ===== BENEFITS ===== */
+      .benefits-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .benefit-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .benefit-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--primary-dark);
+        flex-shrink: 0;
+      }
+
+      .benefit-text h4 {
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+
+      .benefit-text p {
+        color: var(--gray-600);
+        margin: 0;
+      }
+
+      /* ===== CASE STUDY ===== */
+      .casestudy-section {
+        padding: 80px 0;
+        background: white;
       }
 
       .case-study-card {
-        padding: 1.5rem;
+        background: var(--off-white);
+        border-radius: 24px;
+        padding: 2rem;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
+      }
+
+      .case-study-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-md);
+      }
+
+      .case-study-card .industry {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .case-study-card .result {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--primary);
+        border-top: 1px solid var(--gray-200);
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+
+      .result-highlight {
+        color: var(--accent);
+        font-size: 1.5rem;
+      }
+
+      /* ===== FAQ ===== */
+      .faq-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
       }
 
       .faq-item {
-        padding: 1.25rem;
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 16px;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="logo">
-          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
-          <div class="logo-text">
-            <h1>One<span style="color:#c5a059;">Stack</span></h1>
-            <p>COMPLETE DIGITAL ECOSYSTEM</p>
-          </div>
-        </a>
-        <div class="menu-toggle" id="mobileMenu">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navList">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="founder.html">Founder</a></li>
-          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+      .faq-item:hover {
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="container hero-content">
-      <span class="sme-badge" data-aos="fade-down">Business Strategy</span>
-      <h1 data-aos="fade-up" data-aos-delay="100">Plan for <span>Success</span></h1>
-      <p data-aos="fade-up" data-aos-delay="200">We align your digital presence with your long-term goals through expert market analysis, competitor research, and strategic planning.</p>
-    </div>
-  </section>
+      .faq-item h4 {
+        color: var(--primary);
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
 
-  <!-- ===== METRICS ===== -->
-  <section class="metrics-section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="0">
-          <div class="metric-number">50+</div>
-          <div class="metric-label">Businesses Strategized</div>
-        </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="100">
-          <div class="metric-number">3x</div>
-          <div class="metric-label">Faster Growth</div>
-        </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="200">
-          <div class="metric-number">100%</div>
-          <div class="metric-label">Custom Roadmap</div>
-        </div>
-        <div style="flex: 1; min-width: 150px;" data-aos="fade-up" data-aos-delay="300">
-          <div class="metric-number">₦200M+</div>
-          <div class="metric-label">Client Revenue Generated</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      .faq-item p {
+        color: var(--gray-600);
+        margin: 0;
+      }
 
-  <!-- ===== INTRO ===== -->
-  <section class="pillars-section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <span class="sme-badge">Strategic Clarity</span>
-          <h2 class="section-title" style="display: inline-block;">Don't Just <span style="color: var(--accent);">Execute</span> — Strategize</h2>
-          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 16px;">Without a strategy, you're just guessing. We help you move with purpose.</p>
-          <p style="color: var(--gray-600); margin-bottom: 24px;">At OneStack, we believe that every digital asset should serve a clear business purpose. Our business strategy service helps you define where you're going and how to get there. Through deep market analysis, competitor research, and strategic planning, we create a roadmap that aligns your digital presence with your long-term business goals.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 160px;">
-              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary);"><i class="fas fa-search me-2" style="color: var(--accent);"></i>Data-Driven</h4>
-              <p style="color: var(--gray-600); font-size: 0.9rem;">Decisions based on facts</p>
+      /* ===== CTA ===== */
+      .cta-section {
+        background: var(--gradient-primary);
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .cta-section .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      .cta-section p {
+        max-width: 600px;
+        margin: 0 auto 32px;
+        opacity: 0.9;
+      }
+
+      .cta-section .btn-light {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 14px 40px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .cta-section .btn-light:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
+
+      .cta-section .btn-outline-light {
+        border: 2px solid white;
+        color: white;
+        padding: 14px 40px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .cta-section .btn-outline-light:hover {
+        background: white;
+        color: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--primary);
+        color: var(--off-white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+
+      .footer-col a {
+        display: block;
+        color: var(--gray-300);
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-col a:hover {
+        color: var(--accent);
+      }
+
+      .footer-col p {
+        margin-bottom: 8px;
+      }
+
+      .social-icons a {
+        margin-right: 18px;
+        font-size: 1.2rem;
+        color: var(--gray-300);
+      }
+
+      .social-icons a:hover {
+        color: var(--accent);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        font-size: 0.8rem;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 880px) {
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          background: white;
+          padding: 20px 0;
+          gap: 1rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .container {
+          padding: 0 20px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .metric-number {
+          font-size: 2rem;
+        }
+
+        .pillar-card {
+          padding: 1.5rem;
+        }
+
+        .framework-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .framework-letter {
+          margin: 0 auto;
+        }
+
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .benefit-item {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer .social-icons {
+          justify-content: center;
+        }
+
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .cta-section .btn-light,
+        .cta-section .btn-outline-light {
+          display: block;
+          margin: 10px 20px;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+
+        .metric-number {
+          font-size: 1.5rem;
+        }
+
+        .pillar-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+        }
+
+        .case-study-card {
+          padding: 1.5rem;
+        }
+
+        .faq-item {
+          padding: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="image/onestack-logo.png"
+              alt="OneStack Digital Agency"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="logo-text">
+              <h1>One<span style="color: #c5a059">Stack</span></h1>
+              <p>COMPLETE DIGITAL ECOSYSTEM</p>
             </div>
-            <div style="flex: 1; min-width: 160px;">
-              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary);"><i class="fas fa-road me-2" style="color: var(--accent);"></i>Clear Roadmap</h4>
-              <p style="color: var(--gray-600); font-size: 0.9rem;">Step-by-step execution plan</p>
-            </div>
+          </a>
+          <div class="menu-toggle" id="mobileMenu">
+            <i class="fas fa-bars"></i>
           </div>
-        </div>
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <img src="image/strategy-showcase.jpg" alt="Strategic planning" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Strategic+Planning'">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== STRATEGY PILLARS ===== -->
-  <section class="framework-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">The Pillars</span>
-        <h2 class="section-title-center" data-aos="fade-up">What Our Strategy Includes</h2>
-        <p style="color: var(--gray-600); max-width: 600px; margin: 16px auto 0;" data-aos="fade-up" data-aos-delay="100">A comprehensive approach to business growth</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="pillar-icon"><i class="fas fa-chart-bar"></i></div>
-          <h3>Market Analysis</h3>
-          <p>Deep dive into your industry, market trends, customer behavior, and opportunities. We identify where the real growth is.</p>
-        </div>
-
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="pillar-icon"><i class="fas fa-users"></i></div>
-          <h3>Competitor Research</h3>
-          <p>We analyze your competitors — their strengths, weaknesses, strategies, and gaps. Find your competitive advantage.</p>
-        </div>
-
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
-          <h3>Goal Setting</h3>
-          <p>Clear, measurable objectives aligned with your business vision. We define what success looks like and how to measure it.</p>
-        </div>
-
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="pillar-icon"><i class="fas fa-road"></i></div>
-          <h3>Strategic Roadmap</h3>
-          <p>A step-by-step plan with timelines, milestones, and priorities. Know exactly what to do and when.</p>
-        </div>
-
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="pillar-icon"><i class="fas fa-chart-pie"></i></div>
-          <h3>Budget & Resources</h3>
-          <p>We help you allocate resources effectively — budget, team, tools — to maximize ROI and minimize waste.</p>
-        </div>
-
-        <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>KPIs & Metrics</h3>
-          <p>Define the key performance indicators that matter. We help you track progress and adjust course as needed.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OUR FRAMEWORK ===== -->
-  <section class="process-section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <span class="sme-badge">Our Framework</span>
-          <h2 class="section-title" style="display: inline-block;">The OneStack Strategic Framework</h2>
-          <p style="font-size: 1.1rem; color: var(--gray-600); margin: 20px 0 24px;">A proven methodology that delivers results for Nigerian SMEs.</p>
-
-          <div class="framework-item">
-            <div class="framework-letter">A</div>
-            <div class="framework-content">
-              <h4>Analyze</h4>
-              <p>Market research, competitor audit, SWOT analysis, customer insights</p>
-            </div>
-          </div>
-
-          <div class="framework-item">
-            <div class="framework-letter">B</div>
-            <div class="framework-content">
-              <h4>Blueprint</h4>
-              <p>Goal setting, positioning, value proposition, strategic direction</p>
-            </div>
-          </div>
-
-          <div class="framework-item">
-            <div class="framework-letter">C</div>
-            <div class="framework-content">
-              <h4>Create</h4>
-              <p>Roadmap development, resource planning, KPI definition</p>
-            </div>
-          </div>
-
-          <div class="framework-item">
-            <div class="framework-letter">D</div>
-            <div class="framework-content">
-              <h4>Deploy</h4>
-              <p>Execution support, monitoring, optimization, and iteration</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <img src="image/strategy-framework.jpg" alt="Strategic framework" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/1e3a5f/ffffff?text=ABCD+Framework'">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OUR PROCESS ===== -->
-  <section class="framework-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Our Process</span>
-        <h2 class="section-title-center" data-aos="fade-up">From Analysis to Action</h2>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-          <div class="step-number">1</div>
-          <h4>Discovery</h4>
-          <p>We learn about your business, goals, challenges, and vision.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-          <div class="step-number">2</div>
-          <h4>Research</h4>
-          <p>Market analysis, competitor research, customer insights.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-          <div class="step-number">3</div>
-          <h4>Strategy</h4>
-          <p>We develop your custom roadmap and action plan.</p>
-        </div>
-        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-          <div class="step-number">4</div>
-          <h4>Review</h4>
-          <p>We present, refine, and help you execute.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BENEFITS ===== -->
-  <section class="benefits-section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <img src="image/strategy-benefits.jpg" alt="Business growth" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);" onerror="this.src='https://placehold.co/600x400/0a2647/c5a059?text=Business+Growth'">
-        </div>
-
-        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <span class="sme-badge">Why Strategy Matters</span>
-          <h2 class="section-title" style="display: inline-block;">The Power of Planning</h2>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-compass"></i></div>
-            <div class="benefit-text">
-              <h4>Clear Direction</h4>
-              <p>Everyone on your team knows where you're going and why. No more guesswork.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-            <div class="benefit-text">
-              <h4>Faster Growth</h4>
-              <p>Businesses with a clear strategy grow 3x faster than those without.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
-            <div class="benefit-text">
-              <h4>Resource Efficiency</h4>
-              <p>Stop wasting money on tactics that don't work. Focus on what matters.</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="benefit-text">
-              <h4>Competitive Advantage</h4>
-              <p>Understand your market better than competitors. Find gaps they've missed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CASE STUDY ===== -->
-  <section class="casestudy-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Success Story</span>
-        <h2 class="section-title-center" data-aos="fade-up">Strategy in Action</h2>
-      </div>
-
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="case-study-card" data-aos="fade-up">
-          <h4>CredMart</h4>
-          <p class="industry">E‑commerce · Lagos</p>
-          <p>CredMart was struggling with low visibility and inconsistent sales. We developed a comprehensive digital strategy:</p>
-          <ul style="color: var(--gray-600); margin: 12px 0 16px; padding-left: 20px;">
-            <li>Market analysis revealed untapped customer segments</li>
-            <li>Competitor research identified gaps in product offerings</li>
-            <li>Strategic roadmap prioritized SEO and Google Ads</li>
-            <li>Clear KPIs established for each quarter</li>
+          <ul class="nav-links" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li>
+              <a href="audit.html" class="btn-consult">Get Free Audit →</a>
+            </li>
           </ul>
-          <p class="result"><span class="result-highlight">+240%</span> sales increase in 3 months · <span class="result-highlight">#1</span> for 15+ keywords</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 32px;">
-          <a href="results.html" class="btn-primary-custom">View More Success Stories</a>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ===== FAQ ===== -->
-  <section class="faq-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">FAQ</span>
-        <h2 class="section-title-center" data-aos="fade-up">Frequently Asked Questions</h2>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="sme-badge" data-aos="fade-down">Business Strategy</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          Plan for <span>Success</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          We align your digital presence with your long-term goals through
+          expert market analysis, competitor research, and strategic planning.
+        </p>
       </div>
+    </section>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="faq-item" data-aos="fade-up">
-          <h4>How is this different from consulting?</h4>
-          <p>We focus specifically on aligning your digital presence with business goals. We don't just give advice — we provide actionable roadmaps you can execute.</p>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up">
-          <h4>How long does the strategy process take?</h4>
-          <p>A comprehensive strategy typically takes 2-3 weeks, depending on the complexity of your business and market.</p>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up">
-          <h4>What if I already have a business plan?</h4>
-          <p>Great! We can review your existing plan and help you create a digital strategy that aligns with it. We fill the digital gaps.</p>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up">
-          <h4>Do you help with execution?</h4>
-          <p>Yes. We can support you in executing the strategy — from building the digital assets to implementing the marketing campaigns.</p>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up">
-          <h4>What deliverables will I receive?</h4>
-          <p>You'll receive a comprehensive strategy document including market analysis, competitor research, strategic roadmap, KPIs, and budget recommendations.</p>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up">
-          <h4>How much does it cost?</h4>
-          <p>Pricing depends on the scope. We offer packages starting from ₦350,000 for SMEs. Contact us for a custom quote.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="cta-section">
-    <div class="container">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Ready to Plan?</span>
-        <h2 data-aos="fade-up">Let's Build Your Strategy</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Get a free strategic consultation. No pressure, just possibilities.</p>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <a href="audit.html" class="btn-light">Claim Free Audit →</a>
-          <a href="results.html" class="btn-outline-light">View Case Studies</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container" style="max-width: 1200px;">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>OneStack</h4>
-          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+    <!-- ===== METRICS ===== -->
+    <section class="metrics-section">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+          "
+        >
+          <div
+            style="flex: 1; min-width: 150px"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="metric-number">50+</div>
+            <div class="metric-label">Businesses Strategized</div>
+          </div>
+          <div
+            style="flex: 1; min-width: 150px"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="metric-number">3x</div>
+            <div class="metric-label">Faster Growth</div>
+          </div>
+          <div
+            style="flex: 1; min-width: 150px"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="metric-number">100%</div>
+            <div class="metric-label">Custom Roadmap</div>
+          </div>
+          <div
+            style="flex: 1; min-width: 150px"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="metric-number">₦200M+</div>
+            <div class="metric-label">Client Revenue Generated</div>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="services.html">Web & E‑commerce</a>
-          <a href="services.html">Digital Marketing</a>
-          <a href="ai-automation.html">AI & Automation</a>
-          <a href="services.html">Cybersecurity</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="about.html">About OneStack</a>
-          <a href="results.html">Results</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Get in touch</h4>
-          <p>oborimusa@gmail.com</p>
-          <p>+234 803 966 1354</p>
-          <p>Remote-first / Osogbo</p>
+      </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="pillars-section">
+      <div class="container">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center"
+        >
+          <div style="flex: 1; min-width: 300px" data-aos="fade-right">
+            <span class="sme-badge">Strategic Clarity</span>
+            <h2 class="section-title" style="display: inline-block">
+              Don't Just <span style="color: var(--accent)">Execute</span> —
+              Strategize
+            </h2>
+            <p
+              style="
+                font-size: 1.1rem;
+                color: var(--gray-600);
+                margin: 20px 0 16px;
+              "
+            >
+              Without a strategy, you're just guessing. We help you move with
+              purpose.
+            </p>
+            <p style="color: var(--gray-600); margin-bottom: 24px">
+              At OneStack, we believe that every digital asset should serve a
+              clear business purpose. Our business strategy service helps you
+              define where you're going and how to get there. Through deep
+              market analysis, competitor research, and strategic planning, we
+              create a roadmap that aligns your digital presence with your
+              long-term business goals.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px">
+              <div style="flex: 1; min-width: 160px">
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--primary);
+                  "
+                >
+                  <i class="fas fa-search me-2" style="color: var(--accent)"></i
+                  >Data-Driven
+                </h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem">
+                  Decisions based on facts
+                </p>
+              </div>
+              <div style="flex: 1; min-width: 160px">
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--primary);
+                  "
+                >
+                  <i class="fas fa-road me-2" style="color: var(--accent)"></i
+                  >Clear Roadmap
+                </h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem">
+                  Step-by-step execution plan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div style="flex: 1; min-width: 300px" data-aos="fade-left">
+            <img
+              src="image/strategy-showcase.jpg"
+              alt="Strategic planning"
+              style="
+                width: 100%;
+                border-radius: 24px;
+                box-shadow: var(--shadow-lg);
+              "
+              onerror="
+                this.src =
+                  'https://placehold.co/600x400/0a2647/c5a059?text=Strategic+Planning'
+              "
+            />
+          </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
+    </section>
+
+    <!-- ===== STRATEGY PILLARS ===== -->
+    <section class="framework-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">The Pillars</span>
+          <h2 class="section-title-center" data-aos="fade-up">
+            What Our Strategy Includes
+          </h2>
+          <p
+            style="
+              color: var(--gray-600);
+              max-width: 600px;
+              margin: 16px auto 0;
+            "
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            A comprehensive approach to business growth
+          </p>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+          "
+        >
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="pillar-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Market Analysis</h3>
+            <p>
+              Deep dive into your industry, market trends, customer behavior,
+              and opportunities. We identify where the real growth is.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-icon"><i class="fas fa-users"></i></div>
+            <h3>Competitor Research</h3>
+            <p>
+              We analyze your competitors — their strengths, weaknesses,
+              strategies, and gaps. Find your competitive advantage.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Goal Setting</h3>
+            <p>
+              Clear, measurable objectives aligned with your business vision. We
+              define what success looks like and how to measure it.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="pillar-icon"><i class="fas fa-road"></i></div>
+            <h3>Strategic Roadmap</h3>
+            <p>
+              A step-by-step plan with timelines, milestones, and priorities.
+              Know exactly what to do and when.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Budget & Resources</h3>
+            <p>
+              We help you allocate resources effectively — budget, team, tools —
+              to maximize ROI and minimize waste.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>KPIs & Metrics</h3>
+            <p>
+              Define the key performance indicators that matter. We help you
+              track progress and adjust course as needed.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 100 });
+    <!-- ===== OUR FRAMEWORK ===== -->
+    <section class="process-section">
+      <div class="container">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center"
+        >
+          <div style="flex: 1; min-width: 300px" data-aos="fade-right">
+            <span class="sme-badge">Our Framework</span>
+            <h2 class="section-title" style="display: inline-block">
+              The OneStack Strategic Framework
+            </h2>
+            <p
+              style="
+                font-size: 1.1rem;
+                color: var(--gray-600);
+                margin: 20px 0 24px;
+              "
+            >
+              A proven methodology that delivers results for Nigerian SMEs.
+            </p>
 
-    // Mobile menu toggle
-    const toggle = document.getElementById('mobileMenu');
-    const nav = document.getElementById('navList');
+            <div class="framework-item">
+              <div class="framework-letter">A</div>
+              <div class="framework-content">
+                <h4>Analyze</h4>
+                <p>
+                  Market research, competitor audit, SWOT analysis, customer
+                  insights
+                </p>
+              </div>
+            </div>
 
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
+            <div class="framework-item">
+              <div class="framework-letter">B</div>
+              <div class="framework-content">
+                <h4>Blueprint</h4>
+                <p>
+                  Goal setting, positioning, value proposition, strategic
+                  direction
+                </p>
+              </div>
+            </div>
 
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
+            <div class="framework-item">
+              <div class="framework-letter">C</div>
+              <div class="framework-content">
+                <h4>Create</h4>
+                <p>Roadmap development, resource planning, KPI definition</p>
+              </div>
+            </div>
+
+            <div class="framework-item">
+              <div class="framework-letter">D</div>
+              <div class="framework-content">
+                <h4>Deploy</h4>
+                <p>
+                  Execution support, monitoring, optimization, and iteration
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="flex: 1; min-width: 300px" data-aos="fade-left">
+            <img
+              src="image/strategy-framework.jpg"
+              alt="Strategic framework"
+              style="
+                width: 100%;
+                border-radius: 24px;
+                box-shadow: var(--shadow-lg);
+              "
+              onerror="
+                this.src =
+                  'https://placehold.co/600x400/1e3a5f/ffffff?text=ABCD+Framework'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUR PROCESS ===== -->
+    <section class="framework-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">Our Process</span>
+          <h2 class="section-title-center" data-aos="fade-up">
+            From Analysis to Action
+          </h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+            <div class="step-number">1</div>
+            <h4>Discovery</h4>
+            <p>We learn about your business, goals, challenges, and vision.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">2</div>
+            <h4>Research</h4>
+            <p>Market analysis, competitor research, customer insights.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">3</div>
+            <h4>Strategy</h4>
+            <p>We develop your custom roadmap and action plan.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">4</div>
+            <h4>Review</h4>
+            <p>We present, refine, and help you execute.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BENEFITS ===== -->
+    <section class="benefits-section">
+      <div class="container">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center"
+        >
+          <div style="flex: 1; min-width: 300px" data-aos="fade-right">
+            <img
+              src="image/strategy-benefits.jpg"
+              alt="Business growth"
+              style="
+                width: 100%;
+                border-radius: 24px;
+                box-shadow: var(--shadow-lg);
+              "
+              onerror="
+                this.src =
+                  'https://placehold.co/600x400/0a2647/c5a059?text=Business+Growth'
+              "
+            />
+          </div>
+
+          <div style="flex: 1; min-width: 300px" data-aos="fade-left">
+            <span class="sme-badge">Why Strategy Matters</span>
+            <h2 class="section-title" style="display: inline-block">
+              The Power of Planning
+            </h2>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fas fa-compass"></i></div>
+              <div class="benefit-text">
+                <h4>Clear Direction</h4>
+                <p>
+                  Everyone on your team knows where you're going and why. No
+                  more guesswork.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+              <div class="benefit-text">
+                <h4>Faster Growth</h4>
+                <p>
+                  Businesses with a clear strategy grow 3x faster than those
+                  without.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fas fa-wallet"></i></div>
+              <div class="benefit-text">
+                <h4>Resource Efficiency</h4>
+                <p>
+                  Stop wasting money on tactics that don't work. Focus on what
+                  matters.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="benefit-text">
+                <h4>Competitive Advantage</h4>
+                <p>
+                  Understand your market better than competitors. Find gaps
+                  they've missed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CASE STUDY ===== -->
+    <section class="casestudy-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">Success Story</span>
+          <h2 class="section-title-center" data-aos="fade-up">
+            Strategy in Action
+          </h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto">
+          <div class="case-study-card" data-aos="fade-up">
+            <h4>CredMart</h4>
+            <p class="industry">E‑commerce · Lagos</p>
+            <p>
+              CredMart was struggling with low visibility and inconsistent
+              sales. We developed a comprehensive digital strategy:
+            </p>
+            <ul
+              style="
+                color: var(--gray-600);
+                margin: 12px 0 16px;
+                padding-left: 20px;
+              "
+            >
+              <li>Market analysis revealed untapped customer segments</li>
+              <li>Competitor research identified gaps in product offerings</li>
+              <li>Strategic roadmap prioritized SEO and Google Ads</li>
+              <li>Clear KPIs established for each quarter</li>
+            </ul>
+            <p class="result">
+              <span class="result-highlight">+240%</span> sales increase in 3
+              months · <span class="result-highlight">#1</span> for 15+ keywords
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 32px">
+            <a href="results.html" class="btn-primary-custom"
+              >View More Success Stories</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">FAQ</span>
+          <h2 class="section-title-center" data-aos="fade-up">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto">
+          <div class="faq-item" data-aos="fade-up">
+            <h4>How is this different from consulting?</h4>
+            <p>
+              We focus specifically on aligning your digital presence with
+              business goals. We don't just give advice — we provide actionable
+              roadmaps you can execute.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <h4>How long does the strategy process take?</h4>
+            <p>
+              A comprehensive strategy typically takes 2-3 weeks, depending on
+              the complexity of your business and market.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <h4>What if I already have a business plan?</h4>
+            <p>
+              Great! We can review your existing plan and help you create a
+              digital strategy that aligns with it. We fill the digital gaps.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <h4>Do you help with execution?</h4>
+            <p>
+              Yes. We can support you in executing the strategy — from building
+              the digital assets to implementing the marketing campaigns.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <h4>What deliverables will I receive?</h4>
+            <p>
+              You'll receive a comprehensive strategy document including market
+              analysis, competitor research, strategic roadmap, KPIs, and budget
+              recommendations.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <h4>How much does it cost?</h4>
+            <p>
+              Pricing depends on the scope. We offer packages starting from
+              ₦350,000 for SMEs. Contact us for a custom quote.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto">
+          <span
+            class="sme-badge"
+            style="background: rgba(255, 255, 255, 0.15); color: var(--accent)"
+            data-aos="fade-down"
+            >Ready to Plan?</span
+          >
+          <h2 data-aos="fade-up">Let's Build Your Strategy</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Get a free strategic consultation. No pressure, just possibilities.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <a href="audit.html" class="btn-light">Claim Free Audit →</a>
+            <a href="results.html" class="btn-outline-light"
+              >View Case Studies</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container" style="max-width: 1200px">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>OneStack</h4>
+            <p>
+              Complete Digital Ecosystem — We build, grow & secure your online
+              presence.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Web & E‑commerce</a>
+            <a href="services.html">Digital Marketing</a>
+            <a href="ai-automation.html">AI & Automation</a>
+            <a href="services.html">Cybersecurity</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="about.html">About OneStack</a>
+            <a href="results.html">Results</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Get in touch</h4>
+            <p>oborimusa@gmail.com</p>
+            <p>+234 803 966 1354</p>
+            <p>Remote-first / Osogbo</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem.
+            Built in Nigeria for African businesses.
+          </p>
+          <p style="margin-top: 8px">
+            <a href="privacy-policy.html" style="color: var(--off-white)"
+              >Privacy Policy</a
+            >
+            <a href="terms-conditions.html" style="color: var(--off-white)"
+              >Terms & Conditions</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("mobileMenu");
+      const nav = document.getElementById("navList");
+
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
         });
-      });
-    }
-  </script>
-</body>
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("active");
+          });
+        });
+      }
+    </script>
+  </body>
 </html>

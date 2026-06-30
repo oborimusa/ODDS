@@ -1,1030 +1,1160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-  <!-- ===== FAVICON ===== -->
-  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
-
-  <!-- ===== SEO ===== -->
-  <title>Claim Your Free Digital Audit | OneStack Digital Agency</title>
-  <meta name="description" content="Get a FREE digital ecosystem audit for your Nigerian business. We'll analyze your website, SEO, social media, and automation – and deliver a custom growth roadmap." />
-  <meta name="keywords" content="free digital audit Nigeria, website analysis, SEO audit, business growth, digital strategy" />
-  <meta name="author" content="OneStack Digital Agency" />
-
-  <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="Claim Your Free Digital Audit | OneStack Digital Agency" />
-  <meta property="og:description" content="Get a FREE digital ecosystem audit for your Nigerian business. We'll analyze your website, SEO, social media, and automation." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://onestack.ng/audit.html" />
-
-  <!-- ===== GOOGLE FONTS ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- ===== FONT AWESOME ===== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- ===== AOS ===== -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    :root {
-      --primary: #0a2647;
-      --primary-dark: #051a34;
-      --primary-light: #1e3a5f;
-      --accent: #c5a059;
-      --accent-light: #d4b37a;
-      --accent-dark: #9e7b44;
-      --white: #ffffff;
-      --off-white: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-600: #475569;
-      --gray-800: #1e293b;
-      --dark: #0f172a;
-      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
-      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
-      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .logo-text h1 {
-      font-family: "Space Grotesk", monospace;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-    }
-
-    .logo-text p {
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--gray-800);
-      transition: 0.2s;
-      padding: 8px 12px;
-      border-radius: 40px;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-links a.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    .btn-consult {
-      background: var(--gradient-primary);
-      color: white !important;
-      padding: 10px 28px !important;
-      border-radius: 40px;
-      font-weight: 600;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-consult:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      color: white !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    /* ===== BADGE ===== */
-    .sme-badge {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 16px;
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--primary);
-    }
-
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: var(--accent);
-      margin: 12px auto 0;
-      border-radius: 3px;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: var(--gray-600);
-      max-width: 700px;
-      margin: 0 auto 56px;
-      font-size: 1.1rem;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 100px 0 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-
-    @keyframes softShift {
-      0%,
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.05);
-      }
-    }
-
-    .hero-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      flex: 1;
-    }
-
-    .hero-badge {
-      background: var(--accent);
-      color: var(--primary-dark);
-      display: inline-block;
-      padding: 6px 16px;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      margin-bottom: 24px;
-    }
-
-    .hero-content h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      font-family: "Space Grotesk", sans-serif;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero-content h1 span {
-      color: var(--accent);
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 30px;
-      max-width: 90%;
-    }
-
-    .checklist {
-      list-style: none;
-      margin-top: 24px;
-    }
-
-    .checklist li {
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .checklist i {
-      color: var(--accent);
-      font-size: 1.2rem;
-    }
-
-    /* ===== FORM ===== */
-    .audit-form {
-      flex: 1;
-      background: white;
-      border-radius: 32px;
-      padding: 40px;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .audit-form h3 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-      font-family: "Space Grotesk", sans-serif;
-    }
-
-    .audit-form .form-sub {
-      color: var(--gray-600);
-      margin-bottom: 28px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: var(--gray-800);
-      font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 14px 18px;
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: all 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
-    }
-
-    .submit-btn {
-      background: var(--gradient-primary);
-      color: white;
-      border: none;
-      padding: 14px;
-      width: 100%;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .submit-btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .submit-btn:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .submit-btn .spinner {
-      display: none;
-      width: 20px;
-      height: 20px;
-      border: 3px solid rgba(255, 255, 255, 0.3);
-      border-top-color: white;
-      border-radius: 50%;
-      animation: spin 0.6s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .submit-btn.loading .spinner {
-      display: inline-block;
-    }
-    .submit-btn.loading .btn-text {
-      display: none;
-    }
-
-    .form-note {
-      font-size: 0.7rem;
-      text-align: center;
-      margin-top: 16px;
-      color: var(--gray-600);
-    }
-
-    .form-success,
-    .form-error {
-      display: none;
-      padding: 14px;
-      border-radius: 12px;
-      margin-top: 16px;
-      font-weight: 500;
-    }
-
-    .form-success {
-      background: #d1fae5;
-      color: #065f46;
-      border: 1px solid #10b981;
-    }
-
-    .form-error {
-      background: #fee2e2;
-      color: #991b1b;
-      border: 1px solid #ef4444;
-    }
-
-    .form-success.show,
-    .form-error.show {
-      display: block;
-    }
-
-    /* ===== FEATURES ===== */
-    .features-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-
-    .feature-card {
-      background: white;
-      border-radius: 24px;
-      padding: 32px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .feature-card i {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-
-    .feature-card h4 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-      color: var(--primary);
-    }
-
-    .feature-card p {
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
-
-    /* ===== TRUST BANNER ===== */
-    .trust-banner {
-      background: var(--primary);
-      color: white;
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .trust-item .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-
-    .trust-item p {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    /* ===== TESTIMONIAL ===== */
-    .testimonial-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .testimonial-card {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--off-white);
-      border-radius: 32px;
-      padding: 48px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-    }
-
-    .testimonial-card i {
-      font-size: 2.5rem;
-      color: var(--accent);
-      opacity: 0.5;
-    }
-
-    .testimonial-card p {
-      font-size: 1.2rem;
-      margin: 24px 0;
-      color: var(--gray-800);
-      font-style: italic;
-    }
-
-    .testimonial-card strong {
-      color: var(--primary);
-    }
-
-    /* ===== CTA ===== */
-    .cta-section {
-      background: var(--gradient-primary);
-      color: white;
-      text-align: center;
-      padding: 60px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-section .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
-    .cta-section .btn-secondary {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 14px 40px;
-      border-radius: 60px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      transition: all 0.3s;
-    }
-
-    .cta-section .btn-secondary:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--primary);
-      color: var(--off-white);
-      padding: 60px 0 30px;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-    }
-
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    .footer-col a {
-      display: block;
-      color: var(--gray-300);
-      text-decoration: none;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent);
-    }
-
-    .footer-col p {
-      margin-bottom: 8px;
-    }
-
-    .social-icons a {
-      margin-right: 18px;
-      font-size: 1.2rem;
-      color: var(--gray-300);
-    }
-
-    .social-icons a:hover {
-      color: var(--accent);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
-      font-size: 0.8rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 880px) {
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background: white;
-        padding: 20px 0;
-        gap: 1rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon-16x16.png"
+    />
+
+    <!-- ===== SEO ===== -->
+    <title>Claim Your Free Digital Audit | OneStack Digital Agency</title>
+    <meta
+      name="description"
+      content="Get a FREE digital ecosystem audit for your Nigerian business. We'll analyze your website, SEO, social media, and automation – and deliver a custom growth roadmap."
+    />
+    <meta
+      name="keywords"
+      content="free digital audit Nigeria, website analysis, SEO audit, business growth, digital strategy"
+    />
+    <meta name="author" content="OneStack Digital Agency" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta
+      property="og:title"
+      content="Claim Your Free Digital Audit | OneStack Digital Agency"
+    />
+    <meta
+      property="og:description"
+      content="Get a FREE digital ecosystem audit for your Nigerian business. We'll analyze your website, SEO, social media, and automation."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://onestack.ng/audit.html" />
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- ===== AOS ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .nav-links.active {
-        display: flex;
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #1e293b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
       }
 
-      .menu-toggle {
-        display: block;
+      :root {
+        --primary: #0a2647;
+        --primary-dark: #051a34;
+        --primary-light: #1e3a5f;
+        --accent: #c5a059;
+        --accent-light: #d4b37a;
+        --accent-dark: #9e7b44;
+        --white: #ffffff;
+        --off-white: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-600: #475569;
+        --gray-800: #1e293b;
+        --dark: #0f172a;
+        --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+        --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+        --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
       }
 
       .container {
-        padding: 0 20px;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
       }
 
-      .hero-grid {
-        flex-direction: column;
-        gap: 30px;
+      /* ===== HEADER ===== */
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--gray-200);
       }
 
-      .hero-content h1 {
-        font-size: 2rem;
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        flex-wrap: wrap;
       }
 
-      .hero-content p {
-        max-width: 100%;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
       }
 
-      .audit-form {
-        padding: 28px;
+      .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .logo-text h1 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .logo-text p {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--gray-800);
+        transition: 0.2s;
+        padding: 8px 12px;
+        border-radius: 40px;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .nav-links a.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+
+      .btn-consult {
+        background: var(--gradient-primary);
+        color: white !important;
+        padding: 10px 28px !important;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .btn-consult:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        color: white !important;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      /* ===== BADGE ===== */
+      .sme-badge {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow-accent);
       }
 
       .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 16px;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--primary);
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+        margin: 12px auto 0;
+        border-radius: 3px;
+      }
+
+      .section-sub {
+        text-align: center;
+        color: var(--gray-600);
+        max-width: 700px;
+        margin: 0 auto 56px;
+        font-size: 1.1rem;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 100px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: softShift 15s ease infinite;
+      }
+
+      @keyframes softShift {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .hero-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-content {
+        flex: 1;
+      }
+
+      .hero-badge {
+        background: var(--accent);
+        color: var(--primary-dark);
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 40px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .hero-content h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .hero-content h1 span {
+        color: var(--accent);
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 30px;
+        max-width: 90%;
+      }
+
+      .checklist {
+        list-style: none;
+        margin-top: 24px;
+      }
+
+      .checklist li {
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .checklist i {
+        color: var(--accent);
+        font-size: 1.2rem;
+      }
+
+      /* ===== FORM ===== */
+      .audit-form {
+        flex: 1;
+        background: white;
+        border-radius: 32px;
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .audit-form h3 {
         font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 8px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .audit-form .form-sub {
+        color: var(--gray-600);
+        margin-bottom: 28px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--gray-800);
+        font-size: 0.9rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid var(--gray-200);
+        border-radius: 16px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+      }
+
+      .submit-btn {
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        padding: 14px;
+        width: 100%;
+        border-radius: 60px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .submit-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .submit-btn .spinner {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .submit-btn.loading .spinner {
+        display: inline-block;
+      }
+      .submit-btn.loading .btn-text {
+        display: none;
+      }
+
+      .form-note {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 16px;
+        color: var(--gray-600);
+      }
+
+      .form-success,
+      .form-error {
+        display: none;
+        padding: 14px;
+        border-radius: 12px;
+        margin-top: 16px;
+        font-weight: 500;
+      }
+
+      .form-success {
+        background: #d1fae5;
+        color: #065f46;
+        border: 1px solid #10b981;
+      }
+
+      .form-error {
+        background: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #ef4444;
+      }
+
+      .form-success.show,
+      .form-error.show {
+        display: block;
+      }
+
+      /* ===== FEATURES ===== */
+      .features-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
       }
 
       .features-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 32px;
       }
 
-      .testimonial-card {
-        padding: 28px;
+      .feature-card {
+        background: white;
+        border-radius: 24px;
+        padding: 32px;
+        text-align: center;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
       }
 
-      .testimonial-card p {
-        font-size: 1rem;
+      .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-lg);
       }
 
-      .footer-grid {
-        flex-direction: column;
+      .feature-card i {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      .feature-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        color: var(--primary);
+      }
+
+      .feature-card p {
+        color: var(--gray-600);
+        font-size: 0.9rem;
+      }
+
+      /* ===== TRUST BANNER ===== */
+      .trust-banner {
+        background: var(--primary);
+        color: white;
+        padding: 40px 0;
         text-align: center;
       }
 
-      .footer .social-icons {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 550px) {
-      .hero-content h1 {
-        font-size: 1.6rem;
-      }
-
-      .audit-form {
-        padding: 20px;
-      }
-
       .trust-row {
-        gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
       }
 
       .trust-item .stat-number {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent);
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="logo">
-          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
-          <div class="logo-text">
-            <h1>One<span style="color:#c5a059;">Stack</span></h1>
-            <p>COMPLETE DIGITAL ECOSYSTEM</p>
-          </div>
-        </a>
-        <div class="menu-toggle" id="mobileMenu">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navList">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="founder.html">Founder</a></li>
-          <li><a href="audit.html" class="btn-consult active">Get Free Audit →</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+      .trust-item p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
 
-  <!-- ===== HERO + FORM ===== -->
-  <section class="hero">
-    <div class="container hero-grid">
+      /* ===== TESTIMONIAL ===== */
+      .testimonial-section {
+        padding: 80px 0;
+        background: white;
+      }
 
-      <!-- Left: Content -->
-      <div class="hero-content" data-aos="fade-right">
-        <div class="hero-badge">🔥 Limited Slots – Free Audit</div>
-        <h1>Claim Your <span>Free Digital Ecosystem Audit</span></h1>
-        <p>Find out exactly where your business is losing leads, money, and time online. Get a custom roadmap with actionable recommendations – zero cost, zero obligation.</p>
-        <ul class="checklist">
-          <li><i class="fas fa-check-circle"></i> Website performance & SEO health</li>
-          <li><i class="fas fa-check-circle"></i> Social media & content audit</li>
-          <li><i class="fas fa-check-circle"></i> Automation & chatbot opportunities</li>
-          <li><i class="fas fa-check-circle"></i> Competitor gap analysis</li>
-          <li><i class="fas fa-check-circle"></i> Priority growth roadmap</li>
-        </ul>
-      </div>
+      .testimonial-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background: var(--off-white);
+        border-radius: 32px;
+        padding: 48px;
+        text-align: center;
+        border: 1px solid var(--gray-200);
+      }
 
-      <!-- Right: Form -->
-      <div class="audit-form" data-aos="fade-left">
-        <h3>Start your free audit</h3>
-        <div class="form-sub">We'll deliver your report within 48 hours.</div>
+      .testimonial-card i {
+        font-size: 2.5rem;
+        color: var(--accent);
+        opacity: 0.5;
+      }
 
-        <form id="auditForm" action="https://formspree.io/f/maqkvreg" method="POST">
-          <div class="form-group">
-            <label for="name">Full name *</label>
-            <input type="text" id="name" name="name" required>
-          </div>
+      .testimonial-card p {
+        font-size: 1.2rem;
+        margin: 24px 0;
+        color: var(--gray-800);
+        font-style: italic;
+      }
 
-          <div class="form-group">
-            <label for="business">Business / Company name</label>
-            <input type="text" id="business" name="business">
-          </div>
+      .testimonial-card strong {
+        color: var(--primary);
+      }
 
-          <div class="form-group">
-            <label for="email">Email address *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
+      /* ===== CTA ===== */
+      .cta-section {
+        background: var(--gradient-primary);
+        color: white;
+        text-align: center;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+      }
 
-          <div class="form-group">
-            <label for="phone">Phone number (WhatsApp preferred)</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
 
-          <div class="form-group">
-            <label for="website">Website URL (if you have one)</label>
-            <input type="url" id="website" name="website" placeholder="https://yourbusiness.com">
-          </div>
+      .cta-section .container {
+        position: relative;
+        z-index: 1;
+      }
 
-          <div class="form-group">
-            <label for="challenge">What's your biggest digital challenge right now?</label>
-            <textarea id="challenge" name="challenge" rows="3" placeholder="E.g., low website traffic, poor sales, inactive social media..."></textarea>
-          </div>
+      .cta-section h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
 
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span class="spinner"></span>
-            <span class="btn-text">Claim My Free Audit →</span>
-          </button>
+      .cta-section .btn-secondary {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 14px 40px;
+        border-radius: 60px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        transition: all 0.3s;
+      }
 
-          <div id="formSuccess" class="form-success">✅ Your audit request has been received! We'll contact you within 24 hours.</div>
-          <div id="formError" class="form-error">❌ Something went wrong. Please try again or email us directly at oborimusa@gmail.com.</div>
+      .cta-section .btn-secondary:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
 
-          <div class="form-note">✅ No spam. Your data is safe. We respond within 24 hours.</div>
-        </form>
-      </div>
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--primary);
+        color: var(--off-white);
+        padding: 60px 0 30px;
+      }
 
-    </div>
-  </section>
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
 
-  <!-- ===== FEATURES ===== -->
-  <section class="features-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">What's inside your audit report</h2>
-      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">A comprehensive analysis of your digital presence</p>
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
 
-      <div class="features-grid">
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
-          <i class="fas fa-chart-line"></i>
-          <h4>SEO & Visibility Score</h4>
-          <p>Understand how search engines see your business and where you rank.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-mobile-alt"></i>
-          <h4>Mobile & UX Review</h4>
-          <p>Is your website losing customers on mobile? We'll show you exactly why.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-hashtag"></i>
-          <h4>Social Media Audit</h4>
-          <p>Content gaps, engagement metrics, and platform-specific recommendations.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-robot"></i>
-          <h4>Automation Potential</h4>
-          <p>Identify repetitive tasks we can automate (chatbots, email, CRM).</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      .footer-col a {
+        display: block;
+        color: var(--gray-300);
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
 
-  <!-- ===== TRUST BANNER ===== -->
-  <div class="trust-banner">
-    <div class="container">
-      <div class="trust-row">
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="stat-number">50+</div>
-          <p>Businesses Audited</p>
-        </div>
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number">98%</div>
-          <p>Would Recommend</p>
-        </div>
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number">₦200M+</div>
-          <p>Revenue Generated</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      .footer-col a:hover {
+        color: var(--accent);
+      }
 
-  <!-- ===== TESTIMONIAL ===== -->
-  <section class="testimonial-section">
-    <div class="container">
-      <div class="testimonial-card" data-aos="fade-up">
-        <i class="fas fa-quote-left"></i>
-        <p>"The free audit from OneStack uncovered issues we didn't even know existed. Within 2 months of implementing their recommendations, our leads tripled."</p>
-        <p><strong>— Adeola O., CredMart</strong></p>
-      </div>
-    </div>
-  </section>
+      .footer-col p {
+        margin-bottom: 8px;
+      }
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-section">
-    <div class="container">
-      <h2 data-aos="fade-up">Ready to grow your business?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Join 50+ Nigerian SMEs that trust OneStack for their digital growth.</p>
-      <a href="contact.html" class="btn-secondary" data-aos="fade-up" data-aos-delay="200">Schedule a Free Call →</a>
-    </div>
-  </section>
+      .social-icons a {
+        margin-right: 18px;
+        font-size: 1.2rem;
+        color: var(--gray-300);
+      }
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container" style="max-width: 1200px;">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>OneStack</h4>
-          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="services.html">Web & E‑commerce</a>
-          <a href="services.html">Digital Marketing</a>
-          <a href="ai-automation.html">AI & Automation</a>
-          <a href="services.html">Cybersecurity</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="about.html">About OneStack</a>
-          <a href="results.html">Results</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Get in touch</h4>
-          <p>oborimusa@gmail.com</p>
-          <p>+234 803 966 1354</p>
-          <p>Remote-first / Osogbo</p>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-      </div>
-    </div>
-  </footer>
+      .social-icons a:hover {
+        color: var(--accent);
+      }
 
-  <!-- ===== SCRIPTS ===== -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 100 });
+      .copyright {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        font-size: 0.8rem;
+      }
 
-    // Mobile menu toggle
-    const toggle = document.getElementById('mobileMenu');
-    const nav = document.getElementById('navList');
-
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
-        });
-      });
-    }
-
-    // Form submission
-    const form = document.getElementById('auditForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const successDiv = document.getElementById('formSuccess');
-    const errorDiv = document.getElementById('formError');
-
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-
-        if (!name || !email) {
-          errorDiv.textContent = '❌ Please fill in your name and email address.';
-          errorDiv.classList.add('show');
-          setTimeout(() => errorDiv.classList.remove('show'), 5000);
-          return;
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 880px) {
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          background: white;
+          padding: 20px 0;
+          gap: 1rem;
         }
 
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        .nav-links.active {
+          display: flex;
+        }
 
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-        successDiv.classList.remove('show');
-        errorDiv.classList.remove('show');
+        .menu-toggle {
+          display: block;
+        }
 
-        try {
-          const response = await fetch(form.action, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
+        .container {
+          padding: 0 20px;
+        }
+
+        .hero-grid {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .hero-content p {
+          max-width: 100%;
+        }
+
+        .audit-form {
+          padding: 28px;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .testimonial-card {
+          padding: 28px;
+        }
+
+        .testimonial-card p {
+          font-size: 1rem;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer .social-icons {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .hero-content h1 {
+          font-size: 1.6rem;
+        }
+
+        .audit-form {
+          padding: 20px;
+        }
+
+        .trust-row {
+          gap: 24px;
+        }
+
+        .trust-item .stat-number {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="image/onestack-logo.png"
+              alt="OneStack Digital Agency"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="logo-text">
+              <h1>One<span style="color: #c5a059">Stack</span></h1>
+              <p>COMPLETE DIGITAL ECOSYSTEM</p>
+            </div>
+          </a>
+          <div class="menu-toggle" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li>
+              <a href="audit.html" class="btn-consult active"
+                >Get Free Audit →</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO + FORM ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Left: Content -->
+        <div class="hero-content" data-aos="fade-right">
+          <div class="hero-badge">🔥 Limited Slots – Free Audit</div>
+          <h1>Claim Your <span>Free Digital Ecosystem Audit</span></h1>
+          <p>
+            Find out exactly where your business is losing leads, money, and
+            time online. Get a custom roadmap with actionable recommendations –
+            zero cost, zero obligation.
+          </p>
+          <ul class="checklist">
+            <li>
+              <i class="fas fa-check-circle"></i> Website performance & SEO
+              health
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Social media & content audit
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Automation & chatbot
+              opportunities
+            </li>
+            <li><i class="fas fa-check-circle"></i> Competitor gap analysis</li>
+            <li><i class="fas fa-check-circle"></i> Priority growth roadmap</li>
+          </ul>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="audit-form" data-aos="fade-left">
+          <h3>Start your free audit</h3>
+          <div class="form-sub">We'll deliver your report within 48 hours.</div>
+
+          <form
+            id="auditForm"
+            action="https://formspree.io/f/maqkvreg"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="business">Business / Company name</label>
+              <input type="text" id="business" name="business" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number (WhatsApp preferred)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="website">Website URL (if you have one)</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://yourbusiness.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="challenge"
+                >What's your biggest digital challenge right now?</label
+              >
+              <textarea
+                id="challenge"
+                name="challenge"
+                rows="3"
+                placeholder="E.g., low website traffic, poor sales, inactive social media..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="spinner"></span>
+              <span class="btn-text">Claim My Free Audit →</span>
+            </button>
+
+            <div id="formSuccess" class="form-success">
+              ✅ Your audit request has been received! We'll contact you within
+              24 hours.
+            </div>
+            <div id="formError" class="form-error">
+              ❌ Something went wrong. Please try again or email us directly at
+              oborimusa@gmail.com.
+            </div>
+
+            <div class="form-note">
+              ✅ No spam. Your data is safe. We respond within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          What's inside your audit report
+        </h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+          A comprehensive analysis of your digital presence
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <i class="fas fa-chart-line"></i>
+            <h4>SEO & Visibility Score</h4>
+            <p>
+              Understand how search engines see your business and where you
+              rank.
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Mobile & UX Review</h4>
+            <p>
+              Is your website losing customers on mobile? We'll show you exactly
+              why.
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-hashtag"></i>
+            <h4>Social Media Audit</h4>
+            <p>
+              Content gaps, engagement metrics, and platform-specific
+              recommendations.
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-robot"></i>
+            <h4>Automation Potential</h4>
+            <p>
+              Identify repetitive tasks we can automate (chatbots, email, CRM).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BANNER ===== -->
+    <div class="trust-banner">
+      <div class="container">
+        <div class="trust-row">
+          <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-number">50+</div>
+            <p>Businesses Audited</p>
+          </div>
+          <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-number">98%</div>
+            <p>Would Recommend</p>
+          </div>
+          <div class="trust-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number">₦200M+</div>
+            <p>Revenue Generated</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-card" data-aos="fade-up">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            "The free audit from OneStack uncovered issues we didn't even know
+            existed. Within 2 months of implementing their recommendations, our
+            leads tripled."
+          </p>
+          <p><strong>— Adeola O., CredMart</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 data-aos="fade-up">Ready to grow your business?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Join 50+ Nigerian SMEs that trust OneStack for their digital growth.
+        </p>
+        <a
+          href="contact.html"
+          class="btn-secondary"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          >Schedule a Free Call →</a
+        >
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container" style="max-width: 1200px">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>OneStack</h4>
+            <p>
+              Complete Digital Ecosystem — We build, grow & secure your online
+              presence.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Web & E‑commerce</a>
+            <a href="services.html">Digital Marketing</a>
+            <a href="ai-automation.html">AI & Automation</a>
+            <a href="services.html">Cybersecurity</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="about.html">About OneStack</a>
+            <a href="results.html">Results</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Get in touch</h4>
+            <p>oborimusa@gmail.com</p>
+            <p>+234 803 966 1354</p>
+            <p>Remote-first / Osogbo</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem.
+            Built in Nigeria for African businesses.
+          </p>
+          <p style="margin-top: 8px">
+            <a href="privacy-policy.html" style="color: var(--off-white)"
+              >Privacy Policy</a
+            >
+            <a href="terms-conditions.html" style="color: var(--off-white)"
+              >Terms & Conditions</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("mobileMenu");
+      const nav = document.getElementById("navList");
+
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("active");
           });
-
-          if (response.ok) {
-            successDiv.classList.add('show');
-            form.reset();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(() => successDiv.classList.remove('show'), 10000);
-          } else {
-            errorDiv.textContent = '❌ Something went wrong. Please try again or email us directly at oborimusa@gmail.com.';
-            errorDiv.classList.add('show');
-            setTimeout(() => errorDiv.classList.remove('show'), 6000);
-          }
-        } catch (err) {
-          errorDiv.textContent = '❌ Network error. Please check your connection and try again.';
-          errorDiv.classList.add('show');
-          setTimeout(() => errorDiv.classList.remove('show'), 6000);
-        } finally {
-          submitBtn.classList.remove('loading');
-          submitBtn.disabled = false;
-        }
-      });
-
-      // Auto-hide error/success on typing
-      document.querySelectorAll('#auditForm input, #auditForm textarea').forEach(el => {
-        el.addEventListener('input', () => {
-          successDiv.classList.remove('show');
-          errorDiv.classList.remove('show');
         });
-      });
-    }
-  </script>
-</body>
+      }
+
+      // Form submission
+      const form = document.getElementById("auditForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const successDiv = document.getElementById("formSuccess");
+      const errorDiv = document.getElementById("formError");
+
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+
+          if (!name || !email) {
+            errorDiv.textContent =
+              "❌ Please fill in your name and email address.";
+            errorDiv.classList.add("show");
+            setTimeout(() => errorDiv.classList.remove("show"), 5000);
+            return;
+          }
+
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          submitBtn.classList.add("loading");
+          submitBtn.disabled = true;
+          successDiv.classList.remove("show");
+          errorDiv.classList.remove("show");
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              successDiv.classList.add("show");
+              form.reset();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              setTimeout(() => successDiv.classList.remove("show"), 10000);
+            } else {
+              errorDiv.textContent =
+                "❌ Something went wrong. Please try again or email us directly at oborimusa@gmail.com.";
+              errorDiv.classList.add("show");
+              setTimeout(() => errorDiv.classList.remove("show"), 6000);
+            }
+          } catch (err) {
+            errorDiv.textContent =
+              "❌ Network error. Please check your connection and try again.";
+            errorDiv.classList.add("show");
+            setTimeout(() => errorDiv.classList.remove("show"), 6000);
+          } finally {
+            submitBtn.classList.remove("loading");
+            submitBtn.disabled = false;
+          }
+        });
+
+        // Auto-hide error/success on typing
+        document
+          .querySelectorAll("#auditForm input, #auditForm textarea")
+          .forEach((el) => {
+            el.addEventListener("input", () => {
+              successDiv.classList.remove("show");
+              errorDiv.classList.remove("show");
+            });
+          });
+      }
+    </script>
+  </body>
 </html>

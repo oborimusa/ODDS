@@ -1,1055 +1,1287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-  <!-- ===== FAVICON ===== -->
-  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
-
-  <!-- ===== SEO ===== -->
-  <title>Contact OneStack Digital Agency · Let's Build Your Digital Ecosystem</title>
-  <meta name="description" content="Get in touch with OneStack – your Complete Digital Ecosystem. Reach us via phone, email, WhatsApp, or visit our Osogbo office. We respond within 24 hours." />
-  <meta name="keywords" content="contact OneStack, digital agency Lagos, web design consultation, SME digital solutions Nigeria" />
-  <meta name="author" content="OneStack Digital Agency" />
-
-  <!-- ===== OPEN GRAPH ===== -->
-  <meta property="og:title" content="Contact OneStack · Premium Digital Agency" />
-  <meta property="og:description" content="Let's discuss your digital transformation journey." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://onestack.ng/contact.html" />
-
-  <!-- ===== GOOGLE FONTS ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- ===== FONT AWESOME ===== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- ===== AOS ===== -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    :root {
-      --primary: #0a2647;
-      --primary-dark: #051a34;
-      --primary-light: #1e3a5f;
-      --accent: #c5a059;
-      --accent-light: #d4b37a;
-      --accent-dark: #9e7b44;
-      --white: #ffffff;
-      --off-white: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-600: #475569;
-      --gray-800: #1e293b;
-      --dark: #0f172a;
-      --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
-      --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
-      --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-      --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .logo-text h1 {
-      font-family: "Space Grotesk", monospace;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-    }
-
-    .logo-text p {
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--gray-800);
-      transition: 0.2s;
-      padding: 8px 12px;
-      border-radius: 40px;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-links a.active {
-      background: var(--accent);
-      color: var(--primary-dark) !important;
-    }
-
-    .btn-consult {
-      background: var(--gradient-primary);
-      color: white !important;
-      padding: 10px 28px !important;
-      border-radius: 40px;
-      font-weight: 600;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-consult:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      color: white !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    /* ===== BADGE ===== */
-    .sme-badge {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      font-size: 0.8rem;
-      box-shadow: var(--shadow-accent);
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-      color: var(--primary);
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 3px;
-    }
-
-    .section-title.text-start::after {
-      left: 0;
-      transform: none;
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn-primary-custom {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 12px 32px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      border: none;
-    }
-
-    .btn-primary-custom:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: var(--gradient-primary);
-      padding: 100px 0 80px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: softShift 15s ease infinite;
-    }
-
-    @keyframes softShift {
-      0%,
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.05);
-      }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      font-family: "Space Grotesk", sans-serif;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    /* ===== CONTACT INFO CARDS ===== */
-    .contact-info-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .contact-info-card {
-      background: white;
-      border-radius: 24px;
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-      height: 100%;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .contact-info-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    .contact-info-icon {
-      width: 70px;
-      height: 70px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-      font-size: 1.8rem;
-      color: var(--primary-dark);
-    }
-
-    .contact-info-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .contact-info-card p {
-      color: var(--gray-600);
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-info-card a {
-      color: var(--gray-600);
-      text-decoration: none;
-      transition: color 0.3s;
-      font-weight: 500;
-    }
-
-    .contact-info-card a:hover {
-      color: var(--accent);
-    }
-
-    /* ===== CONTACT FORM & MAP ===== */
-    .contact-form-section {
-      padding: 80px 0;
-      background: var(--off-white);
-      border-top: 1px solid var(--gray-200);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .contact-form-wrapper {
-      background: white;
-      border-radius: 30px;
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--gray-200);
-    }
-
-    .contact-form-wrapper h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--primary);
-      font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      font-family: inherit;
-      transition: all 0.3s;
-      background: white;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
-    }
-
-    .btn-submit {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s;
-      width: 100%;
-      font-size: 1rem;
-    }
-
-    .btn-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      background: var(--primary-dark);
-    }
-
-    /* ===== MAP & OFFICE ===== */
-    .map-container {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-
-    .office-hours {
-      background: white;
-      border-radius: 20px;
-      padding: 1.5rem;
-      border: 1px solid var(--gray-200);
-    }
-
-    .office-hours h4 {
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .hour-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--gray-200);
-      font-size: 0.95rem;
-    }
-
-    .hour-item:last-child {
-      border-bottom: none;
-    }
-
-    .hour-item span:last-child {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      border: none;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-      color: white;
-    }
-
-    /* ===== FAQ ===== */
-    .faq-section {
-      padding: 80px 0;
-      background: white;
-    }
-
-    .faq-grid {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      background: white;
-      border-radius: 20px;
-      padding: 20px 28px;
-      margin-bottom: 16px;
-      cursor: pointer;
-      border: 1px solid var(--gray-200);
-      transition: all 0.3s;
-    }
-
-    .faq-item:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .faq-item.active {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--primary);
-    }
-
-    .faq-answer {
-      margin-top: 16px;
-      color: var(--gray-600);
-      display: none;
-      line-height: 1.6;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-question i {
-      transition: transform 0.3s;
-      color: var(--accent);
-    }
-
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-
-    /* ===== CTA ===== */
-    .cta-section {
-      background: var(--gradient-primary);
-      padding: 80px 0;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-section .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 32px;
-      opacity: 0.9;
-    }
-
-    .cta-section .btn-light {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 14px 40px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      transition: all 0.3s;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .cta-section .btn-light:hover {
-      transform: translateY(-3px);
-      background: var(--accent-light);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--primary);
-      color: var(--off-white);
-      padding: 60px 0 30px;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-    }
-
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    .footer-col a {
-      display: block;
-      color: var(--gray-300);
-      text-decoration: none;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent);
-    }
-
-    .footer-col p {
-      margin-bottom: 8px;
-    }
-
-    .social-icons a {
-      margin-right: 18px;
-      font-size: 1.2rem;
-      color: var(--gray-300);
-    }
-
-    .social-icons a:hover {
-      color: var(--accent);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
-      font-size: 0.8rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 880px) {
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background: white;
-        padding: 20px 0;
-        gap: 1rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon-16x16.png"
+    />
+
+    <!-- ===== SEO ===== -->
+    <title>
+      Contact OneStack Digital Agency · Let's Build Your Digital Ecosystem
+    </title>
+    <meta
+      name="description"
+      content="Get in touch with OneStack – your Complete Digital Ecosystem. Reach us via phone, email, WhatsApp, or visit our Osogbo office. We respond within 24 hours."
+    />
+    <meta
+      name="keywords"
+      content="contact OneStack, digital agency Lagos, web design consultation, SME digital solutions Nigeria"
+    />
+    <meta name="author" content="OneStack Digital Agency" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta
+      property="og:title"
+      content="Contact OneStack · Premium Digital Agency"
+    />
+    <meta
+      property="og:description"
+      content="Let's discuss your digital transformation journey."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://onestack.ng/contact.html" />
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- ===== AOS ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .nav-links.active {
-        display: flex;
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #1e293b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
       }
 
-      .menu-toggle {
-        display: block;
+      :root {
+        --primary: #0a2647;
+        --primary-dark: #051a34;
+        --primary-light: #1e3a5f;
+        --accent: #c5a059;
+        --accent-light: #d4b37a;
+        --accent-dark: #9e7b44;
+        --white: #ffffff;
+        --off-white: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-600: #475569;
+        --gray-800: #1e293b;
+        --dark: #0f172a;
+        --gradient-primary: linear-gradient(135deg, #0a2647 0%, #1e3a5f 100%);
+        --gradient-accent: linear-gradient(135deg, #c5a059 0%, #d4b37a 100%);
+        --shadow-sm: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        --shadow-accent: 0 20px 40px -15px rgba(197, 160, 89, 0.3);
       }
 
       .container {
-        padding: 0 20px;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
       }
 
-      .hero h1 {
-        font-size: 2rem;
+      /* ===== HEADER ===== */
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--gray-200);
       }
 
-      .hero p {
-        font-size: 1rem;
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .logo-text h1 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .logo-text p {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--gray-800);
+        transition: 0.2s;
+        padding: 8px 12px;
+        border-radius: 40px;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .nav-links a.active {
+        background: var(--accent);
+        color: var(--primary-dark) !important;
+      }
+
+      .btn-consult {
+        background: var(--gradient-primary);
+        color: white !important;
+        padding: 10px 28px !important;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .btn-consult:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        color: white !important;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      /* ===== BADGE ===== */
+      .sme-badge {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow-accent);
       }
 
       .section-title {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+        color: var(--primary);
       }
 
-      .contact-form-wrapper {
-        padding: 1.5rem;
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 3px;
       }
 
-      .footer-grid {
-        flex-direction: column;
+      .section-title.text-start::after {
+        left: 0;
+        transform: none;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn-primary-custom {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        border: none;
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: var(--gradient-primary);
+        padding: 100px 0 80px;
         text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
       }
 
-      .footer .social-icons {
-        justify-content: center;
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: softShift 15s ease infinite;
       }
 
-      .cta-section h2 {
-        font-size: 1.8rem;
+      @keyframes softShift {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
       }
-    }
 
-    @media (max-width: 550px) {
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
       .hero h1 {
-        font-size: 1.6rem;
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* ===== CONTACT INFO CARDS ===== */
+      .contact-info-section {
+        padding: 80px 0;
+        background: white;
       }
 
       .contact-info-card {
+        background: white;
+        border-radius: 24px;
+        padding: 2rem;
+        text-align: center;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
+        height: 100%;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .contact-info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent);
+      }
+
+      .contact-info-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.8rem;
+        color: var(--primary-dark);
+      }
+
+      .contact-info-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .contact-info-card p {
+        color: var(--gray-600);
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-info-card a {
+        color: var(--gray-600);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      .contact-info-card a:hover {
+        color: var(--accent);
+      }
+
+      /* ===== CONTACT FORM & MAP ===== */
+      .contact-form-section {
+        padding: 80px 0;
+        background: var(--off-white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .contact-form-wrapper {
+        background: white;
+        border-radius: 30px;
+        padding: 2.5rem;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--gray-200);
+      }
+
+      .contact-form-wrapper h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 0.9rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--gray-200);
+        border-radius: 12px;
+        font-family: inherit;
+        transition: all 0.3s;
+        background: white;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+      }
+
+      .btn-submit {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        font-size: 1rem;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+        background: var(--primary-dark);
+      }
+
+      /* ===== MAP & OFFICE ===== */
+      .map-container {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+      }
+
+      .office-hours {
+        background: white;
+        border-radius: 20px;
         padding: 1.5rem;
+        border: 1px solid var(--gray-200);
+      }
+
+      .office-hours h4 {
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+
+      .hour-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--gray-200);
+        font-size: 0.95rem;
+      }
+
+      .hour-item:last-child {
+        border-bottom: none;
+      }
+
+      .hour-item span:last-child {
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .btn-whatsapp {
+        background: #25d366;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        border: none;
+      }
+
+      .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        color: white;
+      }
+
+      /* ===== FAQ ===== */
+      .faq-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .faq-grid {
+        max-width: 800px;
+        margin: 0 auto;
       }
 
       .faq-item {
-        padding: 16px 20px;
+        background: white;
+        border-radius: 20px;
+        padding: 20px 28px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="logo">
-          <img src="image/onestack-logo.png" alt="OneStack Digital Agency" onerror="this.style.display='none'">
-          <div class="logo-text">
-            <h1>One<span style="color:#c5a059;">Stack</span></h1>
-            <p>COMPLETE DIGITAL ECOSYSTEM</p>
-          </div>
-        </a>
-        <div class="menu-toggle" id="mobileMenu">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navList">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="founder.html">Founder</a></li>
-          <li><a href="audit.html" class="btn-consult">Get Free Audit →</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+      .faq-item:hover {
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="container hero-content">
-      <span class="sme-badge" data-aos="fade-down">Get in Touch</span>
-      <h1 data-aos="fade-up" data-aos-delay="100">Let's <span>Connect</span> and Grow Together</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Ready to transform your digital presence? We're just a message away.</p>
-    </div>
-  </section>
+      .faq-item.active {
+        border-color: var(--accent);
+        box-shadow: var(--shadow-sm);
+      }
 
-  <!-- ===== CONTACT INFO CARDS ===== -->
-  <section class="contact-info-section">
-    <div class="container">
-      <div class="row" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
-        <!-- Phone -->
-        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="0">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-            <h3>Phone</h3>
-            <p>Call us directly</p>
-            <a href="tel:+2348039661354">+234 803 966 1354</a>
-          </div>
-        </div>
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--primary);
+      }
 
-        <!-- Email -->
-        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="100">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-            <h3>Email</h3>
-            <p>Send us a message</p>
-            <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a>
-          </div>
-        </div>
+      .faq-answer {
+        margin-top: 16px;
+        color: var(--gray-600);
+        display: none;
+        line-height: 1.6;
+      }
 
-        <!-- Location -->
-        <div class="col" style="flex: 1; min-width: 250px;" data-aos="fade-up" data-aos-delay="200">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h3>Location</h3>
-            <p>Remote-first</p>
-            <p>Serving Nigeria nationwide</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      .faq-item.active .faq-answer {
+        display: block;
+      }
 
-  <!-- ===== CONTACT FORM & MAP ===== -->
-  <section class="contact-form-section">
-    <div class="container">
-      <div class="row" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
+      .faq-question i {
+        transition: transform 0.3s;
+        color: var(--accent);
+      }
 
-        <!-- Contact Form -->
-        <div class="col-left" style="flex: 1; min-width: 300px;" data-aos="fade-right">
-          <div class="contact-form-wrapper">
-            <h2 class="section-title text-start" style="text-align: left !important;">Send a Message</h2>
-            <p style="color: var(--gray-600); margin-bottom: 24px;">Fill out the form and we'll get back to you within 24 hours.</p>
+      .faq-item.active .faq-question i {
+        transform: rotate(180deg);
+      }
 
-            <form id="contactForm" action="https://formspree.io/f/maqkvreg" method="POST">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-              </div>
+      /* ===== CTA ===== */
+      .cta-section {
+        background: var(--gradient-primary);
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
 
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-              </div>
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(197, 160, 89, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
 
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-control">
-              </div>
+      .cta-section .container {
+        position: relative;
+        z-index: 1;
+      }
 
-              <div class="form-group">
-                <label for="service">Service Interested In *</label>
-                <select id="service" name="service" class="form-control" required>
-                  <option value="">Select a service</option>
-                  <option value="web-design">Web Design & Development</option>
-                  <option value="digital-marketing">Digital Marketing</option>
-                  <option value="branding">Branding & Identity</option>
-                  <option value="ai-automation">AI Chatbot & Automation</option>
-                  <option value="consulting">Digital Strategy Consulting</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: white;
+      }
 
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" class="form-control" placeholder="Tell us about your project..." required></textarea>
-              </div>
+      .cta-section p {
+        max-width: 600px;
+        margin: 0 auto 32px;
+        opacity: 0.9;
+      }
 
-              <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-            </form>
+      .cta-section .btn-light {
+        background: var(--accent);
+        color: var(--primary-dark);
+        padding: 14px 40px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        transition: all 0.3s;
+        box-shadow: var(--shadow-lg);
+      }
 
-            <div id="formSuccess" class="alert alert-success" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; background: #d1fae5; color: #065f46; border: 1px solid #10b981;">
-              <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll contact you soon.
+      .cta-section .btn-light:hover {
+        transform: translateY(-3px);
+        background: var(--accent-light);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--primary);
+        color: var(--off-white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+
+      .footer-col a {
+        display: block;
+        color: var(--gray-300);
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-col a:hover {
+        color: var(--accent);
+      }
+
+      .footer-col p {
+        margin-bottom: 8px;
+      }
+
+      .social-icons a {
+        margin-right: 18px;
+        font-size: 1.2rem;
+        color: var(--gray-300);
+      }
+
+      .social-icons a:hover {
+        color: var(--accent);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        font-size: 0.8rem;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 880px) {
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          background: white;
+          padding: 20px 0;
+          gap: 1rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .container {
+          padding: 0 20px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .contact-form-wrapper {
+          padding: 1.5rem;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer .social-icons {
+          justify-content: center;
+        }
+
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+
+        .contact-info-card {
+          padding: 1.5rem;
+        }
+
+        .faq-item {
+          padding: 16px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="image/onestack-logo.png"
+              alt="OneStack Digital Agency"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="logo-text">
+              <h1>One<span style="color: #c5a059">Stack</span></h1>
+              <p>COMPLETE DIGITAL ECOSYSTEM</p>
             </div>
-            <div id="formError" class="alert alert-danger" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; background: #fee2e2; color: #991b1b; border: 1px solid #ef4444;">
-              <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or call us directly.
+          </a>
+          <div class="menu-toggle" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li>
+              <a href="audit.html" class="btn-consult">Get Free Audit →</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="sme-badge" data-aos="fade-down">Get in Touch</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          Let's <span>Connect</span> and Grow Together
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Ready to transform your digital presence? We're just a message away.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT INFO CARDS ===== -->
+    <section class="contact-info-section">
+      <div class="container">
+        <div
+          class="row"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+          "
+        >
+          <!-- Phone -->
+          <div
+            class="col"
+            style="flex: 1; min-width: 250px"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3>Phone</h3>
+              <p>Call us directly</p>
+              <a href="tel:+2348039661354">+234 803 966 1354</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div
+            class="col"
+            style="flex: 1; min-width: 250px"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+              <p>Send us a message</p>
+              <a href="mailto:oborimusa@gmail.com">oborimusa@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div
+            class="col"
+            style="flex: 1; min-width: 250px"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Location</h3>
+              <p>Remote-first</p>
+              <p>Serving Nigeria nationwide</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Map & Office Info -->
-        <div class="col-right" style="flex: 1; min-width: 300px;" data-aos="fade-left">
-          <!-- Map -->
-          <div class="map-container" style="margin-bottom: 24px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.92735657368!2d3.319104406722723!3d6.463208377937347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" allowfullscreen loading="lazy"></iframe>
-          </div>
+    <!-- ===== CONTACT FORM & MAP ===== -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div
+          class="row"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: stretch;
+          "
+        >
+          <!-- Contact Form -->
+          <div
+            class="col-left"
+            style="flex: 1; min-width: 300px"
+            data-aos="fade-right"
+          >
+            <div class="contact-form-wrapper">
+              <h2
+                class="section-title text-start"
+                style="text-align: left !important"
+              >
+                Send a Message
+              </h2>
+              <p style="color: var(--gray-600); margin-bottom: 24px">
+                Fill out the form and we'll get back to you within 24 hours.
+              </p>
 
-          <!-- Office Hours -->
-          <div class="office-hours" style="margin-bottom: 24px;">
-            <h4><i class="fas fa-clock me-2" style="color: var(--accent);"></i> Office Hours</h4>
-            <div class="hour-item">
-              <span>Monday - Friday</span>
-              <span>9:00 AM - 6:00 PM</span>
+              <form
+                id="contactForm"
+                action="https://formspree.io/f/maqkvreg"
+                method="POST"
+              >
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="service">Service Interested In *</label>
+                  <select
+                    id="service"
+                    name="service"
+                    class="form-control"
+                    required
+                  >
+                    <option value="">Select a service</option>
+                    <option value="web-design">Web Design & Development</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="branding">Branding & Identity</option>
+                    <option value="ai-automation">
+                      AI Chatbot & Automation
+                    </option>
+                    <option value="consulting">
+                      Digital Strategy Consulting
+                    </option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Tell us about your project..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                  Send Message <i class="fas fa-paper-plane ms-2"></i>
+                </button>
+              </form>
+
+              <div
+                id="formSuccess"
+                class="alert alert-success"
+                style="
+                  display: none;
+                  margin-top: 16px;
+                  padding: 12px;
+                  border-radius: 12px;
+                  background: #d1fae5;
+                  color: #065f46;
+                  border: 1px solid #10b981;
+                "
+              >
+                <i class="fas fa-check-circle"></i> Thank you! Your message has
+                been sent. We'll contact you soon.
+              </div>
+              <div
+                id="formError"
+                class="alert alert-danger"
+                style="
+                  display: none;
+                  margin-top: 16px;
+                  padding: 12px;
+                  border-radius: 12px;
+                  background: #fee2e2;
+                  color: #991b1b;
+                  border: 1px solid #ef4444;
+                "
+              >
+                <i class="fas fa-exclamation-circle"></i> Oops! Something went
+                wrong. Please try again or call us directly.
+              </div>
             </div>
-            <div class="hour-item">
-              <span>Saturday</span>
-              <span>10:00 AM - 2:00 PM</span>
+          </div>
+
+          <!-- Map & Office Info -->
+          <div
+            class="col-right"
+            style="flex: 1; min-width: 300px"
+            data-aos="fade-left"
+          >
+            <!-- Map -->
+            <div class="map-container" style="margin-bottom: 24px">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126910.92735657368!2d3.319104406722723!3d6.463208377937347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
-            <div class="hour-item">
-              <span>Sunday</span>
-              <span>Closed</span>
+
+            <!-- Office Hours -->
+            <div class="office-hours" style="margin-bottom: 24px">
+              <h4>
+                <i class="fas fa-clock me-2" style="color: var(--accent)"></i>
+                Office Hours
+              </h4>
+              <div class="hour-item">
+                <span>Monday - Friday</span>
+                <span>9:00 AM - 6:00 PM</span>
+              </div>
+              <div class="hour-item">
+                <span>Saturday</span>
+                <span>10:00 AM - 2:00 PM</span>
+              </div>
+              <div class="hour-item">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div style="text-align: center">
+              <a
+                href="https://wa.me/2348039661354?text=Hello%20OneStack%2C%20I%20need%20help%20with%20your%20digital%20services."
+                class="btn-whatsapp"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="text-center mb-5" style="margin-bottom: 48px">
+          <span class="sme-badge" data-aos="fade-down">Quick Answers</span>
+          <h2 class="section-title" data-aos="fade-up">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="faq-question">
+              <span>How fast do you reply?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We typically respond within 2–4 hours during business days. For
+              urgent inquiries, use the WhatsApp button – we reply within 1
+              hour.
             </div>
           </div>
 
-          <!-- WhatsApp CTA -->
-          <div style="text-align: center;">
-            <a href="https://wa.me/2348039661354?text=Hello%20OneStack%2C%20I%20need%20help%20with%20your%20digital%20services." class="btn-whatsapp" target="_blank">
-              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-question">
+              <span>Do you offer a free consultation?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes. We offer a free 30‑minute digital audit call to understand
+              your needs and recommend the right solutions. Just mention "free
+              audit" in your message.
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-question">
+              <span>Can you serve clients outside Osogbo?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely. We work remotely with clients across Lagos, Abuja,
+              Port Harcourt, and nationwide. Our digital ecosystem is designed
+              for seamless remote collaboration.
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-question">
+              <span>What payment methods do you accept?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Bank transfer, card payments via Paystack, and USSD. We issue
+              proper receipts/invoices for all transactions.
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="text-center mb-5" style="margin-bottom: 48px;">
-        <span class="sme-badge" data-aos="fade-down">Quick Answers</span>
-        <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="faq-question">
-            <span>How fast do you reply?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">We typically respond within 2–4 hours during business days. For urgent inquiries, use the WhatsApp button – we reply within 1 hour.</div>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="faq-question">
-            <span>Do you offer a free consultation?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">Yes. We offer a free 30‑minute digital audit call to understand your needs and recommend the right solutions. Just mention "free audit" in your message.</div>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="faq-question">
-            <span>Can you serve clients outside Osogbo?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">Absolutely. We work remotely with clients across Lagos, Abuja, Port Harcourt, and nationwide. Our digital ecosystem is designed for seamless remote collaboration.</div>
-        </div>
-
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="faq-question">
-            <span>What payment methods do you accept?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">Bank transfer, card payments via Paystack, and USSD. We issue proper receipts/invoices for all transactions.</div>
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto">
+          <span
+            class="sme-badge"
+            style="background: rgba(255, 255, 255, 0.15); color: var(--accent)"
+            data-aos="fade-down"
+            >Let's Work Together</span
+          >
+          <h2 data-aos="fade-up">Ready to Get Started?</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Book a free strategy session with our team. No pressure, just
+            possibilities.
+          </p>
+          <a
+            href="audit.html"
+            class="btn-light"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            >Schedule a Free Audit →</a
+          >
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-section">
-    <div class="container">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <span class="sme-badge" style="background: rgba(255,255,255,0.15); color: var(--accent);" data-aos="fade-down">Let's Work Together</span>
-        <h2 data-aos="fade-up">Ready to Get Started?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a free strategy session with our team. No pressure, just possibilities.</p>
-        <a href="audit.html" class="btn-light" data-aos="fade-up" data-aos-delay="200">Schedule a Free Audit →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container" style="max-width: 1200px;">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>OneStack</h4>
-          <p>Complete Digital Ecosystem — We build, grow & secure your online presence.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container" style="max-width: 1200px">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>OneStack</h4>
+            <p>
+              Complete Digital Ecosystem — We build, grow & secure your online
+              presence.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Web & E‑commerce</a>
+            <a href="services.html">Digital Marketing</a>
+            <a href="ai-automation.html">AI & Automation</a>
+            <a href="services.html">Cybersecurity</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="about.html">About OneStack</a>
+            <a href="results.html">Results</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Get in touch</h4>
+            <p>oborimusa@gmail.com</p>
+            <p>+234 803 966 1354</p>
+            <p>Remote-first / Osogbo</p>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="services.html">Web & E‑commerce</a>
-          <a href="services.html">Digital Marketing</a>
-          <a href="ai-automation.html">AI & Automation</a>
-          <a href="services.html">Cybersecurity</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="about.html">About OneStack</a>
-          <a href="results.html">Results</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Get in touch</h4>
-          <p>oborimusa@gmail.com</p>
-          <p>+234 803 966 1354</p>
-          <p>Remote-first / Osogbo</p>
+        <div class="copyright">
+          <p>
+            &copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem.
+            Built in Nigeria for African businesses.
+          </p>
+          <p style="margin-top: 8px">
+            <a href="privacy-policy.html" style="color: var(--off-white)"
+              >Privacy Policy</a
+            >
+            <a href="terms-conditions.html" style="color: var(--off-white)"
+              >Terms & Conditions</a
+            >
+          </p>
         </div>
       </div>
-      <div class="copyright">
-        <p>&copy; 2026 OneStack Digital Agency — Complete Digital Ecosystem. Built in Nigeria for African businesses.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 100 });
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
 
-    // Mobile menu toggle
-    const toggle = document.getElementById('mobileMenu');
-    const nav = document.getElementById('navList');
+      // Mobile menu toggle
+      const toggle = document.getElementById("mobileMenu");
+      const nav = document.getElementById("navList");
 
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+        });
 
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("active");
+          });
+        });
+      }
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        question.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+          faqItems.forEach((i) => i.classList.remove("active"));
+          if (!isActive) item.classList.add("active");
         });
       });
-    }
 
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        faqItems.forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
-      });
-    });
+      // Contact Form Submission (Formspree)
+      const contactForm = document.getElementById("contactForm");
+      const successDiv = document.getElementById("formSuccess");
+      const errorDiv = document.getElementById("formError");
 
-    // Contact Form Submission (Formspree)
-    const contactForm = document.getElementById('contactForm');
-    const successDiv = document.getElementById('formSuccess');
-    const errorDiv = document.getElementById('formError');
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+          successDiv.style.display = "none";
+          errorDiv.style.display = "none";
 
-        successDiv.style.display = 'none';
-        errorDiv.style.display = 'none';
+          const formData = new FormData(contactForm);
+          const data = Object.fromEntries(formData.entries());
 
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
-
-        if (!data.name || !data.email || !data.service || !data.message) {
-          errorDiv.textContent = '❌ Please fill in all required fields.';
-          errorDiv.style.display = 'block';
-          setTimeout(() => { errorDiv.style.display = 'none'; }, 4000);
-          return;
-        }
-
-        try {
-          const response = await fetch(contactForm.action, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-
-          if (response.ok) {
-            successDiv.style.display = 'block';
-            contactForm.reset();
-            setTimeout(() => { successDiv.style.display = 'none'; }, 5000);
-          } else {
-            throw new Error('Server error');
+          if (!data.name || !data.email || !data.service || !data.message) {
+            errorDiv.textContent = "❌ Please fill in all required fields.";
+            errorDiv.style.display = "block";
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 4000);
+            return;
           }
-        } catch (error) {
-          errorDiv.textContent = '❌ Error sending message. Please call us directly at +234 803 966 1354.';
-          errorDiv.style.display = 'block';
-          setTimeout(() => { errorDiv.style.display = 'none'; }, 5000);
-        }
-      });
-    }
-  </script>
-</body>
+
+          try {
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              successDiv.style.display = "block";
+              contactForm.reset();
+              setTimeout(() => {
+                successDiv.style.display = "none";
+              }, 5000);
+            } else {
+              throw new Error("Server error");
+            }
+          } catch (error) {
+            errorDiv.textContent =
+              "❌ Error sending message. Please call us directly at +234 803 966 1354.";
+            errorDiv.style.display = "block";
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 5000);
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
